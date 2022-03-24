@@ -1,0 +1,57 @@
+{
+  "name": "vue-3231-tailwindcss-3023-fontawesome-6-sctg-20",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/cli-plugin-babel": "5.0.4",
+    "core-js": "3.21.1",
+    "vue": "3.2.31"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@vue/cli-plugin-babel": "^5.0.1",
+    "@vue/cli-plugin-eslint": "^5.0.1",
+    "@vue/cli-service": "^5.0.1",
+    "autoprefixer": "^10.4.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23",
+    "vue-template-compiler": "^2.6.14",
+    "gitlog":"^4.0.4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "keywords": [],
+  "description": ""
+}
