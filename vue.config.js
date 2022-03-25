@@ -53,9 +53,19 @@ module.exports = {
       fallback: {
         "fs": false,
       }
-    }
+    },
   },
   chainWebpack(config) {
-    config.resolve.alias.set('vue', path.resolve('./node_modules/vue')); 
-  }
+    config.resolve.alias.set('vue', path.resolve('./node_modules/vue'));
+  },
+/* css: {
+    loaderOptions: {
+      postcss: {
+        postcssOptions:
+        { 
+          plugins: {"postcss-rename":{"strategy":"minimal"}}
+        }
+      }
+    }
+  }*/
 };

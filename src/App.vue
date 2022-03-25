@@ -1,142 +1,323 @@
 <template>
-<!-- source https://nft-tailwind.preview.uideck.com/ -->
-  <div class="bg-gdtdarkF">
+  <!-- source https://nft-tailwind.preview.uideck.com/ -->
+  <div class="bg-slate-900">
     <header
       class="bg-transparent items-center w-full flex z-50 left-0 top-0 fixed"
     >
-      <div class="w-full mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl px-4">
+      <div
+        class="
+          w-full
+          mx-auto
+          px-[16px]
+          sm:max-w-[575px]
+          md:max-w-[768px]
+          lg:max-w-[992px]
+          xl:max-w-[1140px]
+          2xl:max-w-[1320px]
+        "
+      >
         <div class="relative -mx-4 flex items-center justify-between">
-          <div class="px-4 max-w-full">
+          <div class="max-w-full px-4">
             <a
               href="index.html"
-              class="header-logo block w-full py-5 lg:py-7"
-              :class="scrolledFromTop ? 'am lg:py-2' : 'py-5 lg:py-7'"
+              class="header-logo w-32 block py-5 lg:py-7"
+              :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'"
             >
-            <img
-                srcq="https://www.sctg.eu.org/logo.svg"
-                src5="require('@/assets/img/Logo_SCTG_long.svg')"
+              <img
                 :src="require('@/assets/img/Logo_SCTG_long.svg')"
-                alt="hero image"
-                class="mx-auto h-20 contrast-125 brightness-125"
+                alt="SCTG logo"
+                class="h-20 max-w-full contrast-100 brightness-100"
               />
-              <cimg src="https://nft-tailwind.preview.uideck.com/images/logo.svg" alt="logo" class="h-10 max-w-full" />
             </a>
           </div>
           <div class="flex w-full items-center justify-between mx-4">
             <div>
               <button
                 @click="navbarOpen = !navbarOpen"
-                :class="navbarOpen && 'navbarTogglerActive' "
+                :class="navbarOpen && 'navbarTogglerActive'"
                 id="navbarToggler"
                 name="navbarToggler"
                 aria-label="navbarToggler"
-                class="absolute px-6 top-1/2 block -translate-y-1/2 rounded-lg text-base pfont-semibold text-[40px] focus:text-white lg:hidden"
+                class="
+                  absolute
+                  px-6
+                  top-1/2
+                  block
+                  -translate-y-1/2
+                  rounded-lg
+                  text-base
+                  pfont-semibold
+                  text-[40px]
+                  focus:text-white
+                  lg:hidden
+                "
               >
                 <span
-                  :class="navbarOpen && 'aB aC top-2' "
-                  class="relative max-w-[1320px] block relative w-[30px] justify-between"
+                  :class="navbarOpen && 'aB aC top-2'"
+                  class="relative max-w-[1320px] block w-[30px] justify-between"
                 ></span>
                 <span
-                  :class="navbarOpen && 'w-60' "
-                  class="relative max-w-[1320px] block relative w-[30px] justify-between"
+                  :class="navbarOpen && 'w-60'"
+                  class="relative max-w-[1320px] block w-[30px] justify-between"
                 ></span>
                 <span
-                  :class="navbarOpen && 'aD[-8px] max-w-full' "
-                  class="relative max-w-[1320px] block relative w-[30px] justify-between"
+                  :class="navbarOpen && 'aD[-8px] max-w-full'"
+                  class="relative max-w-[1320px] block w-[30px] justify-between"
                 ></span>
               </button>
               <nav
-                :class="!navbarOpen && 'hidden' "
+                :class="!navbarOpen && 'hidden'"
                 id="navbarCollapse"
-                class="absolute px-6 mx-4 w-full block rounded-lg bg-slate-700 shadow-md lg:py-5 lg:block lg:w-full lg:max-w-full lg:bg-transparent py-7 lg:h-10 lg:mx-4 lg:aR xl:px-6 hidden"
+                class="
+                  absolute
+                  right-4
+                  top-full
+                  w-full
+                  max-w-[250px]
+                  rounded
+                  bg-slate-700
+                  lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent
+                  py-3 
+                  lg:py-4
+                  xl:px-6
+                  none
+                "
               >
-                <ul class="aT lg:flex">
-                  <li class="aU relative">
+                <ul class="lg:flex">
+                  <li class="relative">
                     <a
                       href="index.html"
-                      class="px-8 flex py-2 text-base font-semibold text-white group-hover:text-white lg:mr-0 lg:font-bold lg:py-6 lg:a12"
+                      class="
+                        px-4
+                        flex
+                        py-2
+                        text-xl
+                        font-semibold
+                        text-white
+                        group-hover:text-white
+                        lg:mr-0 lg:font-bold lg:py-6 lg:a12
+                      "
                     >
                       Home
                     </a>
                   </li>
-                  <li class="aU relative">
+                  <li class="relative">
                     <a
                       href="explore-items.html"
-                      class="px-8 flex py-2 text-base font-semibold text-slate-400 group-hover:text-white lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12 xl:a14"
+                      class="
+                        px-4
+                        flex
+                        py-2
+                        text-xl
+                        font-semibold
+                        text-slate-400
+                        group-hover:text-white
+                        lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
+                        xl:ml-12
+                      "
                     >
                       Explore
                     </a>
                   </li>
-                  <li class="aU relative">
+                  <li class="relative">
                     <a
                       href="https://discord.com/invite/SxNNgXBAQS"
                       target="_blank"
                       rel="nofollow"
-                      class="px-8 flex py-2 text-base font-semibold text-slate-400 group-hover:text-white lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12 xl:a14"
+                      class="
+                        px-8
+                        flex
+                        py-2
+                        text-xl
+                        font-semibold
+                        text-slate-400
+                        group-hover:text-white
+                        lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
+                        xl:ml-12
+                      "
                     >
                       Community
                     </a>
                   </li>
-                  <li class="aU submenu-item relative">
+                  <li class="submenu-item relative">
                     <a
                       href="javascript:void(0)"
                       @click="submenuOpen = !submenuOpen"
-                      class="relative px-8 flex py-2 text-base font-semibold text-slate-400 after:absolute after:right-1 after:top-1/2 after:a16[-2px] after:a17 after:a18 after:-translate-y-1/2 after:aC after:a19 after:a1a after:a1b group-hover:text-white lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a1c lg:a1d lg:after:a1e xl:a14"
+                      class="
+                        relative
+                        px-4
+                        flex
+                        py-2
+                        text-xl
+                        font-semibold
+                        text-slate-400
+                        after:absolute
+                        after:right-1
+                        after:top-1/2
+                        after:a16[-2px]
+                        after:a17
+                        after:a18
+                        after:-translate-y-1/2
+                        after:aC
+                        after:a19
+                        after:a1a
+                        after:a1b
+                        group-hover:text-white
+                        lg:mr-0
+                        lg:ml-8
+                        lg:font-bold
+                        lg:py-6
+                        lg:a1c
+                        lg:a1d
+                        lg:after:a1e
+                        xl:ml-12
+                      "
                     >
-                      Pages
+                      Pages <i class="pl-1 py-1 fa-solid fa-angle-down"></i>
                     </a>
                     <div
                       :class="submenuOpen ? 'block' : 'hidden'"
-                      class="submenu relative mx-4 left-0 w-[250px] rounded-md hidden p-4 px-8[top] a1i group-hover:a1j lg:a1k lg:absolute lg:aD[110%] lg:block lg:w-60 lg:shadow-md lg:group-hover:text-center lg:group-hover:mx-4 hidden"
+                      class="
+                        submenu
+                        relative
+                        top-full
+                        left-0
+                        w-[250px]
+                        rounded-lg
+                        bg-slate-800
+                        p-4
+                        px-8[top]
+                        a1i
+                        group-hover:a1j
+                        lg:a1k
+                        lg:absolute
+                        lg:aD[110%]
+                        lg:w-60
+                        lg:shadow-md
+                        lg:group-hover:text-center
+                        lg:group-hover:mx-4
+                      "
                     >
                       <a
                         href="explore-items.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Explore Items
                       </a>
                       <a
                         href="item-details.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Item Details
                       </a>
                       <a
                         href="create-item.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Create Item
                       </a>
                       <a
                         href="connect-wallet.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Connect Wallet
                       </a>
                       <a
                         href="support.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Support
                       </a>
                       <a
                         href="signin.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Sign In Page
                       </a>
                       <a
                         href="signup.html"
-                        class="block rounded font-semibold mx-4 text-sm font-medium text-slate-400 hover:text-white"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
                       >
                         Sign Up Page
                       </a>
                     </div>
                   </li>
-                  <li class="aU relative">
+                  <li class="relative">
                     <a
                       href="support.html"
-                      class="px-8 flex py-2 text-base font-semibold text-slate-400 group-hover:text-white lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12 xl:a14"
+                      class="
+                        px-4
+                        flex
+                        py-2
+                        text-xl
+                        font-semibold
+                        text-slate-400
+                        group-hover:text-white
+                        lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12
+                        xl:ml-12
+                      "
                     >
                       Support
                     </a>
@@ -145,9 +326,22 @@
               </nav>
             </div>
             <div class="hidden justify-end pr-1 sm:flex lg:pr-0">
-              <div class="aU relative hidden md:flex">
+              <div class="relative hidden md:flex">
                 <button
-                  class="py-7 px-7 text-base font-semibold text-zinc-400 transition-all ease-in-out duration-150 hover:mb-6 lg:mx-4 xl:px-7"
+                  @click="searchOpen = !searchOpen"
+                  class="
+                    py-7
+                    px-7
+                    text-base
+                    font-semibold
+                    text-zinc-400
+                    transition-all
+                    ease-in-out
+                    duration-150
+                    hover:text-indigo-600
+                    lg:mx-4
+                    xl:px-7
+                  "
                   name="search"
                   aria-label="search"
                 >
@@ -165,13 +359,33 @@
                   </svg>
                 </button>
                 <div
-                  class="a1k absolute aD[110%] a1e w-[250px] rounded-md hidden a1v w-60 ease-in-out duration-150 group-hover:text-center group-hover:mx-4 group-hover:a1j"
+                  :class="searchOpen ? 'block' : 'hidden'"
+                  class="
+                    absolute
+                    top-[110%]
+                    right-0
+                    rounded-md
+                    bg-slate-800
+                    p-3
+                    w-60
+                    ease-in-out
+                    duration-150
+                  "
                 >
                   <form class="flex">
                     <input
                       type="text"
                       placeholder="Search here..."
-                      class="w-full bg-transparent py-2 mx-4 text-white outline-none"
+                      class="
+                        w-full
+                        bg-transparent
+                        py-2
+                        px-4
+                        mr-1
+                        text-white
+                        rounded
+                        outline-none
+                      "
                     />
                     <button
                       class="text-white"
@@ -196,7 +410,24 @@
               </div>
               <a
                 href="connect-wallet.html"
-                class="flex items-center rounded-md border-2 border-white my-2 py-3 px-4 text-base font-semibold text-white transition-all ease-in-out duration-300 hover:border-indigo-600 hover:bg-indigo-600 lg:px-4"
+                class="
+                  flex
+                  whitespace-nowrap
+                  items-center
+                  rounded-md
+                  border-2 border-white
+                  my-2
+                  py-3
+                  px-4
+                  text-base
+                  font-semibold
+                  text-white
+                  transition-all
+                  ease-in-out
+                  duration-300
+                  hover:border-indigo-600 hover:bg-indigo-600
+                  lg:px-4
+                "
               >
                 <span class="pr-2">
                   <svg
@@ -224,37 +455,112 @@
         backgroundImage:
           'url(https://nft-tailwind.preview.uideck.com/images/hero/common-bg.jpg)',
       }"
-      class="pb-24 pt-[150px] bg-no-repeat bg-top bg-cover overflow-hidden z-10 relative"
+      class="
+        pb-24
+        pt-[150px]
+        bg-no-repeat bg-top bg-cover
+        overflow-hidden
+        z-10
+        relative
+      "
     >
       <div
-        class="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-b from-gdtdarkA to-gdtdarkF"
+        class="
+          absolute
+          left-0
+          top-0
+          -z-10
+          h-full
+          w-full
+          bg-gradient-to-b
+          from-transparent
+          via-gdt-800
+          to-slate-900
+        "
       ></div>
-      <div class="w-full mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl px-4">
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
+          md:max-w-screen-md
+          lg:max-w-screen-lg
+          2xl:max-w-screen-xl
+          px-4
+        "
+      >
         <div class="-mx-4 flex flex-wrap items-center">
           <div class="w-full px-4 lg:w-1/2">
             <div class="mb-12 max-w-[570px] lg:mb-0">
               <h1
-                class="mb-1 text-4xl font-bold leading-5 text-white md:text-5xl lg:text-6xl sm:text-4xl"
+                class="
+                  mb-1
+                  text-4xl
+                  font-bold
+                  leading-5
+                  text-white
+                  md:text-5xl
+                  lg:text-6xl
+                  sm:text-4xl
+                "
               >
                 SCTG Development
               </h1>
               <p
-                class="mb-8 text-lg font-medium leading-7 text-slate-400 md:pr-14"
+                class="
+                  mb-8
+                  text-lg
+                  font-medium
+                  leading-7
+                  text-slate-400
+                  md:pr-14
+                "
               >
-                Start business with us. Build together your future systems.<br/>
-                Start your internet visibility.<br/>
+                Start business with us. Build together your future systems.<br />
+                Start your internet visibility.<br />
                 Develop your B2B business with inspiring solutions.
               </p>
               <div class="flex flex-wrap items-center">
                 <a
                   href="explore-items.html"
-                  class="mr-5 mb-5 font-bold items-center justify-center rounded-md border-2 border-indigo-600 leading-7 p-4 flex-wrap text-base font-semibold text-white ease-in-out duration-150 bg-indigo-600 hover:bg-indigo-700"
+                  class="
+                    mr-5
+                    mb-5
+                    items-center
+                    justify-center
+                    rounded-md
+                    border-2 border-indigo-600
+                    leading-7
+                    p-4
+                    flex-wrap
+                    text-base
+                    font-semibold
+                    text-white
+                    ease-in-out
+                    duration-150
+                    bg-indigo-600
+                    hover:bg-indigo-700
+                  "
                 >
                   Explore now
                 </a>
                 <a
                   href="create-item.html"
-                  class="mb-5 font-bold items-center justify-center rounded-md border-2 border-white p-4 flex-wrap text-base font-semibold text-white ease-in-out duration-150 hover:border-indigo-600 hover:leading-7"
+                  class="
+                    mb-5
+                    items-center
+                    justify-center
+                    rounded-md
+                    border-2 border-white
+                    p-4
+                    flex-wrap
+                    text-base
+                    font-semibold
+                    text-white
+                    ease-in-out
+                    duration-150
+                    hover:border-indigo-600 hover:leading-7
+                  "
                 >
                   Upload Your Art
                 </a>
@@ -392,662 +698,135 @@
             </defs>
           </svg>
         </span>
-        <div class="absolute left-0 top-0 -z-10 flex h-full w-full justify-around opacity-20">
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden lg:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden lg:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden lg:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden md:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden md:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent hidden md:flex"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
-          <span class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"> </span>
+        <div
+          class="
+            absolute
+            left-0
+            top-0
+            -z-10
+            flex
+            h-full
+            w-full
+            justify-around
+            opacity-20
+          "
+        >
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              lg:flex
+            "
+          >
+          </span>
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              lg:flex
+            "
+          >
+          </span>
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              lg:flex
+            "
+          >
+          </span>
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              md:flex
+            "
+          >
+          </span>
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              md:flex
+            "
+          >
+          </span>
+          <span
+            class="
+              h-full
+              w-[1.1px]
+              bg-gradient-to-b
+              from-white
+              to-transparent
+              hidden
+              md:flex
+            "
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
+          <span
+            class="h-full w-[1.1px] bg-gradient-to-b from-white to-transparent"
+          >
+          </span>
         </div>
       </div>
     </section>
     <section class="pt-5">
-      <div class="w-full mx-auto px-4">
-        <div class="py-1 border-t border-white px-1.5">
+      <div class=" w-full
+          mx-auto
+          sm:max-w-screen-sm
+          md:max-w-screen-md
+          lg:max-w-screen-lg
+          2xl:max-w-screen-xl
+          px-4">
+        <div class="py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="-mx-4 flex">
             <div class="w-full px-4">
-              <h2 class="mb-5 text-3xl font-medium text-white">Top Artists</h2>
+              <h2 class="mb-5 text-3xl font-bold text-white">Top Artists</h2>
             </div>
           </div>
         </div>
         <div class="relative">
-          <div class="tns-outer" id="tns1-ow">
-            <div
-              class="tns-controls"
-              aria-label="Carousel Navigation"
-              tabindex="0"
-            >
-              <button
-                type="button"
-                data-controls="prev"
-                tabindex="-1"
-                aria-controls="tns1"
-              >
-                <svg
-                  width="14"
-                  height="11"
-                  viewBox="0 0 14 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.00001 0.0600594L5.00001 4.06006L13.92 4.06006L13.95 6.07006L5.00001 6.07006L5.00001 10.0601L1.19607e-05 5.06006L5.00001 0.0600594Z"
-                    fill="white"
-                  ></path>
-                </svg></button
-              ><button
-                type="button"
-                data-controls="next"
-                tabindex="-1"
-                aria-controls="tns1"
-              >
-                <svg
-                  width="14"
-                  height="11"
-                  viewBox="0 0 14 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.99999 10.9399V6.93994H0.0799875L0.0499878 4.92994H8.99999V0.939941L14 5.93994L8.99999 10.9399Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div
-              class="tns-liveregion tns-visually-hidden"
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              slide <span class="current">14 to 17</span> of 5
-            </div>
-            <div id="tns1-mw" class="tns-ovh">
-              <div class="tns-inner" id="tns1-iw">
-                <div
-                  class="artists-slider -mx-4 flex px-7 tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
-                  id="tns1"
-                  style="transform: translate3d(-61.9048%, 0px, 0px)"
-                >
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Elon_Mask
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            12.25 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-03.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Hiliya_Farah
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            9.89 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-04.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Wilium_Dev
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            2.09 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Elon_Mask
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            12.25 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-03.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Hiliya_Farah
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            9.89 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-04.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Wilium_Dev
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            2.09 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item"
-                    id="tns1-item0"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item"
-                    id="tns1-item1"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item"
-                    id="tns1-item2"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Elon_Mask
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            12.25 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item"
-                    id="tns1-item3"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-03.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Hiliya_Farah
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            9.89 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item"
-                    id="tns1-item4"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-04.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Wilium_Dev
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            2.09 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned tns-slide-active"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned tns-slide-active"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned tns-slide-active"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Elon_Mask
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            12.25 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned tns-slide-active"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-03.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Hiliya_Farah
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            9.89 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-04.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Wilium_Dev
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            2.09 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Devid_Miller
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            14.55 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4 tns-item tns-slide-cloned"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  >
-                    <div class="gradient-bg mb-5 rounded p-[10px][2px]">
-                      <div class="flex items-center rounded bg-slate-700 a3o">
-                        <div class="mr-5 h-[70px] w-full max-w-[70px] overflow-hidden rounded-lg">
-                          <img
-                            src="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-                            alt="artists"
-                            class="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div class="w-full">
-                          <h3 class="a2E text-lg font-semibold text-white">
-                            @Elon_Mask
-                          </h3>
-                          <span class="text-base font-semibold py-10">
-                            12.25 ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tns-nav"
-              aria-label="Carousel Pagination"
-              style="display: none"
-            >
-              <button
-                type="button"
-                data-nav="0"
-                aria-controls="tns1"
-                style="display: none"
-                aria-label="Carousel Page 1 (Current Slide)"
-                class="tns-nav-active"
-              ></button
-              ><button
-                type="button"
-                data-nav="1"
-                tabindex="-1"
-                aria-controls="tns1"
-                style="display: none"
-                aria-label="Carousel Page 2"
-              ></button
-              ><button
-                type="button"
-                data-nav="2"
-                tabindex="-1"
-                aria-controls="tns1"
-                style="display: none"
-                aria-label="Carousel Page 3"
-              ></button
-              ><button
-                type="button"
-                data-nav="3"
-                tabindex="-1"
-                aria-controls="tns1"
-                style="display: none"
-                aria-label="Carousel Page 4"
-              ></button
-              ><button
-                type="button"
-                data-nav="4"
-                tabindex="-1"
-                aria-controls="tns1"
-                style="display: none"
-                aria-label="Carousel Page 5"
-              ></button>
-            </div>
-          </div>
+          <slides-card />
         </div>
       </div>
     </section>
@@ -1060,7 +839,23 @@
             </h2>
             <a
               href="javascript:void(0)"
-              class="mb-5 font-bold items-center justify-center rounded-md bg-indigo-600 font-semibold px-6 py-2 text-base font-semibold text-white ease-in-out duration-150 hover:opacity-90"
+              class="
+                mb-5
+                font-bold
+                items-center
+                justify-center
+                rounded-md
+                bg-indigo-600
+                font-semibold
+                px-6
+                py-2
+                text-base
+                font-semibold
+                text-white
+                ease-in-out
+                duration-150
+                hover:opacity-90
+              "
             >
               View All
             </a>
@@ -1068,14 +863,33 @@
         </div>
         <div class="-mx-4 flex px-7">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/auctions/image-01.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1097,7 +911,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     22-Bit Digital #551
                   </a>
@@ -1132,7 +953,18 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-center rounded-md bg-white opacity-10 p-[10px] text-base font-semibold text-white"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    rounded-md
+                    bg-white
+                    opacity-10
+                    p-[10px]
+                    text-base
+                    font-semibold
+                    text-white
+                  "
                 >
                   05 : 15 : 07 : 45
                 </div>
@@ -1140,14 +972,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/auctions/image-02.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1169,7 +1020,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     25-Bit Digital #729
                   </a>
@@ -1204,7 +1062,18 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-center rounded-md bg-white opacity-10 p-[10px] text-base font-semibold text-white"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    rounded-md
+                    bg-white
+                    opacity-10
+                    p-[10px]
+                    text-base
+                    font-semibold
+                    text-white
+                  "
                 >
                   06 : 15 : 07 : 55
                 </div>
@@ -1212,14 +1081,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/auctions/image-03.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1241,7 +1129,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     27-Bit Digital #395
                   </a>
@@ -1276,7 +1171,18 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-center rounded-md bg-white opacity-10 p-[10px] text-base font-semibold text-white"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    rounded-md
+                    bg-white
+                    opacity-10
+                    p-[10px]
+                    text-base
+                    font-semibold
+                    text-white
+                  "
                 >
                   02 : 15 : 08 : 44
                 </div>
@@ -1284,14 +1190,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/auctions/image-04.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1313,7 +1238,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     35-Bit Digital #439
                   </a>
@@ -1348,7 +1280,18 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-center rounded-md bg-white opacity-10 p-[10px] text-base font-semibold text-white"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    rounded-md
+                    bg-white
+                    opacity-10
+                    p-[10px]
+                    text-base
+                    font-semibold
+                    text-white
+                  "
                 >
                   07 : 15 : 03 : 12
                 </div>
@@ -1358,7 +1301,7 @@
         </div>
       </div>
     </section>
-    <section class="pt-8">
+    <section class="w-full pt-8">
       <div class="w-full mx-auto px-4">
         <div class="py-1 border-t border-white px-1.5">
           <div class="justify-between sm:flex">
@@ -1367,22 +1310,56 @@
             </h2>
             <a
               href="javascript:void(0)"
-              class="mb-5 font-bold items-center justify-center rounded-md bg-indigo-600 font-semibold px-6 py-2 text-base font-semibold text-white ease-in-out duration-150 hover:opacity-90"
+              class="
+                mb-5
+                items-center
+                justify-center
+                rounded-md
+                bg-indigo-600
+                font-semibold
+                px-6
+                py-2
+                text-base
+                font-semibold
+                text-white
+                ease-in-out
+                duration-150
+                hover:opacity-90
+              "
             >
               View All
             </a>
           </div>
         </div>
-        <div class="-mx-4 flex px-7">
+        <div class="w-1/2-mx-4 flex px-7 overflow-hidden">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-01.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1404,7 +1381,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1438,16 +1422,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1470,14 +1489,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-02.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1499,7 +1537,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1533,16 +1578,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1565,14 +1645,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-03.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1594,7 +1693,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1628,16 +1734,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1660,14 +1801,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-04.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1689,7 +1849,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1723,16 +1890,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1755,14 +1957,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-05.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1784,7 +2005,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1818,16 +2046,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1850,14 +2113,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-06.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1879,7 +2161,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -1913,16 +2202,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -1945,14 +2269,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-07.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -1974,7 +2317,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -2008,16 +2358,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -2040,14 +2425,33 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 p-[10px]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                p-[10px]
+              "
+            >
               <div class="relative mb-5 overflow-hidden rounded-lg">
                 <img
                   src="https://nft-tailwind.preview.uideck.com/images/picks/image-08.svg"
                   alt="auctions"
                   class="w-full"
                 />
-                <button class="absolute px-6 px-5 font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="
+                    absolute
+                    px-6 px-5
+                    font-bold
+                    items-center
+                    rounded-md
+                    bg-white
+                    px-2
+                    py-1
+                  "
+                >
                   <svg
                     width="14"
                     height="14"
@@ -2069,7 +2473,14 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="mb-3 inline-block text-lg font-semibold text-white hover:text-slate-600"
+                    class="
+                      mb-3
+                      inline-block
+                      text-lg
+                      font-semibold
+                      text-white
+                      hover:text-slate-600
+                    "
                   >
                     3d abstract illustration
                   </a>
@@ -2103,16 +2514,51 @@
                     </h5>
                   </div>
                 </div>
-                <div class="flex items-center justify-between border-t-2 border-slate-600 pt-5">
+                <div
+                  class="
+                    flex
+                    items-center
+                    justify-between
+                    border-t-2 border-slate-600
+                    pt-5
+                  "
+                >
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md bg-indigo-600 py-7 px-4 text-sm font-semibold text-white ease-in-out duration-150 hover:opacity-90 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      bg-indigo-600
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:opacity-90
+                      sm:px-5
+                    "
                   >
                     Place Bid
                   </a>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center justify-center rounded-md py-7 px-4 text-sm font-semibold text-white hover:mb-6 sm:px-5"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      rounded-md
+                      py-7
+                      px-4
+                      text-sm
+                      font-semibold
+                      text-white
+                      hover:mb-6
+                      sm:px-5
+                    "
                   >
                     <span class="pr-1">
                       <svg
@@ -2138,7 +2584,21 @@
             <div class="pt-8 text-center">
               <a
                 href="javascript:void(0)"
-                class="font-bold items-center justify-center rounded-md border-2 border-white py-7 px-7 text-base font-semibold text-white ease-in-out duration-150 hover:border-indigo-600 hover:bg-indigo-600"
+                class="
+                  font-bold
+                  items-center
+                  justify-center
+                  rounded-md
+                  border-2 border-white
+                  py-7
+                  px-7
+                  text-base
+                  font-semibold
+                  text-white
+                  ease-in-out
+                  duration-150
+                  hover:border-indigo-600 hover:bg-indigo-600
+                "
               >
                 Load More...
               </a>
@@ -2162,8 +2622,30 @@
         </div>
         <div class="-mx-4 flex px-7">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="aU mb-10 rounded border border-slate-600 bg-slate-700 a1X ease-in-out duration-150 hover:border-white hover:bg-white">
-              <div class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-b-full bg-[#FFF0E9]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a1X
+                ease-in-out
+                duration-150
+                hover:border-white hover:bg-white
+              "
+            >
+              <div
+                class="
+                  mb-5
+                  flex
+                  h-[72px]
+                  w-[72px]
+                  items-center
+                  justify-center
+                  rounded-b-full
+                  bg-[#FFF0E9]
+                "
+              >
                 <svg
                   width="34"
                   height="34"
@@ -2178,7 +2660,16 @@
                 </svg>
               </div>
               <h3
-                class="mb-2 text-xl font-medium text-white transition-all ease-in-out duration-150 group-hover:text-zinc-900"
+                class="
+                  mb-2
+                  text-xl
+                  font-medium
+                  text-white
+                  transition-all
+                  ease-in-out
+                  duration-150
+                  group-hover:text-zinc-900
+                "
               >
                 Set Up Your Wallet
               </h3>
@@ -2188,8 +2679,30 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="aU mb-10 rounded border border-slate-600 bg-slate-700 a1X ease-in-out duration-150 hover:border-white hover:bg-white">
-              <div class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-b-full bg-[#FFF6DD]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a1X
+                ease-in-out
+                duration-150
+                hover:border-white hover:bg-white
+              "
+            >
+              <div
+                class="
+                  mb-5
+                  flex
+                  h-[72px]
+                  w-[72px]
+                  items-center
+                  justify-center
+                  rounded-b-full
+                  bg-[#FFF6DD]
+                "
+              >
                 <svg
                   width="34"
                   height="34"
@@ -2204,7 +2717,16 @@
                 </svg>
               </div>
               <h3
-                class="mb-2 text-xl font-medium text-white transition-all ease-in-out duration-150 group-hover:text-zinc-900"
+                class="
+                  mb-2
+                  text-xl
+                  font-medium
+                  text-white
+                  transition-all
+                  ease-in-out
+                  duration-150
+                  group-hover:text-zinc-900
+                "
               >
                 Make Your Collection
               </h3>
@@ -2214,8 +2736,30 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="aU mb-10 rounded border border-slate-600 bg-slate-700 a1X ease-in-out duration-150 hover:border-white hover:bg-white">
-              <div class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-b-full bg-[#EDF8F4]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a1X
+                ease-in-out
+                duration-150
+                hover:border-white hover:bg-white
+              "
+            >
+              <div
+                class="
+                  mb-5
+                  flex
+                  h-[72px]
+                  w-[72px]
+                  items-center
+                  justify-center
+                  rounded-b-full
+                  bg-[#EDF8F4]
+                "
+              >
                 <svg
                   width="34"
                   height="34"
@@ -2230,7 +2774,16 @@
                 </svg>
               </div>
               <h3
-                class="mb-2 text-xl font-medium text-white transition-all ease-in-out duration-150 group-hover:text-zinc-900"
+                class="
+                  mb-2
+                  text-xl
+                  font-medium
+                  text-white
+                  transition-all
+                  ease-in-out
+                  duration-150
+                  group-hover:text-zinc-900
+                "
               >
                 Add Your NFTs
               </h3>
@@ -2240,8 +2793,30 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="aU mb-10 rounded border border-slate-600 bg-slate-700 a1X ease-in-out duration-150 hover:border-white hover:bg-white">
-              <div class="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-b-full bg-[#E1DDFF]">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a1X
+                ease-in-out
+                duration-150
+                hover:border-white hover:bg-white
+              "
+            >
+              <div
+                class="
+                  mb-5
+                  flex
+                  h-[72px]
+                  w-[72px]
+                  items-center
+                  justify-center
+                  rounded-b-full
+                  bg-[#E1DDFF]
+                "
+              >
                 <svg
                   width="34"
                   height="34"
@@ -2256,7 +2831,16 @@
                 </svg>
               </div>
               <h3
-                class="mb-2 text-xl font-medium text-white transition-all ease-in-out duration-150 group-hover:text-zinc-900"
+                class="
+                  mb-2
+                  text-xl
+                  font-medium
+                  text-white
+                  transition-all
+                  ease-in-out
+                  duration-150
+                  group-hover:text-zinc-900
+                "
               >
                 List Them For Sale
               </h3>
@@ -2277,7 +2861,22 @@
             </h2>
             <a
               href="javascript:void(0)"
-              class="mb-5 font-bold items-center justify-center rounded-md bg-indigo-600 font-semibold px-6 text-base font-semibold text-white ease-in-out duration-150 hover:opacity-90"
+              class="
+                mb-5
+                font-bold
+                items-center
+                justify-center
+                rounded-md
+                bg-indigo-600
+                font-semibold
+                px-6
+                text-base
+                font-semibold
+                text-white
+                ease-in-out
+                duration-150
+                hover:opacity-90
+              "
             >
               Explore More
             </a>
@@ -2285,7 +2884,18 @@
         </div>
         <div class="-mx-4 flex px-7">
           <div class="w-full px-4 lg:w-1/2">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 a3t md:a1X lg:a3t xl:a1X">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a3t
+                md:a1X
+                lg:a3t
+                xl:a1X
+              "
+            >
               <div class="a2I flex px-7">
                 <div class="a18/3 text-base">
                   <div class="a2b w-full">
@@ -2317,12 +2927,22 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="text-lg font-medium text-white sm:text-xl md:text-2xl lg:text-xl xl:text-2xl"
+                    class="
+                      text-lg
+                      font-medium
+                      text-white
+                      sm:text-xl
+                      md:text-2xl
+                      lg:text-xl
+                      xl:text-2xl
+                    "
                   >
                     Creative 3d illustration
                   </a>
                 </h3>
-                <button class="font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="font-bold items-center rounded-md bg-white px-2 py-1"
+                >
                   <svg
                     width="14"
                     height="14"
@@ -2341,7 +2961,16 @@
                 </button>
               </div>
               <div class="flex items-center">
-                <div class="a3u h-[46px] w-full max-w-[46px] overflow-hidden rounded-md">
+                <div
+                  class="
+                    a3u
+                    h-[46px]
+                    w-full
+                    max-w-[46px]
+                    overflow-hidden
+                    rounded-md
+                  "
+                >
                   <img
                     src="https://nft-tailwind.preview.uideck.com/images/collections/creator-01.jpg"
                     alt=""
@@ -2351,14 +2980,27 @@
                 <div class="w-full">
                   <h4 class="text-base font-semibold text-white">
                     @Lathium_Lui...
-                    <span class="block text-sm font-medium text-zinc-400"> Creator </span>
+                    <span class="block text-sm font-medium text-zinc-400">
+                      Creator
+                    </span>
                   </h4>
                 </div>
               </div>
             </div>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <div class="mb-10 rounded border border-slate-600 bg-slate-700 a3t md:a1X lg:a3t xl:a1X">
+            <div
+              class="
+                mb-10
+                rounded
+                border border-slate-600
+                bg-slate-700
+                a3t
+                md:a1X
+                lg:a3t
+                xl:a1X
+              "
+            >
               <div class="a2I flex px-7">
                 <div class="w-1/3 text-base">
                   <div class="a2b w-full">
@@ -2405,12 +3047,22 @@
                 <h3>
                   <a
                     href="javascript:void(0)"
-                    class="text-lg font-medium text-white sm:text-xl md:text-2xl lg:text-xl xl:text-2xl"
+                    class="
+                      text-lg
+                      font-medium
+                      text-white
+                      sm:text-xl
+                      md:text-2xl
+                      lg:text-xl
+                      xl:text-2xl
+                    "
                   >
                     Modern illustration
                   </a>
                 </h3>
-                <button class="font-bold items-center rounded-md bg-white px-2 py-1">
+                <button
+                  class="font-bold items-center rounded-md bg-white px-2 py-1"
+                >
                   <svg
                     width="14"
                     height="14"
@@ -2429,7 +3081,16 @@
                 </button>
               </div>
               <div class="flex items-center">
-                <div class="a3u h-[46px] w-full max-w-[46px] overflow-hidden rounded-md">
+                <div
+                  class="
+                    a3u
+                    h-[46px]
+                    w-full
+                    max-w-[46px]
+                    overflow-hidden
+                    rounded-md
+                  "
+                >
                   <img
                     src="https://nft-tailwind.preview.uideck.com/images/collections/creator-02.jpg"
                     alt=""
@@ -2439,7 +3100,9 @@
                 <div class="w-full">
                   <h4 class="text-base font-semibold text-white">
                     @Andrio_Hev...
-                    <span class="block text-sm font-medium text-zinc-400"> Creator </span>
+                    <span class="block text-sm font-medium text-zinc-400">
+                      Creator
+                    </span>
                   </h4>
                 </div>
               </div>
@@ -2455,7 +3118,11 @@
             <div class="a28">
               <div class="max-w-[300px]">
                 <a href="index.html" class="a29 inline-block">
-                  <img src="https://nft-tailwind.preview.uideck.com/images/logo.svg" alt="logo" class="aq" />
+                  <img
+                    src="https://nft-tailwind.preview.uideck.com/images/logo.svg"
+                    alt="logo"
+                    class="aq"
+                  />
                 </a>
                 <p class="a2b text-base font-medium text-zinc-400">
                   Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod
@@ -2521,7 +3188,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     About company
                   </a>
@@ -2529,7 +3206,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Company services
                   </a>
@@ -2537,7 +3224,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Job opportunities
                   </a>
@@ -2545,7 +3242,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Contact us
                   </a>
@@ -2560,7 +3267,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Client support
                   </a>
@@ -2568,7 +3285,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Latest news
                   </a>
@@ -2576,7 +3303,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Company Details
                   </a>
@@ -2584,7 +3321,17 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="mb-4 inline-block text-base font-medium text-zinc-400 transition-all ease-in-out duration-150 hover:text-white"
+                    class="
+                      mb-4
+                      inline-block
+                      text-base
+                      font-medium
+                      text-zinc-400
+                      transition-all
+                      ease-in-out
+                      duration-150
+                      hover:text-white
+                    "
                   >
                     Who we are
                   </a>
@@ -2603,13 +3350,39 @@
                   type="email"
                   name="newslettersEmail"
                   placeholder="Enter your email address"
-                  class="a2g w-full rounded-lg border border-slate-600 bg-transparent pl-5 pr-10 text-sm font-medium text-white outline-none focus:border-indigo-600"
+                  class="
+                    a2g
+                    w-full
+                    rounded-lg
+                    border border-slate-600
+                    bg-transparent
+                    pl-5
+                    pr-10
+                    text-sm
+                    font-medium
+                    text-white
+                    outline-none
+                    focus:border-indigo-600
+                  "
                 />
                 <button
                   type="submit"
                   name="submit"
                   aria-label="submit"
-                  class="absolute a2j[6px] top-1/2 flex a2k a2l a2m/2 items-center justify-center rounded-md bg-indigo-600 text-white"
+                  class="
+                    absolute
+                    a2j[6px]
+                    top-1/2
+                    flex
+                    a2k
+                    a2l
+                    a2m/2
+                    items-center
+                    justify-center
+                    rounded-md
+                    bg-indigo-600
+                    text-white
+                  "
                 >
                   <svg width="20" height="20" viewBox="0 0 20 20" class="a2d">
                     <path
@@ -2624,7 +3397,7 @@
         <div class="a2n border-slate-600">
           <div class="py-7 text-center">
             <p class="text-base font-medium text-zinc-400">
-              © Copyright 2025 - NFT, All rights reserved.
+              © Copyright SCTG Development - All rights reserved.
             </p>
           </div>
         </div>
@@ -2634,14 +3407,26 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import SlidesCard from "@/components/SlidesCard"
+
 export default {
   name: "App",
   data() {
-    return { app }; //eslint-disable-line no-undef
+    let submenuOpen = false;
+    let navbarOpen = false;
+    let scrolledFromTop = false;
+    let searchOpen = false;
+    return {
+      navbarOpen: ref(navbarOpen),
+      submenuOpen: ref(submenuOpen),
+      scrolledFromTop: ref(scrolledFromTop),
+      searchOpen: ref(searchOpen),
+    };
   },
-  components: {},
+  components: {
+    SlidesCard
+  },
+  methods: {},
 };
 </script>
-
-<style>
-</style>
