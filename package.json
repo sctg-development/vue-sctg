@@ -10,22 +10,26 @@
   "dependencies": {
     "@vue/cli-plugin-babel": "5.0.4",
     "core-js": "3.21.1",
+    "vue-tiny-slider":"^0.1.39",
     "vue": "3.2.31"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
-    "@vue/cli-plugin-babel": "^5.0.1",
-    "@vue/cli-plugin-eslint": "^5.0.1",
-    "@vue/cli-service": "^5.0.1",
-    "autoprefixer": "^10.4.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.9.0",
-    "eslint-plugin-vue": "^8.4.1",
-    "postcss": "^8.4.6",
+    "@fortawesome/fontawesome-free": "~6.1.1",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "@vue/cli-plugin-babel": "^5.0.4",
+    "@vue/cli-plugin-eslint": "^5.0.4",
+    "@vue/cli-service": "^5.0.4",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.11.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "gitlog": "^4.0.4",
+    "postcss": "^8.4.12",
+    "postcss-rename": "^0.6.0",
     "tailwindcss": "^3.0.23",
-    "vue-template-compiler": "^2.6.14",
-    "gitlog":"^4.0.4"
+    "webpack": "~5.70.0"
   },
   "eslintConfig": {
     "root": true,
