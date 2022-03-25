@@ -13,7 +13,7 @@
     <path d="M217.38,285.63l68.25-68.25A25.8,25.8,0,0,1,304,209.81V278A26,26,0,0,1,278,304H209.81A25.8,25.8,0,0,1,217.38,285.63Z" style="fill:#99b91f"/>
     <path d="M112.47,180.72a25.85,25.85,0,0,1-18.33,7.56V120.06a26,26,0,0,1,25.92-25.92h68.22a25.85,25.85,0,0,1-7.56,18.33Z" style="fill:#efae00"/>
     <path d="M304,120.06v68.22a25.83,25.83,0,0,1-18.32-7.56l-68.25-68.25a25.82,25.82,0,0,1-7.57-18.33H278A26,26,0,0,1,304,120.06Z" style="fill:#2a9086"/>
-    <text transform="translate(449.92 255.08)" style="font-size:189.2855224609375px;fill:#706f6f;font-family:KeepCalm-Medium, Keep Calm;font-weight:500">SC<tspan x="275.6" y="0" style="letter-spacing:-0.04499857154557479em">T</tspan>
+    <text transform="translate(449.92 255.08)" style="font-size:189.2855224609375px;fill:#706f6f;font-family:KeepCalm-Mediu, Keep Calm,sans-serif;font-weight:500">SC<tspan x="275.6" y="0" style="letter-spacing:-0.04499857154557479em">T</tspan>
         <tspan x="389.92" y="0">G</tspan>
     </text>
 </svg>
