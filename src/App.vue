@@ -496,9 +496,10 @@
                 class="
                   mb-1
                   text-4xl
-                  font-bold
+                  font-medium
                   leading-5
                   text-white
+                  font-keepcalm tracking-wide
                   md:text-5xl
                   lg:text-6xl
                   sm:text-4xl

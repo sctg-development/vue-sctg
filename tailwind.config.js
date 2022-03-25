@@ -11,8 +11,10 @@ module.exports = {
   ],
   safelist: (process.env.SANITY_DATASET === 'production') ? [] : [{ pattern: /.*/ }],
   theme: {
-
     extend: {
+      fontFamily: {
+        'keepcalm': ['KeepCalm-Medium', 'sans-serif'],
+      },
       colors: {
         "gdt": {
           "50": "#646470",
