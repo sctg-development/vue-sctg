@@ -2960,23 +2960,13 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import HeaderMain from "@/components/HeaderMain"
 import SlidesCard from "@/components/SlidesCard"
 
 export default {
   name: "App",
   data() {
-    let submenuOpen = false;
-    let navbarOpen = false;
-    let scrolledFromTop = false;
-    let searchOpen = false;
-    return {
-      navbarOpen: ref(navbarOpen),
-      submenuOpen: ref(submenuOpen),
-      scrolledFromTop: ref(scrolledFromTop),
-      searchOpen: ref(searchOpen),
-    };
+    return {}
   },
   components: {
     SlidesCard,
