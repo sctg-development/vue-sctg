@@ -578,7 +578,7 @@
   </div>
 </template>
 <script>
-import VueTinySlider from "@/components/VueTinySlider.vue";
+import VueTinySlider from "@/utilities/VueTinySlider.vue";
 const sliderOptions = {
   autoplay: false,
   autoplayTimeout: 5000,
