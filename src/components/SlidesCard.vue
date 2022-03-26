@@ -5,7 +5,7 @@
       class="-mx-4 flex"
     >
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -113,7 +113,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -141,7 +141,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -167,7 +167,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -195,7 +195,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -221,7 +221,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -249,7 +249,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -277,7 +277,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -303,7 +303,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -331,7 +331,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -357,7 +357,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -385,7 +385,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -413,7 +413,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -439,7 +439,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -467,7 +467,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -493,7 +493,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -521,7 +521,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
@@ -549,7 +549,7 @@
         </div>
       </div>
       <div class="w-full px-4 md:w-1/2 xl:w-1/3 2xl:w-1/4">
-        <div class="gradient-bg mb-5 rounded-lg p-[2px]">
+        <div class="bg-slate-600 hover:bg-gradient-to-r hover:from-yellow-400 hover:via-pink-600  hover:to-indigo-500 mb-5 rounded-lg p-[2px]">
           <div class="flex items-center rounded-lg bg-slate-700 p-6">
             <div
               class="
