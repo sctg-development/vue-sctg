@@ -97,7 +97,7 @@
                       lg:mr-0 lg:font-bold lg:py-6 lg:a12
                     "
                   >
-                    Home
+                    {{$t("nav.home")}}
                   </a>
                 </li>
                 <li class="relative">
@@ -115,7 +115,7 @@
                       xl:ml-12
                     "
                   >
-                    Explore
+                    {{$t("nav.explore")}}
                   </a>
                 </li>
                 <li class="relative">
@@ -135,7 +135,7 @@
                       xl:ml-12
                     "
                   >
-                    Community
+                    {{$t("nav.community")}}
                   </a>
                 </li>
                 <li class="submenu-item relative">
@@ -172,7 +172,7 @@
                       xl:ml-12
                     "
                   >
-                    Pages <i class="pl-1 py-1 fa-solid fa-angle-down"></i>
+                    {{$t("nav.pages")}} <i class="pl-1 py-1 fa-solid fa-angle-down"></i>
                   </a>
                   <div
                     :class="submenuOpen ? 'block' : 'hidden'"
@@ -268,7 +268,7 @@
                         hover:text-white
                       "
                     >
-                      Support
+                      {{$t("nav.support")}}
                     </a>
                     <a
                       href="signin.html"
@@ -317,7 +317,7 @@
                       xl:ml-12
                     "
                   >
-                    Support
+                    {{$t("nav.support")}}
                   </a>
                 </li>
               </ul>
