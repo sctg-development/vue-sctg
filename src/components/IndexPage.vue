@@ -4,8 +4,7 @@
     <header-main />
     <section
       :style="{
-        backgroundImage:
-          'url(https://nft-tailwind.preview.uideck.com/images/hero/common-bg.jpg)',
+        backgroundImage: 'url(' + reactiveBackground + ')',
       }"
       class="
         pb-24
@@ -51,13 +50,14 @@
                   font-medium
                   leading-5
                   text-white
-                  font-keepcalm tracking-wide
+                  font-keepcalm
+                  tracking-wide
                   md:text-5xl
                   lg:text-6xl
                   sm:text-4xl
                 "
               >
-                {{$t("message.company")}}
+                {{ $t("message.company") }}
               </h1>
               <p
                 class="
@@ -69,9 +69,7 @@
                   md:pr-14
                 "
                 v-html="$t('message.greetings')"
-              >
-                
-              </p>
+              ></p>
               <div class="flex flex-wrap items-center">
                 <a
                   href="explore-items.html"
@@ -94,7 +92,7 @@
                     hover:bg-indigo-700
                   "
                 >
-                  {{$t("message.explore_now")}}
+                  {{ $t("message.explore_now") }}
                 </a>
                 <a
                   href="create-item.html"
@@ -114,7 +112,7 @@
                     hover:border-indigo-600 hover:leading-7
                   "
                 >
-                  {{$t("message.upload_your_art")}}
+                  {{ $t("message.contact_us") }}
                 </a>
               </div>
             </div>
@@ -122,7 +120,7 @@
           <div class="w-full px-4 lg:w-1/2">
             <div class="text-center">
               <img
-                :src="require('@/assets/img/Logo_SCTG_carre_3D.svg')"
+                :src="getCloudinaryImg('Logo_SCTG_carre_3D').toURL()"
                 alt="hero image"
                 class="mx-auto max-w-full contrast-125 brightness-125"
               />
@@ -363,499 +361,99 @@
       </div>
     </section>
     <section class="pt-5">
-      <div class=" w-full
-          mx-auto
-          sm:max-w-screen-sm
-          md:max-w-screen-md
-          lg:max-w-screen-lg
-          2xl:max-w-screen-xl
-          px-4">
+      <div class="w-full mx-auto px-10">
         <div class="py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="-mx-4 flex">
             <div class="w-full px-4">
-              <h2 class="mb-5 text-3xl font-bold text-white">{{$t("message.references")}}</h2>
+              <h2 class="mb-5 text-3xl font-bold text-white">
+                {{ $t("message.references") }}
+              </h2>
             </div>
           </div>
         </div>
         <div class="relative">
-          <slides-card />
+          <tiny-slider>
+            <mini-slides />
+          </tiny-slider>
         </div>
       </div>
     </section>
     <section class="pt-12">
-      <div class="w-full mx-auto px-4">
-        <div class="py-1 border-t border-white px-1.5">
-          <div class="justify-between sm:flex">
-            <h2 class="mb-4 text-3xl font-medium leading-none text-white">
-              Live Auctions
-            </h2>
-            <a
-              href="javascript:void(0)"
-              class="
-                mb-5
-                font-bold
-                items-center
-                justify-center
-                rounded-md
-                bg-indigo-600
-                font-semibold
-                px-6
-                py-2
-                text-base
-                font-semibold
-                text-white
-                ease-in-out
-                duration-150
-                hover:opacity-90
-              "
-            >
-              View All
-            </a>
+      <div class="w-full mx-auto px-10">
+        <div class="py-1 border-b border-white px-1.5 border-opacity-10">
+          <div class="-mx-4 flex">
+            <div class="w-full px-4">
+              <h2 class="mb-5 text-3xl font-bold text-white">
+                {{ $t("slide.live_auctions") }}
+              </h2>
+            </div>
           </div>
         </div>
-        <div class="-mx-4 flex px-7">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/auctions/image-01.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    22-Bit Digital #551
-                  </a>
-                </h3>
-                <div class="mb-5 flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/auctions/creator-01.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Devid_Mill...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      5.49 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    rounded-md
-                    bg-white
-                    opacity-10
-                    p-[10px]
-                    text-base
-                    font-semibold
-                    text-white
-                  "
-                >
-                  05 : 15 : 07 : 45
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/auctions/image-02.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    1.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    25-Bit Digital #729
-                  </a>
-                </h3>
-                <div class="mb-5 flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/auctions/creator-02.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Devid_Meth...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      1.58 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    rounded-md
-                    bg-white
-                    opacity-10
-                    p-[10px]
-                    text-base
-                    font-semibold
-                    text-white
-                  "
-                >
-                  06 : 15 : 07 : 55
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/auctions/image-03.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    500
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    27-Bit Digital #395
-                  </a>
-                </h3>
-                <div class="mb-5 flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/auctions/creator-03.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Jemmy_Fra...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      3.25 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    rounded-md
-                    bg-white
-                    opacity-10
-                    p-[10px]
-                    text-base
-                    font-semibold
-                    text-white
-                  "
-                >
-                  02 : 15 : 08 : 44
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/auctions/image-04.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    200
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    35-Bit Digital #439
-                  </a>
-                </h3>
-                <div class="mb-5 flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/auctions/creator-04.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Miliya_Cho...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      1.57 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    rounded-md
-                    bg-white
-                    opacity-10
-                    p-[10px]
-                    text-base
-                    font-semibold
-                    text-white
-                  "
-                >
-                  07 : 15 : 03 : 12
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="relative">
+          <tiny-slider>
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+          </tiny-slider>
         </div>
       </div>
     </section>
-    <section class="w-full pt-8">
-      <div class="w-full mx-auto px-4">
-        <div class="py-1 border-t border-white px-1.5">
+    <section class="w-full pt-12">
+      <div class="w-full mx-auto px-10">
+        <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
               Today's Picks
@@ -883,1279 +481,15 @@
             </a>
           </div>
         </div>
-        <div class="w-1/2-mx-4 flex px-7 overflow-hidden">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-01.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-01.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Devid_Mill...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      5.49 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-02.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    1.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-02.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Wilium_de...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      2.85 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-03.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-03.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Nicolo_Tes...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      7.82 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-04.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-04.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Liza_Auro...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      0.25 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-05.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-05.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Lathium_Lui...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      3.24 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-06.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-06.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Marko...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      4.55 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-07.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-07.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Andrio_Hev...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      0.89 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                p-[10px]
-              "
-            >
-              <div class="relative mb-5 overflow-hidden rounded-lg">
-                <img
-                  src="https://nft-tailwind.preview.uideck.com/images/picks/image-08.svg"
-                  alt="auctions"
-                  class="w-full"
-                />
-                <button
-                  class="
-                    absolute
-                    px-6 px-5
-                    font-bold
-                    items-center
-                    rounded-md
-                    bg-white
-                    px-2
-                    py-1
-                  "
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.99999 11.8709L6.15416 11.1009C3.14999 8.37675 1.16666 6.57425 1.16666 4.37508C1.16666 2.57258 2.57832 1.16675 4.37499 1.16675C5.38999 1.16675 6.36416 1.63925 6.99999 2.38008C7.63582 1.63925 8.60999 1.16675 9.62499 1.16675C11.4217 1.16675 12.8333 2.57258 12.8333 4.37508C12.8333 6.57425 10.85 8.37675 7.84582 11.1009L6.99999 11.8709Z"
-                      fill="#F85486"
-                    ></path>
-                  </svg>
-                  <span class="pl-1 text-xs font-semibold text-zinc-900">
-                    4.6K
-                  </span>
-                </button>
-              </div>
-              <div>
-                <h3>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      mb-3
-                      inline-block
-                      text-lg
-                      font-semibold
-                      text-white
-                      hover:text-slate-600
-                    "
-                  >
-                    3d abstract illustration
-                  </a>
-                </h3>
-                <div class="a2b flex items-center justify-between">
-                  <div class="w-full">
-                    <div class="flex items-center">
-                      <div class="mr-2 h-8 w-full max-w-[32px] rounded-md">
-                        <img
-                          src="https://nft-tailwind.preview.uideck.com/images/picks/creator-08.png"
-                          alt="creator"
-                          class="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div class="w-full">
-                        <h4 class="text-xs font-semibold text-white">
-                          @Mariya_Hie...
-                          <span class="block text-xs font-medium text-zinc-400">
-                            creator
-                          </span>
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <h5 class="text-right text-xs font-semibold text-white">
-                      1.75 ETH
-                      <span class="block text-xs font-medium text-zinc-400">
-                        Current Bit
-                      </span>
-                    </h5>
-                  </div>
-                </div>
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-between
-                    border-t-2 border-slate-600
-                    pt-5
-                  "
-                >
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      bg-indigo-600
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      ease-in-out
-                      duration-150
-                      hover:opacity-90
-                      sm:px-5
-                    "
-                  >
-                    Place Bid
-                  </a>
-                  <a
-                    href="javascript:void(0)"
-                    class="
-                      flex
-                      items-center
-                      justify-center
-                      rounded-md
-                      py-7
-                      px-4
-                      text-sm
-                      font-semibold
-                      text-white
-                      hover:mb-6
-                      sm:px-5
-                    "
-                  >
-                    <span class="pr-1">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 4.5V6.75L12 3.75L9 0.75V3C7.4087 3 5.88258 3.63214 4.75736 4.75736C3.63214 5.88258 3 7.4087 3 9C3 10.1775 3.345 11.2725 3.93 12.195L5.025 11.1C4.6875 10.4775 4.5 9.75 4.5 9C4.5 7.80653 4.97411 6.66193 5.81802 5.81802C6.66193 4.97411 7.80652 4.5 9 4.5ZM14.07 5.805L12.975 6.9C13.305 7.53 13.5 8.25 13.5 9C13.5 10.1935 13.0259 11.3381 12.182 12.182C11.3381 13.0259 10.1935 13.5 9 13.5V11.25L6 14.25L9 17.25V15C10.5913 15 12.1174 14.3679 13.2426 13.2426C14.3679 12.1174 15 10.5913 15 9C15 7.8225 14.655 6.7275 14.07 5.805Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </span>
-                    View History
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4">
-            <div class="pt-8 text-center">
-              <a
-                href="javascript:void(0)"
-                class="
-                  font-bold
-                  items-center
-                  justify-center
-                  rounded-md
-                  border-2 border-white
-                  py-7
-                  px-7
-                  text-base
-                  font-semibold
-                  text-white
-                  ease-in-out
-                  duration-150
-                  hover:border-indigo-600 hover:bg-indigo-600
-                "
-              >
-                Load More...
-              </a>
-            </div>
-          </div>
+        <div class="-mx-4 flex flex-wrap">
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
+          <type-3-card />
         </div>
       </div>
     </section>
@@ -2173,120 +507,8 @@
           </p>
         </div>
         <div class="-mx-4 flex px-7">
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                a1X
-                ease-in-out
-                duration-150
-                hover:border-white hover:bg-white
-              "
-            >
-              <div
-                class="
-                  mb-5
-                  flex
-                  h-[72px]
-                  w-[72px]
-                  items-center
-                  justify-center
-                  rounded-b-full
-                  bg-[#FFF0E9]
-                "
-              >
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M29.75 25.5V26.9167C29.75 27.6681 29.4515 28.3888 28.9201 28.9201C28.3888 29.4515 27.6681 29.75 26.9167 29.75H7.08333C5.51083 29.75 4.25 28.475 4.25 26.9167V7.08333C4.25 6.33189 4.54851 5.61122 5.07986 5.07986C5.61122 4.54851 6.33189 4.25 7.08333 4.25H26.9167C27.6681 4.25 28.3888 4.54851 28.9201 5.07986C29.4515 5.61122 29.75 6.33189 29.75 7.08333V8.5H17C15.4275 8.5 14.1667 9.775 14.1667 11.3333V22.6667C14.1667 23.4181 14.4652 24.1388 14.9965 24.6701C15.5279 25.2015 16.2486 25.5 17 25.5H29.75ZM17 22.6667H31.1667V11.3333H17V22.6667ZM22.6667 19.125C22.1031 19.125 21.5626 18.9011 21.1641 18.5026C20.7656 18.1041 20.5417 17.5636 20.5417 17C20.5417 16.4364 20.7656 15.8959 21.1641 15.4974C21.5626 15.0989 22.1031 14.875 22.6667 14.875C23.2303 14.875 23.7708 15.0989 24.1693 15.4974C24.5678 15.8959 24.7917 16.4364 24.7917 17C24.7917 17.5636 24.5678 18.1041 24.1693 18.5026C23.7708 18.9011 23.2303 19.125 22.6667 19.125Z"
-                    fill="#FF766A"
-                  ></path>
-                </svg>
-              </div>
-              <h3
-                class="
-                  mb-2
-                  text-xl
-                  font-medium
-                  text-white
-                  transition-all
-                  ease-in-out
-                  duration-150
-                  group-hover:text-zinc-900
-                "
-              >
-                Set Up Your Wallet
-              </h3>
-              <p class="text-base font-medium text-zinc-400">
-                Lorem ipsum dolor sit amet consectetur smit.
-              </p>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                a1X
-                ease-in-out
-                duration-150
-                hover:border-white hover:bg-white
-              "
-            >
-              <div
-                class="
-                  mb-5
-                  flex
-                  h-[72px]
-                  w-[72px]
-                  items-center
-                  justify-center
-                  rounded-b-full
-                  bg-[#FFF6DD]
-                "
-              >
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4.25 15.5833H15.5833V4.25H4.25V15.5833ZM4.25 29.75H15.5833V18.4167H4.25V29.75ZM18.4167 29.75H29.75V18.4167H18.4167V29.75ZM18.4167 4.25V15.5833H29.75V4.25"
-                    fill="#F5B70A"
-                  ></path>
-                </svg>
-              </div>
-              <h3
-                class="
-                  mb-2
-                  text-xl
-                  font-medium
-                  text-white
-                  transition-all
-                  ease-in-out
-                  duration-150
-                  group-hover:text-zinc-900
-                "
-              >
-                Make Your Collection
-              </h3>
-              <p class="text-base font-medium text-zinc-400">
-                Lorem ipsum dolor sit amet consectetur smit.
-              </p>
-            </div>
-          </div>
+          <type-4-card :imageUrl="require('@/assets/img/icon-wallet.svg')" text="Lorem ipsum dolor sit amet consectetur smit." title="Contact" />
+         <type-4-card  :imageUrl="require('@/assets/img/icon-collection.svg')" text="Lorem ipsum dolor sit amet consectetur smit." title="Collection" />
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
             <div
               class="
@@ -2959,23 +1181,70 @@
 </template>
 
 <script>
-import HeaderMain from "@/components/HeaderMain"
-import SlidesCard from "@/components/SlidesCard"
+import HeaderMain from "@/components/HeaderMain";
+import MiniSlides from "@/components/cards/MiniSlides";
+import TinySlider from "@/components/elements/TinySlider";
+import Type2Card from "@/components/cards/Type2Card";
+
+import {
+  getCloudinaryImg,
+  getCloudinaryResponsiveBackground,
+} from "@/utilities/utilities.js";
+import { ref } from "vue";
+import Type3Card from './cards/Type3Card.vue';
+import Type4Card from './cards/Type4Card.vue';
+
 
 export default {
   name: "App",
+  reactiveBackground: ref(""),
+  resizeId: 0,
+  previousWindowSize: 0,
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.previousWindowSize = window.innerWidth;
+    this.reactiveBackground = getCloudinaryResponsiveBackground(
+      "background-right"
+    )
+      .format("auto")
+      .toURL();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
   data() {
-    this.$route.query.lang !== undefined ?  (this.$route.query.lang == 'fr' || this.$route.query.lang == 'fr' ? this.$i18n.locale = this.$route.query.lang : '' ) : '' ;
-    return {}
+    this.$route.query.lang !== undefined
+      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
+        ? (this.$i18n.locale = this.$route.query.lang)
+        : ""
+      : "";
+    return { getCloudinaryImg, reactiveBackground: this.reactiveBackground};
   },
   components: {
-    SlidesCard,
-    HeaderMain
+    HeaderMain,
+    MiniSlides,
+    TinySlider,
+    Type2Card,
+    Type3Card,
+    Type4Card,
   },
-  methods: {},
+  methods: {
+    handleResize: function () {
+      clearTimeout(this.resizeId);
+      this.resizeId = setTimeout(() => {
+        if (window.innerWidth > this.previousWindowSize) {
+          this.previousWindowSize = window.innerWidth;
+          let newUrl = getCloudinaryResponsiveBackground("background-right")
+            .format("auto")
+            .toURL();
+          if (newUrl != this.reactiveBackground) {
+            this.reactiveBackground = newUrl;
+          }
+        }
+      }, 500);
+    },
+  },
 };
 </script>
 <style>
-
-
 </style>
