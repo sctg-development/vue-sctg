@@ -3,7 +3,7 @@
         "company": "SCTG Développement",
         "greetings": "Développez vous avec nous. Construisons ensemble votre futur système.<br />Start your internet visibility.<br />Develop your B2B business with inspiring solutions.",
         "explore_now": "Explorez",
-        "upload_your_art": "Envoyez vos créatiosn",
+        "contact_us": "Contactez-nous",
         "references": "Références"
     },
     "nav": {
@@ -12,5 +12,8 @@
         "community": "Communauté",
         "pages": "Pages",
         "support": "Support"
+    },
+    "slide":{
+        "live_auctions": "Enchères en cours"
     }
 }
