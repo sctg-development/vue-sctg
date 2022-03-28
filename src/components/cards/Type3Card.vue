@@ -121,7 +121,7 @@
               text-sm
               font-semibold
               text-white
-              hover:mb-6
+              hover:text-indigo-600
               sm:px-5
             "
           >

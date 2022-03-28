@@ -490,14 +490,39 @@
           <type-3-card />
           <type-3-card />
           <type-3-card />
+                  <div class="w-full px-4">
+            <div class="pt-8 text-center">
+              <a
+                href="javascript:void(0)"
+                class="
+                inline-flex
+                  font-bold
+                  items-center
+                  justify-center
+                  rounded-md
+                  border-2 border-white
+                  py-3
+                  px-7
+                  text-base
+                  font-semibold
+                  text-white
+                  ease-in-out
+                  duration-150
+                  hover:border-indigo-600 hover:bg-indigo-600
+                "
+              >
+                Load More...
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="features" class="a1E[90px]">
+    <section id="features" class="pt-[90px]">
       <div class="w-full mx-auto px-4">
-        <div class="mx-auto a1K max-w-[650px] text-center">
+        <div class="mx-auto mb-10 max-w-[650px] text-center">
           <h2
-            class="mb-4 text-sm font-medium leading-5 text-white sm:text-[40px]"
+            class="mb-4 text-sm font-medium leading-5 text-white sm:text-5xl"
           >
             Core Features
           </h2>
@@ -506,144 +531,48 @@
             lacinia dolor, in pretium nunc. Morbi mollis arcu eget.
           </p>
         </div>
-        <div class="-mx-4 flex px-7">
-          <type-4-card :imageUrl="require('@/assets/img/icon-wallet.svg')" text="Lorem ipsum dolor sit amet consectetur smit." title="Contact" />
-         <type-4-card  :imageUrl="require('@/assets/img/icon-collection.svg')" text="Lorem ipsum dolor sit amet consectetur smit." title="Collection" />
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                a1X
-                ease-in-out
-                duration-150
-                hover:border-white hover:bg-white
-              "
-            >
-              <div
-                class="
-                  mb-5
-                  flex
-                  h-[72px]
-                  w-[72px]
-                  items-center
-                  justify-center
-                  rounded-b-full
-                  bg-[#EDF8F4]
-                "
-              >
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.0417 19.125L15.5833 23.375L20.5417 17L26.9167 25.5H7.08333L12.0417 19.125ZM29.75 26.9167V7.08333C29.75 5.51083 28.475 4.25 26.9167 4.25H7.08333C6.33189 4.25 5.61122 4.54851 5.07986 5.07986C4.54851 5.61122 4.25 6.33189 4.25 7.08333V26.9167C4.25 27.6681 4.54851 28.3888 5.07986 28.9201C5.61122 29.4515 6.33189 29.75 7.08333 29.75H26.9167C27.6681 29.75 28.3888 29.4515 28.9201 28.9201C29.4515 28.3888 29.75 27.6681 29.75 26.9167Z"
-                    fill="#06DE90"
-                  ></path>
-                </svg>
-              </div>
-              <h3
-                class="
-                  mb-2
-                  text-xl
-                  font-medium
-                  text-white
-                  transition-all
-                  ease-in-out
-                  duration-150
-                  group-hover:text-zinc-900
-                "
-              >
-                Add Your NFTs
-              </h3>
-              <p class="text-base font-medium text-zinc-400">
-                Lorem ipsum dolor sit amet consectetur smit.
-              </p>
-            </div>
-          </div>
-          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div
-              class="
-                mb-10
-                rounded
-                border border-slate-600
-                bg-slate-700
-                a1X
-                ease-in-out
-                duration-150
-                hover:border-white hover:bg-white
-              "
-            >
-              <div
-                class="
-                  mb-5
-                  flex
-                  h-[72px]
-                  w-[72px]
-                  items-center
-                  justify-center
-                  rounded-b-full
-                  bg-[#E1DDFF]
-                "
-              >
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.79168 9.91671C7.22809 9.91671 6.68759 9.69282 6.28907 9.29431C5.89056 8.89579 5.66668 8.35529 5.66668 7.79171C5.66668 7.22812 5.89056 6.68762 6.28907 6.28911C6.68759 5.89059 7.22809 5.66671 7.79168 5.66671C8.35526 5.66671 8.89576 5.89059 9.29428 6.28911C9.69279 6.68762 9.91668 7.22812 9.91668 7.79171C9.91668 8.35529 9.69279 8.89579 9.29428 9.29431C8.89576 9.69282 8.35526 9.91671 7.79168 9.91671ZM30.3308 16.405L17.5808 3.65504C17.0708 3.14504 16.3625 2.83337 15.5833 2.83337H5.66668C4.09418 2.83337 2.83334 4.09421 2.83334 5.66671V15.5834C2.83334 16.3625 3.14501 17.0709 3.66918 17.5809L16.405 30.3309C16.9292 30.8409 17.6375 31.1667 18.4167 31.1667C19.1958 31.1667 19.9042 30.8409 20.4142 30.3309L30.3308 20.4142C30.855 19.9042 31.1667 19.1959 31.1667 18.4167C31.1667 17.6234 30.8408 16.915 30.3308 16.405Z"
-                    fill="#5142FC"
-                  ></path>
-                </svg>
-              </div>
-              <h3
-                class="
-                  mb-2
-                  text-xl
-                  font-medium
-                  text-white
-                  transition-all
-                  ease-in-out
-                  duration-150
-                  group-hover:text-zinc-900
-                "
-              >
-                List Them For Sale
-              </h3>
-              <p class="text-base font-medium text-zinc-400">
-                Lorem ipsum dolor sit amet consectetur smit.
-              </p>
-            </div>
-          </div>
+        <div class="mt-6 -mx-4 flex px-7">
+          <type-4-card
+            :imageUrl="require('@/assets/img/icon-wallet.svg')"
+            text="Lorem ipsum dolor sit amet consectetur smit."
+            title="Contact"
+          />
+          <type-4-card
+            :imageUrl="require('@/assets/img/icon-collection.svg')"
+            text="Lorem ipsum dolor sit amet consectetur smit."
+            title="Collection"
+          />
+          <type-4-card
+            :imageUrl="require('@/assets/img/icon-mountain.svg')"
+            text="Lorem ipsum dolor sit amet consectetur smit."
+            title="Core features"
+          />
+          <type-4-card
+            :imageUrl="require('@/assets/img/icon-tag.svg')"
+            text="Lorem ipsum dolor sit amet consectetur smit."
+            title="Tag list"
+          />
         </div>
       </div>
     </section>
     <section class="pt-8 a1I[60px]">
-      <div class="w-full mx-auto px-4">
-        <div class="py-1 border-t border-white px-1.5">
+      <div class="w-full mx-auto px-10">
+        <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
-              Popular Collection
+              Next
             </h2>
             <a
               href="javascript:void(0)"
               class="
                 mb-5
-                font-bold
                 items-center
                 justify-center
                 rounded-md
                 bg-indigo-600
                 font-semibold
                 px-6
+                py-2
                 text-base
                 font-semibold
                 text-white
@@ -652,7 +581,7 @@
                 hover:opacity-90
               "
             >
-              Explore More
+              View All
             </a>
           </div>
         </div>
@@ -1191,9 +1120,8 @@ import {
   getCloudinaryResponsiveBackground,
 } from "@/utilities/utilities.js";
 import { ref } from "vue";
-import Type3Card from './cards/Type3Card.vue';
-import Type4Card from './cards/Type4Card.vue';
-
+import Type3Card from "./cards/Type3Card.vue";
+import Type4Card from "./cards/Type4Card.vue";
 
 export default {
   name: "App",
@@ -1218,7 +1146,7 @@ export default {
         ? (this.$i18n.locale = this.$route.query.lang)
         : ""
       : "";
-    return { getCloudinaryImg, reactiveBackground: this.reactiveBackground};
+    return { getCloudinaryImg, reactiveBackground: this.reactiveBackground };
   },
   components: {
     HeaderMain,
