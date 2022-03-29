@@ -279,6 +279,7 @@
                   text-sm
                   font-medium
                   text-white
+                  text-ellipsis
                   outline-none
                   focus:border-indigo-600
                 "
