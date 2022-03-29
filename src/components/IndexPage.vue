@@ -361,7 +361,8 @@
         </div>
       </div>
     </section>
-        <section class="pt-8 ">
+    -->
+    <section class="pt-8">
       <div
         class="
           w-full
@@ -377,7 +378,7 @@
         <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
-              {{$t('message.servicies')}}
+              {{ $t("message.servicies") }}
             </h2>
             <a
               href="javascript:void(0)"
@@ -428,7 +429,7 @@
           <div class="-mx-4 flex">
             <div class="w-full px-4">
               <h2 class="mb-5 text-3xl font-bold text-white">
-                {{ $t("slide.creations") }}
+                {{ $t("slide.web_creations") }}
               </h2>
             </div>
           </div>
@@ -437,63 +438,99 @@
           <tiny-slider>
             <type-2-card
               title="innnov analysis"
-              :imgurl="getCloudinaryImg('ias-web', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('netadmin', 50,50).toURL()"
+              :imgurl="getCloudinaryImg('ias-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
               :lightboxUrl="getCloudinaryImg('ias-web').toURL()"
               author="@innov"
               authorTitle="dev"
-              baseMessage="design hosting"
-              value="17"
+              baseMessage="design-hosting"
+              value="wordpress"
             />
             <type-2-card
               title="silo smeg"
-              :imgurl="getCloudinaryImg('smeg-web', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('web-design-tools', 50,50).toURL()"
+              :imgurl="getCloudinaryImg('smeg-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
               :lightboxUrl="getCloudinaryImg('smeg-web').toURL()"
               author="@smeg"
               authorTitle="dev"
-              baseMessage="design"
-              value="32"
+              baseMessage="design-hosting"
+              value="react"
             />
             <type-2-card
               title="high can fly"
-              :imgurl="getCloudinaryImg('highcanfly-web', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('netadmin', 50,50).toURL()"
+              :imgurl="getCloudinaryImg('highcanfly-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
               :lightboxUrl="getCloudinaryImg('highcanfly-web').toURL()"
-              author="@Ronan"
+              author="@highcanfly"
               authorTitle="dev"
-              baseMessage="designer"
-               value="12"
+              baseMessage="design"
+              value="vue3"
             />
             <type-2-card
               title="cdvl 59"
-              :imgurl="getCloudinaryImg('cdvl59-web', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('Logo_SCTG_carre_3D', 50,50).toURL()"
+              :imgurl="getCloudinaryImg('cdvl59-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
               :lightboxUrl="getCloudinaryImg('cdvl59-web').toURL()"
-              author="@Ronan"
+              author="@cdvl59"
               authorTitle="dev"
-              baseMessage="conceptor"
-               value="23"
+              baseMessage="design"
+              value="vue3"
             />
             <type-2-card
-              title="system design"
-              :imgurl="getCloudinaryImg('web-design-tools', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('netadmin', 50,50).toURL()"
-              :lightboxUrl="getCloudinaryImg('web-design-tools').toURL()"
-              author="@Briac_Lem"
+              title="vdo com"
+              :imgurl="getCloudinaryImg('vdocom-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
+              :lightboxUrl="getCloudinaryImg('vdocom-web').toURL()"
+              author="@vdocom"
               authorTitle="dev"
-              baseMessage="designer"
-               value="17"
+              baseMessage="design-hosting"
+              value="php"
             />
             <type-2-card
-              title="Network administration"
-              :imgurl="getCloudinaryImg('netadmin', 250,250).toURL()"
-              :miniImgurl="getCloudinaryImg('web-design-tools', 50,50).toURL()"
-              :lightboxUrl="getCloudinaryImg('netadmin').toURL()"
-              author="@Briac_Lem"
+              title="cfd marche et vol"
+              :imgurl="getCloudinaryImg('cfdmv-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
+              :lightboxUrl="getCloudinaryImg('cfdmv-web').toURL()"
+              author="@ffvl"
               authorTitle="dev"
-              baseMessage="administrator"
-              value="32"
+              baseMessage="web app"
+              value="js"
+            />
+            <type-2-card
+              title="tma lille 3.1"
+              :imgurl="getCloudinaryImg('tmalille31-web', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
+              :lightboxUrl="getCloudinaryImg('tmalille31-web').toURL()"
+              author="@cdvl59"
+              authorTitle="dev"
+              baseMessage="laravel app"
+              value="laravel"
+            />
+            <type-2-card
+              title="lorany"
+              :imgurl="getCloudinaryImg('lorany-dolly', 250, 250).toURL()"
+              :miniImgurl="
+                getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()
+              "
+              :lightboxUrl="getCloudinaryImg('lorany-dolly').toURL()"
+              author="@lorany"
+              authorTitle="dev"
+              baseMessage="dolibarr-hosting"
+              value="dolibarr"
             />
           </tiny-slider>
         </div>
@@ -528,6 +565,7 @@
         </div>
       </div>
     </section>
+    <!--
     <section class="w-full pt-12">
       <div
         class="
@@ -604,6 +642,7 @@
         </div>
       </div>
     </section>
+    -->
     <section id="features" class="pt-[90px]">
       <div
         class="
@@ -664,7 +703,7 @@ import TinySlider from "@/components/elements/TinySlider";
 import Type2Card from "@/components/cards/Type2Card";
 import WebDesignCard from "@/components/cards/WebDesignCard.vue";
 import ServerAdministrationCard from "@/components/cards/ServerAdministrationCard.vue";
-import Type3Card from "./cards/Type3Card.vue";
+//import Type3Card from "./cards/Type3Card.vue";
 import Type4Card from "./cards/Type4Card.vue";
 import {
   getCloudinaryImg,
@@ -702,7 +741,7 @@ export default {
     MiniSlides,
     TinySlider,
     Type2Card,
-    Type3Card,
+ //   Type3Card,
     Type4Card,
     FooterMain,
     WebDesignCard,

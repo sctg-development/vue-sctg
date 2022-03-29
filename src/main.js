@@ -31,6 +31,8 @@ const app = createApp(App);
 window.app = app;
 app.use(i18n).use(router);
 app.mount("#app");
+
+//Global lightbox function because vue events are not working in slider
 app.config.globalProperties.$lightbox = (url) => {
   if (url !== undefined) {
     basiclightbox
