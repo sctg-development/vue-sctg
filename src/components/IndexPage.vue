@@ -522,7 +522,7 @@
       <div class="w-full mx-auto px-4">
         <div class="mx-auto mb-10 max-w-[650px] text-center">
           <h2
-            class="mb-4 text-sm font-medium leading-5 text-white sm:text-5xl"
+            class="mb-4 text-4xl font-semibold leading-5 text-white sm:text-5xl"
           >
             Core Features
           </h2>
@@ -531,7 +531,7 @@
             lacinia dolor, in pretium nunc. Morbi mollis arcu eget.
           </p>
         </div>
-        <div class="mt-6 -mx-4 flex px-7">
+        <div class="mt-6 -mx-4 flex flex-wrap px-7">
           <type-4-card
             :imageUrl="require('@/assets/img/icon-wallet.svg')"
             text="Lorem ipsum dolor sit amet consectetur smit."
@@ -555,7 +555,7 @@
         </div>
       </div>
     </section>
-    <section class="pt-8 a1I[60px]">
+    <section class="pt-8 pb-[60px]">
       <div class="w-full mx-auto px-10">
         <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
