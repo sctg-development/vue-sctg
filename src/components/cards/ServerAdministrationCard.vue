@@ -15,7 +15,7 @@
       <div class="w-2/3 mx-3">
         <div class="mb-6 w-full">
           <img
-            :src="getCloudinaryImg('web-design', 300).toURL()"
+            :src="getCloudinaryImg('unix-admin', 300).toURL()"
             alt="Web design"
             class="rounded-xl w-full"
           />
@@ -24,14 +24,14 @@
       <div class="w-1/3 mx-3">
         <div class="mb-6 w-full bg-slate-300 rounded-lg">
           <img
-            :src="getCloudinaryImg('responsive-web-design', 200).toURL()"
+            :src="getCloudinaryImg('netadmin', 200,112).toURL()"
             alt="Responsive web design"
-            class="w-full"
+            class="w-full rounded-lg"
           />
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="require('@/assets/img/html5-react-vue.svg')"
+            :src="require('@/assets/img/admin-tools.svg')"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -52,7 +52,7 @@
             xl:text-2xl
           "
         >
-          {{ $t("message.web_design") }}
+          {{ $t("message.sysadmin") }}
         </a>
       </h3>
       <button
@@ -72,7 +72,7 @@
       </div>
       <div class="w-full">
         <h4 class="text-base font-semibold text-white">
-          webdesign@…
+          sysadmin@…
           <span class="block text-sm font-medium text-zinc-400"> SCTG Team </span>
         </h4>
       </div>

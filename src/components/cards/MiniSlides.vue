@@ -1,41 +1,49 @@
 <template> <!-- eslint-disable vue/no-multiple-template-root-->
   <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-    subtitle="12.25 ETH"
-    title="@Elon_Mask"
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@ronan"
+    subtitle="dev"
   />
   <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-03.png"
-    subtitle="9.89 ETH"
-    title="@Hiliya_Farah"
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@audrey"
+    subtitle="admin"
   />
   <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-04.png"
-    subtitle="2.09 ETH"
-    title="@Wilium_Dev"
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@françois"
+    subtitle="admin"
   />
   <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-01.png"
-    subtitle="14.55 ETH"
-    title="@Devid_Miller"
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@briac"
+    subtitle="design"
   />
   <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-    subtitle="12.25 ETH"
-    title="@Wilium_Dev"
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@klervi"
+    subtitle="design"
   />
-    <mini-card
-    imgurl="https://nft-tailwind.preview.uideck.com/images/artists/image-02.png"
-    subtitle="24 ETH"
-    title="@briac_Lem"
+  <mini-card
+    :imgurl="getCloudinaryImg('formula', 70,70).toURL()"
+    title="@vincent"
+    subtitle="net"
   />
 </template>
 <script>
 import MiniCard from "@/components/cards/Type1Card.vue";
+import {
+  getCloudinaryImg,
+} from "@/utilities/utilities.js";
+
 export default {
-  setup() {},
+  setup() {
+    return {
+      getCloudinaryImg,
+      }
+  },
   components: {
-    MiniCard,
+    MiniCard
   },
 };
 </script>
