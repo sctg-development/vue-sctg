@@ -5,8 +5,8 @@
         <img
           :src="imgurl"
           alt="auctions"
-          class="w-full"
-          @click="lightBox(lightboxUrl)"
+          class="w-full hover:cursor-pointer"
+          :onclick="`window.app.config.globalProperties.$lightbox('${lightboxUrl}')`"
         />
         <button
           class="
@@ -31,7 +31,7 @@
       <div>
         <h3>
           <a
-            href="javascript:void(0)"
+            :onclick="`window.app.config.globalProperties.$lightbox('${lightboxUrl}')`"
             class="
               mb-3
               inline-block
@@ -39,6 +39,7 @@
               font-semibold
               text-white
               hover:text-slate-600
+              hover:cursor-pointer
             "
           >
             {{ title }}
