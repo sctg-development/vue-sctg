@@ -19,7 +19,7 @@
                 <img
                   :src="require('@/assets/img/Logo_SCTG_long.svg')"
                   alt="SCTG logo"
-              class="h-12 max-w-full contrast-100 brightness-100"
+                  class="h-12 max-w-full contrast-100 brightness-100"
                 />
               </a>
               <p class="mb-6 text-base font-medium text-zinc-400">
@@ -267,7 +267,7 @@
               <input
                 type="email"
                 name="newslettersEmail"
-                placeholder="Enter your email address"
+                :placeholder="$t('message.enter_your_email_address')"
                 class="
                   h-12
                   w-full
@@ -290,10 +290,10 @@
                 class="
                   absolute
                   right-[6px]
-                  top-1/2
+                  -top-1/4
                   flex
-                  a2k
-                  w-5
+                  h-9
+                  w-9
                   translate-y-1/2
                   items-center
                   justify-center

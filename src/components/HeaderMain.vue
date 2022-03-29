@@ -93,7 +93,7 @@
                       text-xl
                       font-semibold
                       text-white
-                      group-hover:text-white
+                      hover:text-slate-400
                       lg:mr-0 lg:font-bold lg:py-6 lg:a12
                     "
                   >
@@ -110,7 +110,7 @@
                       text-xl
                       font-semibold
                       text-slate-400
-                      group-hover:text-white
+                      hover:text-white
                       lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                       xl:ml-12
                     "
@@ -130,7 +130,7 @@
                       text-xl
                       font-semibold
                       text-slate-400
-                      group-hover:text-white
+                      hover:text-white
                       lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                       xl:ml-12
                     "
@@ -161,7 +161,7 @@
                       after:a19
                       after:a1a
                       after:a1b
-                      group-hover:text-white
+                      hover:text-white
                       lg:mr-0
                       lg:ml-8
                       lg:font-bold
@@ -312,7 +312,7 @@
                       text-xl
                       font-semibold
                       text-slate-400
-                      group-hover:text-white
+                      hover:text-white
                       lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12
                       xl:ml-12
                     "
