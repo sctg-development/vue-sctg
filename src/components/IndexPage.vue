@@ -36,6 +36,7 @@
           sm:max-w-screen-sm
           md:max-w-screen-md
           lg:max-w-screen-lg
+          xl:max-w-screen-xl
           2xl:max-w-screen-xl
           px-4
         "
@@ -360,11 +361,103 @@
         </div>
       </div>
     </section>
-    <section class="pt-5">
-      <div class="w-full mx-auto           sm:max-w-screen-sm
+    <section class="pt-12">
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
           md:max-w-screen-md
           lg:max-w-screen-lg
-          2xl:max-w-screen-xl px-10">
+          xl:max-w-screen-xl
+          2xl:max-w-screen-xl
+          px-10
+        "
+      >
+        <div class="py-1 border-b border-white px-1.5 border-opacity-10">
+          <div class="-mx-4 flex">
+            <div class="w-full px-4">
+              <h2 class="mb-5 text-3xl font-bold text-white">
+                {{ $t("message.actions") }}
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <tiny-slider>
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+            <type-2-card
+              title="22-Bit Digital #551"
+              imgurl=""
+              author="@Briac_Lem"
+              price="5.49 ETH"
+              time="05 : 15 : 07 : 45"
+            />
+          </tiny-slider>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5">
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
+          md:max-w-screen-md
+          lg:max-w-screen-lg
+          xl:max-w-screen-xl
+          2xl:max-w-screen-xl
+          px-10
+        "
+      >
         <div class="py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="-mx-4 flex">
             <div class="w-full px-4">
@@ -381,87 +474,19 @@
         </div>
       </div>
     </section>
-    <section class="pt-12">
-      <div class="w-full mx-auto           sm:max-w-screen-sm
-          md:max-w-screen-md
-          lg:max-w-screen-lg
-          2xl:max-w-screen-xl px-10">
-        <div class="py-1 border-b border-white px-1.5 border-opacity-10">
-          <div class="-mx-4 flex">
-            <div class="w-full px-4">
-              <h2 class="mb-5 text-3xl font-bold text-white">
-                {{ $t("slide.live_auctions") }}
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="relative">
-          <tiny-slider>
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-            <type-2-card
-              title="22-Bit Digital #551"
-              imgurl=""
-              author="@Briac_Lem"
-              price="5.49 ETH"
-              time="05 : 15 : 07 : 45"
-            />
-          </tiny-slider>
-        </div>
-      </div>
-    </section>
     <section class="w-full pt-12">
-      <div class="w-full mx-auto           sm:max-w-screen-sm
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
           md:max-w-screen-md
           lg:max-w-screen-lg
-          2xl:max-w-screen-xl px-10">
+          xl:max-w-screen-xl
+          2xl:max-w-screen-xl
+          px-10
+        "
+      >
         <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
@@ -499,12 +524,12 @@
           <type-3-card />
           <type-3-card />
           <type-3-card />
-                  <div class="w-full px-4">
+          <div class="w-full px-4">
             <div class="pt-8 text-center">
               <a
                 href="javascript:void(0)"
                 class="
-                inline-flex
+                  inline-flex
                   font-bold
                   items-center
                   justify-center
@@ -528,10 +553,18 @@
       </div>
     </section>
     <section id="features" class="pt-[90px]">
-      <div class="w-full mx-auto           sm:max-w-screen-sm
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
           md:max-w-screen-md
           lg:max-w-screen-lg
-          2xl:max-w-screen-xl px-4">
+          xl:max-w-screen-xl
+          2xl:max-w-screen-xl
+          px-4
+        "
+      >
         <div class="mx-auto mb-10 max-w-[650px] text-center">
           <h2
             class="mb-4 text-4xl font-semibold leading-5 text-white sm:text-5xl"
@@ -568,10 +601,18 @@
       </div>
     </section>
     <section class="pt-8 pb-[60px]">
-      <div class="w-full mx-auto           sm:max-w-screen-sm
+      <div
+        class="
+          w-full
+          mx-auto
+          sm:max-w-screen-sm
           md:max-w-screen-md
           lg:max-w-screen-lg
-          2xl:max-w-screen-xl px-10">
+          xl:max-w-screen-xl
+          2xl:max-w-screen-2xl
+          px-10
+        "
+      >
         <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
@@ -600,43 +641,43 @@
             </a>
           </div>
         </div>
-        <div class="-mx-4 flex px-7">
+        <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4 lg:w-1/2">
             <div
               class="
                 mb-10
-                rounded
+                rounded-xl
                 border border-slate-600
                 bg-slate-700
-                a3t
-                md:a1X
-                lg:a3t
-                xl:a1X
+                p-3
+                md:p-3
+                lg:p-5
+                xl:p-5
               "
             >
-              <div class="a2I flex px-7">
-                <div class="a18/3 text-base">
-                  <div class="a2b w-full">
+              <div class="-mx-3 flex">
+                <div class="w-2/3 mx-3">
+                  <div class="mb-6 w-full">
                     <img
-                      src="https://nft-tailwind.preview.uideck.com/images/collections/image-01.svg"
-                      alt="collection"
-                      class="w-full"
+                      :src="getCloudinaryImg('web-design', 300).toURL()"
+                      alt="Web design"
+                      class="rounded-xl w-full"
                     />
                   </div>
                 </div>
-                <div class="w-1/3 text-base">
-                  <div class="a2b w-full">
+                <div class="w-1/3 mx-3">
+                  <div class="mb-6 w-full bg-slate-300 rounded-lg">
                     <img
-                      src="https://nft-tailwind.preview.uideck.com/images/collections/image-02.svg"
-                      alt="collection"
+                      :src="getCloudinaryImg('responsive-web-design', 200).toURL()"
+                      alt="Responsive web design"
                       class="w-full"
                     />
                   </div>
-                  <div class="a2b w-full">
+                  <div class="mb-6 w-full bs-slate-100">
                     <img
-                      src="https://nft-tailwind.preview.uideck.com/images/collections/image-03.svg"
+                      :src="require('@/assets/img/html5-react-vue.svg')"
                       alt="collection"
-                      class="w-full"
+                      class="rounded-lg w-full"
                     />
                   </div>
                 </div>
@@ -655,11 +696,11 @@
                       xl:text-2xl
                     "
                   >
-                    Creative 3d illustration
+                    {{ $t("message.web_design") }}
                   </a>
                 </h3>
                 <button
-                  class="font-bold items-center rounded-md bg-white px-2 py-1"
+                  class="inline-flex font-bold items-center rounded-md bg-white px-2 py-1"
                 >
                   <svg
                     width="14"
@@ -681,7 +722,7 @@
               <div class="flex items-center">
                 <div
                   class="
-                    a3u
+                    mr-3
                     h-[46px]
                     w-full
                     max-w-[46px]
@@ -713,15 +754,15 @@
                 rounded
                 border border-slate-600
                 bg-slate-700
-                a3t
-                md:a1X
-                lg:a3t
-                xl:a1X
+                p-5
+                md:p-7
+                lg:p-5
+                xl:p-7
               "
             >
               <div class="a2I flex px-7">
                 <div class="w-1/3 text-base">
-                  <div class="a2b w-full">
+                  <div class="mb-6 w-full">
                     <img
                       src="https://nft-tailwind.preview.uideck.com/images/collections/image-04.svg"
                       alt="collection"
@@ -732,7 +773,7 @@
                 <div class="a18/3 text-base">
                   <div class="a2I flex px-7">
                     <div class="w-1/2 text-base">
-                      <div class="a2b w-full">
+                      <div class="mb-6 w-full">
                         <img
                           src="https://nft-tailwind.preview.uideck.com/images/collections/image-05.svg"
                           alt="collection"
@@ -741,7 +782,7 @@
                       </div>
                     </div>
                     <div class="w-1/2 text-base">
-                      <div class="a2b w-full">
+                      <div class="mb-6 w-full">
                         <img
                           src="https://nft-tailwind.preview.uideck.com/images/collections/image-06.svg"
                           alt="collection"
@@ -750,7 +791,7 @@
                       </div>
                     </div>
                     <div class="w-full text-base">
-                      <div class="a2b w-full">
+                      <div class="mb-6 w-full">
                         <img
                           src="https://nft-tailwind.preview.uideck.com/images/collections/image-07.svg"
                           alt="collection"
@@ -801,7 +842,7 @@
               <div class="flex items-center">
                 <div
                   class="
-                    a3u
+                    mr-3
                     h-[46px]
                     w-full
                     max-w-[46px]
@@ -847,6 +888,7 @@ import {
 import { ref } from "vue";
 import Type3Card from "./cards/Type3Card.vue";
 import Type4Card from "./cards/Type4Card.vue";
+const backgroundImage = "background-left";
 
 export default {
   name: "App",
@@ -856,9 +898,7 @@ export default {
   created() {
     window.addEventListener("resize", this.handleResize);
     this.previousWindowSize = window.innerWidth;
-    this.reactiveBackground = getCloudinaryResponsiveBackground(
-      "background-right"
-    )
+    this.reactiveBackground = getCloudinaryResponsiveBackground(backgroundImage)
       .format("auto")
       .toURL();
   },
@@ -888,7 +928,7 @@ export default {
       this.resizeId = setTimeout(() => {
         if (window.innerWidth > this.previousWindowSize) {
           this.previousWindowSize = window.innerWidth;
-          let newUrl = getCloudinaryResponsiveBackground("background-right")
+          let newUrl = getCloudinaryResponsiveBackground(backgroundImage)
             .format("auto")
             .toURL();
           if (newUrl != this.reactiveBackground) {
