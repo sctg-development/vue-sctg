@@ -11,7 +11,7 @@
         px-4
       "
     >
-      <div class="-mx-4 flex px-7">
+      <div class="-mx-4 flex flex-wrap px-7">
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/3">
           <div class="mb-16">
             <div class="max-w-[300px]">
