@@ -22,7 +22,10 @@
             py-1
           "
         >
-          <img :src="require('@/assets/img/heart.svg')" />
+          <img
+            class="w-[14px] h-[14px]"
+            :src="require('@/assets/img/techno.svg')"
+          />
           <span class="pl-1 text-xs font-semibold text-zinc-900">
             {{ value }}
           </span>
@@ -39,6 +42,7 @@
               font-semibold
               text-white
               hover:text-slate-600
+              capitalize
               hover:cursor-pointer
             "
           >
@@ -73,6 +77,7 @@
           </div>
         </div>
         <div
+          :onclick="`window.app.config.globalProperties.$lightbox('${lightboxUrl}')`"
           class="
             flex
             items-center
@@ -83,6 +88,7 @@
             text-base
             font-semibold
             text-white
+            hover:bg-indigo-600 hover:cursor-pointer
           "
         >
           {{ baseMessage }}
