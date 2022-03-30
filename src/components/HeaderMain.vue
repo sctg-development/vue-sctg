@@ -33,41 +33,15 @@
         </div>
         <div class="flex w-full items-center justify-between mx-4">
           <div>
-            <button
-              @click="navbarOpen = !navbarOpen"
-              :class="navbarOpen && 'navbarTogglerActive'"
-              id="navbarToggler"
-              name="navbarToggler"
-              aria-label="navbarToggler"
-              class="
-                absolute
-                px-6
-                top-1/2
-                block
-                -translate-y-1/2
-                rounded-lg
-                text-base
-                pfont-semibold
-                text-[40px]
-                focus:text-white
-                lg:hidden
-              "
-            >
-              <span
-                :class="navbarOpen && 'aB aC top-2'"
-                class="relative max-w-[1320px] block w-[30px] justify-between"
-              ></span>
-              <span
-                :class="navbarOpen && 'w-60'"
-                class="relative max-w-[1320px] block w-[30px] justify-between"
-              ></span>
-              <span
-                :class="navbarOpen && 'aD[-8px] max-w-full'"
-                class="relative max-w-[1320px] block w-[30px] justify-between"
-              ></span>
-            </button>
+        <button
+          class="self-start cursor-pointer text-white text-4xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none absolute top-2 right-2"
+          type="button"
+          @click="navbarOpen = !navbarOpen"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
             <nav
-              :class="!navbarOpen && 'hidden'"
+              :class="navbarOpen ? 'block' : 'hidden'"
               id="navbarCollapse"
               class="
                 absolute
@@ -407,9 +381,9 @@
               </div>
             </div>
             <a
-              href="connect-wallet.html"
+              href="/"
               class="
-                flex
+                hidden lg:flex
                 whitespace-nowrap
                 items-center
                 rounded-md
