@@ -13,7 +13,7 @@
         "web_design": "Web design",
         "sysadmin": "System administration",
         "services": "Services",
-        "us": "Us…",
+        "us": "With us",
         "client": "Customer",
         "news": "News",
         "company_legal": "Legal",
@@ -48,5 +48,18 @@
         "services": "Services",
         "job_opportunitues": "Job opportunities",
         "suscribe": "Subscribe"     
+    },
+    "websites":{
+        "latest_sites":"Our latest creations",
+        "webdev":"From simple WordPress websites and CMS websites to bespoke web development and large eCommerce solutions. With responsive design and a full package service, including website management, copywriting and photography, we’ll help you be seen.",
+        "seo":"Make it easy for your next customer to find you online with web SEO. On-page search engine optimisation and our SEO campaigns will improve your online visibility and your google ranking, helping you convert more browsers into customers.",
+        "web_development": "Web design & Development",
+        "seo_title": "SEO Optimization",
+        "together_title": "Build together",
+        "together": "You’re an integral part of the process.<br/><br/> We begin our process with a discovery phase. The better we understand your business, the better product we can deliver. Your website will grow as you grow.",
+        "webdesign-email": "web-design@sctg.cf",
+        "webdesign-phone": "",
+        "webdesign-open-days": "Open from Mo. Till Fri.",
+        "webdesign-open-hours": "09.00 - 18.00"
     }
 }

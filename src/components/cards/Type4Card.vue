@@ -37,11 +37,9 @@
                   duration-150
                   group-hover:text-zinc-900
                 "
-              >
-                {{title}}
-              </h3>
-              <p class="text-base font-medium text-zinc-400">
-                {{text}}
+                 v-html="title"
+              />
+              <p class="text-base font-medium text-zinc-400" v-html="text">
               </p>
             </div>
           </div>
