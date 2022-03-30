@@ -85,7 +85,7 @@
               <ul class="lg:flex">
                 <li class="relative">
                   <a
-                    href="index.html"
+                    href="/#top"
                     class="
                       px-4
                       flex
@@ -102,7 +102,7 @@
                 </li>
                 <li class="relative">
                   <a
-                    href="explore-items.html"
+                    href="/#services"
                     class="
                       px-4
                       flex
@@ -115,14 +115,12 @@
                       xl:ml-12
                     "
                   >
-                    {{$t("nav.explore")}}
+                    {{$t("nav.services")}}
                   </a>
                 </li>
                 <li class="relative">
                   <a
-                    href="https://discord.com/invite/SxNNgXBAQS"
-                    target="_blank"
-                    rel="nofollow"
+                    href="/#web-design"
                     class="
                       px-8
                       flex
@@ -135,7 +133,7 @@
                       xl:ml-12
                     "
                   >
-                    {{$t("nav.community")}}
+                    {{$t("nav.web")}}
                   </a>
                 </li>
                 <li class="submenu-item relative">

@@ -12,14 +12,21 @@
         "team": "Team",
         "web_design": "Web design",
         "sysadmin": "Administration système",
-        "servicies": "Services"
+        "services": "Services",
+        "us": "Nous…",
+        "client": "Client",
+        "news": "News",
+        "company_legal": "Informations légales",
+        "about_us": "À propos"
         },
     "nav": {
         "home": "Accueil",
         "explore": "Explorer",
         "community": "Communauté",
         "pages": "Pages",
-        "support": "Support"
+        "support": "Support",
+        "services": "Services",
+        "web": "Web"
     },
     "slide":{
         "live_auctions": "Enchères en cours",
@@ -28,6 +35,13 @@
     "services":{
         "design_hosting": "création-gestion",
         "design":"création",
-        "web_app":"appli web"
+        "web_app":"appli web",
+        "erp_integration": "Integration d'ERP"
+    },
+    "footer":{
+        "about_us": "À propos",
+        "services": "Services",
+        "job_opportunitues": "Carrières",
+        "suscribe": "Abonnez-vous"   
     }
 }
