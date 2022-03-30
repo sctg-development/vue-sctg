@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-slate-700 pt-24 inline-block w-full mt-8 bottom-0 right-0">
+  <footer class="bg-slate-800 pt-24 inline-block w-full mt-8 bottom-0 right-0">
     <div
       class="
         w-full
