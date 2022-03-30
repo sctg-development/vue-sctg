@@ -9,7 +9,7 @@ module.exports = {
     "./src/**/*.vue",
     "./src/*.vue",
   ],
-  safelist: (process.env.SANITY_DATASET === 'production') ? [] : [{ pattern: /.*/ }],
+  safelist: (process.env.__DEBUG__ === '1') ? [{ pattern: /.*/ }] : [],
   theme: {
     extend: {
       fontFamily: {
