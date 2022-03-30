@@ -12,14 +12,21 @@
         "team": "Team",
         "web_design": "Web design",
         "sysadmin": "System administration",
-        "servicies": "Servicies"
-    },
+        "services": "Services",
+        "us": "Us…",
+        "client": "Customer",
+        "news": "News",
+        "company_legal": "Legal",
+        "about_us": "About us"
+        },
     "nav": {
         "home": "Home",
         "explore": "Explore",
         "community": "Community",
         "pages": "Pages",
-        "support": "Support"
+        "support": "Support",
+        "services": "Services",
+        "web": "Web"
     },
     "slide":{
         "live_auctions": "Live Auctions",
@@ -28,11 +35,18 @@
     "services":{
         "design_hosting": "design-hosting",
         "design":"design",
-        "web_app":"web app"
+        "web_app":"web app",
+        "erp_integration": "ERP integration"
     },
     "dev":{
         "lorem9": "Eos assumenda saepe in quidem veniam et repellendus consequatur.",
         "lorem15":"Lorem ipsum dolor sit amet. Aut rerum nesciunt et dolores sint non nesciunt sunt.",
         "lorem50": "Lorem ipsum dolor sit amet. Est pariatur vitae et quasi soluta aut tempora galisum et omnis voluptatem est laboriosam corrupti. Qui quia deleniti vel exercitationem omnis sit officiis vitae et ipsum possimus vel odit dolorem. Eos adipisci impedit aut consequatur quod eos fugiat laborum ut nihil saepe et galisum galisum hic molestiae assumenda saepe corrupti."
+    },
+    "footer":{
+        "about_us": "About us",
+        "services": "Services",
+        "job_opportunitues": "Job opportunities",
+        "suscribe": "Subscribe"     
     }
 }

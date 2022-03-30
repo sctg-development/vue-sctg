@@ -13,8 +13,18 @@ const i18n = createI18n({
 })
 const routes = [
   {
+    path: "/demo",
+    component: () => import("@/views/SinglePage.vue"),
+    name: 'demo',
+  },
+  {
+    path: "/web",
+    component: () => import("@/views/WebDesignPage.vue"),
+    name: 'web',
+  },
+  {
     path: "/",
-    component: () => import("@/components/IndexPage.vue"),
+    component: () => import("@/views/IndexPage.vue"),
     name: 'index',
   }
 ];
