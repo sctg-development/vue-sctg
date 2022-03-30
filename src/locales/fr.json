@@ -1,10 +1,11 @@
 {
     "message": {
         "company": "SCTG Développement",
-        "greetings": "Développez vous avec nous. Construisons ensemble votre futur système.<br />Start your internet visibility.<br />Develop your B2B business with inspiring solutions.",
+        "greetings": "Développez vous avec nous. Construisons ensemble votre futur système.<br />Démarrez votre visibilité sur Internet.<br />Développez vos opportunités B2B avec des solutions inspirantes.",
         "explore_now": "Explorez",
         "contact_us": "Contactez-nous",
         "references": "Références",
+        "connect": "Connexion",
         "all_rights_reserved": "Tous droits réservés",
         "enter_your_email_address": "Entrez votre email",
         "actions": "Actions",
@@ -23,5 +24,10 @@
     "slide":{
         "live_auctions": "Enchères en cours",
         "web_creations": "Créations Web"
+    },
+    "services":{
+        "design_hosting": "création-gestion",
+        "design":"création",
+        "web_app":"appli web"
     }
 }

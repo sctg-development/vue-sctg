@@ -23,8 +23,7 @@
                 />
               </a>
               <p class="mb-6 text-base font-medium text-zinc-400">
-                Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod
-                tempor incididunt ut labore et dolore.
+                {{$t('dev.lorem15')}}
               </p>
               <div class="flex items-center">
                 <a
@@ -101,7 +100,7 @@
         </div>
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/4">
           <div class="mb-16">
-            <h2 class="mb-8 text-2xl font-medium text-white">Company</h2>
+            <h2 class="mb-8 text-2xl font-medium text-white">{{$t('message.us')}}</h2>
             <ul>
               <li>
                 <a
@@ -118,7 +117,7 @@
                     hover:text-white
                   "
                 >
-                  About company
+                    {{$t('footer.about_us')}}
                 </a>
               </li>
               <li>
@@ -136,7 +135,7 @@
                     hover:text-white
                   "
                 >
-                  Company services
+                  {{$t('footer.services')}}
                 </a>
               </li>
               <li>
@@ -154,7 +153,7 @@
                     hover:text-white
                   "
                 >
-                  Job opportunities
+                  {{$t('footer.job_opportunitues')}}
                 </a>
               </li>
               <li>
@@ -172,7 +171,7 @@
                     hover:text-white
                   "
                 >
-                  Contact us
+                  {{$t('message.contact_us')}}
                 </a>
               </li>
             </ul>
@@ -180,7 +179,7 @@
         </div>
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-2/12">
           <div class="mb-16">
-            <h2 class="mb-8 text-2xl font-medium text-white">Customer</h2>
+            <h2 class="mb-8 text-2xl font-medium text-white">{{$t('message.client')}}</h2>
             <ul>
               <li>
                 <a
@@ -197,7 +196,7 @@
                     hover:text-white
                   "
                 >
-                  Client support
+                  {{$t('message.client')}}
                 </a>
               </li>
               <li>
@@ -215,7 +214,7 @@
                     hover:text-white
                   "
                 >
-                  Latest news
+                  {{$t('message.news')}}
                 </a>
               </li>
               <li>
@@ -233,7 +232,7 @@
                     hover:text-white
                   "
                 >
-                  Company Details
+                  {{$t('message.company_legal')}}
                 </a>
               </li>
               <li>
@@ -251,7 +250,7 @@
                     hover:text-white
                   "
                 >
-                  Who we are
+                  {{$t('message.about_us')}}
                 </a>
               </li>
             </ul>
@@ -259,7 +258,7 @@
         </div>
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/4">
           <div class="mb-16">
-            <h2 class="mb-8 text-2xl font-medium text-white">Subscribe Now</h2>
+            <h2 class="mb-8 text-2xl font-medium text-white">{{$t('footer.suscribe')}}</h2>
             <p class="mb-5 text-base font-medium text-zinc-400">
               Enter your email address for receiving valuable newsletters.
             </p>

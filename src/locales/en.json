@@ -5,6 +5,7 @@
         "explore_now": "Explore now",
         "contact_us": "Contact us",
         "references": "References",
+        "connect": "Connect",
         "all_rights_reserved": "All rights reserved",
         "enter_your_email_address": "Enter your email address",
         "actions": "Actions",
@@ -23,5 +24,15 @@
     "slide":{
         "live_auctions": "Live Auctions",
         "web_creations": "Web Creations"
+    },
+    "services":{
+        "design_hosting": "design-hosting",
+        "design":"design",
+        "web_app":"web app"
+    },
+    "dev":{
+        "lorem9": "Eos assumenda saepe in quidem veniam et repellendus consequatur.",
+        "lorem15":"Lorem ipsum dolor sit amet. Aut rerum nesciunt et dolores sint non nesciunt sunt.",
+        "lorem50": "Lorem ipsum dolor sit amet. Est pariatur vitae et quasi soluta aut tempora galisum et omnis voluptatem est laboriosam corrupti. Qui quia deleniti vel exercitationem omnis sit officiis vitae et ipsum possimus vel odit dolorem. Eos adipisci impedit aut consequatur quod eos fugiat laborum ut nihil saepe et galisum galisum hic molestiae assumenda saepe corrupti."
     }
 }
