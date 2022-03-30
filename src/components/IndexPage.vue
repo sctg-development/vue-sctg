@@ -445,7 +445,7 @@
               :lightboxUrl="getCloudinaryImg('ias-web').toURL()"
               author="@innov"
               authorTitle="dev"
-              baseMessage="design-hosting"
+              :baseMessage="$t('services.design_hosting')"
               value="wordpress"
             />
             <type-2-card
@@ -457,7 +457,7 @@
               :lightboxUrl="getCloudinaryImg('smeg-web').toURL()"
               author="@smeg"
               authorTitle="dev"
-              baseMessage="design-hosting"
+              :baseMessage="$t('services.design_hosting')"
               value="react"
             />
             <type-2-card
@@ -469,7 +469,7 @@
               :lightboxUrl="getCloudinaryImg('highcanfly-web').toURL()"
               author="@highcanfly"
               authorTitle="dev"
-              baseMessage="design"
+              :baseMessage="$t('services.design')"
               value="vue3"
             />
             <type-2-card
@@ -481,7 +481,7 @@
               :lightboxUrl="getCloudinaryImg('cdvl59-web').toURL()"
               author="@cdvl59"
               authorTitle="dev"
-              baseMessage="design"
+              :baseMessage="$t('services.design')"
               value="vue3"
             />
             <type-2-card
@@ -493,7 +493,7 @@
               :lightboxUrl="getCloudinaryImg('vdocom-web').toURL()"
               author="@vdocom"
               authorTitle="dev"
-              baseMessage="design-hosting"
+              :baseMessage="$t('services.design_hosting')"
               value="php"
             />
             <type-2-card
@@ -505,7 +505,7 @@
               :lightboxUrl="getCloudinaryImg('cfdmv-web').toURL()"
               author="@ffvl"
               authorTitle="dev"
-              baseMessage="web app"
+              :baseMessage="$t('services.web_app')"
               value="js"
             />
             <type-2-card
@@ -663,29 +663,28 @@
             Core Features
           </h2>
           <p class="text-lg font-medium text-zinc-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
-            lacinia dolor, in pretium nunc. Morbi mollis arcu eget.
+            {{$t('dev.lorem50')}}
           </p>
         </div>
         <div class="mt-6 -mx-4 flex flex-wrap px-7">
           <type-4-card
             :imageUrl="require('@/assets/img/icon-wallet.svg')"
-            text="Lorem ipsum dolor sit amet consectetur smit."
+            :text="$t('dev.lorem9')"
             title="Contact"
           />
           <type-4-card
             :imageUrl="require('@/assets/img/icon-collection.svg')"
-            text="Lorem ipsum dolor sit amet consectetur smit."
+            :text="$t('dev.lorem9')"
             title="Collection"
           />
           <type-4-card
             :imageUrl="require('@/assets/img/icon-mountain.svg')"
-            text="Lorem ipsum dolor sit amet consectetur smit."
+            :text="$t('dev.lorem9')"
             title="Core features"
           />
           <type-4-card
             :imageUrl="require('@/assets/img/icon-tag.svg')"
-            text="Lorem ipsum dolor sit amet consectetur smit."
+            :text="$t('dev.lorem9')"
             title="Tag list"
           />
         </div>
