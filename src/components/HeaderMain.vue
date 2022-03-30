@@ -20,7 +20,7 @@
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
           <a
-            href="index.html"
+            href="/#top"
             class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'"
           >
@@ -120,7 +120,7 @@
                 </li>
                 <li class="relative">
                   <a
-                    href="/#web-design"
+                    href="/web"
                     class="
                       px-8
                       flex
@@ -136,6 +136,7 @@
                     {{$t("nav.web")}}
                   </a>
                 </li>
+                <!--
                 <li class="submenu-item relative">
                   <a
                     href="javascript:void(0)"
@@ -208,7 +209,7 @@
                         hover:text-white
                       "
                     >
-                      Explore Items
+                      {{$t('nav.explore')}}
                     </a>
                     <a
                       href="item-details.html"
@@ -241,7 +242,7 @@
                       Create Item
                     </a>
                     <a
-                      href="connect-wallet.html"
+                      href="/"
                       class="
                         block
                         rounded
@@ -253,7 +254,7 @@
                         hover:text-white
                       "
                     >
-                      Connect Wallet
+                      {{$t('message.connect')}}
                     </a>
                     <a
                       href="support.html"
@@ -300,9 +301,10 @@
                     </a>
                   </div>
                 </li>
+                -->
                 <li class="relative">
                   <a
-                    href="support.html"
+                    href="/"
                     class="
                       px-4
                       flex

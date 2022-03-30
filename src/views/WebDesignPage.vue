@@ -1,4 +1,5 @@
 <template>
+  <!-- based on https://nft-tailwind.preview.uideck.com/support -->
   <div id="top" class="bg-slate-900 min-h-screen relative">
     <header-main />
     <main-section />
@@ -16,8 +17,8 @@
       >
         <div class="">
           <div class="relative z-10 overflow-hidden rounded-lg bg-slate-700">
-            <div class="-mx-4 flex flex-wrap items-center">
-              <div class="w-full pr-8 lg:w-5/12 xl:w-1/3">
+            <div class="-mx-4 flex flex-wrap">
+              <div class="w-full pr-8 lg:w-5/12 xl:w-1/3 items-center">
                 <div
                   class="
                     relative
@@ -25,14 +26,63 @@
                     flex flex-col
                     justify-between
                     py-20
-                    pr-10
+                    pr-5
                     lg:text-right
                     bg-indigo-600
                   "
                 >
                   <div class="mb-16 lg:mb-56">
                     <div class="mb-4 text-4xl font-bold text-white sm:text-5xl">
-                      toto
+                      {{ $t("message.web_design") }}
+                    </div>
+                    <div class="absolute bottom-4 right-4">
+                      <div class="mt-16 mb-16">
+                        <p class="text-lg font-bold text-white sm:text-xl">
+                          <span class="block">
+                            {{ $t("websites.webdesign-email") }}
+                          </span>
+                          <span class="block">
+                            {{ $t("websites.webdesign-phone") }}
+                          </span>
+                          <span class="block">
+                            {{ $t("websites.webdesign-open-days") }}
+                          </span>
+                          <span class="block">
+                            {{ $t("websites.webdesign-open-hours") }}
+                          </span>
+                        </p>
+                      </div>
+                      <div>
+                        <p class="a2D text-xl font-bold text-white">
+                          Follow us on
+                        </p>
+                        <div class="flex items-center space-x-1  lg:justify-end">
+                          <a
+                            href="javascript:void(0)"
+                            class="text-white hover:text-white/80"
+                          >
+                            <i class="fa-brands fa-facebook"></i>
+                          </a>
+                          <a
+                            href="javascript:void(0)"
+                            class="text-white hover:text-white/80"
+                          >
+                            <i class="fa-brands fa-twitter"></i>
+                          </a>
+                          <a
+                            href="javascript:void(0)"
+                            class="text-white hover:text-white/80"
+                          >
+                            <i class="fa-brands fa-instagram"></i>
+                          </a>
+                          <a
+                            href="javascript:void(0)"
+                            class="text-white hover:text-white/80"
+                          >
+                            <i class="fa-brands fa-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -52,9 +102,24 @@
                 </div>
               </div>
               <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
-                <div class="text-white">
-                  <h1>Lorem</h1>
-                  <p>{{ $t("dev.lorem50") }}</p>
+                <div class="text-white pt-10">
+                  <h1 class="text-2xl">
+                    We can help with all aspects of web design and graphic
+                    design
+                  </h1>
+                  <p class="pt-8">
+                    Established for more than 20 years, our team helps
+                    start-ups, small businesses and large international
+                    companies to make the right impression. Whether you need web
+                    design, brochure design, graphic design, logo design,
+                    branding, digital design, eCommerce, eCampaign, we can help
+                    to get you noticed.
+                  </p>
+                  <p class="pt-8">
+                    Our design will reflect your company. Not only an amazing
+                    website, but it will be a co-design between you and our
+                    team.
+                  </p>
                 </div>
               </div>
             </div>
@@ -62,7 +127,42 @@
         </div>
       </div>
     </section>
-    <footer-main class="absolute" />
+    <standard-section
+      class="py-12 pt-12"
+      :id="web - content"
+      :title="$t('message.web_design')"
+    >
+      <div class="pt-10 px-20 text-white flex justify-between">
+        <type-4-card
+          :imageUrl="require('@/assets/img/connectdevelop-brands.svg')"
+          :text="$t('websites.webdev')"
+          :title="$t('websites.web_development')"
+          class="2xl:w-1/3"
+        />
+        <type-4-card
+          :imageUrl="require('@/assets/img/searchengin-brands.svg')"
+          :text="$t('websites.seo')"
+          :title="$t('websites.seo_title')"
+          class="2xl:w-1/3"
+        />
+        <type-4-card
+          :imageUrl="require('@/assets/img/handshake.svg')"
+          :text="$t('websites.together')"
+          :title="$t('websites.together_title')"
+          class="2xl:w-1/3"
+        />
+      </div>
+    </standard-section>
+    <standard-section
+      class="py-12 pt-12"
+      :id="web - content"
+      :title="$t('websites.latest_sites')"
+    >
+      <div class="pt-10 px-20 text-white flex flex-wrap">
+        <web-sites />
+      </div>
+    </standard-section>
+    <footer-main />
   </div>
 </template>
 <script>
@@ -71,6 +171,9 @@ import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 
 import { getCloudinaryImg } from "@/utilities/utilities.js";
+import StandardSection from "@/components/elements/StandardSection.vue";
+import WebSites from "@/components/cards/WebSites.vue";
+import Type4Card from "@/components/cards/Type4Card.vue";
 
 export default {
   setup() {},
@@ -88,6 +191,9 @@ export default {
     HeaderMain,
     MainSection,
     FooterMain,
+    StandardSection,
+    WebSites,
+    Type4Card,
   },
 };
 </script>
