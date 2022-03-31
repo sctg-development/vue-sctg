@@ -3,7 +3,6 @@
   <div id="top" class="bg-slate-900 relative">
     <header-main />
     <main-section />
-    -->
     <section id="company">
       <div
         class="
