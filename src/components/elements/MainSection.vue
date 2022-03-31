@@ -26,7 +26,8 @@
         via-gdt-800
         to-slate-900
       "
-    ></div>
+    >
+    </div>
     <div
       class="
         w-full
@@ -264,6 +265,7 @@
         </span>
       </div>
     </div>
+        <slot/>
   </section>
 </template>
 <script>

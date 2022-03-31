@@ -2,7 +2,7 @@
   <!-- based on https://nft-tailwind.preview.uideck.com/support -->
   <div id="top" class="bg-slate-900 min-h-screen relative">
     <header-main />
-    <main-section />
+    <main-section>
     <section id="content">
       <div
         class="
@@ -127,6 +127,8 @@
         </div>
       </div>
     </section>
+    </main-section>
+
     <standard-section
       class="py-12 pt-12"
       :id="web - content"
