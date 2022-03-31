@@ -68,7 +68,7 @@
                       font-semibold
                       text-white
                       hover:text-slate-400
-                      lg:mr-0 lg:font-bold lg:py-6 lg:a12
+                      lg:mr-0 lg:font-bold lg:py-6 lg:px-0
                     "
                   >
                     {{$t("nav.home")}}
@@ -287,7 +287,7 @@
                       font-semibold
                       text-slate-400
                       hover:text-white
-                      lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:a12
+                      lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                       xl:ml-12
                     "
                   >
