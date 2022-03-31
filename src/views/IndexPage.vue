@@ -2,123 +2,125 @@
   <!-- source https://nft-tailwind.preview.uideck.com/ -->
   <div id="top" class="bg-slate-900 relative">
     <header-main />
-    <main-section />
-    <section id="company">
-      <div
-        class="
-          absolute
-          left-0
-          top-0
-          -z-10
-          h-full
-          w-full
-          bg-gradient-to-b
-          from-transparent
-          via-gdt-800
-          to-slate-900
-        "
-      ></div>
-      <div
-        class="
-          w-full
-          mx-auto
-          sm:max-w-screen-sm
-          md:max-w-screen-md
-          lg:max-w-screen-lg
-          xl:max-w-screen-xl
-          2xl:max-w-screen-xl
-          px-4
-        "
-      >
-        <div class="-mx-4 flex flex-wrap items-center">
-          <div class="w-full px-4 lg:w-1/2">
-            <div class="mb-12 max-w-[570px] lg:mb-0">
-              <h1
-                class="
-                  mb-1
-                  text-4xl
-                  font-medium
-                  leading-5
-                  text-white
-                  font-keepcalm
-                  tracking-wide
-                  md:text-5xl
-                  lg:text-6xl
-                  sm:text-4xl
-                "
-              >
-                {{ $t("message.company") }}
-              </h1>
-              <p
-                class="
-                  mb-8
-                  text-lg
-                  font-medium
-                  leading-7
-                  text-slate-400
-                  md:pr-14
-                "
-                v-html="$t('message.greetings')"
-              ></p>
-              <div class="flex flex-wrap items-center">
-                <a
-                  href="explore-items.html"
+    <main-section>
+      <section id="company">
+        <div
+          class="
+            absolute
+            left-0
+            top-0
+            -z-10
+            h-full
+            w-full
+            bg-gradient-to-b
+            from-transparent
+            via-gdt-800
+            to-slate-900
+          "
+        ></div>
+        <div
+          class="
+            w-full
+            mx-auto
+            sm:max-w-screen-sm
+            md:max-w-screen-md
+            lg:max-w-screen-lg
+            xl:max-w-screen-xl
+            2xl:max-w-screen-xl
+            px-4
+          "
+        >
+          <div class="-mx-4 flex flex-wrap items-center">
+            <div class="w-full px-4 lg:w-1/2">
+              <div class="mb-12 max-w-[570px] lg:mb-0">
+                <h1
                   class="
-                    mr-5
-                    mb-5
-                    items-center
-                    justify-center
-                    rounded-md
-                    border-2 border-indigo-600
+                    mb-1
+                    text-4xl
+                    font-medium
+                    leading-5
+                    text-white
+                    font-keepcalm
+                    tracking-wide
+                    md:text-5xl
+                    lg:text-6xl
+                    sm:text-4xl
+                  "
+                >
+                  {{ $t("message.company") }}
+                </h1>
+                <p
+                  class="
+                    mb-8
+                    text-lg
+                    font-medium
                     leading-7
-                    p-4
-                    flex-wrap
-                    text-base
-                    font-semibold
-                    text-white
-                    ease-in-out
-                    duration-150
-                    bg-indigo-600
-                    hover:bg-indigo-700
+                    text-slate-400
+                    md:pr-14
                   "
-                >
-                  {{ $t("message.explore_now") }}
-                </a>
-                <a
-                  href="create-item.html"
-                  class="
-                    mb-5
-                    items-center
-                    justify-center
-                    rounded-md
-                    border-2 border-white
-                    p-4
-                    flex-wrap
-                    text-base
-                    font-semibold
-                    text-white
-                    ease-in-out
-                    duration-150
-                    hover:border-indigo-600 hover:leading-7
-                  "
-                >
-                  {{ $t("message.contact_us") }}
-                </a>
+                  v-html="$t('message.greetings')"
+                ></p>
+                <div class="flex flex-wrap items-center">
+                  <a
+                    href="explore-items.html"
+                    class="
+                      mr-5
+                      mb-5
+                      items-center
+                      justify-center
+                      rounded-md
+                      border-2 border-indigo-600
+                      leading-7
+                      p-4
+                      flex-wrap
+                      text-base
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      bg-indigo-600
+                      hover:bg-indigo-700
+                    "
+                  >
+                    {{ $t("message.explore_now") }}
+                  </a>
+                  <a
+                    href="create-item.html"
+                    class="
+                      mb-5
+                      items-center
+                      justify-center
+                      rounded-md
+                      border-2 border-white
+                      p-4
+                      flex-wrap
+                      text-base
+                      font-semibold
+                      text-white
+                      ease-in-out
+                      duration-150
+                      hover:border-indigo-600 hover:leading-7
+                    "
+                  >
+                    {{ $t("message.contact_us") }}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-4 lg:w-1/2">
+              <div class="text-center">
+                <img
+                  :src="getCloudinaryImg('Logo_SCTG_carre_3D').toURL()"
+                  alt="hero image"
+                  class="mx-auto max-w-full contrast-125 brightness-125"
+                />
               </div>
             </div>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <div class="text-center">
-              <img
-                :src="getCloudinaryImg('Logo_SCTG_carre_3D').toURL()"
-                alt="hero image"
-                class="mx-auto max-w-full contrast-125 brightness-125"
-              />
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main-section>
+
     <section id="services" class="pt-8">
       <div
         class="
