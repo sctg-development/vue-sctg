@@ -15,10 +15,10 @@
           2xl:max-w-screen-xl
         "
       >
-        <div class="">
+        <div class="px-4">
           <div class="relative z-10 overflow-hidden rounded-lg bg-slate-700">
             <div class="-mx-4 flex flex-wrap">
-              <div class="w-full pr-8 lg:w-5/12 xl:w-1/3 items-center">
+              <div class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center">
                 <div
                   class="
                     relative
@@ -32,7 +32,7 @@
                   "
                 >
                   <div class="mb-16 lg:mb-56">
-                    <div class="mb-4 text-4xl font-bold text-white sm:text-5xl">
+                    <div class="mb-4 text-4xl pl-4 font-bold text-white sm:text-5xl">
                       {{ $t("message.web_design") }}
                     </div>
                     <div class="absolute bottom-4 right-4">
@@ -115,7 +115,7 @@
                     branding, digital design, eCommerce, eCampaign, we can help
                     to get you noticed.
                   </p>
-                  <p class="pt-8">
+                  <p class="py-8">
                     Our design will reflect your company. Not only an amazing
                     website, but it will be a co-design between you and our
                     team.
@@ -132,24 +132,24 @@
       :id="web - content"
       :title="$t('message.web_design')"
     >
-      <div class="pt-10 px-20 text-white flex justify-between">
+      <div class="pt-10 px-4 sm:px-8 lg:px-20 text-white flex flex-wrap justify-between">
         <type-4-card
           :imageUrl="require('@/assets/img/connectdevelop-brands.svg')"
           :text="$t('websites.webdev')"
           :title="$t('websites.web_development')"
-          class="2xl:w-1/3"
+          class="w-full lg:w-1/2 2xl:w-1/3"
         />
         <type-4-card
           :imageUrl="require('@/assets/img/searchengin-brands.svg')"
           :text="$t('websites.seo')"
           :title="$t('websites.seo_title')"
-          class="2xl:w-1/3"
+          class="w-full lg:w-1/2 2xl:w-1/3"
         />
         <type-4-card
           :imageUrl="require('@/assets/img/handshake.svg')"
           :text="$t('websites.together')"
           :title="$t('websites.together_title')"
-          class="2xl:w-1/3"
+          class="w-full lg:w-1/2 2xl:w-1/3"
         />
       </div>
     </standard-section>
