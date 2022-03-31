@@ -14,10 +14,10 @@
           2xl:max-w-screen-xl
         "
       >
-        <div class="">
+        <div class="px-4">
           <div class="relative z-10 overflow-hidden rounded-lg bg-slate-700">
-            <div class="-mx-4 flex flex-wrap items-center">
-              <div class="w-full pr-8 lg:w-5/12 xl:w-1/3">
+            <div class="-mx-4 flex flex-wrap">
+              <div class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center">
                 <div
                   class="
                     relative
@@ -25,13 +25,13 @@
                     flex flex-col
                     justify-between
                     py-20
-                    pr-10
+                    pr-5
                     lg:text-right
                     bg-indigo-600
                   "
                 >
                   <div class="mb-16 lg:mb-56">
-                    <div class="mb-4 text-4xl font-bold text-white sm:text-5xl">
+                    <div class="mb-4 text-4xl pl-4 font-bold text-white sm:text-5xl">
                       toto
                     </div>
                   </div>
