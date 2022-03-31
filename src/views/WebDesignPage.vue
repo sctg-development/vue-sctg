@@ -134,24 +134,24 @@
 
     <standard-section
       class="py-12 pt-12"
-      :id="web - content"
+      :id="web-content"
       :title="$t('message.web_design')"
     >
       <div class="pt-10 px-4 sm:px-8 lg:px-20 text-white flex flex-wrap justify-between">
         <type-4-card
-          :imageUrl="require('@/assets/img/connectdevelop-brands.svg')"
+          icon="text-blue-500 fa-brands fa-connectdevelop"
           :text="$t('websites.webdev')"
           :title="$t('websites.web_development')"
           class="w-full lg:w-1/2 2xl:w-1/3"
         />
         <type-4-card
-          :imageUrl="require('@/assets/img/searchengin-brands.svg')"
+          icon="text-emerald-600 fa-brands fa-searchengin"
           :text="$t('websites.seo')"
           :title="$t('websites.seo_title')"
           class="w-full lg:w-1/2 2xl:w-1/3"
         />
         <type-4-card
-          :imageUrl="require('@/assets/img/handshake.svg')"
+          icon="text-purple-500 fa-solid fa-handshake"
           :text="$t('websites.together')"
           :title="$t('websites.together_title')"
           class="w-full lg:w-1/2 2xl:w-1/3"

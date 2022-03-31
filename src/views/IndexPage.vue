@@ -229,22 +229,22 @@
         </div>
         <div class="mt-6 -mx-4 flex flex-wrap px-7">
           <type-4-card
-            :imageUrl="require('@/assets/img/icon-wallet.svg')"
+            icon="text-orange-500 fa-solid fa-handshake"
             :text="$t('dev.lorem9')"
             title="Contact"
           />
           <type-4-card
-            :imageUrl="require('@/assets/img/icon-collection.svg')"
+            icon="text-amber-600 fa-solid fa-wifi"
             :text="$t('dev.lorem9')"
             title="Collection"
           />
           <type-4-card
-            :imageUrl="require('@/assets/img/icon-mountain.svg')"
+            icon="text-green-500 fa-solid fa-code-compare"
             :text="$t('dev.lorem9')"
             title="Core features"
           />
           <type-4-card
-            :imageUrl="require('@/assets/img/icon-tag.svg')"
+            icon="text-indigo-600 fa-solid fa-tag"
             :text="$t('dev.lorem9')"
             title="Tag list"
           />

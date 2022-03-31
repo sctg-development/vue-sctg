@@ -24,7 +24,7 @@
                   bg-[#FFF0E9]
                 "
               >
-              <img class="w-[34px] h-[34px]" :src="imageUrl"/>
+              <span class="text-3xl"><i :class="icon"></i></span>
               </div>
               <h3
                 class="
@@ -49,7 +49,7 @@ export default {
     props: {
         title: String,
         text: String,
-        imageUrl: String,
+        icon: String,
     },
     setup() {
         
