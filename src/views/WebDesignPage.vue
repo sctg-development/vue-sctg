@@ -19,7 +19,7 @@
         "
       >
         <div class="px-4">
-          <div class="relative z-10 overflow-hidden rounded-lg bg-slate-700">
+          <div class="relative z-10 overflow-hidden rounded-lg bg-slate-800">
             <div class="-mx-4 flex flex-wrap">
               <div class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center">
                 <div
@@ -106,7 +106,7 @@
               </div>
               <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
                 <div class="text-white pt-10">
-                  <h1 class="text-2xl">
+                  <h1 class="text-3xl font-semibold">
                     We can help with all aspects of web design and graphic
                     design
                   </h1>
