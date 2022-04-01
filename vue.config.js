@@ -44,9 +44,24 @@ fs.writeFile('./sanity-conf.json',
 process.env.VUE_APP_ALGOLIA_SEARCH_KEY = process.env.ALGOLIA_SEARCH_KEY;
 process.env.VUE_APP_ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
 
+const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
+const myManglePlugin = new MangleCssClassPlugin({
+  classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
+  log: true,
+  reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
+  ignorePrefixRegExp: '.*tns.*|light[bB]ox'
+});
+
+const webpackPlugins = [];
+
+if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')){
+  webpackPlugins.push(myManglePlugin);
+}
+
 module.exports = {
   runtimeCompiler: true,
   configureWebpack: {
+    plugins: webpackPlugins,
     devtool: process.env.CF_PAGES === '1' ? (process.env.__DEBUG__ === '1' ? 'source-map' : false) : 'source-map',
     mode: process.env.CF_PAGES === '1' ? (process.env.__DEBUG__ === '1' ? 'development' : 'production') : 'development',
     resolve: {
@@ -58,14 +73,15 @@ module.exports = {
   chainWebpack(config) {
     config.resolve.alias.set('vue', path.resolve('./node_modules/vue'));
   },
-/* css: {
-    loaderOptions: {
-      postcss: {
-        postcssOptions:
-        { 
-          plugins: {"postcss-rename":{"strategy":"minimal"}}
-        }
-      }
-    }
-  }*/
 };
+/*
+
+module.exports = {
+  runtimeCompiler: true,
+  configureWebpack: {
+    plugins: [myManglePlugin],
+    devtool: false,
+    mode: 'production',
+  },
+};
+*/
