@@ -17,7 +17,15 @@
         "client": "Customer",
         "news": "News",
         "company_legal": "Legal",
-        "about_us": "About us"
+        "about_us": "About us",
+        "core_activities": "Core activities",
+        "design_content": "The best websites aren't brochures. Our sites are more like your best and hardest-working salespeople: dedicated, multi-tasking, and always laser-focused on your bottom line.",
+        "seo_content": "Looking to tweak your current website or take your SEO, analytics, or conversions to the next level? Learn more about our website optimization services and get a free site audit today!",
+        "core_content": "",
+        "dev":"Application development",
+        "dev_content":"Specific custom application may be necessary for complete your requirements. We can develop for you a new application.",
+        "admin":"Maintenance and hosting",
+        "admin_content": "Even if we didn't build your website, we offer a variety of packages to host, maintain, protect, and even update your website so you can focus on running your business. "
         },
     "nav": {
         "home": "Home",
@@ -47,7 +55,9 @@
         "about_us": "About us",
         "services": "Services",
         "job_opportunitues": "Job opportunities",
-        "suscribe": "Subscribe"     
+        "suscribe": "Subscribe",
+        "slogan": "Your Internet partner"
+
     },
     "websites":{
         "latest_sites":"Our latest creations",

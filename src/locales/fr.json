@@ -17,7 +17,15 @@
         "client": "Client",
         "news": "News",
         "company_legal": "Informations légales",
-        "about_us": "À propos"
+        "about_us": "À propos",
+        "core_activities": "Nos activités",
+        "design_content": "The best websites aren't brochures. Our sites are more like your best and hardest-working salespeople: dedicated, multi-tasking, and always laser-focused on your bottom line.",
+        "seo_content": "Looking to tweak your current website or take your SEO, analytics, or conversions to the next level? Learn more about our website optimization services and get a free site audit today!",
+        "core_content": "",
+        "dev":"Développement d'applications",
+        "dev_content":"Specific custom application may be necessary for complete your requirements. We can develop for you a new application.",
+        "admin":"Maintenance et hébergement",
+        "admin_content": "Even if we didn't build your website, we offer a variety of packages to host, maintain, protect, and even update your website so you can focus on running your business. "
         },
     "nav": {
         "home": "Accueil",
@@ -42,6 +50,20 @@
         "about_us": "À propos",
         "services": "Services",
         "job_opportunitues": "Carrières",
-        "suscribe": "Abonnez-vous"   
+        "suscribe": "Abonnez-vous",
+        "slogan": "Your Internet partner"   
+    },
+    "websites":{
+        "latest_sites":"Nos dernières créations",
+        "webdev":"From simple WordPress websites and CMS websites to bespoke web development and large eCommerce solutions. With responsive design and a full package service, including website management, copywriting and photography, we’ll help you be seen.",
+        "seo":"Make it easy for your next customer to find you online with web SEO. On-page search engine optimisation and our SEO campaigns will improve your online visibility and your google ranking, helping you convert more browsers into customers.",
+        "web_development": "Web design & Développement",
+        "seo_title": "Optimisation SEO",
+        "together_title": "Construire ensemble",
+        "together": "You’re an integral part of the process.<br/><br/> We begin our process with a discovery phase. The better we understand your business, the better product we can deliver. Your website will grow as you grow.",
+        "webdesign-email": "web-design-fr{'@'}sctg.cf",
+        "webdesign-phone": " ",
+        "webdesign-open-days": "Ouvert de Lu. à ve.",
+        "webdesign-open-hours": "09.00 - 18.00"
     }
 }

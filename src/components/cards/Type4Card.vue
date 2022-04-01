@@ -2,6 +2,7 @@
               <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
             <div
               class="
+                h-full
                 mb-10
                 rounded-xl
                 border border-slate-600

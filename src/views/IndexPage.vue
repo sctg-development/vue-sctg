@@ -204,7 +204,7 @@
         </div>
       </div>
     </section>
-    <section id="features" class="pt-[90px]">
+    <section id="features" class="pb-[900px] sm:pb-[800px] md:pb-[300px] 2xl:pb-0 pt-[90px]">
       <div
         class="
           w-full
@@ -221,32 +221,36 @@
           <h2
             class="mb-4 text-4xl font-semibold leading-5 text-white sm:text-5xl"
           >
-            Core Features
+            {{$t('message.core_activities')}}
           </h2>
           <p class="text-lg font-medium text-zinc-400">
-            {{ $t("dev.lorem50") }}
+            {{ $t("message.core_content") }}
           </p>
         </div>
-        <div class="mt-6 -mx-4 flex flex-wrap px-7">
+        <div class="mt-6 -mx-4 flex flex-wrap h-[500px] px-7">
           <type-4-card
+            class="pb-4"
             icon="text-orange-500 fa-solid fa-handshake"
-            :text="$t('dev.lorem9')"
-            title="Contact"
+            :text="$t('message.design_content')"
+            :title="$t('message.web_design')"
           />
           <type-4-card
+            class="pb-4"
             icon="text-amber-600 fa-solid fa-wifi"
-            :text="$t('dev.lorem9')"
-            title="Collection"
+            :text="$t('message.seo_content')"
+            :title="$t('websites.seo_title')"
           />
           <type-4-card
+            class="pb-4"
             icon="text-green-500 fa-solid fa-code-compare"
-            :text="$t('dev.lorem9')"
-            title="Core features"
+            :text="$t('message.admin_content')"
+            :title="$t('message.admin')"
           />
           <type-4-card
+            class="pb-4"
             icon="text-indigo-600 fa-solid fa-tag"
-            :text="$t('dev.lorem9')"
-            title="Tag list"
+            :text="$t('message.dev_content')"
+            :title="$t('message.dev')"
           />
         </div>
       </div>
