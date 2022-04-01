@@ -63,7 +63,20 @@
         "together": "You’re an integral part of the process.<br/><br/> We begin our process with a discovery phase. The better we understand your business, the better product we can deliver. Your website will grow as you grow.",
         "webdesign-email": "web-design-fr{'@'}sctg.cf",
         "webdesign-phone": " ",
-        "webdesign-open-days": "Ouvert de Lu. à ve.",
-        "webdesign-open-hours": "09.00 - 18.00"
+        "webdesign-open-days": "Ouvert du Lu. au ve.",
+        "webdesign-open-hours": "09.00 - 18.00",
+        "follow":"Suivez-nous"
+    },
+    "contact":{
+        "title":"Contact",
+        "contact-email":"get-in-touch{'@'}sctg.cf",
+        "name": "Votre Nom",
+        "email": "votre Email",
+        "message":"Votre Message",
+        "send": "Envoyer",
+        "errormsg": "Veuillez corriger ces erreurs.",
+        "errorname": "Nom requis",
+        "erroremail": "Email requis",
+        "errormessage": "Message requis"
     }
 }

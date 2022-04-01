@@ -57,7 +57,7 @@
                       </div>
                       <div>
                         <p class="a2D text-xl font-bold text-white">
-                          Follow us on
+                          {{$t('websites.follow')}}
                         </p>
                         <div class="flex items-center space-x-1  lg:justify-end">
                           <a
