@@ -23,7 +23,7 @@
                 />
               </a>
               <p class="mb-6 text-base font-medium text-zinc-400">
-                {{$t('dev.lorem15')}}
+                {{$t('footer.slogan')}}
               </p>
               <div class="flex items-center">
                 <a
@@ -320,11 +320,32 @@
       <div class="border-t-1 border-slate-600">
         <div class="py-7 text-center">
           <p class="text-base font-medium text-zinc-400">
-            © Copyright {{ $t("message.company") }} -
-            {{ $t("message.all_rights_reserved") }}.
+            <span  @mouseover="copyright_text = 'build: ' + commit_date"
+              @mouseleave="copyright_text = '2018-' + new Date().getFullYear()">© Copyright {{copyright_text}} {{ $t("message.company") }} -
+            {{ $t("message.all_rights_reserved") }}.</span>
           </p>
         </div>
       </div>
     </div>
   </footer>
 </template>
+<script>
+export default {
+  setup() {
+    
+  },
+  data() {
+    return {
+      copyright_text: "2018-" + new Date().getFullYear(),
+      commit_date: new Intl.DateTimeFormat("fr-FR", {
+        year: "2-digit",
+        month: "short",
+        day: "2-digit",
+        hour: "numeric",
+        minute: "numeric",
+      }).format(new Date(process.env.VUE_APP_GIT_LAST_COMMIT)),
+      date: new Date().getFullYear(),
+    }
+  }
+}
+</script>
