@@ -74,8 +74,8 @@ module.exports = {
     config.resolve.alias.set('vue', path.resolve('./node_modules/vue'));
   },
 };
-
 /*
+
 module.exports = {
   runtimeCompiler: true,
   configureWebpack: {

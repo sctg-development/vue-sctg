@@ -275,7 +275,7 @@
         </div>
         <div class="relative">
           <tiny-slider>
-            <mini-slides />
+            <team-slides />
           </tiny-slider>
         </div>
       </div>
@@ -367,7 +367,7 @@
 import HeaderMain from "@/components/HeaderMain";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain";
-import MiniSlides from "@/components/cards/MiniSlides";
+import TeamSlides from "@/components/cards/TeamSlides";
 import TinySlider from "@/components/elements/TinySlider";
 import WebDesignCard from "@/components/cards/WebDesignCard.vue";
 import ServerAdministrationCard from "@/components/cards/ServerAdministrationCard.vue";
@@ -390,7 +390,7 @@ export default {
   components: {
     HeaderMain,
     MainSection,
-    MiniSlides,
+    TeamSlides,
     TinySlider,
     //   Type3Card,
     Type4Card,
