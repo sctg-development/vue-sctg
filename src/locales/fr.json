@@ -77,6 +77,8 @@
         "errormsg": "Veuillez corriger ces erreurs.",
         "errorname": "Nom requis",
         "erroremail": "Email requis",
-        "errormessage": "Message requis"
+        "errormessage": "Message requis",
+        "sent":"Email envoyé !",
+        "notsent":"Error : email non envoyé !"
     }
 }

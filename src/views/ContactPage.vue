@@ -133,7 +133,7 @@
                         Get in touch
                       </h2>
                       <h3 class="text-white" v-if="formerrors.length">
-                        <b>{{$t('contact.errormsg')}}</b>
+                        <b>{{ $t("contact.errormsg") }}</b>
                         <ul>
                           <li v-for="error in formerrors" :key="error.id">
                             <!-- eslint-disable-line -->
@@ -154,6 +154,7 @@
                               {{ $t("contact.name") }}
                             </label>
                             <input
+                              v-if="!fromSendEmail.executed"
                               type="text"
                               name="name"
                               id="name"
@@ -176,6 +177,7 @@
                               {{ $t("contact.email") }}
                             </label>
                             <input
+                              v-if="!fromSendEmail.executed"
                               type="email"
                               name="email"
                               v-model="email"
@@ -198,6 +200,7 @@
                               {{ $t("contact.message") }}
                             </label>
                             <textarea
+                              v-if="!fromSendEmail.executed"
                               rows="5"
                               name="message"
                               id="message"
@@ -216,10 +219,11 @@
                         </div>
                         <div class="flex justify-center w-full mt-4">
                           <vue-hcaptcha
-                            v-if="formVerified"
+                            v-if="formVerified && !fromSendEmail.executed"
                             :sitekey="hCaptcha_sitekey"
                             theme="dark"
                             class="flex justify-center rounded"
+                            :apiEndpoint="`https://hcaptcha.com/1/api.js?hl={$i18n.locale}`"
                             @verify="hCaptchaVerify"
                             @expired="hCaptchaExpire"
                             @challenge-expired="hCaptchaChallengeExpire"
@@ -257,6 +261,11 @@
                           >
                             {{ $t("contact.send") }}
                           </button>
+                          <div v-if="fromSendEmail.executed">
+                            <h4 class="text-white p-2 bg-indigo-600 rounded text-2xl font-semibold">
+                              {{ $t("contact.sent") }}
+                            </h4>
+                          </div>
                         </div>
                       </div>
                     </form>
@@ -295,7 +304,7 @@ export default {
     const email = ref("");
     const message = ref("");
     const email_sent = ref(false);
-    const fromSendEmail = ref(false);
+    const fromSendEmail = ref({executed:false,hCaptchaResponse:false,mailjetResponse:'Unauthorized'});
     this.$route.query.lang !== undefined
       ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
         ? (this.$i18n.locale = this.$route.query.lang)
@@ -334,13 +343,13 @@ export default {
       this.formerrors = [];
 
       if (!this.name.length) {
-        this.formerrors.push(this.$t('contact.errorname'));
+        this.formerrors.push(this.$t("contact.errorname"));
       }
       if (!this.email.length) {
-        this.formerrors.push(this.$t('contact.erroremail'));
+        this.formerrors.push(this.$t("contact.erroremail"));
       }
       if (!this.message.length) {
-        this.formerrors.push(this.$t('contact.errormessage'));
+        this.formerrors.push(this.$t("contact.errormessage"));
       }
       e.preventDefault();
     },
@@ -369,7 +378,7 @@ export default {
             console.log(data);
             return (
               data.hCaptchaResponse &&
-              (data.mailjetResponse != "ERROR" ? true : false)
+              (data.mailjetResponse == "OK" ? true : false)
             );
           });
       }

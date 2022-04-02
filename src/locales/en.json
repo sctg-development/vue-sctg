@@ -83,6 +83,8 @@
         "errormsg": "Please correct these errors",
         "errorname": "Name required",
         "erroremail": "Email required",
-        "errormessage": "Message required"
+        "errormessage": "Message required",
+        "sent":"Email sent !",
+        "notsent":"Error : email not sent !"
     }
 }
