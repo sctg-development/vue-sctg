@@ -25,7 +25,8 @@
         "dev":"Application development",
         "dev_content":"Specific custom application may be necessary for complete your requirements. We can develop for you a new application.",
         "admin":"Maintenance and hosting",
-        "admin_content": "Even if we didn't build your website, we offer a variety of packages to host, maintain, protect, and even update your website so you can focus on running your business. "
+        "admin_content": "Even if we didn't build your website, we offer a variety of packages to host, maintain, protect, and even update your website so you can focus on running your business. ",
+        "view_all": "View all"
         },
     "nav": {
         "home": "Home",
@@ -71,10 +72,15 @@
         "webdesign-phone": " ",
         "webdesign-open-days": "Open from Mo. Till Fri.",
         "webdesign-open-hours": "09.00 - 18.00",
-        "follow":"Follow us on"
+        "follow":"Follow us on",
+        "title":"We can help with all aspects of web design and graphic design",
+        "subtitle-1":"Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
+        "subtitle-2":"Our design will reflect your company. Not only an amazing website, but it will be a co-design between you and our team."
+
     },
     "contact":{
         "title":"Contact",
+        "subtitle": "Get in touch",
         "contact-email":"get-in-touch{'@'}sctg.cf",
         "name": "Your Name",
         "email": "Your Email",
@@ -85,6 +91,11 @@
         "erroremail": "Email required",
         "errormessage": "Message required",
         "sent":"Email sent !",
-        "notsent":"Error : email not sent !"
+        "notsent":"Error : email not sent !",
+        "mailmsg":"Enter your email",
+        "msgmsg":"Type your message",
+        "namemsg":"Enter your name",
+        "slogan":"We will answer soon…"
+
     }
 }
