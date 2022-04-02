@@ -15,13 +15,13 @@
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/3">
           <div class="mb-16">
             <div class="max-w-[300px]">
-              <a href="index.html" class="mb-7 inline-block">
+              <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="mb-7 inline-block">
                 <img
                   :src="require('@/assets/img/Logo_SCTG_long.svg')"
                   alt="SCTG logo"
                   class="h-12 max-w-full contrast-100 brightness-100"
                 />
-              </a>
+              </router-link>
               <p class="mb-6 text-base font-medium text-zinc-400">
                 {{$t('footer.slogan')}}
               </p>
