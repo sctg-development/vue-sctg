@@ -229,20 +229,21 @@
                             @challenge-expired="hCaptchaChallengeExpire"
                             @error="hCaptchaError"
                           ></vue-hcaptcha>
+                          <!-- :type="'hidde'+'n'" is a workaround for avoiding mangling like tailwind class hidden -->
                           <input
-                            type="hidden"
+                            :type="'hidde'+'n'"
                             name="ekey"
                             id="ekey"
                             v-model="hCaptcha_eKey"
                           />
                           <input
-                            type="hidden"
+                            :type="'hidde'+'n'"
                             name="token"
                             id="etoken"
                             v-model="hCaptcha_token"
                           />
                           <input
-                            type="hidden"
+                            :type="'hidde'+'n'"
                             name="sitekey"
                             id="sitekey"
                             v-model="hCaptcha_sitekey"
