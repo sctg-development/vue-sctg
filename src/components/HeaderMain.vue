@@ -94,7 +94,7 @@
                 </li>
                 <li class="relative">
                   <router-link
-                    :to="{path:'/web'}"
+                    :to="{path:'/web', hash:'#top'}"
                     class="
                       px-8
                       flex
