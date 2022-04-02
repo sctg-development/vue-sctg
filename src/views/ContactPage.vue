@@ -6,6 +6,7 @@
         <div
           class="
             flex
+            justify-center
             items-center
             sm:min-h-screen-1/3
             w-full

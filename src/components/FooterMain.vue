@@ -346,6 +346,6 @@ export default {
       }).format(new Date(process.env.VUE_APP_GIT_LAST_COMMIT)),
       date: new Date().getFullYear(),
     }
-  }
+  },
 }
 </script>

@@ -35,7 +35,8 @@
         "pages": "Pages",
         "support": "Support",
         "services": "Services",
-        "web": "Web"
+        "web": "Web",
+        "lang": "Language"
     },
     "slide":{
         "live_auctions": "Live Auctions",
