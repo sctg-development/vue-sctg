@@ -124,13 +124,12 @@
                         class="
                           mb-4
                           text-4xl
-                          pl-4
                           font-bold
                           text-white
                           sm:text-5xl
                         "
                       >
-                        Get in touch
+                        {{$t('contact.subtitle')}}
                       </h2>
                       <h3 class="text-white" v-if="formerrors.length">
                         <b>{{ $t("contact.errormsg") }}</b>
@@ -142,8 +141,7 @@
                         </ul>
                       </h3>
                       <p class="text-white text-xl">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In non dui aliquet, pellentesque tellus ac, faucibus ex.
+                        {{$t('contact.slogan')}}
                       </p>
                     </div>
                     <form @submit="checkForm" @submit.prevent="submitForm">
@@ -159,7 +157,7 @@
                               name="name"
                               id="name"
                               v-model="name"
-                              placeholder="Enter your name"
+                              :placeholder="$t('contact.namemsg')"
                               class="
                                 w-full
                                 bg-slate-600
@@ -182,7 +180,7 @@
                               name="email"
                               v-model="email"
                               id="email"
-                              placeholder="Enter your email"
+                              :placeholder="$t('contact.mailmsg')"
                               class="
                                 w-full
                                 bg-slate-600
@@ -205,7 +203,7 @@
                               name="message"
                               id="message"
                               v-model="message"
-                              placeholder="Type your message"
+                              :placeholder="$t('contact.msgmsg')"
                               class="
                                 w-full
                                 bg-slate-600

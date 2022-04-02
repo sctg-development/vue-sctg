@@ -62,7 +62,7 @@
                 ></p>
                 <div class="flex flex-wrap items-center">
                   <router-link
-                    :to="{path:'/', hash:'#features'}"
+                    :to="{path:'/', hash:'#features' ,query:{lang: $i18n.locale}}"
                     class="
                       mr-5
                       mb-5
@@ -85,7 +85,7 @@
                     {{ $t("message.explore_now") }}
                   </router-link>
                   <router-link
-                    :to="{path:'/contact', hash:'#top'}"
+                    :to="{path:'/contact', hash:'#top',query:{lang: $i18n.locale}}"
                     class="
                       mb-5
                       items-center
@@ -140,7 +140,7 @@
               {{ $t("message.services") }}
             </h2>
             <router-link
-              :to="{path:'/web', hash:'#websites'}"
+              :to="{path:'/web', hash:'#websites',query:{lang: $i18n.locale}}"
               class="
                 mb-5
                 items-center

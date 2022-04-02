@@ -20,7 +20,7 @@
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
           <router-link
-            :to="{path:'/', hash:'#top'}"
+            :to="{path:'/', hash:'#top',query:{lang: $i18n.locale}}"
             class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'"
           >
@@ -59,7 +59,7 @@
               <ul class="lg:flex">
                 <li class="relative">
                   <router-link
-                    :to="{path:'/',hash:'#top'}"
+                    :to="{path:'/',hash:'#top',query:{lang: $i18n.locale}}"
                     class="
                       px-4
                       flex
@@ -76,7 +76,7 @@
                 </li>
                 <li class="relative">
                   <router-link
-                    :to="{path:'/', hash:'#services'}"
+                    :to="{path:'/', hash:'#services',query:{lang: $i18n.locale}}"
                     class="
                       px-4
                       flex
@@ -94,7 +94,7 @@
                 </li>
                 <li class="relative">
                   <router-link
-                    :to="{path:'/web', hash:'#top'}"
+                    :to="{path:'/web', hash:'#top',query:{lang: $i18n.locale}}"
                     class="
                       px-8
                       flex
@@ -278,7 +278,7 @@
                 -->
                 <li class="relative">
                   <router-link
-                    to="/"
+                    :to="{path:'/',hash:'#top',query:{lang: $i18n.locale}}"
                     class="
                       px-4
                       flex
@@ -381,7 +381,7 @@
               </div>
             </div>
             <router-link
-              to="/"
+              :to="{path:'/',hash:'#top',query:{lang: $i18n.locale}}"
               class="
                 hidden lg:flex
                 whitespace-nowrap
