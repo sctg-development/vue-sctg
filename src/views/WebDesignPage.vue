@@ -134,7 +134,7 @@
 
     <standard-section
       class="py-12 pt-12"
-      :id="web-content"
+      id="web-content"
       :title="$t('message.web_design')"
     >
       <div class="pt-10 px-4 sm:px-8 lg:px-20 text-white flex flex-wrap justify-between">
@@ -160,7 +160,7 @@
     </standard-section>
     <standard-section
       class="py-12 pt-12"
-      :id="web - content"
+      id="websites"
       :title="$t('websites.latest_sites')"
     >
       <div class="pt-10 px-20 text-white flex flex-wrap">
