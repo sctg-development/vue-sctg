@@ -107,21 +107,13 @@
               <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
                 <div class="text-white pt-10">
                   <h1 class="text-3xl font-semibold">
-                    We can help with all aspects of web design and graphic
-                    design
+                    {{$t('websites.title')}}
                   </h1>
                   <p class="pt-8">
-                    Established for more than 20 years, our team helps
-                    start-ups, small businesses and large international
-                    companies to make the right impression. Whether you need web
-                    design, brochure design, graphic design, logo design,
-                    branding, digital design, eCommerce, eCampaign, we can help
-                    to get you noticed.
+                    {{$t('websites.subtitle-1')}}
                   </p>
                   <p class="py-8">
-                    Our design will reflect your company. Not only an amazing
-                    website, but it will be a co-design between you and our
-                    team.
+                    {{$t('websites.subtitle-2')}}
                   </p>
                 </div>
               </div>
@@ -134,7 +126,7 @@
 
     <standard-section
       class="py-12 pt-12"
-      :id="web-content"
+      id="web-content"
       :title="$t('message.web_design')"
     >
       <div class="pt-10 px-4 sm:px-8 lg:px-20 text-white flex flex-wrap justify-between">
@@ -160,7 +152,7 @@
     </standard-section>
     <standard-section
       class="py-12 pt-12"
-      :id="web - content"
+      id="websites"
       :title="$t('websites.latest_sites')"
     >
       <div class="pt-10 px-20 text-white flex flex-wrap">

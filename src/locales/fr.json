@@ -19,13 +19,14 @@
         "company_legal": "Informations légales",
         "about_us": "À propos",
         "core_activities": "Nos activités",
-        "design_content": "The best websites aren't brochures. Our sites are more like your best and hardest-working salespeople: dedicated, multi-tasking, and always laser-focused on your bottom line.",
-        "seo_content": "Looking to tweak your current website or take your SEO, analytics, or conversions to the next level? Learn more about our website optimization services and get a free site audit today!",
+        "design_content": "Les meilleurs sites web ne sont pas de simples brochures. Nos sites sont comme vos meilleurs commerciaux: dédiés, multi-tâches et toujours focalisés,sur les obejtifs.",
+        "seo_content": "Vous cherchez à optimiser les optimisations pour les moteurs de recherche, les analyser ou les convertir aux nouvelles technologies? Découvrez nos services d'optimisations!",
         "core_content": "",
         "dev":"Développement d'applications",
-        "dev_content":"Specific custom application may be necessary for complete your requirements. We can develop for you a new application.",
+        "dev_content":"Parfois le développement d'applictations spécifiques est nécessaire pour atteindre vos objectifs. Nous pouvons développer pour vous votre prochaine application.",
         "admin":"Maintenance et hébergement",
-        "admin_content": "Even if we didn't build your website, we offer a variety of packages to host, maintain, protect, and even update your website so you can focus on running your business. "
+        "admin_content": "Même si nous n'avons pas développé votre site web, nous pouvons vous aider à le maintenir, l'héberger, le développer et même le mettre à jour pour qu'il suive votre développement. ",
+        "view_all": "Tout voir"
         },
     "nav": {
         "home": "Accueil",
@@ -55,20 +56,24 @@
     },
     "websites":{
         "latest_sites":"Nos dernières créations",
-        "webdev":"From simple WordPress websites and CMS websites to bespoke web development and large eCommerce solutions. With responsive design and a full package service, including website management, copywriting and photography, we’ll help you be seen.",
-        "seo":"Make it easy for your next customer to find you online with web SEO. On-page search engine optimisation and our SEO campaigns will improve your online visibility and your google ranking, helping you convert more browsers into customers.",
+        "webdev":"Des simples sites Wordpress et sites CMS jusqu'au site 100% sur mesure et les ambitieux sites de e-Commerce. Avec un design réactif et un ensemble de services complets, incluant la gestion, les droits d'auteurs et d'images, nous vous aiderons à être vus.",
+        "seo":"Rendre facile à vos futus clients de vous trouver sur Internet grace à l'optimisation des moteurs de recherche (SEO). Les optimsations intégrées et nos campagnes SEO améliorerons votre visibilité en ligne et votre classement Google. Cela conduira plus d'internautes sur votre site et au final plus de clients.",
         "web_development": "Web design & Développement",
         "seo_title": "Optimisation SEO",
         "together_title": "Construire ensemble",
-        "together": "You’re an integral part of the process.<br/><br/> We begin our process with a discovery phase. The better we understand your business, the better product we can deliver. Your website will grow as you grow.",
+        "together": "Vous faites intégralement partie du process.<br/><br/> Nous commençons le développement par une phase d'échange. Mieux nous comprendrons votre projet, meilleur sera le produit que nous vous délivrerons. Votre site web grandira en même temps que vous.",
         "webdesign-email": "web-design-fr{'@'}sctg.cf",
         "webdesign-phone": " ",
-        "webdesign-open-days": "Ouvert du Lu. au ve.",
+        "webdesign-open-days": "Ouvert du Lu. au Ve.",
         "webdesign-open-hours": "09.00 - 18.00",
-        "follow":"Suivez-nous"
+        "follow":"Suivez-nous",
+        "title":"Nous pouvons vous aider pour tous les aspects de la conception web et graphique",
+        "subtitle-1":"Créée depuis plus de 20 ans, notre équipe aide les start-ups, les PME et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
+        "subtitle-2":"Notre production reflètera votre société. Un site n'est pas seulement une image, il doit être aussi une co-conception entre vous et nous."
     },
     "contact":{
         "title":"Contact",
+        "subtitle": "Restons en contact",
         "contact-email":"get-in-touch{'@'}sctg.cf",
         "name": "Votre Nom",
         "email": "votre Email",
@@ -79,6 +84,10 @@
         "erroremail": "Email requis",
         "errormessage": "Message requis",
         "sent":"Email envoyé !",
-        "notsent":"Error : email non envoyé !"
+        "notsent":"Erreur : email non envoyé !",
+        "mailmsg":"Entrez votre email",
+        "msgmsg":"Entrez votre message",
+        "namemsg":"Entrez votre nom",
+        "slogan":"Nous vous répondrons…"
     }
 }

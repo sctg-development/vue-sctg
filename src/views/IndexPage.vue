@@ -61,8 +61,8 @@
                   v-html="$t('message.greetings')"
                 ></p>
                 <div class="flex flex-wrap items-center">
-                  <a
-                    href="explore-items.html"
+                  <router-link
+                    :to="{path:'/', hash:'#features' ,query:{lang: $i18n.locale}}"
                     class="
                       mr-5
                       mb-5
@@ -83,9 +83,9 @@
                     "
                   >
                     {{ $t("message.explore_now") }}
-                  </a>
-                  <a
-                    href="create-item.html"
+                  </router-link>
+                  <router-link
+                    :to="{path:'/contact', hash:'#top',query:{lang: $i18n.locale}}"
                     class="
                       mb-5
                       items-center
@@ -103,7 +103,7 @@
                     "
                   >
                     {{ $t("message.contact_us") }}
-                  </a>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -139,8 +139,8 @@
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
               {{ $t("message.services") }}
             </h2>
-            <a
-              href="javascript:void(0)"
+            <router-link
+              :to="{path:'/web', hash:'#websites',query:{lang: $i18n.locale}}"
               class="
                 mb-5
                 items-center
@@ -157,11 +157,11 @@
                 hover:opacity-90
               "
             >
-              View All
-            </a>
+              {{$t('message.view_all')}}
+            </router-link>
           </div>
         </div>
-        <div class="-mx-4 flex flex-wrap">
+        <div id="activities" class="-mx-4 flex flex-wrap">
           <div class="w-full px-4 lg:w-1/2">
             <web-design-card />
           </div>

@@ -157,8 +157,8 @@
                 </a>
               </li>
               <li>
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="{path:'/contact',hash:'#top',query:{lang: $i18n.locale}}"
                   class="
                     mb-4
                     inline-block
@@ -172,7 +172,7 @@
                   "
                 >
                   {{$t('message.contact_us')}}
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>
@@ -346,6 +346,6 @@ export default {
       }).format(new Date(process.env.VUE_APP_GIT_LAST_COMMIT)),
       date: new Date().getFullYear(),
     }
-  }
+  },
 }
 </script>

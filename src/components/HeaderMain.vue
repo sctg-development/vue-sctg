@@ -2,7 +2,9 @@
   <header
     class="items-center w-full flex z-50 left-0 top-0 fixed"
     :class="
-      scrolledFromTop ? 'shadow backdrop-blur-sm bg-gdt-700/70' : 'bg-transparent'
+      scrolledFromTop
+        ? 'shadow backdrop-blur-sm bg-gdt-700/70'
+        : 'bg-transparent'
     "
   >
     <div
@@ -19,8 +21,8 @@
     >
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
-          <a
-            href="/#top"
+          <router-link
+            :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }"
             class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'"
           >
@@ -29,17 +31,34 @@
               alt="SCTG logo"
               class="h-12 max-w-full contrast-100 brightness-100"
             />
-          </a>
+          </router-link>
         </div>
         <div class="flex w-full items-center justify-between mx-4">
           <div>
-        <button
-          class="self-start cursor-pointer text-white text-4xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none absolute top-2 right-2"
-          type="button"
-          @click="navbarOpen = !navbarOpen"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
+            <button
+              class="
+                self-start
+                cursor-pointer
+                text-white text-4xl
+                leading-none
+                px-3
+                py-1
+                border border-solid border-transparent
+                rounded
+                bg-transparent
+                block
+                lg:hidden
+                outline-none
+                focus:outline-none
+                absolute
+                top-2
+                right-2
+              "
+              type="button"
+              @click="navbarOpen = !navbarOpen"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
             <nav
               :class="navbarOpen ? 'block' : 'hidden'"
               id="navbarCollapse"
@@ -58,8 +77,12 @@
             >
               <ul class="lg:flex">
                 <li class="relative">
-                  <a
-                    href="/#top"
+                  <router-link
+                    :to="{
+                      path: '/',
+                      hash: '#top',
+                      query: { lang: $i18n.locale },
+                    }"
                     class="
                       px-4
                       flex
@@ -71,12 +94,16 @@
                       lg:mr-0 lg:font-bold lg:py-6 lg:px-0
                     "
                   >
-                    {{$t("nav.home")}}
-                  </a>
+                    {{ $t("nav.home") }}
+                  </router-link>
                 </li>
                 <li class="relative">
-                  <a
-                    href="/#services"
+                  <router-link
+                    :to="{
+                      path: '/',
+                      hash: '#services',
+                      query: { lang: $i18n.locale },
+                    }"
                     class="
                       px-4
                       flex
@@ -89,12 +116,16 @@
                       xl:ml-12
                     "
                   >
-                    {{$t("nav.services")}}
-                  </a>
+                    {{ $t("nav.services") }}
+                  </router-link>
                 </li>
                 <li class="relative">
-                  <a
-                    href="/web"
+                  <router-link
+                    :to="{
+                      path: '/web',
+                      hash: '#top',
+                      query: { lang: $i18n.locale },
+                    }"
                     class="
                       px-8
                       flex
@@ -107,8 +138,8 @@
                       xl:ml-12
                     "
                   >
-                    {{$t("nav.web")}}
-                  </a>
+                    {{ $t("nav.web") }}
+                  </router-link>
                 </li>
                 <!--
                 <li class="submenu-item relative">
@@ -277,8 +308,12 @@
                 </li>
                 -->
                 <li class="relative">
-                  <a
-                    href="/"
+                  <router-link
+                    :to="{
+                      path: '/',
+                      hash: '#top',
+                      query: { lang: $i18n.locale },
+                    }"
                     class="
                       px-4
                       flex
@@ -291,8 +326,81 @@
                       xl:ml-12
                     "
                   >
-                    {{$t("nav.support")}}
-                  </a>
+                    {{ $t("nav.support") }}
+                  </router-link>
+                </li>
+                <li class="flex items-center">
+                  <div class="relative inline-block text-left">
+                    <div>
+                      <button
+                        @click="langOpen = !langOpen"
+                        type="button"
+                        class="
+                          inline-flex
+                          w-full
+                          rounded-md
+                          border-none
+                          px-4
+                          py-2
+                          bg-transparent
+                          text-xl
+                          font-semibold
+                          text-slate-400
+                          hover:text-white
+                          focus:outline-none
+                          lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
+                          xl:ml-12
+                        "
+                        id="menu-button"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                      >
+                        {{ $t("nav.lang") }}
+                        <svg
+                          class="-mr-1 ml-2 h-5 w-5 self-center"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="
+                        origin-top-right
+                        absolute
+                        right-0
+                        -mt-4
+                        w-18
+                        focus:outline-none
+                      "
+                      :class="langOpen ? 'block' : 'hidden'"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="menu-button"
+                      tabindex="-1"
+                    >
+                      <div class="py-1" role="none">
+                        <span
+                          v-for="locale in $i18n.availableLocales"
+                          :key="`locale-${locale}`"
+                          :value="locale"
+                        >
+                          <img
+                          @click="($i18n.locale = locale)&&(langOpen=false) "
+                            class="cursor-pointer w-12 h-12"
+                            :src="require(`@/assets/img/lang/${locale}.svg`)"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -380,10 +488,11 @@
                 </form>
               </div>
             </div>
-            <a
-              href="/"
+            <router-link
+              :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }"
               class="
-                hidden lg:flex
+                hidden
+                lg:flex
                 whitespace-nowrap
                 items-center
                 rounded-md
@@ -402,8 +511,8 @@
               "
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
-              {{$t('message.connect')}}
-            </a>
+              {{ $t("message.connect") }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -414,7 +523,7 @@
 import { ref } from "vue";
 
 export default {
-  scrolledFromTop: ref(''),
+  scrolledFromTop: ref(""),
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -422,20 +531,22 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll() {   
+    handleScroll() {
       window.pageYOffset >= 50
         ? (this.scrolledFromTop = true)
         : (this.scrolledFromTop = false);
     },
   },
   data() {
+    let langOpen = false;
     let submenuOpen = false;
     let navbarOpen = false;
     let searchOpen = false;
     return {
+      langOpen: ref(langOpen),
       navbarOpen: ref(navbarOpen),
       submenuOpen: ref(submenuOpen),
-      scrolledFromTop: (this.scrolledFromTop),
+      scrolledFromTop: this.scrolledFromTop,
       searchOpen: ref(searchOpen),
     };
   },

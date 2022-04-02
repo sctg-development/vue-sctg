@@ -34,6 +34,13 @@ const routes = [
   }
 ];
 const router = createRouter({
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+      }
+    }
+  },
   history: createWebHistory(),
   routes,
 });
