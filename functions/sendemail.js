@@ -48,7 +48,6 @@ async function sendEmail({ api_key, api_pwd, dest, fromemail, name, message, red
   }
 
   const email = await fetch('https://api.mailjet.com/v3.1/send', {
-  //const email = await Promise.resolve({                           // for testing without emailing
     body: JSON.stringify({
       "Messages": [
         {
