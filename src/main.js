@@ -18,6 +18,11 @@ const routes = [
     name: 'demo',
   },
   {
+    path: "/contact",
+    component: () => import("@/views/ContactPage.vue"),
+    name: 'contact',
+  },
+  {
     path: "/web",
     component: () => import("@/views/WebDesignPage.vue"),
     name: 'web',
