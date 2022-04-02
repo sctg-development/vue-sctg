@@ -139,8 +139,8 @@
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
               {{ $t("message.services") }}
             </h2>
-            <a
-              href="javascript:void(0)"
+            <router-link
+              :to="{path:'/web', hash:'#websites'}"
               class="
                 mb-5
                 items-center
@@ -157,8 +157,8 @@
                 hover:opacity-90
               "
             >
-              View All
-            </a>
+              {{$t('message.view_all')}}
+            </router-link>
           </div>
         </div>
         <div class="-mx-4 flex flex-wrap">

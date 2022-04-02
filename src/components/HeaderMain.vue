@@ -19,8 +19,8 @@
     >
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
-          <a
-            href="/#top"
+          <router-link
+            :to="{path:'/', hash:'#top'}"
             class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'"
           >
@@ -29,7 +29,7 @@
               alt="SCTG logo"
               class="h-12 max-w-full contrast-100 brightness-100"
             />
-          </a>
+          </router-link>
         </div>
         <div class="flex w-full items-center justify-between mx-4">
           <div>
@@ -58,8 +58,8 @@
             >
               <ul class="lg:flex">
                 <li class="relative">
-                  <a
-                    href="/#top"
+                  <router-link
+                    :to="{path:'/',hash:'#top'}"
                     class="
                       px-4
                       flex
@@ -72,11 +72,11 @@
                     "
                   >
                     {{$t("nav.home")}}
-                  </a>
+                  </router-link>
                 </li>
                 <li class="relative">
-                  <a
-                    href="/#services"
+                  <router-link
+                    :to="{path:'/', hash:'#services'}"
                     class="
                       px-4
                       flex
@@ -90,11 +90,11 @@
                     "
                   >
                     {{$t("nav.services")}}
-                  </a>
+                  </router-link>
                 </li>
                 <li class="relative">
-                  <a
-                    href="/web"
+                  <router-link
+                    :to="{path:'/web'}"
                     class="
                       px-8
                       flex
@@ -108,7 +108,7 @@
                     "
                   >
                     {{$t("nav.web")}}
-                  </a>
+                  </router-link>
                 </li>
                 <!--
                 <li class="submenu-item relative">
@@ -277,8 +277,8 @@
                 </li>
                 -->
                 <li class="relative">
-                  <a
-                    href="/"
+                  <router-link
+                    to="/"
                     class="
                       px-4
                       flex
@@ -292,7 +292,7 @@
                     "
                   >
                     {{$t("nav.support")}}
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </nav>
@@ -380,8 +380,8 @@
                 </form>
               </div>
             </div>
-            <a
-              href="/"
+            <router-link
+              to="/"
               class="
                 hidden lg:flex
                 whitespace-nowrap
@@ -403,7 +403,7 @@
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
               {{$t('message.connect')}}
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
