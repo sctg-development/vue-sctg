@@ -154,7 +154,7 @@
                               {{ $t("contact.name") }}
                             </label>
                             <input
-                              v-if="!fromSendEmail.executed"
+                              v-if="!fromSendEmail"
                               type="text"
                               name="name"
                               id="name"
@@ -177,7 +177,7 @@
                               {{ $t("contact.email") }}
                             </label>
                             <input
-                              v-if="!fromSendEmail.executed"
+                              v-if="!fromSendEmail"
                               type="email"
                               name="email"
                               v-model="email"
@@ -200,7 +200,7 @@
                               {{ $t("contact.message") }}
                             </label>
                             <textarea
-                              v-if="!fromSendEmail.executed"
+                              v-if="!fromSendEmail"
                               rows="5"
                               name="message"
                               id="message"
@@ -219,7 +219,7 @@
                         </div>
                         <div class="flex justify-center w-full mt-4">
                           <vue-hcaptcha
-                            v-if="formVerified && !fromSendEmail.executed"
+                            v-if="formVerified && !fromSendEmail"
                             :sitekey="hCaptcha_sitekey"
                             theme="dark"
                             class="flex justify-center rounded"
@@ -231,19 +231,19 @@
                           ></vue-hcaptcha>
                           <!-- :type="'hidde'+'n'" is a workaround for avoiding mangling like tailwind class hidden -->
                           <input
-                            :type="'hidde'+'n'"
+                            :type="'hidde' + 'n'"
                             name="ekey"
                             id="ekey"
                             v-model="hCaptcha_eKey"
                           />
                           <input
-                            :type="'hidde'+'n'"
+                            :type="'hidde' + 'n'"
                             name="token"
                             id="etoken"
                             v-model="hCaptcha_token"
                           />
                           <input
-                            :type="'hidde'+'n'"
+                            :type="'hidde' + 'n'"
                             name="sitekey"
                             id="sitekey"
                             v-model="hCaptcha_sitekey"
@@ -262,9 +262,28 @@
                           >
                             {{ $t("contact.send") }}
                           </button>
-                          <div v-if="fromSendEmail.executed">
-                            <h4 class="text-white p-2 bg-indigo-600 rounded text-2xl font-semibold">
+                          <div
+                            v-if="fromSendEmail"
+                            class="
+                              text-white
+                              p-2
+                              bg-indigo-600
+                              rounded
+                              text-2xl
+                              font-semibold
+                            "
+                          >
+                            <h4
+                              v-if="
+                                fromSendEmail.executed &&
+                                sendemailRet.hCaptchaResponse &&
+                                sendemailRet.mailjetResponse == 'OK'
+                              "
+                            >
                               {{ $t("contact.sent") }}
+                            </h4>
+                            <h4 v-else>
+                              {{ $t("contact.notsent") }}
                             </h4>
                           </div>
                         </div>
@@ -287,7 +306,7 @@ import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
 import { getCloudinaryImg } from "@/utilities/utilities.js";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 export default {
   setup() {},
   name: "SinglePage",
@@ -305,7 +324,12 @@ export default {
     const email = ref("");
     const message = ref("");
     const email_sent = ref(false);
-    const fromSendEmail = ref({executed:false,hCaptchaResponse:false,mailjetResponse:'Unauthorized'});
+    const fromSendEmail = ref(false);
+    const sendemailRet = reactive({
+      executed: false,
+      hCaptchaResponse: false,
+      mailjetResponse: "Unauthorized",
+    });
     this.$route.query.lang !== undefined
       ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
         ? (this.$i18n.locale = this.$route.query.lang)
@@ -326,6 +350,7 @@ export default {
       email_sent,
       fromSendEmail,
       formVerified,
+      sendemailRet,
     };
   },
   components: {
@@ -377,6 +402,9 @@ export default {
           })
           .then((data) => {
             console.log(data);
+            this.sendemailRet.executed = true;
+            this.sendemailRet.hCaptchaResponse = data.hCaptchaResponse;
+            this.sendemailRet.mailjetResponse = data.mailjetResponse;
             return (
               data.hCaptchaResponse &&
               (data.mailjetResponse == "OK" ? true : false)
