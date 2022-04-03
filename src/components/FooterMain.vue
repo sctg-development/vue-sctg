@@ -321,7 +321,7 @@
         <div class="py-7 text-center">
           <p class="text-base font-medium text-zinc-400">
             <span  @mouseover="copyright_text = 'build: ' + commit_date"
-              @mouseleave="copyright_text = '2018-' + new Date().getFullYear()">© Copyright {{copyright_text}} {{ $t("message.company") }} -
+              @mouseleave="copyright_text = '2018-' + new Date().getFullYear()">{{$t('footer.copyright')}} {{copyright_text}} {{ $t("message.company") }} -
             {{ $t("message.all_rights_reserved") }}.</span>
           </p>
         </div>
