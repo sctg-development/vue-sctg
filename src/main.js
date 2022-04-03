@@ -9,6 +9,7 @@ const i18n = createI18n({
   messages: {
     en: require('@/locales/en.json'),
     fr: require('@/locales/fr.json'),
+    es: require('@/locales/es.json'),
   }
 })
 const routes = [
