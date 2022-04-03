@@ -99,24 +99,24 @@
         "slogan": "Respondremos pronto…"
     },
     "single": {
-        "title": "Single",
-        "subtitle": "Sub-title",
-        "slogan": "Slogan",
-        "email": "design{'@'}sctg.cf",
+        "title": "Simple",
+        "subtitle": "Subtítulo",
+        "slogan": "Eslogan",
+        "email": "design-es{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
+        "open-days": "Abierto desde Lu. a Vi.",
         "open-hours": "09.00 - 18.00",
-        "follow": "Follow us on"
+        "follow": "Síguenos en"
     },
     "about": {
-        "title": "About us",
-        "subtitle": "A few words",
-        "text": "Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
-        "email": "about-us{'@'}sctg.cf",
+        "title": "Acerca de",
+        "subtitle": "Algunas palabras",
+        "text": "Establecida por más de 20 años, nuestro equipo ayuda a que los emprendimientos, las pequeñas empresas y las grandes empresas internacionales hagan la impresión correcta. Ya sea que usted necesite diseño web, diseño de folletos, diseño gráfico, diseño de logotipos, marca, diseño digital, eCommerce, eCampaign, podemos ayudarle a hacerle notar.",
+        "email": "about-us-es{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
+        "open-days": "Abierto desde Lu. a Vi.",
         "open-hours": "09.00 - 18.00",
-        "follow": "Follow us on",
-        "info": "RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
+        "follow": "Síguenos en",
+        "info": "RCS Arras (Pas-de-Calais Francia): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, Francia"
     }
 }
