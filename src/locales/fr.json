@@ -9,13 +9,13 @@
         "all_rights_reserved": "Tous droits réservés",
         "enter_your_email_address": "Entrez votre email",
         "actions": "Actions",
-        "team": "Team",
-        "web_design": "Web design",
+        "team": "Équipe",
+        "web_design": "Conception Web",
         "sysadmin": "Administration système",
         "services": "Services",
         "us": "Nous…",
         "client": "Client",
-        "news": "News",
+        "news": "Actualités",
         "company_legal": "Informations légales",
         "about_us": "À propos",
         "core_activities": "Nos activités",
@@ -33,10 +33,10 @@
         "explore": "Explorer",
         "community": "Communauté",
         "pages": "Pages",
-        "support": "Support",
+        "support": "Assistance",
         "services": "Services",
         "web": "Web",
-        "lang": "Language"
+        "lang": "Langue"
     },
     "slide": {
         "live_auctions": "Enchères en cours",
@@ -58,7 +58,9 @@
         "services": "Services",
         "job_opportunitues": "Carrières",
         "suscribe": "Abonnez-vous",
-        "slogan": "Your Internet partner"
+        "slogan": "Votre partenaire Internet",
+        "newsletter": "Enter your email address for receiving valuable newsletters.",
+        "copyright": "© Copyright"
     },
     "websites": {
         "latest_sites": "Nos dernières créations",
