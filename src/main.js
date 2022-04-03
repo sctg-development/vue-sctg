@@ -8,8 +8,8 @@ const i18n = createI18n({
   locale: 'en',
   messages: {
     en: require('@/locales/en.json'),
-    fr: require('@/locales/fr.json'),
-    es: require('@/locales/es.json'),
+    fr: "", //will be lazily loaded in HeaderMain/changeLang(locale)
+    es: "",
   }
 })
 const routes = [
