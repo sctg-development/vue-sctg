@@ -97,5 +97,26 @@
         "msgmsg": "Escriba su mensaje",
         "namemsg": "Introduce tu nombre",
         "slogan": "Respondremos pronto…"
+    },
+    "single": {
+        "title": "Simple",
+        "subtitle": "Subtítulo",
+        "slogan": "Eslogan",
+        "email": "design-es{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Abierto desde Lu. a Vi.",
+        "open-hours": "09.00 - 18.00",
+        "follow": "Síguenos en"
+    },
+    "about": {
+        "title": "Acerca de",
+        "subtitle": "Algunas palabras",
+        "text": "Establecida por más de 20 años, nuestro equipo ayuda a que los emprendimientos, las pequeñas empresas y las grandes empresas internacionales hagan la impresión correcta. Ya sea que usted necesite diseño web, diseño de folletos, diseño gráfico, diseño de logotipos, marca, diseño digital, eCommerce, eCampaign, podemos ayudarle a hacerle notar.",
+        "email": "about-us-es{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Abierto desde Lu. a Vi.",
+        "open-hours": "09.00 - 18.00",
+        "follow": "Síguenos en",
+        "info": "RCS Arras (Pas-de-Calais Francia): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, Francia"
     }
 }
