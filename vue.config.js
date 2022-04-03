@@ -67,16 +67,16 @@ if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   webpackPlugins.push(purgeCssPlugin);
 }
 
-// if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
-//   const FontMinPlugin = require('fontmin-webpack');
-//   const fontMinPlugin = new FontMinPlugin({
-//     autodetect: true,
-//     glyphs: [],
-//     allowedFilesRegex: /^fa-/, // RegExp to only target specific fonts by their names
-//     //skippedFilesRegex: null,
-//   });
-//   webpackPlugins.push(fontMinPlugin);
-// }
+if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
+  const FontMinPlugin = require('fontmin-webpack');
+  const fontMinPlugin = new FontMinPlugin({
+    autodetect: true,
+    glyphs: [],
+    allowedFilesRegex: /^fa-/, // RegExp to only target specific fonts by their names
+    //skippedFilesRegex: null,
+  });
+  webpackPlugins.push(fontMinPlugin);
+}
 
 if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
