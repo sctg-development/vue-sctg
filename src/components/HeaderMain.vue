@@ -393,7 +393,7 @@
                           :value="locale"
                         >
                           <img
-                          @click="($i18n.locale = locale)&&(langOpen=false) "
+                            @click="changeLang(locale)"
                             class="cursor-pointer w-12 h-12"
                             :src="require(`@/assets/img/lang/${locale}.svg`)"
                           />
@@ -535,6 +535,22 @@ export default {
       window.pageYOffset >= 50
         ? (this.scrolledFromTop = true)
         : (this.scrolledFromTop = false);
+    },
+    changeLang(locale) {
+      if (this.$i18n.locale != locale) {
+        console.log(`Change locale from ${this.$i18n.locale} to ${locale}`);
+        if (this.$i18n.messages[locale].length == 0) {
+          import(`@/locales/${locale}.json`).then((messages) => {
+            this.$i18n.messages[locale] = messages;
+            console.log(`Lazily loaded ${locale} messages`);
+            this.$i18n.locale = locale;
+            this.langOpen = false;
+          });
+        } else {
+          this.$i18n.locale = locale;
+          this.langOpen = false;
+        }
+      }
     },
   },
   data() {
