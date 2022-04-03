@@ -44,17 +44,48 @@ fs.writeFile('./sanity-conf.json',
 process.env.VUE_APP_ALGOLIA_SEARCH_KEY = process.env.ALGOLIA_SEARCH_KEY;
 process.env.VUE_APP_ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
 
-const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
-const myManglePlugin = new MangleCssClassPlugin({
-  classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
-  log: true,
-  reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
-  ignorePrefixRegExp: '.*tns.*|light[bB]ox'
-});
 
 const webpackPlugins = [];
 
-if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')){
+if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
+  const PurgecssPlugin = require('purgecss-webpack-plugin');
+  const glob = require('glob-all')
+  const PATHS = {
+    src: path.join(__dirname, 'src')
+  }
+
+  const purgeCssPlugin = new PurgecssPlugin({
+    paths: glob.sync(
+      [
+        path.join(__dirname, './public/*.html'),
+        path.join(__dirname, './src/**/*.vue'),
+        path.join(__dirname, './src/**/*.js')
+      ]),
+    safelist: [/^sm:/, /^md:/, /^lg:/, /^xl:/, /^2xl:/, /^focus:/, /^hover:/, /^group-hover:/, /\[.*\]/, /^basicLightbox/, /\/[0-9]/, /^tns/],
+    fontFace: true
+  })
+  webpackPlugins.push(purgeCssPlugin);
+}
+
+if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
+  const FontMinPlugin = require('fontmin-webpack');
+  const fontMinPlugin = new FontMinPlugin({
+    autodetect: true,
+    glyphs: [],
+    allowedFilesRegex: /^fa-/, // RegExp to only target specific fonts by their names
+    //skippedFilesRegex: null,
+  });
+  webpackPlugins.push(fontMinPlugin);
+}
+
+if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
+  const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
+  const myManglePlugin = new MangleCssClassPlugin({
+    classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
+    log: true,
+    reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
+    ignorePrefixRegExp: '.*tns.*|light[bB]ox'
+  });
   webpackPlugins.push(myManglePlugin);
 }
 
