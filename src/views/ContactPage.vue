@@ -18,7 +18,7 @@
             2xl:max-w-screen-xl
           "
         >
-          <div class="px-4">
+          <div class="px-4 min-w-2/3">
             <div class="relative z-10 overflow-hidden rounded-lg bg-slate-800">
               <div class="-mx-4 flex flex-wrap">
                 <div

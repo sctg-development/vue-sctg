@@ -6,6 +6,7 @@
         <div
           class="
             flex
+            justify-center
             items-center
             sm:min-h-screen-1/3
             w-full
@@ -17,8 +18,8 @@
             2xl:max-w-screen-xl
           "
         >
-          <div class="px-4">
-            <div class="relative z-10 overflow-hidden rounded-lg bg-slate-700">
+          <div class="px-4 min-w-2/3">
+            <div class="relative z-10 overflow-hidden rounded-lg bg-slate-800">
               <div class="-mx-4 flex flex-wrap">
                 <div
                   class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center"
@@ -26,6 +27,7 @@
                   <div
                     class="
                       relative
+                      h-full
                       z-10
                       flex flex-col
                       justify-between
@@ -46,7 +48,58 @@
                           sm:text-5xl
                         "
                       >
-                        toto
+                        {{ $t("single.title") }}
+                      </div>
+                      <div class="absolute bottom-4 right-4">
+                        <div class="mt-16 mb-16">
+                          <p class="text-lg font-bold text-white sm:text-xl">
+                            <span class="block">
+                              {{ $t("single.email") }}
+                            </span>
+                            <span class="block">
+                              {{ $t("single.phone") }}
+                            </span>
+                            <span class="block">
+                              {{ $t("single.open-days") }}
+                            </span>
+                            <span class="block">
+                              {{ $t("single.open-hours") }}
+                            </span>
+                          </p>
+                        </div>
+                        <div>
+                          <p class="mb-3 text-xl font-bold text-white">
+                            {{ $t("single.follow") }}
+                          </p>
+                          <div
+                            class="flex items-center space-x-1 lg:justify-end"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-white hover:text-white/80"
+                            >
+                              <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="text-white hover:text-white/80"
+                            >
+                              <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="text-white hover:text-white/80"
+                            >
+                              <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a
+                              href="javascript:void(0)"
+                              class="text-white hover:text-white/80"
+                            >
+                              <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div>
@@ -66,9 +119,17 @@
                   </div>
                 </div>
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
-                  <div class="text-white">
-                    <h1>Lorem</h1>
-                    <p>{{ $t("dev.lorem50") }}</p>
+                  <div class="pt-20 pb-8">
+                    <div class="mb-12 max-w-[410px]">
+                      <h2
+                        class="mb-4 text-4xl font-bold text-white sm:text-5xl"
+                      >
+                        {{ $t("single.subtitle") }}
+                      </h2>
+                      <p class="text-white text-xl">
+                        {{ $t("single.slogan") }}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

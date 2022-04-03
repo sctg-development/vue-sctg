@@ -15,13 +15,13 @@
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/3">
           <div class="mb-16">
             <div class="max-w-[300px]">
-              <a href="index.html" class="mb-7 inline-block">
+              <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="mb-7 inline-block">
                 <img
                   :src="require('@/assets/img/Logo_SCTG_long.svg')"
                   alt="SCTG logo"
                   class="h-12 max-w-full contrast-100 brightness-100"
                 />
-              </a>
+              </router-link>
               <p class="mb-6 text-base font-medium text-zinc-400">
                 {{$t('footer.slogan')}}
               </p>
@@ -103,8 +103,8 @@
             <h2 class="mb-8 text-2xl font-medium text-white">{{$t('message.us')}}</h2>
             <ul>
               <li>
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="{path:'/about',hash:'#top',query:{lang: $i18n.locale}}"
                   class="
                     mb-4
                     inline-block
@@ -118,7 +118,7 @@
                   "
                 >
                     {{$t('footer.about_us')}}
-                </a>
+                </router-link>
               </li>
               <li>
                 <a
@@ -260,7 +260,7 @@
           <div class="mb-16">
             <h2 class="mb-8 text-2xl font-medium text-white">{{$t('footer.suscribe')}}</h2>
             <p class="mb-5 text-base font-medium text-zinc-400">
-              Enter your email address for receiving valuable newsletters.
+              {{$t('footer.newsletter')}}
             </p>
             <form class="relative">
               <input
@@ -321,7 +321,7 @@
         <div class="py-7 text-center">
           <p class="text-base font-medium text-zinc-400">
             <span  @mouseover="copyright_text = 'build: ' + commit_date"
-              @mouseleave="copyright_text = '2018-' + new Date().getFullYear()">© Copyright {{copyright_text}} {{ $t("message.company") }} -
+              @mouseleave="copyright_text = '2018-' + new Date().getFullYear()">{{$t('footer.copyright')}} {{copyright_text}} {{ $t("message.company") }} -
             {{ $t("message.all_rights_reserved") }}.</span>
           </p>
         </div>

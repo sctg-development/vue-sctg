@@ -58,7 +58,9 @@
         "services": "Services",
         "job_opportunitues": "Job opportunities",
         "suscribe": "Subscribe",
-        "slogan": "Your Internet partner"
+        "slogan": "Your Internet partner",
+        "newsletter":"Enter your email address for receiving valuable newsletters.",
+        "copyright":"© Copyright"
 
     },
     "websites":{
@@ -97,6 +99,26 @@
         "msgmsg":"Type your message",
         "namemsg":"Enter your name",
         "slogan":"We will answer soon…"
-
+    },
+    "single":{
+        "title": "Single",
+        "subtitle": "Sub-title",
+        "slogan": "Slogan",
+        "email": "design{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Open from Mo. Till Fri.",
+        "open-hours": "09.00 - 18.00",
+        "follow":"Follow us on"
+    },
+    "about":{
+        "title": "About us",
+        "subtitle": "A few words",
+        "text": "Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
+        "email": "about-us{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Open from Mo. Till Fri.",
+        "open-hours": "09.00 - 18.00",
+        "follow":"Follow us on",
+        "info":"RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
     }
 }

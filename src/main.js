@@ -9,6 +9,7 @@ const i18n = createI18n({
   messages: {
     en: require('@/locales/en.json'),
     fr: require('@/locales/fr.json'),
+    es: require('@/locales/es.json'),
   }
 })
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     path: "/demo",
     component: () => import("@/views/SinglePage.vue"),
     name: 'demo',
+  },
+  {
+    path: "/about",
+    component: () => import("@/views/AboutPage.vue"),
+    name: 'about',
   },
   {
     path: "/contact",
