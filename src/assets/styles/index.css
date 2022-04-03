@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('@/assets/fonts/KeepCalm.css');
 
+
 .basicLightbox {
     position: fixed;
     display: flex;
