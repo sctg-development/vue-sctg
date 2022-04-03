@@ -99,24 +99,24 @@
         "slogan": "Nous vous répondrons…"
     },
     "single": {
-        "title": "Single",
-        "subtitle": "Sub-title",
+        "title": "Unique",
+        "subtitle": "Sous-titre",
         "slogan": "Slogan",
-        "email": "design{'@'}sctg.cf",
+        "email": "design-fr{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
+        "open-days": "Ouvert du Lu. au Ve.",
         "open-hours": "09.00 - 18.00",
-        "follow": "Follow us on"
+        "follow": "Suivez-nous sur"
     },
     "about": {
-        "title": "About us",
-        "subtitle": "A few words",
-        "text": "Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
-        "email": "about-us{'@'}sctg.cf",
+        "title": "À propos",
+        "subtitle": "Quelques mots",
+        "text": "Créée depuis plus de 20 ans, notre équipe aide les start-ups, les Pme et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
+        "email": "about-us-fr{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
+        "open-days": "Ouvert du Lu. au Ve.",
         "open-hours": "09.00 - 18.00",
-        "follow": "Follow us on",
-        "info": "RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
+        "follow": "Suivez-nous sur",
+        "info": "RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
     }
 }
