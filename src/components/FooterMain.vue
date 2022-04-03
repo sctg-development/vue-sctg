@@ -103,8 +103,8 @@
             <h2 class="mb-8 text-2xl font-medium text-white">{{$t('message.us')}}</h2>
             <ul>
               <li>
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="{path:'/about',hash:'#top',query:{lang: $i18n.locale}}"
                   class="
                     mb-4
                     inline-block
@@ -118,7 +118,7 @@
                   "
                 >
                     {{$t('footer.about_us')}}
-                </a>
+                </router-link>
               </li>
               <li>
                 <a
