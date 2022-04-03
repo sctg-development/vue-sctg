@@ -9,55 +9,63 @@
         "all_rights_reserved": "Tous droits réservés",
         "enter_your_email_address": "Entrez votre email",
         "actions": "Actions",
-        "team": "Team",
-        "web_design": "Web design",
+        "team": "Équipe",
+        "web_design": "Conception Web",
         "sysadmin": "Administration système",
         "services": "Services",
         "us": "Nous…",
         "client": "Client",
-        "news": "News",
+        "news": "Actualités",
         "company_legal": "Informations légales",
         "about_us": "À propos",
         "core_activities": "Nos activités",
         "design_content": "Les meilleurs sites web ne sont pas de simples brochures. Nos sites sont comme vos meilleurs commerciaux: dédiés, multi-tâches et toujours focalisés,sur les obejtifs.",
         "seo_content": "Vous cherchez à optimiser les optimisations pour les moteurs de recherche, les analyser ou les convertir aux nouvelles technologies? Découvrez nos services d'optimisations!",
         "core_content": "",
-        "dev":"Développement d'applications",
-        "dev_content":"Parfois le développement d'applictations spécifiques est nécessaire pour atteindre vos objectifs. Nous pouvons développer pour vous votre prochaine application.",
-        "admin":"Maintenance et hébergement",
+        "dev": "Développement d'applications",
+        "dev_content": "Parfois le développement d'applictations spécifiques est nécessaire pour atteindre vos objectifs. Nous pouvons développer pour vous votre prochaine application.",
+        "admin": "Maintenance et hébergement",
         "admin_content": "Même si nous n'avons pas développé votre site web, nous pouvons vous aider à le maintenir, l'héberger, le développer et même le mettre à jour pour qu'il suive votre développement. ",
         "view_all": "Tout voir"
-        },
+    },
     "nav": {
         "home": "Accueil",
         "explore": "Explorer",
         "community": "Communauté",
         "pages": "Pages",
-        "support": "Support",
+        "support": "Assistance",
         "services": "Services",
-        "web": "Web"
+        "web": "Web",
+        "lang": "Langue"
     },
-    "slide":{
+    "slide": {
         "live_auctions": "Enchères en cours",
         "web_creations": "Créations Web"
     },
-    "services":{
+    "services": {
         "design_hosting": "création-gestion",
-        "design":"création",
-        "web_app":"appli web",
+        "design": "création",
+        "web_app": "appli web",
         "erp_integration": "Integration d'ERP"
     },
-    "footer":{
+    "dev": {
+        "lorem9": "Eos assumenda saepe in quidem veniam et repellendus consequatur.",
+        "lorem15": "Lorem ipsum dolor sit amet. Aut rerum nesciunt et dolores sint non nesciunt sunt.",
+        "lorem50": "Lorem ipsum dolor sit amet. Est pariatur vitae et quasi soluta aut tempora galisum et omnis voluptatem est laboriosam corrupti. Qui quia deleniti vel exercitationem omnis sit officiis vitae et ipsum possimus vel odit dolorem. Eos adipisci impedit aut consequatur quod eos fugiat laborum ut nihil saepe et galisum galisum hic molestiae assumenda saepe corrupti."
+    },
+    "footer": {
         "about_us": "À propos",
         "services": "Services",
         "job_opportunitues": "Carrières",
         "suscribe": "Abonnez-vous",
-        "slogan": "Your Internet partner"   
+        "slogan": "Votre partenaire Internet",
+        "newsletter": "Entrez votre adresse e-mail pour recevoir des bulletins de valeur.",
+        "copyright": "© Droits d'auteur"
     },
-    "websites":{
-        "latest_sites":"Nos dernières créations",
-        "webdev":"Des simples sites Wordpress et sites CMS jusqu'au site 100% sur mesure et les ambitieux sites de e-Commerce. Avec un design réactif et un ensemble de services complets, incluant la gestion, les droits d'auteurs et d'images, nous vous aiderons à être vus.",
-        "seo":"Rendre facile à vos futus clients de vous trouver sur Internet grace à l'optimisation des moteurs de recherche (SEO). Les optimsations intégrées et nos campagnes SEO améliorerons votre visibilité en ligne et votre classement Google. Cela conduira plus d'internautes sur votre site et au final plus de clients.",
+    "websites": {
+        "latest_sites": "Nos dernières créations",
+        "webdev": "Des simples sites Wordpress et sites CMS jusqu'au site 100% sur mesure et les ambitieux sites de e-Commerce. Avec un design réactif et un ensemble de services complets, incluant la gestion, les droits d'auteurs et d'images, nous vous aiderons à être vus.",
+        "seo": "Rendre facile à vos futus clients de vous trouver sur Internet grace à l'optimisation des moteurs de recherche (SEO). Les optimsations intégrées et nos campagnes SEO améliorerons votre visibilité en ligne et votre classement Google. Cela conduira plus d'internautes sur votre site et au final plus de clients.",
         "web_development": "Web design & Développement",
         "seo_title": "Optimisation SEO",
         "together_title": "Construire ensemble",
@@ -66,28 +74,28 @@
         "webdesign-phone": " ",
         "webdesign-open-days": "Ouvert du Lu. au Ve.",
         "webdesign-open-hours": "09.00 - 18.00",
-        "follow":"Suivez-nous",
-        "title":"Nous pouvons vous aider pour tous les aspects de la conception web et graphique",
-        "subtitle-1":"Créée depuis plus de 20 ans, notre équipe aide les start-ups, les PME et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
-        "subtitle-2":"Notre production reflètera votre société. Un site n'est pas seulement une image, il doit être aussi une co-conception entre vous et nous."
+        "follow": "Suivez-nous",
+        "title": "Nous pouvons vous aider pour tous les aspects de la conception web et graphique",
+        "subtitle-1": "Créée depuis plus de 20 ans, notre équipe aide les start-ups, les PME et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
+        "subtitle-2": "Notre production reflètera votre société. Un site n'est pas seulement une image, il doit être aussi une co-conception entre vous et nous."
     },
-    "contact":{
-        "title":"Contact",
+    "contact": {
+        "title": "Contact",
         "subtitle": "Restons en contact",
-        "contact-email":"get-in-touch{'@'}sctg.cf",
+        "contact-email": "get-in-touch{'@'}sctg.cf",
         "name": "Votre Nom",
         "email": "votre Email",
-        "message":"Votre Message",
+        "message": "Votre Message",
         "send": "Envoyer",
         "errormsg": "Veuillez corriger ces erreurs.",
         "errorname": "Nom requis",
         "erroremail": "Email requis",
         "errormessage": "Message requis",
-        "sent":"Email envoyé !",
-        "notsent":"Erreur : email non envoyé !",
-        "mailmsg":"Entrez votre email",
-        "msgmsg":"Entrez votre message",
-        "namemsg":"Entrez votre nom",
-        "slogan":"Nous vous répondrons…"
+        "sent": "Email envoyé !",
+        "notsent": "Erreur : email non envoyé !",
+        "mailmsg": "Entrez votre email",
+        "msgmsg": "Entrez votre message",
+        "namemsg": "Entrez votre nom",
+        "slogan": "Nous vous répondrons…"
     }
 }
