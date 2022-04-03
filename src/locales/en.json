@@ -99,6 +99,14 @@
         "msgmsg":"Type your message",
         "namemsg":"Enter your name",
         "slogan":"We will answer soon…"
-
+    },
+    "single":{
+        "title": "Single",
+        "subtitle": "Sub-title",
+        "slogan": "Slogan",
+        "email": "design{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Open from Mo. Till Fri.",
+        "open-hours": "09.00 - 18.00"
     }
 }
