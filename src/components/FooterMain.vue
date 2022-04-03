@@ -260,7 +260,7 @@
           <div class="mb-16">
             <h2 class="mb-8 text-2xl font-medium text-white">{{$t('footer.suscribe')}}</h2>
             <p class="mb-5 text-base font-medium text-zinc-400">
-              Enter your email address for receiving valuable newsletters.
+              {{$t('footer.newsletter')}}
             </p>
             <form class="relative">
               <input
