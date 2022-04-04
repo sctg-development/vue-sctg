@@ -96,7 +96,9 @@
         "mailmsg": "Ingrese su email",
         "msgmsg": "Escriba su mensaje",
         "namemsg": "Introduce tu nombre",
-        "slogan": "Respondremos pronto…"
+        "slogan": "Respondremos pronto…",
+        "agreement": "Al hacer clic aquí usted acepta recibir correos electrónicos de nosotros, tenga en cuenta que nunca compartiremos su dirección con nadie.",
+        "disagree": "Debes aceptar recibir correos electrónicos."
     },
     "single": {
         "title": "Simple",
