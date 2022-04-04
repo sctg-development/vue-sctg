@@ -97,8 +97,8 @@
         "msgmsg": "Entrez votre message",
         "namemsg": "Entrez votre nom",
         "slogan": "Nous vous répondrons…",
-        "agreement": "By clicking here you agree to receive emails from us, note that we will never share your address with anyone.",
-        "disagree": "You must agree to receive emails."
+        "agreement": "En cliquant ici, vous acceptez de recevoir des courriels de notre part, notez que nous ne partagerons jamais votre adresse avec quiconque.",
+        "disagree": "Vous devez accepter de recevoir des e-mails."
     },
     "single": {
         "title": "Unique",
