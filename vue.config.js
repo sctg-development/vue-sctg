@@ -72,22 +72,24 @@ if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   const fontMinPlugin = new FontMinPlugin({
     autodetect: true,
     glyphs: [],
-    allowedFilesRegex: /^fa-/, // RegExp to only target specific fonts by their names
-    //skippedFilesRegex: null,
+    allowedFilesRegex: /^fa[srltdb]*-/, // RegExp to only target specific fonts by their names
+    skippedFilesRegex: null, // RegExp to skip specific fonts by their names
+    textRegex: /\.(js|css|html|vue)$/,  // RegExp for searching text reference
+    webpackCompilationHook: 'compilation', // Webpack compilation hook (for example PurgeCss webpack plugin use 'compilation' )
   });
   webpackPlugins.push(fontMinPlugin);
 }
 
-if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
-  const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
-  const myManglePlugin = new MangleCssClassPlugin({
-    classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
-    log: true,
-    reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
-    ignorePrefixRegExp: '.*tns.*|light[bB]ox'
-  });
-  webpackPlugins.push(myManglePlugin);
-}
+// if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
+//   const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
+//   const myManglePlugin = new MangleCssClassPlugin({
+//     classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
+//     log: true,
+//     reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
+//     ignorePrefixRegExp: '.*tns.*|light[bB]ox'
+//   });
+//   webpackPlugins.push(myManglePlugin);
+// }
 
 module.exports = {
   runtimeCompiler: true,
