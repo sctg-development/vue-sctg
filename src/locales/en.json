@@ -98,7 +98,9 @@
         "mailmsg":"Enter your email",
         "msgmsg":"Type your message",
         "namemsg":"Enter your name",
-        "slogan":"We will answer soon…"
+        "slogan":"We will answer soon…",
+        "agreement": "By clicking here you agree to receive emails from us, note that we will never share your address with anyone.",
+        "disagree": "You must agree to receive emails."
     },
     "single":{
         "title": "Single",

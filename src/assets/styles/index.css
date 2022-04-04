@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url('@/assets/fonts/KeepCalm.css');
+@import "@fortawesome/fontawesome-free/css/all.css";
+
 
 
 .basicLightbox {

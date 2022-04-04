@@ -372,6 +372,7 @@
                       </button>
                     </div>
                     <div
+                      v-if="langOpen"
                       class="
                         origin-top-right
                         absolute
@@ -379,8 +380,8 @@
                         -mt-4
                         w-18
                         focus:outline-none
+                        block
                       "
-                      :class="langOpen ? 'block' : 'hidden'"
                       role="menu"
                       aria-orientation="vertical"
                       aria-labelledby="menu-button"

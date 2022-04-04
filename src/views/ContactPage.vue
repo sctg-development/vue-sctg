@@ -72,7 +72,7 @@
                             {{ $t("websites.follow") }}
                           </p>
                           <div
-                            class="flex items-center space-x-1 lg:justify-end"
+                            class="flex items-center trext-xl space-x-1 lg:justify-end"
                           >
                             <a
                               href="javascript:void(0)"
@@ -122,15 +122,9 @@
                   <div class="pt-20 pb-8">
                     <div class="mb-12 max-w-[410px]">
                       <h2
-                        class="
-                          mb-4
-                          text-4xl
-                          font-bold
-                          text-white
-                          sm:text-5xl
-                        "
+                        class="mb-4 text-4xl font-bold text-white sm:text-5xl"
                       >
-                        {{$t('contact.subtitle')}}
+                        {{ $t("contact.subtitle") }}
                       </h2>
                       <h3 class="text-white" v-if="formerrors.length">
                         <b>{{ $t("contact.errormsg") }}</b>
@@ -142,7 +136,7 @@
                         </ul>
                       </h3>
                       <p class="text-white text-xl">
-                        {{$t('contact.slogan')}}
+                        {{ $t("contact.slogan") }}
                       </p>
                     </div>
                     <form @submit="checkForm" @submit.prevent="submitForm">
@@ -194,7 +188,7 @@
                           </div>
                         </div>
                         <div class="w-full px-3">
-                          <div class="a2e">
+                          <div class="mb-8">
                             <label for="" class="mb-3 block text-white">
                               {{ $t("contact.message") }}
                             </label>
@@ -214,6 +208,41 @@
                                 focus:bg-slate-400
                               "
                             ></textarea>
+                          </div>
+                        </div>
+                        <div class="w-full px-3">
+                          <div class="mb-8 flex flex-nowrap items-center">
+                            <input
+                              type="checkbox"
+                              name="agreement"
+                              id="agreement"
+                              v-model="agreement"
+                              class="
+                                appearance-none
+                                h-4
+                                w-4
+                                border border-gray-300
+                                rounded-sm
+                                bg-white
+                                checked:bg-blue-600 checked:border-blue-600
+                                focus:outline-none
+                                transition
+                                duration-200
+                                align-top
+                                mr-2
+                                cursor-pointer
+                              "
+                            />
+                            <label
+                              for="agreement"
+                              class="
+                                inline-block
+                                text-white
+                                text-xs
+                              "
+                            >
+                              {{ $t("contact.agreement") }}
+                            </label>
                           </div>
                         </div>
                         <div class="flex justify-center w-full mt-4">
@@ -322,6 +351,7 @@ export default {
     const name = ref("");
     const email = ref("");
     const message = ref("");
+    const agreement = ref(false);
     const email_sent = ref(false);
     const fromSendEmail = ref(false);
     const sendemailRet = reactive({
@@ -346,6 +376,7 @@ export default {
       name,
       email,
       message,
+      agreement,
       email_sent,
       fromSendEmail,
       formVerified,
@@ -360,7 +391,7 @@ export default {
   },
   methods: {
     checkForm: function (e) {
-      if (this.name.length && this.email.length && this.message.length) {
+      if (this.name.length && this.email.length && this.message.length && this.agreement) {
         this.formerrors = [];
         return true;
       }
@@ -375,6 +406,9 @@ export default {
       }
       if (!this.message.length) {
         this.formerrors.push(this.$t("contact.errormessage"));
+      }
+      if (!this.agreement) {
+        this.formerrors.push(this.$t("contact.disagree"));
       }
       e.preventDefault();
     },
@@ -440,7 +474,8 @@ export default {
         !this.formerrors.length &&
         this.name.length &&
         this.email.length &&
-        this.message.length
+        this.message.length &&
+        this.agreement
       ) {
         this.formVerified = true;
       }

@@ -52,7 +52,6 @@ const router = createRouter({
 });
 
 import "@/assets/styles/index.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import * as basiclightbox from "basiclightbox";
 
 const app = createApp(App);
