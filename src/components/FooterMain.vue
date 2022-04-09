@@ -215,8 +215,8 @@
                 </a>
               </li>
               <li>
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="{ path: '/about', hash: '#top', query: { lang: $i18n.locale } }"
                   class="
                     mb-4
                     inline-block
@@ -230,7 +230,7 @@
                   "
                 >
                   {{ $t("message.about_us") }}
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>
