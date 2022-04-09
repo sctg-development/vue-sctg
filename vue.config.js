@@ -83,7 +83,7 @@ if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
 if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
   const myManglePlugin = new MangleCssClassPlugin({
-    classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
+    classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|fa|fas|far|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
     log: true,
     reserveClassName: ['fa', 'fas', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
     ignorePrefixRegExp: '.*tns.*|light[bB]ox'
