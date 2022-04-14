@@ -1,0 +1,26 @@
+export async function onRequestPost(context) {
+
+}
+
+export async function onRequestGet(context) {
+  let originUrl = (new URL(context.request.url)).origin;
+  if (context.params !== undefined) {
+    if (context.params.link !== undefined) {
+      let req = context.params.link;
+      let link = await context.env.SHORTURL.get(req);
+      if (link) {
+        return new Response(null, {
+          headers: { Location: link },
+          status: 301,
+        });
+      }
+      else {
+        return new Response(null, {
+          headers: { Location: originUrl },
+          status: 301,
+        });
+      }
+    }
+  }
+  return new Response("ERROR NO SHORT LINK PROVIDED", null, 2);
+}
