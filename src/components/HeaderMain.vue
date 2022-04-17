@@ -489,8 +489,8 @@
                 </form>
               </div>
             </div>
-            <router-link
-              :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }"
+            <button
+              @click="login()"
               class="
                 hidden
                 lg:flex
@@ -513,7 +513,7 @@
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
               {{ $t("message.connect") }}
-            </router-link>
+            </button>
           </div>
         </div>
       </div>
@@ -552,6 +552,15 @@ export default {
           this.langOpen = false;
         }
       }
+    },
+    login() {
+      this.$auth0.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth0.logout({
+        returnTo: window.location.origin,
+      });
     },
   },
   data() {
