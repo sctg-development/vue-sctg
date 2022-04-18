@@ -102,7 +102,9 @@ export function initAuth0({
     };
     /** Authenticates the user using the redirect method */
     const loginWithRedirect = (options) => {
-        return state.auth0Client.loginWithRedirect(options);
+        let retCode = state.auth0Client.loginWithRedirect(options);
+        console.log(`token:${state.token}`);
+        return retCode;
     };
     /** Returns all the claims present in the ID token */
     const getIdTokenClaims = (options) => {

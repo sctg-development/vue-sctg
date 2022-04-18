@@ -48,28 +48,28 @@
                           sm:text-5xl
                         "
                       >
-                        {{ $t("single.title") }}
+                        {{ $t("authorize.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("single.email") }}
+                              {{ $t("authorize.email") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.phone") }}
+                              {{ $t("authorize.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-days") }}
+                              {{ $t("authorize.open-days") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-hours") }}
+                              {{ $t("authorize.open-hours") }}
                             </span>
                           </p>
                         </div>
                         <div>
                           <p class="mb-3 text-xl font-bold text-white">
-                            {{ $t("single.follow") }}
+                            {{ $t("authorize.follow") }}
                           </p>
                           <div
                             class="flex items-center space-x-1 lg:justify-end"
@@ -119,18 +119,12 @@
                   </div>
                 </div>
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
-                  <div class="pt-20 pb-8">
-                    <div class="mb-12 max-w-[410px]">
-                      <h2
-                        class="mb-4 text-4xl font-bold text-white sm:text-5xl"
-                      >
-                        {{ $t("single.subtitle") }}
-                      </h2>
+                  <div class="text-white pt-10">
+                    <h1 class="text-3xl font-semibold">{{ $t("authorize.subtitle") }}</h1>
                       <p class="text-white text-xl">
-                        {{ $t("single.slogan") }}
+                        {{ $t("authorize.text") }}
                       </p>
                       <auth-0-rize />
-                    </div>
                   </div>
                 </div>
               </div>
@@ -139,7 +133,7 @@
         </div>
       </section>
     </main-section>
-    <footer-main class="absolute" />
+    <footer-main />
   </div>
 </template>
 <script>

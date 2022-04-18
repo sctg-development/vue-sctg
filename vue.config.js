@@ -23,7 +23,11 @@ fs.writeFile('./commit.json',
 var path = require('path');
 const auth0Conf = {
   "domain": process.env.AUTH0_DOMAIN,
-  "clientId": process.env.AUTH0_CLIENT_ID
+  "client_id": process.env.AUTH0_CLIENT_ID,
+  "scope": 'openid email profile',
+  "useRefreshTokens": true,
+  "cacheLocation": "localstorage",
+  "audience":"https://www.sctg.eu.org/api/shortener/list"
 };
 fs.writeFile('./auth0-conf.json',
   JSON.stringify(auth0Conf),

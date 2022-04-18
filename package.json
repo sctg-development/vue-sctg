@@ -11,6 +11,7 @@
     "@auth0/auth0-spa-js": "^1.21.0",
     "@cloudinary/url-gen": "^1.7.0",
     "@vueuse/core": "^8.2.6",
+    "jose": "^4.6.1",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.14",

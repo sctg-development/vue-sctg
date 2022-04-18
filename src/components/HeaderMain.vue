@@ -490,7 +490,7 @@
               </div>
             </div>
             <button
-              @click="login()"
+              @click="loginout()"
               class="
                 hidden
                 lg:flex
@@ -512,7 +512,11 @@
               "
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
-              {{ $t("message.connect") }}
+              {{
+                    $auth0.user.value !== undefined
+                      ? `${$t("message.logout")} ${$auth0.user.value.name}`
+                      : $t("message.connect")
+                  }}
             </button>
           </div>
         </div>
@@ -551,6 +555,13 @@ export default {
           this.$i18n.locale = locale;
           this.langOpen = false;
         }
+      }
+    },
+    loginout() {
+      if (this.$auth0.user.value !== undefined){
+        this.logout();
+      }else{
+        this.login();
       }
     },
     login() {
