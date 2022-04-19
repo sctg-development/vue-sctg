@@ -38,7 +38,7 @@ fs.writeFile('./auth0-conf.json',
   }
 );
 
-/*retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
+/* retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
 const https = require('https')
 const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
 https.get(url, res => {

@@ -1,6 +1,4 @@
-import * as jose from "jose";
-import { verifyToken } from "../../src/auth0/verifyToken.js";
-
+import { isAllowed } from "../../src/auth0/TokenHelper";
 export const onRequestPost: PagesFunction<{
   SHORTURL: KVNamespace;
   AUTH0_DOMAIN: string;
@@ -13,13 +11,14 @@ export const onRequestPost: PagesFunction<{
       7,
       authorizationHeader.length
     );
-    const jwtVerified = await verifyToken(
+    const hasPermission:boolean = await isAllowed(
       jwtToken,
       auth0Domain,
-      Date.now() / 1000
+      Date.now() / 1000,
+      "list:all_short_url"
     );
-    if (jwtVerified !== false) {
-      return new Response(JSON.stringify(jwtVerified, null, 3));
+    if (hasPermission !== false) {
+      return new Response(JSON.stringify({ access: "list:all_short_url" }, null, 3));
     } else {
       return new Response(
         JSON.stringify({ error: "JWT invalid" }, null, 3),

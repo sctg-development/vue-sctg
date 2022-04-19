@@ -1,0 +1,85 @@
+import * as jose from "jose";
+
+import jwks from "../../sctg-jwks.json";
+const x509cert: string = `-----BEGIN CERTIFICATE-----\n${jwks.keys[0].x5c}\n-----END CERTIFICATE-----`;
+const algorithm: string = "RS256";
+
+/**
+ * @param token JWT token as string
+ * @param issuer Auth0 domain
+ * @param now number of seconds from 01/01/1970
+ * @returns false if token is invalid or a valid JWTVerifyResult
+ */
+export const verifyToken: Function = (
+  token: string,
+  issuer: string,
+  now: number
+): Promise<boolean | jose.JWTVerifyResult> => {
+  return new Promise((resolve) => {
+    jose.importX509(x509cert, algorithm).then((pubkey) => {
+      jose
+        .jwtVerify(token, pubkey)
+        .then((jwt) => {
+          if (
+            jwt.payload !== undefined &&
+            jwt.payload.iat !== undefined &&
+            jwt.payload.exp !== undefined &&
+            `https://${issuer}/` == jwt.payload.iss &&
+            jwt.payload.iat < now &&
+            jwt.payload.exp > now
+          ) {
+            resolve(jwt);
+          } else {
+            resolve(false);
+          }
+        })
+        .catch(() => {
+          resolve(false);
+        });
+    });
+  });
+};
+
+/**
+ * @param token JWT token as string
+ * @param issuer Auth0 domain
+ * @param now number of seconds from 01/01/1970
+ * @param permission string or array of strings
+ * @returns true if user has required permission, false if not
+ */
+export const isAllowed: Function = (
+  token: string,
+  issuer: string,
+  now: number,
+  permission: string | string[]
+): Promise<boolean> => {
+  let requiredPermissions: string[] = [];
+  if (typeof permission === "string") {
+    //permission is a string not a string array
+    requiredPermissions.push(permission);
+  } else {
+    requiredPermissions = permission;
+  }
+  return new Promise((resolve) => {
+    verifyToken(token, issuer, now).then(
+      (jwt: boolean | jose.JWTVerifyResult) => {
+        if (typeof jwt != "boolean") {
+          let isAllowed: boolean = true;
+          if (jwt.payload.permissions !== undefined) {
+            const permissions: string[] = <string[]>jwt.payload.permissions;
+            requiredPermissions.forEach((requiredPermission) => {
+              const permissionPosition: number =
+                permissions.indexOf(requiredPermission);
+              permissionPosition >= 0 && isAllowed
+                ? (isAllowed = true)
+                : (isAllowed = false);
+            });
+            resolve(isAllowed);
+          }
+        } else {
+          resolve(jwt);
+        }
+      }
+    );
+  });
+};
