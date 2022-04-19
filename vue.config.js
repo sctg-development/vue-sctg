@@ -21,13 +21,15 @@ fs.writeFile('./commit.json',
   }
 );
 var path = require('path');
+
+/*generate auth0-conf.json*/
 const auth0Conf = {
   "domain": process.env.AUTH0_DOMAIN,
   "client_id": process.env.AUTH0_CLIENT_ID,
   "scope": 'openid email profile',
   "useRefreshTokens": true,
   "cacheLocation": "localstorage",
-  "audience":"https://www.sctg.eu.org/api/shortener/list"
+  "audience": "https://www.sctg.eu.org/api/shortener/list"
 };
 fs.writeFile('./auth0-conf.json',
   JSON.stringify(auth0Conf),
@@ -35,6 +37,29 @@ fs.writeFile('./auth0-conf.json',
     if (err) return console.log(err);
   }
 );
+
+/*retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
+const https = require('https')
+const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
+https.get(url, res => {
+  let data = '';
+  res.on('data', chunk => {
+    data += chunk;
+  });
+  res.on('end', () => {
+    data = JSON.parse(data);
+    fs.writeFile('./sctg-jwks.json',
+      JSON.stringify(data),
+      'utf8', function (err) {
+        if (err) return console.log(err);
+      }
+    );
+  })
+}).on('error', err => {
+  console.log(err.message);
+})
+
+/*build sanity-conf.json */
 const sanityApiVersion = "2021-10-21";
 const sanityConf = {
   projectId: process.env.SANITY_PROJECT_ID, // find this at manage.sanity.io or in your sanity.json
@@ -98,7 +123,7 @@ if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   const myManglePlugin = new MangleCssClassPlugin({
     classNameRegExp: '(bg|[-]*p[xylrbt]*|[-]*m[xylrbt]*|[-]*left|[-]*top|[-]*right|[-]*bottom|w|[-]*z|h|fa|fas|far|fab|justify|overflow|border|max|flex|text|font|inline|rounded|from|to|via|contrast|brightness|leading|items|backdrop|shadow|duration|whitespace|self|cursor|transition|outline)-[a-z0-9_-]+|relative|static|absolute|shadow|flex|hidden|rounded|border',
     log: true,
-    reserveClassName: ['fa', 'fas','fab', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
+    reserveClassName: ['fa', 'fas', 'fab', 'far', 'p', 'm', 'z', 'pt', 'pb', 'px', 'py', 'pl', 'pr', 'mt', 'mb', 'mx', 'my', 'ml', 'mr', 'to'],
     ignorePrefixRegExp: '.*tns.*|light[bB]ox'
   });
   webpackPlugins.push(myManglePlugin);

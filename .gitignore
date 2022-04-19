@@ -37,3 +37,4 @@ _sensitive_datas/_sensitive_datas.tar.xz
 .vscode/launch.json
 launch-dist
 launch-test-list
+sctg-jwks.json
