@@ -90,10 +90,10 @@
       class="text-white pt-8 text-normal font-mono break-all text-justify"
       @click="show_access_token = !show_access_token"
     >
-      access_token ({{$t("authorize.validity")}}: {{(new Date(access_token_payload.exp*1000)).toLocaleString($i18n.locale)}}):<br />
+      access_token ({{$t("authorize.validity")}}: {{access_token_payload !== undefined ? (new Date(access_token_payload.exp*1000)).toLocaleString($i18n.locale) : ""}}):<br />
       {{$t("authorize.permissions")}}
       <pre>
-        {{access_token_payload.permissions}}
+        {{access_token_payload !== undefined ? access_token_payload.permissions : ""}}
       </pre>
       <span class="text-xs" :class="show_access_token ? 'inline' : 'hidden'">{{
         access_token
@@ -104,7 +104,7 @@
       class="text-white pt-8 pb-8 text-normal font-mono break-all text-justify"
       @click="show_id_token = !show_id_token"
     >
-      id_token ({{$t("authorize.validity")}}: {{(new Date(id_token_payload.exp*1000).toLocaleString($i18n.locale))}}):
+      id_token ({{$t("authorize.validity")}}: {{id_token_payload !== undefined ? (new Date(id_token_payload.exp*1000).toLocaleString($i18n.locale)) : ""}}):
       <span class="text-xs" :class="show_id_token ? 'inline' : 'hidden'">{{
         id_token
       }}</span>
@@ -114,6 +114,10 @@
 <script>
 import { ref } from "vue";
 import * as jose from "jose";
+import jwks from "../../sctg-jwks.json";
+const x509cert = `-----BEGIN CERTIFICATE-----\n${jwks.keys[0].x5c}\n-----END CERTIFICATE-----`;
+const algorithm = "RS256";
+
 export default {
   name: "AuthPage",
   components: {},
@@ -146,29 +150,8 @@ export default {
       });
     },
     getToken() {
-      const algorithm = "RS256";
-      const x509 = `-----BEGIN CERTIFICATE-----
-MIIC/TCCAeWgAwIBAgIJOB18AY7+LiSQMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
-BAMTEXNjdGcuZXUuYXV0aDAuY29tMB4XDTIyMDQxNTE2NTkwOVoXDTM1MTIyMzE2
-NTkwOVowHDEaMBgGA1UEAxMRc2N0Zy5ldS5hdXRoMC5jb20wggEiMA0GCSqGSIb3
-DQEBAQUAA4IBDwAwggEKAoIBAQCamYSv535mi9AlGFRzBQ0rfl1Irxi8hCWxNqii
-4QE+lF3t3bSXI50AjDwQYg1TQ1Dy4pZCmQkn9GisbiKf+zpq8y/sQ0vhYpZFNTa2
-sWbO8QJ8m/CnYNeq48IJ6u5LiJLlkcyhGSrIXKpjeZ6DnhAPkqx4Yi7T6Ul2jD/Z
-839I8reB5+q+qT/wfQWIzXMOFDAiuy3KawLzqLjkmIiAQpbUewEs8UBkrVMMC4SK
-yWEG0CYCGMRYKukCpNs2p0xcoS0FS5MuIzidjX+GaWbgbfm54kkiTvRpX89/gZN5
-28FLRp7aOT6a4OFJ2vxzfeaIgU7BrzBSTNGl31/8hZi98XWTAgMBAAGjQjBAMA8G
-A1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFEqVvVi3Rxt0cP+x4WwfKcq8b3FOMA4G
-A1UdDwEB/wQEAwIChDANBgkqhkiG9w0BAQsFAAOCAQEAKZ9Celmd6wKDYw+UlevU
-lgxtyoIG5q+6fXbDIiiygoKESX1pCDYZX7mZGLmnIDeGRI9JyNxxnfpUHTNtGbLI
-ZTbD7tOFXuPDrIatvDqjoTKHitBOab0Njuz1mAgxwXzlYLAdmC5OqD9z/BYYUCP+
-SSIP016J2ImyQ9Bn1IsX7lUIlucwuTkxQ0R5ENF75WZjx+ZRaipmnysTcErRe1V6
-GXt/ss75hZGOCFFGzakyJORYpmTkKrU/vai2M8ACvWW2gqPjsqGz5MaA4uofSDem
-PZnLn9NFqLPvrN7NsTcctlGEyr46LRXy7xk64E1ZmWUPIPLGJTisEqn0xMiGN7ef
-bg==
------END CERTIFICATE-----`;
-
       Promise.all([
-        jose.importX509(x509, algorithm),
+        jose.importX509(x509cert, algorithm),
         this.$auth0.getTokenSilentlyVerbose(),
       ]).then((values) => {
         const pubkey = values[0];
