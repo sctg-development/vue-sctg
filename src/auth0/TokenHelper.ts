@@ -41,6 +41,23 @@ export const verifyToken: Function = (
 };
 
 /**
+ * @param authorizationHeader value part of the 'Authorization: Bearer edkOsdd…' header ex: 'Bearer edkOsdd…'
+ * @returns null if it fails or the parsed token
+ */
+export const parseTokenFromAuthorizationHeader: Function = (
+  authorizationHeader: string | null
+): string => {
+  if (authorizationHeader && authorizationHeader.startsWith("Bearer ")) {
+    const jwtToken: string = authorizationHeader.substring(
+      7,
+      authorizationHeader.length
+    );
+    return jwtToken;
+  }
+  return null;
+};
+
+/**
  * @param token JWT token as string
  * @param issuer Auth0 domain
  * @param now number of seconds from 01/01/1970
@@ -66,7 +83,7 @@ export const isAllowed: Function = (
         if (typeof jwt != "boolean") {
           let isAllowed: boolean = true;
           if (jwt.payload.permissions !== undefined) {
-            const permissions: string[] = <string[]>jwt.payload.permissions;
+            const permissions: string[] = jwt.payload.permissions as string[];
             requiredPermissions.forEach((requiredPermission) => {
               const permissionPosition: number =
                 permissions.indexOf(requiredPermission);

@@ -1,7 +1,3 @@
-export async function onRequestPost(context) {
-
-}
-
 export async function onRequestGet(context) {
   let originUrl = (new URL(context.request.url)).origin;
   if (context.params !== undefined) {

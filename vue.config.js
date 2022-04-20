@@ -88,9 +88,6 @@ const webpackPlugins = [];
 if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
   const PurgecssPlugin = require('purgecss-webpack-plugin');
   const glob = require('glob-all')
-  const PATHS = {
-    src: path.join(__dirname, 'src')
-  }
 
   const purgeCssPlugin = new PurgecssPlugin({
     paths: glob.sync(
