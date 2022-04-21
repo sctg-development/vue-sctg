@@ -489,8 +489,8 @@
                 </form>
               </div>
             </div>
-            <router-link
-              :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }"
+            <button
+              @click="loginout()"
               class="
                 hidden
                 lg:flex
@@ -512,8 +512,12 @@
               "
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
-              {{ $t("message.connect") }}
-            </router-link>
+              {{
+                    $auth0.user.value !== undefined
+                      ? `${$t("message.logout")} ${$auth0.user.value.name}`
+                      : $t("message.connect")
+                  }}
+            </button>
           </div>
         </div>
       </div>
@@ -552,6 +556,22 @@ export default {
           this.langOpen = false;
         }
       }
+    },
+    loginout() {
+      if (this.$auth0.user.value !== undefined){
+        this.logout();
+      }else{
+        this.login();
+      }
+    },
+    login() {
+      this.$auth0.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth0.logout({
+        returnTo: window.location.origin,
+      });
     },
   },
   data() {

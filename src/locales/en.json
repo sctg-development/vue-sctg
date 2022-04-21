@@ -6,6 +6,7 @@
         "contact_us": "Contact us",
         "references": "References",
         "connect": "Connect",
+        "logout": "Logout",
         "all_rights_reserved": "All rights reserved",
         "enter_your_email_address": "Enter your email address",
         "actions": "Actions",
@@ -122,5 +123,18 @@
         "open-hours": "09.00 - 18.00",
         "follow":"Follow us on",
         "info":"RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
+    },
+    "authorize":{
+        "title": "Rights",
+        "subtitle": "Authorization",
+        "text": "Click for details",
+        "email": "design{'@'}sctg.cf",
+        "phone": " ",
+        "open-days": "Open from Mo. Till Fri.",
+        "open-hours": "09.00 - 18.00",
+        "follow":"Follow us on",
+        "validity": "validity",
+        "get_token":"Get Token",
+        "permissions": "permissions"
     }
 }

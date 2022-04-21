@@ -24,6 +24,11 @@ const routes = [
     name: 'about',
   },
   {
+    path: "/authorize",
+    component: () => import("@/views/AuthorizePage.vue"),
+    name: 'authorize',
+  },
+  {
     path: "/contact",
     component: () => import("@/views/ContactPage.vue"),
     name: 'contact',
@@ -53,10 +58,18 @@ const router = createRouter({
 
 import "@/assets/styles/index.css";
 import * as basiclightbox from "basiclightbox";
+//AuthO
+import { initAuth0 } from "@/auth0";
+const auth0conf = require("../auth0-conf.json");
 
 const app = createApp(App);
 window.app = app;
 app.use(i18n).use(router);
+app.config.globalProperties.$auth0 = initAuth0({
+  onRedirectCallback:`${window.location.origin}/authorize`,
+  redirectUri: `${window.location.origin}/authorize`,
+  ...auth0conf,
+});
 app.mount("#app");
 
 //Global lightbox function because vue events are not working in slider
