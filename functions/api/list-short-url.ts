@@ -43,16 +43,13 @@ export const onRequestPost: PagesFunction<{
          * request KV get in parallel
          */
         return Promise.all(
-          list.keys.map((key) => {
-            return env.SHORTURL.getWithMetadata(key.name).then(
-              (getResult) =>
-                new Promise((resolve) =>
-                  resolve({
-                    name: key.name,
-                    value: getResult.value,
-                    metadata: getResult.metadata,
-                  })
-                )
+          list.keys.map(async (key) => {
+            const getResult = await env.SHORTURL.getWithMetadata(key.name);
+            return await new Promise((resolve) => resolve({
+              name: key.name,
+              value: getResult.value,
+              metadata: getResult.metadata,
+            })
             );
           })
         );

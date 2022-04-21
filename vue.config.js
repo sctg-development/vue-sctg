@@ -48,6 +48,7 @@ https.get(url, res => {
   });
   res.on('end', () => {
     data = JSON.parse(data);
+    data.domain = process.env.AUTH0_DOMAIN;
     fs.writeFile('./sctg-jwks.json',
       JSON.stringify(data),
       'utf8', function (err) {
