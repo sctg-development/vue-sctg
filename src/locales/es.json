@@ -35,8 +35,8 @@
         "community": "Comunidad",
         "pages": "Páginas",
         "support": "Asistencia",
-        "add-shortlinks": "Add a shortlink",
-        "list-shortlinks": "List shortlinks",
+        "add-shortlinks": "Añadir un enlace corto",
+        "list-shortlinks": "Listar enlaces directos",
         "services": "Servicios",
         "web": "Web",
         "lang": "Idioma"
@@ -138,25 +138,25 @@
         "permissions": "permisos"
     },
     "add-short-link": {
-        "title": "Shorten an URL",
-        "subtitle": "Take care of the auto expiraton",
-        "errormsg": "Please correct these errors",
-        "longurl-title": "Long URL",
-        "longurl-help": "Enter your long URL",
-        "longurl-error": "Missing long URL",
-        "description-title": "Description",
-        "description-help": "Enter something describing this URL",
-        "description-error": "Missing a description",
-        "longurl-noturl-error": "Doesn't seem to be an URL",
-        "add": "get short URL",
-        "hour": "hour",
-        "day": "day",
-        "week": "week",
-        "month": "month",
-        "year": "year"
+        "title": "Acorta una URL",
+        "subtitle": "Cuidar el vencimiento automático",
+        "errormsg": "Corrige los errores",
+        "longurl-title": "URL larga",
+        "longurl-help": "Introduzca su URL larga",
+        "longurl-error": "Falta URL larga",
+        "description-title": "Descripción",
+        "description-help": "Introduzca algo que describa esta URL",
+        "description-error": "Falta descripción",
+        "longurl-noturl-error": "Parece que no es una URL",
+        "add": "obtener URL corta",
+        "hour": "hora",
+        "day": "día",
+        "week": "semana",
+        "month": "mes",
+        "year": "año"
     },
     "list-short-links": {
-        "title": "List all short URLs",
+        "title": "Listar todas las URLs cortas",
         "subtitle": "…"
     }
 }
