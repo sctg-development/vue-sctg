@@ -38,7 +38,6 @@ export default {
       });
 
       eventsList.forEach((ev) => {
-        // @ts-ignore
         slider.events.on(ev, function (info, eventName) {
           emit(eventName, info);
         });

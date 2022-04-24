@@ -50,7 +50,6 @@ export default {
     subtitle: String,
     imgurl: String,
   },
-  setup() {},
   data() {
     return {};
   },

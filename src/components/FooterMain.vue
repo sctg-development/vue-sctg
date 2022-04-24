@@ -315,7 +315,6 @@
 </template>
 <script>
 export default {
-  setup() {},
   data() {
     return {
       copyright_text: "2018-" + new Date().getFullYear(),

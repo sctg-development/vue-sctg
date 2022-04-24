@@ -34,6 +34,16 @@ const routes = [
     name: 'contact',
   },
   {
+    path: "/add-shortlink",
+    component: () => import("@/views/AddShortLink.vue"),
+    name: 'Add short link',
+  },
+  {
+    path: "/list-shorlinks",
+    component: () => import("@/views/ListShortLinks.vue"),
+    name: 'list short links',
+  },
+  {
     path: "/web",
     component: () => import("@/views/WebDesignPage.vue"),
     name: 'web',

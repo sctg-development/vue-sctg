@@ -173,7 +173,6 @@ import WebSites from "@/components/cards/WebSites.vue";
 import Type4Card from "@/components/cards/Type4Card.vue";
 
 export default {
-  setup() {},
   name: "SinglePage",
 
   data() {

@@ -86,9 +86,6 @@ import Type2Card from "@/components/cards/Type2Card.vue";
 import { getCloudinaryImg } from "@/utilities/utilities.js";
 
 export default {
-    setup() {
-        
-    },
     data(){
         return {getCloudinaryImg};
     },

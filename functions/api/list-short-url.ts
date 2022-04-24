@@ -1,10 +1,10 @@
-import { resolveComponent } from "vue";
 import {
   isAllowed,
   parseTokenFromAuthorizationHeader,
+  LIST_ALL_SHORT_URL
 } from "../../src/auth0/TokenHelper";
 
-const LIST_ALL_SHORT_URL = "list:all_short_url";
+
 
 export const onRequestPost: PagesFunction<{
   SHORTURL: KVNamespace;
@@ -16,7 +16,6 @@ export const onRequestPost: PagesFunction<{
    * 1- Read Authorization header
    * ex: Authorization: Bearer eyJhbGci…AsTy
    */
-  const headers: Headers = await request.headers;
   const authorizationHeader: string = request.headers.get("Authorization");
   const jwtToken: string =
     parseTokenFromAuthorizationHeader(authorizationHeader);

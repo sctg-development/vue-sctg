@@ -141,193 +141,103 @@
                     {{ $t("nav.web") }}
                   </router-link>
                 </li>
-                <!--
-                <li class="submenu-item relative">
-                  <a
-                    href="javascript:void(0)"
-                    @click="submenuOpen = !submenuOpen"
-                    class="
-                      relative
-                      px-4
-                      flex
-                      py-2
-                      text-xl
-                      font-semibold
-                      text-slate-400
-                      after:absolute
-                      after:right-1
-                      after:top-1/2
-                      after:a16[-2px]
-                      after:a17
-                      after:a18
-                      after:-translate-y-1/2
-                      after:aC
-                      after:a19
-                      after:a1a
-                      after:a1b
-                      hover:text-white
-                      lg:mr-0
-                      lg:ml-8
-                      lg:font-bold
-                      lg:py-6
-                      lg:a1c
-                      lg:a1d
-                      lg:after:a1e
-                      xl:ml-12
-                    "
-                  >
-                    {{$t("nav.pages")}} <i class="pl-1 py-1 fa-solid fa-angle-down"></i>
-                  </a>
-                  <div
-                    :class="submenuOpen ? 'block' : 'hidden'"
-                    class="
-                      submenu
-                      relative
-                      top-full
-                      left-0
-                      w-[250px]
-                      rounded-lg
-                      bg-slate-800
-                      p-4
-                      px-8[top]
-                      a1i
-                      group-hover:a1j
-                      lg:a1k
-                      lg:absolute
-                      lg:aD[110%]
-                      lg:w-60
-                      lg:shadow-md
-                      lg:group-hover:text-center
-                      lg:group-hover:mx-4
-                    "
-                  >
-                    <a
-                      href="explore-items.html"
+                <li class="flex items-center">
+                  <div class="relative inline-block text-left">
+                    <div>
+                      <button
+                        @click="supportOpen = !supportOpen"
+                        type="button"
+                        class="
+                          inline-flex
+                          w-full
+                          rounded-md
+                          border-none
+                          px-4
+                          py-2
+                          bg-transparent
+                          text-xl
+                          font-semibold
+                          text-slate-400
+                          hover:text-white
+                          focus:outline-none
+                          lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
+                          xl:ml-12
+                        "
+                        id="menu-button"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                      >
+                        {{ $t("nav.support") }}
+                        <svg
+                          class="-mr-1 ml-2 h-5 w-5 self-center"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      v-if="supportOpen && $auth0.user.value !== undefined"
                       class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
+                        submenu
+                        relative
+                        top-full
+                        left-0
+                        w-[250px]
+                        rounded-lg
+                        bg-slate-800
+                        p-4
+                        px-8[top]
+                        a1i
+                        group-hover:a1j
+                        lg:a1k
+                        lg:absolute
+                        lg:aD[110%]
+                        lg:w-60
+                        lg:shadow-md
+                        lg:group-hover:text-center
+                        lg:group-hover:mx-4
                       "
                     >
-                      {{$t('nav.explore')}}
-                    </a>
-                    <a
-                      href="item-details.html"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      Item Details
-                    </a>
-                    <a
-                      href="create-item.html"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      Create Item
-                    </a>
-                    <a
-                      href="/"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      {{$t('message.connect')}}
-                    </a>
-                    <a
-                      href="support.html"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      {{$t("nav.support")}}
-                    </a>
-                    <a
-                      href="signin.html"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      Sign In Page
-                    </a>
-                    <a
-                      href="signup.html"
-                      class="
-                        block
-                        rounded
-                        font-semibold
-                        mx-4
-                        text-sm
-                        font-medium
-                        text-slate-400
-                        hover:text-white
-                      "
-                    >
-                      Sign Up Page
-                    </a>
+                      <router-link
+                        to="/add-shortlink"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
+                      >
+                        {{ $t("nav.add-shortlinks") }}
+                      </router-link>
+                      <router-link
+                        to="/list-shorlinks"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
+                      >
+                        {{ $t("nav.list-shortlinks") }}
+                      </router-link>
+                    </div>
                   </div>
-                </li>
-                -->
-                <li class="relative">
-                  <router-link
-                    :to="{
-                      path: '/',
-                      hash: '#top',
-                      query: { lang: $i18n.locale },
-                    }"
-                    class="
-                      px-4
-                      flex
-                      py-2
-                      text-xl
-                      font-semibold
-                      text-slate-400
-                      hover:text-white
-                      lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
-                      xl:ml-12
-                    "
-                  >
-                    {{ $t("nav.support") }}
-                  </router-link>
                 </li>
                 <li class="flex items-center">
                   <div class="relative inline-block text-left">
@@ -513,10 +423,10 @@
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
               {{
-                    $auth0.user.value !== undefined
-                      ? `${$t("message.logout")} ${$auth0.user.value.name}`
-                      : $t("message.connect")
-                  }}
+                $auth0.user.value !== undefined
+                  ? `${$t("message.logout")} ${$auth0.user.value.name}`
+                  : $t("message.connect")
+              }}
             </button>
           </div>
         </div>
@@ -532,7 +442,7 @@ export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
@@ -558,9 +468,9 @@ export default {
       }
     },
     loginout() {
-      if (this.$auth0.user.value !== undefined){
+      if (this.$auth0.user.value !== undefined) {
         this.logout();
-      }else{
+      } else {
         this.login();
       }
     },
@@ -576,11 +486,13 @@ export default {
   },
   data() {
     let langOpen = false;
+    let supportOpen = false;
     let submenuOpen = false;
     let navbarOpen = false;
     let searchOpen = false;
     return {
       langOpen: ref(langOpen),
+      supportOpen: ref(supportOpen),
       navbarOpen: ref(navbarOpen),
       submenuOpen: ref(submenuOpen),
       scrolledFromTop: this.scrolledFromTop,

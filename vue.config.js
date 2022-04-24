@@ -38,7 +38,14 @@ fs.writeFile('./auth0-conf.json',
   }
 );
 
+function listDir(dir){fs.readdir(dir, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+});}
+
 /* retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
+console.log('retrieve https://sctg.eu.auth0.com/.well-known/jwks.json')
 const https = require('https')
 const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
 https.get(url, res => {
@@ -52,6 +59,7 @@ https.get(url, res => {
     fs.writeFile('./sctg-jwks.json',
       JSON.stringify(data),
       'utf8', function (err) {
+        listDir('.');
         if (err) return console.log(err);
       }
     );
@@ -128,6 +136,12 @@ if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
 }
 
 module.exports = {
+  pages:{
+    index:{
+      entry:'src/main.js'
+    }
+  },
+  transpileDependencies: true,
   runtimeCompiler: true,
   configureWebpack: {
     plugins: webpackPlugins,

@@ -35,6 +35,8 @@
         "community": "Communauté",
         "pages": "Pages",
         "support": "Assistance",
+        "add-shortlinks": "Ajouter un lien court",
+        "list-shortlinks": "Liste des liens courts",
         "services": "Services",
         "web": "Web",
         "lang": "Langue"
@@ -134,5 +136,27 @@
         "validity": "validité",
         "get_token": "Obtenir un jeton",
         "permissions": "permissions"
+    },
+    "add-short-link": {
+        "title": "Raccourcir l'URL",
+        "subtitle": "Vérifiez l'expiration automatique",
+        "errormsg": "Veuillez corriger ces erreurs",
+        "longurl-title": "URL longue",
+        "longurl-help": "Entrez votre URL longue",
+        "longurl-error": "URL longue manquante",
+        "description-title": "Description",
+        "description-help": "Entrez quelque chose décrivant cette URL",
+        "description-error": "Description manquante",
+        "longurl-noturl-error": "Ne semble pas être une URL",
+        "add": "obtenir une URL courte",
+        "hour": "heure",
+        "day": "jour",
+        "week": "semaine",
+        "month": "mois",
+        "year": "année"
+    },
+    "list-short-links": {
+        "title": "Lister toutes les URLs courtes",
+        "subtitle": "…"
     }
 }

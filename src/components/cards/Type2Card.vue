@@ -110,7 +110,6 @@ export default {
     baseMessage: String,
     value: String,
   },
-  setup() {},
   methods: {
     lightBox: (url) => {
       if (url !== undefined) {
