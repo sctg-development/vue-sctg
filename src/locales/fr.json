@@ -35,6 +35,8 @@
         "community": "Communauté",
         "pages": "Pages",
         "support": "Assistance",
+        "add-shortlinks": "Add a shortlink",
+        "list-shortlinks": "List shortlinks",
         "services": "Services",
         "web": "Web",
         "lang": "Langue"
@@ -134,5 +136,27 @@
         "validity": "validité",
         "get_token": "Obtenir un jeton",
         "permissions": "permissions"
+    },
+    "add-short-link": {
+        "title": "Shorten an URL",
+        "subtitle": "Take care of the auto expiraton",
+        "errormsg": "Please correct these errors",
+        "longurl-title": "Long URL",
+        "longurl-help": "Enter your long URL",
+        "longurl-error": "Missing long URL",
+        "description-title": "Description",
+        "description-help": "Enter something describing this URL",
+        "description-error": "Missing a description",
+        "longurl-noturl-error": "Doesn't seem to be an URL",
+        "add": "get short URL",
+        "hour": "hour",
+        "day": "day",
+        "week": "week",
+        "month": "month",
+        "year": "year"
+    },
+    "list-short-links": {
+        "title": "List all short URLs",
+        "subtitle": "…"
     }
 }
