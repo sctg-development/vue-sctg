@@ -38,6 +38,12 @@ fs.writeFile('./auth0-conf.json',
   }
 );
 
+function listDir(dir){fs.readdir(dir, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+});}
+
 /* retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
 console.log('retrieve https://sctg.eu.auth0.com/.well-known/jwks.json')
 const https = require('https')
@@ -53,6 +59,7 @@ https.get(url, res => {
     fs.writeFile('./sctg-jwks.json',
       JSON.stringify(data),
       'utf8', function (err) {
+        listDir('.');
         if (err) return console.log(err);
       }
     );
