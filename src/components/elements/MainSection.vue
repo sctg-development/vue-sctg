@@ -285,7 +285,7 @@ export default {
       .format("auto")
       .toURL();
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener("resize", this.handleResize);
   },
   data() {

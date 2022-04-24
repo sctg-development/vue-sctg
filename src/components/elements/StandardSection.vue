@@ -31,8 +31,5 @@ export default {
         id: String,
         title: String,
     },
-    setup() {
-        
-    },
 }
 </script>

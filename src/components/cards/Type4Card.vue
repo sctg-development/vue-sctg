@@ -52,8 +52,5 @@ export default {
         text: String,
         icon: String,
     },
-    setup() {
-        
-    },
 }
 </script>

@@ -5,10 +5,10 @@ export async function onRequestGet(context) {
       let req = context.params.link;
       let link = await context.env.SHORTURL.get(req);
       if (link) {
-        return new Response.redirect(link, 301)
+        return Response.redirect(link, 301)
       }
       else {
-        return new Response.redirect(originUrl, 301)
+        return Response.redirect(originUrl, 301)
       }
     }
   }

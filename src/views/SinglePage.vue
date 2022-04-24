@@ -149,7 +149,6 @@ import FooterMain from "@/components/FooterMain.vue";
 import { getCloudinaryImg } from "@/utilities/utilities.js";
 
 export default {
-  setup() {},
   name: "SinglePage",
 
   data() {

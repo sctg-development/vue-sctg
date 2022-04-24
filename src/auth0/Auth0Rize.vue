@@ -120,7 +120,6 @@ const algorithm = "RS256";
 
 export default {
   name: "AuthPage",
-  components: {},
   access_token: "",
   access_token_payload: {},
   id_token: "",

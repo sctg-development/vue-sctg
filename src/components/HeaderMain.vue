@@ -141,27 +141,103 @@
                     {{ $t("nav.web") }}
                   </router-link>
                 </li>
-                <li class="relative">
-                  <router-link
-                    :to="{
-                      path: '/',
-                      hash: '#top',
-                      query: { lang: $i18n.locale },
-                    }"
-                    class="
-                      px-4
-                      flex
-                      py-2
-                      text-xl
-                      font-semibold
-                      text-slate-400
-                      hover:text-white
-                      lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
-                      xl:ml-12
-                    "
-                  >
-                    {{ $t("nav.support") }}
-                  </router-link>
+                <li class="flex items-center">
+                  <div class="relative inline-block text-left">
+                    <div>
+                      <button
+                        @click="supportOpen = !supportOpen"
+                        type="button"
+                        class="
+                          inline-flex
+                          w-full
+                          rounded-md
+                          border-none
+                          px-4
+                          py-2
+                          bg-transparent
+                          text-xl
+                          font-semibold
+                          text-slate-400
+                          hover:text-white
+                          focus:outline-none
+                          lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
+                          xl:ml-12
+                        "
+                        id="menu-button"
+                        aria-expanded="true"
+                        aria-haspopup="true"
+                      >
+                        {{ $t("nav.support") }}
+                        <svg
+                          class="-mr-1 ml-2 h-5 w-5 self-center"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      v-if="supportOpen && $auth0.user.value !== undefined"
+                      class="
+                        submenu
+                        relative
+                        top-full
+                        left-0
+                        w-[250px]
+                        rounded-lg
+                        bg-slate-800
+                        p-4
+                        px-8[top]
+                        a1i
+                        group-hover:a1j
+                        lg:a1k
+                        lg:absolute
+                        lg:aD[110%]
+                        lg:w-60
+                        lg:shadow-md
+                        lg:group-hover:text-center
+                        lg:group-hover:mx-4
+                      "
+                    >
+                      <router-link
+                        to="/add-shortlink"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
+                      >
+                        {{ $t("nav.add-shortlinks") }}
+                      </router-link>
+                      <router-link
+                        to="/list-shorlinks"
+                        class="
+                          block
+                          rounded
+                          font-semibold
+                          mx-4
+                          text-sm
+                          font-medium
+                          text-slate-400
+                          hover:text-white
+                        "
+                      >
+                        {{ $t("nav.list-shortlinks") }}
+                      </router-link>
+                    </div>
+                  </div>
                 </li>
                 <li class="flex items-center">
                   <div class="relative inline-block text-left">
@@ -347,10 +423,10 @@
             >
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
               {{
-                    $auth0.user.value !== undefined
-                      ? `${$t("message.logout")} ${$auth0.user.value.name}`
-                      : $t("message.connect")
-                  }}
+                $auth0.user.value !== undefined
+                  ? `${$t("message.logout")} ${$auth0.user.value.name}`
+                  : $t("message.connect")
+              }}
             </button>
           </div>
         </div>
@@ -392,9 +468,9 @@ export default {
       }
     },
     loginout() {
-      if (this.$auth0.user.value !== undefined){
+      if (this.$auth0.user.value !== undefined) {
         this.logout();
-      }else{
+      } else {
         this.login();
       }
     },
@@ -410,11 +486,13 @@ export default {
   },
   data() {
     let langOpen = false;
+    let supportOpen = false;
     let submenuOpen = false;
     let navbarOpen = false;
     let searchOpen = false;
     return {
       langOpen: ref(langOpen),
+      supportOpen: ref(supportOpen),
       navbarOpen: ref(navbarOpen),
       submenuOpen: ref(submenuOpen),
       scrolledFromTop: this.scrolledFromTop,

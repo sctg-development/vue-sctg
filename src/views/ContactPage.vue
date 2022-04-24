@@ -336,7 +336,6 @@ import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
 import { getCloudinaryImg } from "@/utilities/utilities.js";
 import { ref, reactive } from "vue";
 export default {
-  setup() {},
   name: "SinglePage",
 
   data() {

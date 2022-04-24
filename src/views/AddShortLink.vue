@@ -18,7 +18,7 @@
             2xl:max-w-screen-xl
           "
         >
-          <div class="px-4 min-w-3/4">
+          <div class="px-4 min-w-2/3">
             <div class="relative z-10 overflow-hidden rounded-lg bg-slate-800">
               <div class="-mx-4 flex flex-wrap">
                 <div
@@ -48,28 +48,28 @@
                           sm:text-5xl
                         "
                       >
-                        {{ $t("about.title") }}
+                        {{ $t("authorize.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("about.email") }}
+                              {{ $t("authorize.email") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.phone") }}
+                              {{ $t("authorize.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open-days") }}
+                              {{ $t("authorize.open-days") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open-hours") }}
+                              {{ $t("authorize.open-hours") }}
                             </span>
                           </p>
                         </div>
                         <div>
                           <p class="mb-3 text-xl font-bold text-white">
-                            {{ $t("about.follow") }}
+                            {{ $t("authorize.follow") }}
                           </p>
                           <div
                             class="flex items-center space-x-1 lg:justify-end"
@@ -119,20 +119,12 @@
                   </div>
                 </div>
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
-                  <div class="pt-20 pb-8">
-                    <div class="mb-12 max-w-[410px]">
-                      <h2
-                        class="mb-4 text-4xl font-bold text-white sm:text-5xl"
-                      >
-                        {{ $t("about.subtitle") }}
-                      </h2>
+                  <div class="text-white pt-10">
+                    <h1 class="text-3xl font-semibold">{{ $t("add-short-link.title") }}</h1>
                       <p class="text-white text-xl">
-                        {{ $t("about.text") }}
+                        {{ $t("add-short-link.subtitle") }}
                       </p>
-                      <p class="mt-4 text-white text-normal">
-                        {{ $t("about.info") }}
-                      </p>
-                    </div>
+                          <add-shortlink />
                   </div>
                 </div>
               </div>
@@ -148,12 +140,12 @@
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-
 import { getCloudinaryImg } from "@/utilities/utilities.js";
+import AddShortlink from '@/auth0/AddShortlink.vue';
+
 
 export default {
-  name: "AboutPage",
-
+  name: "SinglePage",
   data() {
     this.$route.query.lang !== undefined
       ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
@@ -165,6 +157,7 @@ export default {
   components: {
     HeaderMain,
     MainSection,
+    AddShortlink,
     FooterMain,
   },
 };
