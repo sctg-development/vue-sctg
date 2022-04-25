@@ -29,7 +29,7 @@ const auth0Conf = {
   "scope": 'openid email profile',
   "useRefreshTokens": true,
   "cacheLocation": "localstorage",
-  "audience": "https://www.sctg.eu.org/api/shortener/list"
+  "audience": "https://sctg.api"
 };
 fs.writeFile('./auth0-conf.json',
   JSON.stringify(auth0Conf),

@@ -152,6 +152,7 @@ export default {
       Promise.all([
         jose.importX509(x509cert, algorithm),
         this.$auth0.getTokenSilentlyVerbose(),
+        this.$auth0.getIdTokenClaims(),
       ]).then((values) => {
         const pubkey = values[0];
         const token = values[1];
@@ -161,11 +162,13 @@ export default {
           .jwtVerify(token.id_token, pubkey)
           .then((jwt) => {
             this.id_token_payload = jwt.payload;
+            console.log(jwt.payload);
           });
         jose
           .jwtVerify(token.access_token, pubkey)
           .then((jwt) => {
             this.access_token_payload = jwt.payload;
+            console.log(jwt.payload);
           });
         this.token = token;
       });

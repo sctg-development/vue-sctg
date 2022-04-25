@@ -16,6 +16,7 @@ export const onRequestPost: PagesFunction<{
    * 1- Read Authorization header
    * ex: Authorization: Bearer eyJhbGci…AsTy
    */
+  console.log(request.headers);
   const authorizationHeader: string = request.headers.get("Authorization");
   const jwtToken: string =
     parseTokenFromAuthorizationHeader(authorizationHeader);

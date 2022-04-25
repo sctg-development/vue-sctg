@@ -267,11 +267,12 @@
     </div>
         <slot/>
   </section>
+  <banner-alert />
 </template>
 <script>
 import { ref } from "vue";
 import { getCloudinaryResponsiveBackground } from "@/utilities/utilities.js";
-
+import BannerAlert from "@/components/cards/BannerAlert.vue";
 const backgroundImage = "background-left";
 
 export default {
@@ -307,5 +308,8 @@ export default {
       }, 500);
     },
   },
+  components:{
+    BannerAlert,
+  }
 };
 </script>
