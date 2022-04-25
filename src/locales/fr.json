@@ -160,7 +160,7 @@
         "subtitle": "…"
     },
     "banner": {
-        "long": "You must verify your email and request access to an administrator !",
-        "short": "Please verify your email !"
+        "long": "Vous devez vérifier votre adresse e-mail et demander l'accès à un administrateur !",
+        "short": "Veuillez vérifier votre adresse email!"
     }
 }
