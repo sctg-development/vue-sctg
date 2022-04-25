@@ -29,7 +29,7 @@ const auth0Conf = {
   "scope": 'openid email profile',
   "useRefreshTokens": true,
   "cacheLocation": "localstorage",
-  "audience": "https://www.sctg.eu.org/api/shortener/list"
+  "audience": "https://sctg.api"
 };
 fs.writeFile('./auth0-conf.json',
   JSON.stringify(auth0Conf),
@@ -38,35 +38,47 @@ fs.writeFile('./auth0-conf.json',
   }
 );
 
-function listDir(dir){fs.readdir(dir, (err, files) => {
-  files.forEach(file => {
-    console.log(file);
+function listDir(dir) {
+  fs.readdir(dir, (err, files) => {
+      files.forEach(file => {
+          console.log(file);
+      });
   });
-});}
+}
 
-/* retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
-console.log('retrieve https://sctg.eu.auth0.com/.well-known/jwks.json')
-const https = require('https')
-const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
-https.get(url, res => {
-  let data = '';
-  res.on('data', chunk => {
-    data += chunk;
+
+async function getJwks() {
+  console.log(`retrieve https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`)
+  const https = require('https')
+  const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
+  return new Promise((resolve, reject) => {
+      https.get(url, res => {
+          let data = '';
+          res.on('data', chunk => {
+              data += chunk;
+          });
+          res.on('end', () => {
+              data = JSON.parse(data);
+              data.domain = process.env.AUTH0_DOMAIN;
+              resolve(data);
+          })
+      }).on('error', err => {
+          console.log(err.message);
+          reject(err);
+      })
   });
-  res.on('end', () => {
-    data = JSON.parse(data);
-    data.domain = process.env.AUTH0_DOMAIN;
-    fs.writeFile('./sctg-jwks.json',
-      JSON.stringify(data),
-      'utf8', function (err) {
-        listDir('.');
-        if (err) return console.log(err);
-      }
-    );
-  })
-}).on('error', err => {
-  console.log(err.message);
-})
+}
+
+(async () => {
+  const jwks = await getJwks();
+  fs.writeFile('./jwks.json',
+  JSON.stringify(jwks),
+  'utf8', function (err) {
+      listDir('.');
+      if (err) return console.log(err);
+  });
+})();
+
 
 /*build sanity-conf.json */
 const sanityApiVersion = "2021-10-21";

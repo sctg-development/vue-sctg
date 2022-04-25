@@ -267,11 +267,14 @@
     </div>
         <slot/>
   </section>
+  <div v-if="($auth0.user.value !== undefined) && !$auth0.user.value.email_verified">
+  <banner-alert />
+  </div>
 </template>
 <script>
 import { ref } from "vue";
 import { getCloudinaryResponsiveBackground } from "@/utilities/utilities.js";
-
+import BannerAlert from "@/components/cards/BannerAlert.vue";
 const backgroundImage = "background-left";
 
 export default {
@@ -289,7 +292,7 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   data() {
-    return { reactiveBackground: this.reactiveBackground };
+    return { reactiveBackground: this.reactiveBackground, };
   },
   methods: {
     handleResize: function () {
@@ -307,5 +310,8 @@ export default {
       }, 500);
     },
   },
+  components:{
+    BannerAlert,
+  }
 };
 </script>

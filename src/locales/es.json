@@ -158,5 +158,9 @@
     "list-short-links": {
         "title": "Listar todas las URLs cortas",
         "subtitle": "…"
+    },
+    "banner": {
+        "long": "Debe verificar su correo electrónico y solicitar acceso a un administrador!",
+        "short": "Por favor, verifica tu email!"
     }
 }
