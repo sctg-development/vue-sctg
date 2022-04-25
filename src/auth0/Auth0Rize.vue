@@ -114,7 +114,7 @@
 <script>
 import { ref } from "vue";
 import * as jose from "jose";
-import jwks from "../../sctg-jwks.json";
+import jwks from "../../jwks.json";
 const x509cert = `-----BEGIN CERTIFICATE-----\n${jwks.keys[0].x5c}\n-----END CERTIFICATE-----`;
 const algorithm = "RS256";
 

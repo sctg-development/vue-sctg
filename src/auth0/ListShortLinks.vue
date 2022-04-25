@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { isAllowed, ADD_SHORT_URL } from "./TokenHelper";
-import jwks from "../../sctg-jwks.json";
+import jwks from "../../jwks.json";
 
 interface kvStore {
   name: string;

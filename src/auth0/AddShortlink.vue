@@ -109,7 +109,7 @@
 
 import { defineComponent, ref } from "vue";
 import { isAllowed, ADD_SHORT_URL } from "./TokenHelper";
-import jwks from "../../sctg-jwks.json";
+import jwks from "../../jwks.json";
 
 export default defineComponent<{ token: string; canAddShortUrl: boolean }>({
   token: "",

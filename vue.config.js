@@ -45,7 +45,7 @@ function listDir(dir){fs.readdir(dir, (err, files) => {
 });}
 
 /* retrieve https://sctg.eu.auth0.com/.well-known/jwks.json */
-console.log('retrieve https://sctg.eu.auth0.com/.well-known/jwks.json')
+console.log(`retrieve https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`)
 const https = require('https')
 const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
 https.get(url, res => {
@@ -56,7 +56,7 @@ https.get(url, res => {
   res.on('end', () => {
     data = JSON.parse(data);
     data.domain = process.env.AUTH0_DOMAIN;
-    fs.writeFile('./sctg-jwks.json',
+    fs.writeFile('./jwks.json',
       JSON.stringify(data),
       'utf8', function (err) {
         listDir('.');
