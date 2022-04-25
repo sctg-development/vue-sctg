@@ -267,7 +267,9 @@
     </div>
         <slot/>
   </section>
+  <div v-if="($auth0.user.value !== undefined) && !$auth0.user.value.email_verified">
   <banner-alert />
+  </div>
 </template>
 <script>
 import { ref } from "vue";
@@ -290,7 +292,7 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   data() {
-    return { reactiveBackground: this.reactiveBackground };
+    return { reactiveBackground: this.reactiveBackground, };
   },
   methods: {
     handleResize: function () {
