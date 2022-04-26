@@ -133,7 +133,7 @@
         </div>
       </section>
     </main-section>
-    <footer-main />
+    <footer-main class="absolute"/>
   </div>
 </template>
 <script>

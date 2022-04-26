@@ -94,8 +94,12 @@
                 </router-link>
               </li>
               <li>
-                <a
-                  href="javascript:void(0)"
+                <router-link
+                  :to="{
+                    path: '/',
+                    hash: '#services',
+                    query: { lang: $i18n.locale },
+                  }"
                   class="
                     mb-4
                     inline-block
@@ -109,7 +113,7 @@
                   "
                 >
                   {{ $t("footer.services") }}
-                </a>
+                </router-link>
               </li>
               <li>
                 <a
@@ -216,7 +220,11 @@
               </li>
               <li>
                 <router-link
-                  :to="{ path: '/about', hash: '#top', query: { lang: $i18n.locale } }"
+                  :to="{
+                    path: '/about',
+                    hash: '#top',
+                    query: { lang: $i18n.locale },
+                  }"
                   class="
                     mb-4
                     inline-block
