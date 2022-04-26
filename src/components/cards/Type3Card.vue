@@ -10,7 +10,6 @@
         <button
           class="
             absolute
-            px-6 px-5
             font-bold
             items-center
             rounded-md
