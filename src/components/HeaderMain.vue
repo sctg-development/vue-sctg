@@ -211,7 +211,6 @@
                         class="
                           block
                           rounded
-                          font-semibold
                           mx-4
                           text-sm
                           font-medium
@@ -226,7 +225,6 @@
                         class="
                           block
                           rounded
-                          font-semibold
                           mx-4
                           text-sm
                           font-medium
