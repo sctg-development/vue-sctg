@@ -483,11 +483,11 @@ export default {
     },
   },
   data() {
-    let langOpen = false;
-    let supportOpen = false;
-    let submenuOpen = false;
-    let navbarOpen = false;
-    let searchOpen = false;
+    const langOpen = false;
+    const supportOpen = false;
+    const submenuOpen = false;
+    const navbarOpen = false;
+    const searchOpen = false;
     return {
       langOpen: ref(langOpen),
       supportOpen: ref(supportOpen),

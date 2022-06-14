@@ -83,7 +83,7 @@
 </template>
 <script>
 import Type2Card from "@/components/cards/Type2Card.vue";
-import { getCloudinaryImg } from "@/utilities/utilities.js";
+import { getCloudinaryImg } from "@/utilities/utilities";
 
 export default {
     data(){

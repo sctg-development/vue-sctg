@@ -140,7 +140,7 @@
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-import { getCloudinaryImg } from "@/utilities/utilities.js";
+import { getCloudinaryImg } from "@/utilities/utilities";
 import AddShortlink from '@/auth0/AddShortlink.vue';
 
 

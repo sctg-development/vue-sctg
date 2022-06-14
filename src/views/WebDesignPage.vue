@@ -167,7 +167,7 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 
-import { getCloudinaryImg } from "@/utilities/utilities.js";
+import { getCloudinaryImg } from "@/utilities/utilities";
 import StandardSection from "@/components/elements/StandardSection.vue";
 import WebSites from "@/components/cards/WebSites.vue";
 import Type4Card from "@/components/cards/Type4Card.vue";

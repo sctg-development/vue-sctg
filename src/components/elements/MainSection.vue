@@ -273,7 +273,7 @@
 </template>
 <script>
 import { ref } from "vue";
-import { getCloudinaryResponsiveBackground } from "@/utilities/utilities.js";
+import { getCloudinaryResponsiveBackground } from "@/utilities/utilities";
 import BannerAlert from "@/components/cards/BannerAlert.vue";
 const backgroundImage = "background-left";
 
@@ -300,7 +300,7 @@ export default {
       this.resizeId = setTimeout(() => {
         if (window.innerWidth > this.previousWindowSize) {
           this.previousWindowSize = window.innerWidth;
-          let newUrl = getCloudinaryResponsiveBackground(backgroundImage)
+          const newUrl = getCloudinaryResponsiveBackground(backgroundImage)
             .format("auto")
             .toURL();
           if (newUrl != this.reactiveBackground) {

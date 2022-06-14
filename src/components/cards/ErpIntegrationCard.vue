@@ -82,7 +82,7 @@
 <script>
 import {
   getCloudinaryImg,
-} from "@/utilities/utilities.js";
+} from "@/utilities/utilities";
 export default {
     setup() {
         return {getCloudinaryImg};
