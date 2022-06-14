@@ -333,7 +333,7 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
-import { getCloudinaryImg } from "@/utilities/utilities.js";
+import { getCloudinaryImg } from "@/utilities/utilities";
 import { ref, reactive } from "vue";
 export default {
   name: "SinglePage",

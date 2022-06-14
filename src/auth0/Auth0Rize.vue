@@ -111,15 +111,32 @@
     </p>
   </div>
 </template>
-<script>
-import { ref } from "vue";
-import * as jose from "jose";
-import jwks from "../../jwks.json";
-const x509cert = `-----BEGIN CERTIFICATE-----\n${jwks.keys[0].x5c}\n-----END CERTIFICATE-----`;
-const algorithm = "RS256";
+<script lang="ts">
+interface LoginQuery {
+  query: { error?: string; error_description?: string; state?: string };
+}
 
-export default {
+import { defineComponent, ref } from "vue";
+import { Auth0Instance } from "./instance";
+import { GetTokenSilentlyVerboseResponse } from "@auth0/auth0-spa-js";
+import { verifyToken } from "./TokenHelper";
+import * as jose from "jose";
+import * as jwks from "../../jwks.json";
+
+export default defineComponent<{
+  name: string;
+  error: string;
+  error_description: string;
+  access_token: string;
+  access_token_payload: jose.JWTPayload;
+  id_token: string;
+  id_token_payload: jose.JWTPayload;
+  show_access_token: boolean;
+  shown_id_token: boolean;
+}>({
   name: "AuthPage",
+  error: "",
+  error_description: "",
   access_token: "",
   access_token_payload: {},
   id_token: "",
@@ -127,52 +144,64 @@ export default {
   show_access_token: false,
   shown_id_token: false,
   data() {
+    const route = this.$route as unknown as LoginQuery;
+    if (
+      route !== undefined &&
+      route.query !== undefined &&
+      route.query.error !== undefined
+    ) {
+      this.error = route.query.error;
+      this.error_description = route.query.error_description;
+      console.log(route.query);
+    }
     return {
-      user: this.user,
+      error: ref(this.error),
+      error_description: ref(this.error_description),
       access_token: ref(this.access_token),
       access_token_payload: this.access_token_payload,
       id_token: ref(this.id_token),
       id_token_payload: this.id_token_payload,
       show_access_token: this.show_access_token,
-      show_id_token: this.show_id_token
+      show_id_token: this.show_id_token,
     };
   },
   methods: {
     // Log the user in
     login() {
-      this.$auth0.loginWithRedirect();
+      (this.$auth0 as Auth0Instance).loginWithRedirect();
     },
     // Log the user out
     logout() {
-      this.$auth0.logout({
-        returnTo: window.location.origin,
+      (this.$auth0 as Auth0Instance).logout({
+        localOnly: true,
       });
     },
     getToken() {
-      Promise.all([
-        jose.importX509(x509cert, algorithm),
-        this.$auth0.getTokenSilentlyVerbose(),
-        this.$auth0.getIdTokenClaims(),
-      ]).then((values) => {
-        const pubkey = values[0];
-        const token = values[1];
-        this.access_token = token.access_token;
-        this.id_token = token.id_token;
-        jose
-          .jwtVerify(token.id_token, pubkey)
-          .then((jwt) => {
-            this.id_token_payload = jwt.payload;
-            console.log(jwt.payload);
-          });
-        jose
-          .jwtVerify(token.access_token, pubkey)
-          .then((jwt) => {
-            this.access_token_payload = jwt.payload;
-            console.log(jwt.payload);
-          });
-        this.token = token;
-      });
+      (this.$auth0 as Auth0Instance)
+        .getTokenSilentlyVerbose()
+        .then((tokens: GetTokenSilentlyVerboseResponse) => {
+          this.access_token = tokens.access_token;
+          this.id_token = tokens.id_token;
+          verifyToken(this.access_token, jwks.domain, Date.now() / 1000).then(
+            (value: boolean | jose.JWTVerifyResult) => {
+              if (typeof value != "boolean") {
+                const token = value as jose.JWTVerifyResult;
+                this.access_token_payload = token.payload;
+                console.log(token.payload);
+              }
+            }
+          );
+          verifyToken(this.id_token, jwks.domain, Date.now() / 1000).then(
+            (value: boolean | jose.JWTVerifyResult) => {
+              if (typeof value != "boolean") {
+                const token = value as jose.JWTVerifyResult;
+                this.id_token_payload = token.payload;
+                console.log(token.payload);
+              }
+            }
+          );
+        });
     },
   },
-};
+});
 </script>

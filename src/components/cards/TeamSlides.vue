@@ -34,7 +34,7 @@
 import MiniCard from "@/components/cards/Type1Card.vue";
 import {
   getCloudinaryImg,
-} from "@/utilities/utilities.js";
+} from "@/utilities/utilities";
 
 export default {
   setup() {

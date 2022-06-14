@@ -379,7 +379,7 @@ import ErpIntegrationCard from "@/components/cards/ErpIntegrationCard.vue";
 //import Type3Card from "@/components/cards/Type3Card.vue";
 import WebSites from "@/components/cards/WebSites.vue";
 import Type4Card from "@/components/cards/Type4Card.vue";
-import { getCloudinaryImg } from "@/utilities/utilities.js";
+import { getCloudinaryImg } from "@/utilities/utilities";
 
 export default {
   name: "App",

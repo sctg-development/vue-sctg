@@ -10,8 +10,8 @@ const cloudinaryConf = {
 
 const cloudinary = new Cloudinary(cloudinaryConf);
 
-const getCloudinaryImg = (img, width, height) => {
-  let _img = cloudinary.image(img);
+const getCloudinaryImg = (img:string, width?:number, height?:number) => {
+  const _img = cloudinary.image(img);
   if (width !== undefined || height !== undefined) {
     let _fill = fill();
     if (width !== undefined) {
@@ -25,7 +25,7 @@ const getCloudinaryImg = (img, width, height) => {
   return _img.delivery(quality("auto")).format('auto');
 }
 
-const getCloudinaryResponsiveBackground = (img) => {
+const getCloudinaryResponsiveBackground = (img:string) => {
   return getCloudinaryImg(img,(Math.ceil(window.innerWidth/200)*200));
 }
 export { getCloudinaryImg,getCloudinaryResponsiveBackground }; 
