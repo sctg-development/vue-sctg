@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "module": "CommonJS",
+        "target": "ESNext",
+        "module": "ESNext",
         "lib": [
             "ES2020","dom"
         ],
         "types": [
             "@cloudflare/workers-types"
         ],
+        "moduleResolution": "Node",
         "resolveJsonModule": true,
         "esModuleInterop": true
     },
