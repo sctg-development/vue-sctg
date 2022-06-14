@@ -3,7 +3,8 @@
         "target": "ESNext",
         "module": "ESNext",
         "lib": [
-            "ES2020","dom"
+            "ES2020",
+            "dom"
         ],
         "types": [
             "@cloudflare/workers-types"
@@ -15,5 +16,5 @@
     "include": [
         "src/**/*.ts",
         "functions/**/*.ts"
-      ],
+    ]
 }
