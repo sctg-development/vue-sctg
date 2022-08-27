@@ -15,11 +15,12 @@ import { defineComponent, ref } from "vue";
 import { isAllowed, ADD_SHORT_URL } from "./TokenHelper";
 import jwks from "../../jwks.json";
 
-interface kvStore {
+interface kvStoreElement {
   name: string;
   value: string;
   metadata: { description: string; expiration: number };
 }
+type kvStore = kvStoreElement[] 
 
 export default defineComponent<{
   token: string;
