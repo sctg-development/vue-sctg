@@ -41,6 +41,16 @@
     value="vue3"
   />
   <type-2-card
+    title="ski-sensations"
+    :imgurl="getCloudinaryImg('skisensations-web', 250, 250).toURL()"
+    :miniImgurl="getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()"
+    :lightboxUrl="getCloudinaryImg('skisensations-web').toURL()"
+    author="@ronan"
+    authorTitle="dev"
+    :baseMessage="$t('services.design')"
+    value="vue3"
+  />
+  <type-2-card
     title="vdo com"
     :imgurl="getCloudinaryImg('vdocom-web', 250, 250).toURL()"
     :miniImgurl="getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()"
