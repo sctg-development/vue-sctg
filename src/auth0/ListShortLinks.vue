@@ -8,7 +8,7 @@
         <td><a :href="data.value">link</a></td>
       </tr>
     </table>
-    <a :href="`data:octet/stream;charset=utf-8,${encodeURIComponent(JSON.stringify(kvData))}`" download="kv.xml">db source</a>
+    <a :href="`data:octet/stream;charset=utf-8,${encodeURIComponent(JSON.stringify(kvData))}`" download="kv.json">db source</a>
   </div>
 </template>
 <script lang="ts">
