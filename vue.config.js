@@ -107,10 +107,10 @@ process.env.VUE_APP_ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
 const webpackPlugins = [];
 
 if ((process.env.CF_PAGES === '1') && (process.env.__DEBUG__ !== '1')) {
-  const PurgecssPlugin = require('purgecss-webpack-plugin');
+  const {PurgeCSSPlugin} = require('purgecss-webpack-plugin');
   const glob = require('glob-all')
 
-  const purgeCssPlugin = new PurgecssPlugin({
+  const purgeCssPlugin = new PurgeCSSPlugin({
     paths: glob.sync(
       [
         path.join(__dirname, './public/*.html'),

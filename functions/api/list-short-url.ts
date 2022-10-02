@@ -3,8 +3,18 @@ import {
   parseTokenFromAuthorizationHeader,
   LIST_ALL_SHORT_URL
 } from "../../src/auth0/TokenHelper";
+import { cyrb53 } from "../../src/utilities/utilities";
 
+type Metadata = {
+  description: string;
+  expiration: number;
+}
 
+type KVShort = {
+  name:string;
+  value: string;
+  metadata: Metadata;
+}
 
 export const onRequestPost: PagesFunction<{
   SHORTURL: KVNamespace;
@@ -44,11 +54,13 @@ export const onRequestPost: PagesFunction<{
          */
         return Promise.all(
           list.keys.map(async (key) => {
-            const getResult = await env.SHORTURL.getWithMetadata(key.name);
+            const getResult = await env.SHORTURL.getWithMetadata(key.name) as KVShort;
             return await new Promise((resolve) => resolve({
               name: key.name,
               value: getResult.value,
-              metadata: getResult.metadata,
+              description: getResult.metadata.description,
+              expiration: getResult.metadata.expiration,
+              auth0Domain_hash: cyrb53(env.AUTH0_DOMAIN),
             })
             );
           })

@@ -3,11 +3,12 @@
     <table>
       <tr v-for="data in kvData" :key="data.name">
         <td>{{data.name}}</td>
-        <td>{{data.value}}</td>
-        <td>{{ (data.metadata !==  null) ? data.metadata.description : ''}}</td>
-        <td>{{(data.metadata !==  null) && (data.metadata.expiration !==  null) ? `${(new Date(data.metadata.expiration)).toLocaleDateString($i18n.locale)} ${(new Date(data.metadata.expiration)).toLocaleTimeString($i18n.locale)}` : ''}}</td>
+        <td>{{data.description}}</td>
+        <td>{{(new Date(data.expiration)).toLocaleDateString($i18n.locale)}}</td>
+        <td><a :href="data.value">link</a></td>
       </tr>
     </table>
+    <a :href="`data:octet/stream;charset=utf-8,${encodeURIComponent(JSON.stringify(kvData))}`" download="kv.json">db source</a>
   </div>
 </template>
 <script lang="ts">
@@ -18,9 +19,11 @@ import jwks from "../../jwks.json";
 interface kvStoreElement {
   name: string;
   value: string;
-  metadata: { description: string; expiration: number };
+  description: string;
+  expiration: number;
+  auth0Domain_hash: number;
 }
-type kvStore = kvStoreElement[] 
+type kvStore = kvStoreElement[]
 
 export default defineComponent<{
   token: string;
