@@ -66,7 +66,7 @@
             justify-center
             rounded-md
             bg-slate-600
-            p-[10px]
+            p-10px
             text-base
             font-semibold
             text-white

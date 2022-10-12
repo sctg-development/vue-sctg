@@ -12,7 +12,7 @@
       <div class="-mx-4 flex flex-wrap px-7">
         <div class="w-full px-4 sm:w-1/4 lg:w-1/4 xl:w-1/3">
           <div class="mb-16">
-            <div class="max-w-[300px]">
+            <div class="max-w-300px">
               <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="mb-7 inline-block">
                 <img :src="$require('assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
                   class="h-12 max-w-full contrast-100 brightness-100" />
@@ -220,7 +220,7 @@
                 " />
               <button type="submit" name="submit" aria-label="submit" class="
                   absolute
-                  right-[6px]
+                  right-6px
                   -top-1/4
                   flex
                   h-9

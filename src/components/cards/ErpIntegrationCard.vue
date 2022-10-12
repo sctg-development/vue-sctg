@@ -63,7 +63,7 @@
       </button>
     </div>
     <div class="flex items-center">
-      <div class="mr-3 h-[46px] w-full max-w-[46px] overflow-hidden rounded-md">
+      <div class="mr-3 h-[46px] w-full max-w-46px overflow-hidden rounded-md">
         <img
          :src="getCloudinaryImg('web-design-tools', 50).toURL()"
           alt="Web design tools"

@@ -7,12 +7,12 @@
     <div class="
         w-full
         mx-auto
-        px-[16px]
-        sm:max-w-[575px]
-        md:max-w-[768px]
-        lg:max-w-[992px]
-        xl:max-w-[1140px]
-        2xl:max-w-[1320px]
+        px-16px
+        sm:max-w-575px
+        md:max-w-768px
+        lg:max-w-992px
+        xl:max-w-1140px
+        2xl:max-w-1320px
       ">
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
@@ -49,7 +49,7 @@
                 right-4
                 top-full
                 w-full
-                max-w-[250px]
+                max-w-250px
                 rounded
                 bg-slate-700
                 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent
@@ -146,7 +146,7 @@
                         relative
                         top-full
                         left-0
-                        w-[250px]
+                        w-250px
                         rounded-lg
                         bg-slate-800
                         p-4
@@ -258,7 +258,7 @@
               </button>
               <div :class="searchOpen ? 'block' : 'hidden'" class="
                   absolute
-                  top-[110%]
+                  top-110%
                   right-0
                   rounded-md
                   bg-slate-800

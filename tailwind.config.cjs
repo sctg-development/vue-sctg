@@ -16,6 +16,9 @@ module.exports = {
         'keepcalm': ['KeepCalm-Medium', 'sans-serif'],
       },
       padding:{
+        "2px":"2px",
+        "10px":"10px",
+        "16px":"16px",
         "80px": "80px",
         "90px": "90px",
         "150px": "150px",
@@ -103,6 +106,7 @@ module.exports = {
         "999":999
       },
       inset: {
+        "110%":"110%",
         "-100": "-100%",
         "-225-px": "-225px",
         "-160-px": "-160px",
@@ -111,6 +115,7 @@ module.exports = {
         "-50-px": "-50px",
         "-29-px": "-29px",
         "-20-px": "-20px",
+        "6px":"6x",
         "25-px": "25px",
         "40-px": "40px",
         "95-px": "95px",
@@ -137,6 +142,9 @@ module.exports = {
         "screen-1/6": "calc(100vh / 6)",
         "screen-5/6": "calc(5 * 100vh / 6)",
       },
+      width:{
+        "250px":"250px"
+      },
       minHeight: {
         "95-px": "95px",
         "70-px": "70px",
@@ -160,13 +168,21 @@ module.exports = {
         "860-px": "860px",
       },
       maxWidth: {
+        "46px":"46px",
         "100-px": "100px",
         "120-px": "120px",
         "150-px": "150px",
         "180-px": "180px",
         "200-px": "200px",
         "210-px": "210px",
-        "580-px": "580px",
+        "250px": "250px",
+        "300px": "300px",
+        "576px": "575px",
+        "580px": "580px",
+        "768px": "768px",
+        "992px": "992px",
+        "1140px": "1140x",
+        "1320px": "1320px",
       },
       minWidth: {
         "140-px": "140px",
