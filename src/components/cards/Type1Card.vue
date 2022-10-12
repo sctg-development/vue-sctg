@@ -9,7 +9,7 @@
         hover:to-indigo-500
         mb-5
         rounded-lg
-        p-[2px]
+        p-2px
       "
     >
       <div class="flex items-center rounded-lg bg-slate-700 p-6">

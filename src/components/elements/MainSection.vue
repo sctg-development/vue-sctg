@@ -6,7 +6,7 @@
     }"
     class="
       pb-24
-      pt-[150px]
+      pt-150px
       bg-no-repeat bg-top bg-cover
       overflow-hidden
       z-10

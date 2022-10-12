@@ -17,8 +17,8 @@
                 class="
                   mb-5
                   flex
-                  h-[72px]
-                  w-[72px]
+                  h-16
+                  w-16
                   items-center
                   justify-center
                   rounded-full

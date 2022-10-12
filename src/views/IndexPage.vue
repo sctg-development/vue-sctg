@@ -204,7 +204,7 @@
         </div>
       </div>
     </section>
-    <section id="features" class="pb-[900px] sm:pb-[800px] md:pb-[300px] 2xl:pb-0 pt-[90px]">
+    <section id="features" class="pb-900px sm:pb-800px md:pb-300px 2xl:pb-0 pt-90px">
       <div
         class="
           w-full
@@ -228,25 +228,25 @@
           </p>
         </div>
         <div class="mt-6 -mx-4 flex flex-wrap h-[500px] px-7">
-          <type-4-card
+          <type4-card
             class="pb-4"
             icon="text-orange-500 fa-solid fa-handshake"
             :text="$t('message.design_content')"
             :title="$t('message.web_design')"
           />
-          <type-4-card
+          <type4-card
             class="pb-4"
             icon="text-amber-600 fa-solid fa-wifi"
             :text="$t('message.seo_content')"
             :title="$t('websites.seo_title')"
           />
-          <type-4-card
+          <type4-card
             class="pb-4"
             icon="text-green-500 fa-solid fa-code-compare"
             :text="$t('message.admin_content')"
             :title="$t('message.admin')"
           />
-          <type-4-card
+          <type4-card
             class="pb-4"
             icon="text-indigo-600 fa-solid fa-tag"
             :text="$t('message.dev_content')"
@@ -284,128 +284,22 @@
         </div>
       </div>
     </section>
-    <!--
-    <section class="w-full pt-12">
-      <div
-        class="
-          w-full
-          mx-auto
-          sm:max-w-screen-sm
-          md:max-w-screen-md
-          lg:max-w-screen-lg
-          xl:max-w-screen-xl
-          2xl:max-w-screen-xl
-          px-10
-        "
-      >
-        <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
-          <div class="justify-between sm:flex">
-            <h2 class="mb-4 text-3xl font-medium leading-none text-white">
-              Today's Picks
-            </h2>
-            <a
-              href="javascript:void(0)"
-              class="
-                mb-5
-                items-center
-                justify-center
-                rounded-md
-                bg-indigo-600
-                px-6
-                py-2
-                text-base
-                font-semibold
-                text-white
-                ease-in-out
-                duration-150
-                hover:opacity-90
-              "
-            >
-              View All
-            </a>
-          </div>
-        </div>
-        <div class="-mx-4 flex flex-wrap">
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <type-3-card />
-          <div class="w-full px-4">
-            <div class="pt-8 text-center">
-              <a
-                href="javascript:void(0)"
-                class="
-                  inline-flex
-                  items-center
-                  justify-center
-                  rounded-md
-                  border-2 border-white
-                  py-3
-                  px-7
-                  text-base
-                  font-semibold
-                  text-white
-                  ease-in-out
-                  duration-150
-                  hover:border-indigo-600 hover:bg-indigo-600
-                "
-              >
-                Load More...
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
 
     <footer-main />
   </div>
 </template>
 
-<script>
-import HeaderMain from "@/components/HeaderMain";
+<script setup lang="ts">
+import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
-import FooterMain from "@/components/FooterMain";
-import TeamSlides from "@/components/cards/TeamSlides";
-import TinySlider from "@/components/elements/TinySlider";
+import FooterMain from "@/components/FooterMain.vue";
+import TeamSlides from "@/components/cards/TeamSlides.vue";
+import Type4Card from "@/components/cards/Type4Card.vue"
+import TinySlider from "@/components/elements/TinySlider.vue";
 import WebDesignCard from "@/components/cards/WebDesignCard.vue";
 import ServerAdministrationCard from "@/components/cards/ServerAdministrationCard.vue";
 import ErpIntegrationCard from "@/components/cards/ErpIntegrationCard.vue";
-//import Type3Card from "@/components/cards/Type3Card.vue";
 import WebSites from "@/components/cards/WebSites.vue";
-import Type4Card from "@/components/cards/Type4Card.vue";
 import { getCloudinaryImg } from "@/utilities/utilities";
 
-export default {
-  name: "App",
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    TeamSlides,
-    TinySlider,
-    //   Type3Card,
-    Type4Card,
-    FooterMain,
-    WebDesignCard,
-    ServerAdministrationCard,
-    ErpIntegrationCard,
-    WebSites,
-  },
-  methods: {},
-};
 </script>
-<style>
-</style>

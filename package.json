@@ -2,10 +2,12 @@
   "name": "vue-3231-tailwindcss-3023-fontawesome-6-sctg-20",
   "version": "1.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "node jwks.js && vue-cli-service build --report",
-    "lint": "vue-cli-service lint"
+    "serve": "vite",
+    "build": "npm run prepare-env && npm run build-vite",
+    "build-vite": "vite build",
+    "prepare-env": "node --experimental-fetch --loader ts-node/esm ./prepare-env.ts"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.22.4",
@@ -13,6 +15,7 @@
     "@vueuse/core": "^9.3.0",
     "jose": "^4.10.0",
     "nanoid": "^4.0.0",
+    "pinia": "^2.0.23",
     "vue": "^3.2.40",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.5",
@@ -20,60 +23,34 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@sctg/fontminify": "^1.0.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
-    "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "@typescript-eslint/parser": "^5.38.1",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-typescript": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "@vue/eslint-config-typescript": "^11.0.2",
+    "@types/glob": "^8.0.0",
+    "@types/gulp": "^4.0.9",
+    "@vitejs/plugin-vue": "^3.1.2",
     "autoprefixer": "^10.4.12",
     "basiclightbox": "^5.0.4",
-    "core-js": "^3.25.3",
+    "core-js": "^3.25.5",
     "debug": "^4.3.4",
-    "eslint": "^8.24.0",
-    "eslint-plugin-vue": "^9.5.1",
+    "eslint": "^8.25.0",
+    "eslint-plugin-vue": "^9.6.0",
     "fontmin-webpack": "file:fontmin-webpack",
     "gitlog": "^4.0.4",
     "glob-all": "^3.3.0",
-    "mangle-css-class-webpack-plugin": "file:mangle-css-class-webpack-plugin",
-    "npm-check-updates": "^16.3.7",
+    "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.9",
+    "gulp-replace": "^1.1.3",
+    "npm-check-updates": "^16.3.11",
     "postcss": "^8.4.17",
+    "postcss-purgefonts": "^1.0.2",
     "postcss-rename": "^0.6.1",
-    "purgecss-webpack-plugin": "^5.0.0",
+    "sass": "^1.55.0",
     "tailwindcss": "^3.1.8",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4",
-    "webpack": "~5.74.0",
-    "wrangler": "^2.1.9"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "@vue/typescript/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {}
-  },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "keywords": [],
-  "description": ""
+    "vite": "^3.1.7",
+    "wrangler": "^2.1.11"
+  }
 }

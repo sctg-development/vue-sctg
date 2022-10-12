@@ -31,7 +31,7 @@
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="require('@/assets/img/mysql-php-nginx.svg')"
+            :src="$require('assets/img/mysql-php-nginx.svg')"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -58,12 +58,12 @@
       <button
         class="inline-flex font-bold items-center rounded-md bg-white px-2 py-1"
       >
-        <img :src="require('@/assets/img/heart.svg')"/>
+        <img :src="$require('assets/img/heart.svg')"/>
         <span class="pl-1 text-xs font-semibold text-zinc-900"> 12 </span>
       </button>
     </div>
     <div class="flex items-center">
-      <div class="mr-3 h-[46px] w-full max-w-[46px] overflow-hidden rounded-md">
+      <div class="mr-3 h-[46px] w-full max-w-46px overflow-hidden rounded-md">
         <img
          :src="getCloudinaryImg('web-design-tools', 50).toURL()"
           alt="Web design tools"
