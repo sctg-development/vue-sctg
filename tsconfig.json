@@ -1,20 +1,26 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "lib": [
-            "ES2020",
-            "dom"
-        ],
-        "types": [
-            "@cloudflare/workers-types"
-        ],
-        "moduleResolution": "Node",
-        "resolveJsonModule": true,
-        "esModuleInterop": true
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "§/functions/*": [
+        "./functions/*"
+      ]
     },
-    "include": [
-        "src/**/*.ts",
-        "functions/**/*.ts"
-    ]
+"types": ["vue"]
+  },
+  "include": ["src/**/*.ts","src/**/*.vue"],
+  "exclude": ["sanity/node_modules"]
 }

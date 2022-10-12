@@ -31,7 +31,7 @@
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="require('@/assets/img/mysql-php-nginx.svg')"
+            :src="$require('assets/img/mysql-php-nginx.svg')"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -58,7 +58,7 @@
       <button
         class="inline-flex font-bold items-center rounded-md bg-white px-2 py-1"
       >
-        <img :src="require('@/assets/img/heart.svg')"/>
+        <img :src="$require('assets/img/heart.svg')"/>
         <span class="pl-1 text-xs font-semibold text-zinc-900"> 12 </span>
       </button>
     </div>
