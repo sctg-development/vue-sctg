@@ -104,16 +104,16 @@
                     </div>
                     <div>
                       <span class="absolute left-3 bottom-6 -z-10">
-                        <img :src="$require('assets/img/dots.svg')" />
+                        <img :src="$require('@/assets/img/dots.svg')" />
                       </span>
                       <span class="absolute right-0 bottom-1/2 -z-10">
-                        <img :src="$require('assets/img/circle.svg')" />
+                        <img :src="$require('@/assets/img/circle.svg')" />
                       </span>
                       <span class="absolute left-1/4 bottom-1/2 -z-10">
-                        <img :src="$require('assets/img/triangle.svg')" />
+                        <img :src="$require('@/assets/img/triangle.svg')" />
                       </span>
                       <span class="absolute left-0 bottom-1/4 -z-10">
-                        <img :src="$require('assets/img/broken.svg')" />
+                        <img :src="$require('@/assets/img/broken.svg')" />
                       </span>
                     </div>
                   </div>
@@ -335,6 +335,8 @@ import FooterMain from "@/components/FooterMain.vue";
 import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
 import { getCloudinaryImg } from "@/utilities/utilities";
 import { ref, reactive } from "vue";
+import { $require } from '@/utilities/viteHelper.js';
+
 export default {
   name: "SinglePage",
 
@@ -380,6 +382,7 @@ export default {
       fromSendEmail,
       formVerified,
       sendemailRet,
+      $require
     };
   },
   components: {

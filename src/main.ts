@@ -84,13 +84,6 @@ import * as basiclightbox from "basiclightbox";
 import { initAuth0 } from "@/auth0";
 import auth0conf from "../auth0-conf.json";
 
-const useImage = (url: string) => {
-  return new URL(
-    `/src/${url.substring(0, 1) === "@" ? url.substring(2) : url}`,
-    import.meta.url
-  ).href;
-};
-
 const useLightbox = (url) => {
   if (url !== undefined) {
     basiclightbox
@@ -101,7 +94,6 @@ const useLightbox = (url) => {
 
 declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {
-    $require: typeof useImage;
     $lightbox: typeof useLightbox
   }
 }
@@ -110,7 +102,6 @@ const pinia = createPinia();
 const app = createApp(App);
 //window.app = app;
 app.use(pinia).use(i18n).use(router);
-app.config.globalProperties.$require = useImage;
 app.config.globalProperties.$auth0 = initAuth0({
   onRedirectCallback:`${window.location.origin}/authorize`,
   redirectUri: `${window.location.origin}/authorize`,
