@@ -35,8 +35,8 @@
         "community": "Community",
         "pages": "Pages",
         "support": "Support",
-        "add-shortlinks": "Add a shortlink",
-        "list-shortlinks": "List shortlinks",
+        "add_shortlinks": "Add a shortlink",
+        "list_shortlinks": "List shortlinks",
         "services": "Services",
         "web": "Web",
         "lang": "Language"
@@ -74,20 +74,20 @@
         "seo_title": "SEO Optimization",
         "together_title": "Build together",
         "together": "You’re an integral part of the process.<br/><br/> We begin our process with a discovery phase. The better we understand your business, the better product we can deliver. Your website will grow as you grow.",
-        "webdesign-email": "web-design{'@'}sctg.cf",
-        "webdesign-phone": " ",
-        "webdesign-open-days": "Open from Mo. Till Fri.",
-        "webdesign-open-hours": "09.00 - 18.00",
+        "webdesign_email": "web-design{'@'}sctg.cf",
+        "webdesign_phone": " ",
+        "webdesign_open_days": "Open from Mo. Till Fri.",
+        "webdesign_open_hours": "09.00 - 18.00",
         "follow":"Follow us on",
         "title":"We can help with all aspects of web design and graphic design",
-        "subtitle-1":"Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
-        "subtitle-2":"Our design will reflect your company. Not only an amazing website, but it will be a co-design between you and our team."
+        "subtitle_1":"Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
+        "subtitle_2":"Our design will reflect your company. Not only an amazing website, but it will be a co-design between you and our team."
 
     },
     "contact":{
         "title":"Contact",
         "subtitle": "Get in touch",
-        "contact-email":"get-in-touch{'@'}sctg.cf",
+        "contact_email":"get-in-touch{'@'}sctg.cf",
         "name": "Your Name",
         "email": "Your Email",
         "message":"Your Message",
@@ -111,8 +111,8 @@
         "slogan": "Slogan",
         "email": "design{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Open from Mo. Till Fri.",
+        "open_hours": "09.00 - 18.00",
         "follow":"Follow us on"
     },
     "about":{
@@ -121,8 +121,8 @@
         "text": "Established for more than 20 years, our team helps start-ups, small businesses and large international companies to make the right impression. Whether you need web design, brochure design, graphic design, logo design, branding, digital design, eCommerce, eCampaign, we can help to get you noticed.",
         "email": "about-us{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Open from Mo. Till Fri.",
+        "open_hours": "09.00 - 18.00",
         "follow":"Follow us on",
         "info":"RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
     },
@@ -132,24 +132,24 @@
         "text": "Click for details",
         "email": "design{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Open from Mo. Till Fri.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Open from Mo. Till Fri.",
+        "open_hours": "09.00 - 18.00",
         "follow":"Follow us on",
         "validity": "validity",
         "get_token":"Get Token",
         "permissions": "permissions"
     },
-    "add-short-link":{
+    "add_short_link":{
         "title": "Shorten an URL",
         "subtitle":"Take care of the auto expiraton",
         "errormsg": "Please correct these errors",
-        "longurl-title": "Long URL",
-        "longurl-help": "Enter your long URL",
-        "longurl-error": "Missing long URL",
-        "description-title": "Description",
-        "description-help": "Enter something describing this URL",
-        "description-error": "Missing a description",
-        "longurl-noturl-error": "Doesn't seem to be an URL",
+        "longurl_title": "Long URL",
+        "longurl_help": "Enter your long URL",
+        "longurl_error": "Missing long URL",
+        "description_title": "Description",
+        "description_help": "Enter something describing this URL",
+        "description_error": "Missing a description",
+        "longurl_noturl_error": "Doesn't seem to be an URL",
         "add": "get short URL",
         "hour": "hour",
         "day": "day",
@@ -157,7 +157,7 @@
         "month": "month",
         "year":"year"
     },
-    "list-short-links":{
+    "list_short_links":{
         "title": "List all short URLs",
         "subtitle":"…"
     },

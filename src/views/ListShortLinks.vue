@@ -60,10 +60,10 @@
                               {{ $t("authorize.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open-days") }}
+                              {{ $t("authorize.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open-hours") }}
+                              {{ $t("authorize.open_hours") }}
                             </span>
                           </p>
                         </div>
@@ -120,11 +120,11 @@
                 </div>
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
                   <div class="text-white pt-10">
-                    <h1 class="text-3xl font-semibold">{{ $t("list-short-links.title") }}</h1>
+                    <h1 class="text-3xl font-semibold">{{ $t("list_short_links.title") }}</h1>
                       <p class="text-white text-xl">
-                        {{ $t("list-short-links.subtitle") }}
+                        {{ $t("list_short_links.subtitle") }}
                       </p>
-                          <list-short-links />
+                          <list_short_links />
                   </div>
                 </div>
               </div>
@@ -136,30 +136,20 @@
     <footer-main class="absolute"/>
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-import { getCloudinaryImg } from "@/utilities/utilities";
 import ListShortLinks from '@/auth0/ListShortLinks.vue';
 import { $require } from '@/utilities/viteHelper.js';
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+const $route = useRoute()
+const {locale} = useI18n()
+$route.query.lang !== undefined ?
+      $route.query.lang == "fr" || $route.query.lang == "fr"
+        ? (locale.value = $route.query.lang)
+         : ""
+       : "";
 
-export default {
-  name: "SinglePage",
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    ListShortLinks,
-    FooterMain,
-    $require
-  },
-};
 </script>

@@ -170,7 +170,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.add-shortlinks") }}
+                        {{ $t("nav.add_shortlinks") }}
                       </router-link>
                       <router-link to="/list-shorlinks" class="
                           block
@@ -181,7 +181,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.list-shortlinks") }}
+                        {{ $t("nav.list_shortlinks") }}
                       </router-link>
                     </div>
                   </div>
@@ -372,6 +372,7 @@ function loginout() {
   }
 }
 function login() {
+  debugger
   $auth0.loginWithRedirect();
 }
 // Log the user out

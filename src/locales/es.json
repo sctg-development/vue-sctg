@@ -35,8 +35,8 @@
         "community": "Comunidad",
         "pages": "Páginas",
         "support": "Asistencia",
-        "add-shortlinks": "Añadir un enlace corto",
-        "list-shortlinks": "Listar enlaces directos",
+        "add_shortlinks": "Añadir un enlace corto",
+        "list_shortlinks": "Listar enlaces directos",
         "services": "Servicios",
         "web": "Web",
         "lang": "Idioma"
@@ -73,19 +73,19 @@
         "seo_title": "Optimización SEO",
         "together_title": "Construir juntos",
         "together": "Usted es una parte integral del proceso.<br/><br/> Comenzamos nuestro proceso con una fase de descubrimiento. Cuanto mejor entendamos su negocio, mejor producto podemos entregar. Su sitio web crecerá a medida que crezca.",
-        "webdesign-email": "web-design-es{'@'}sctg.cf",
-        "webdesign-phone": " ",
-        "webdesign-open-days": "Abierto desde Lu. a Vi.",
-        "webdesign-open-hours": "09.00 - 18.00",
+        "webdesign_email": "web-design-es{'@'}sctg.cf",
+        "webdesign_phone": " ",
+        "webdesign_open_days": "Abierto desde Lu. a Vi.",
+        "webdesign_open_hours": "09.00 - 18.00",
         "follow": "Síguenos en",
         "title": "Podemos ayudar en todos los aspectos del diseño web y el diseño gráfico",
-        "subtitle-1": "Establecida por más de 20 años, nuestro equipo ayuda a que los emprendimientos, las pequeñas empresas y las grandes empresas internacionales hagan la impresión correcta. Ya sea que usted necesite diseño web, diseño de folletos, diseño gráfico, diseño de logotipos, marca, diseño digital, eCommerce, eCampaign, podemos ayudarle a hacerle notar.",
-        "subtitle-2": "Nuestro diseño reflejará su empresa, no sólo un sitio web asombroso, sino que será un co-diseño entre usted y nuestro equipo."
+        "subtitle_1": "Establecida por más de 20 años, nuestro equipo ayuda a que los emprendimientos, las pequeñas empresas y las grandes empresas internacionales hagan la impresión correcta. Ya sea que usted necesite diseño web, diseño de folletos, diseño gráfico, diseño de logotipos, marca, diseño digital, eCommerce, eCampaign, podemos ayudarle a hacerle notar.",
+        "subtitle_2": "Nuestro diseño reflejará su empresa, no sólo un sitio web asombroso, sino que será un co-diseño entre usted y nuestro equipo."
     },
     "contact": {
         "title": "Contacto",
         "subtitle": "Ponte en contacto",
-        "contact-email": "get-in-touch{'@'}sctg.cf",
+        "contact_email": "get-in-touch{'@'}sctg.cf",
         "name": "Su nombre",
         "email": "Su Email",
         "message": "Su mensaje",
@@ -109,8 +109,8 @@
         "slogan": "Eslogan",
         "email": "design-es{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Abierto desde Lu. a Vi.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Abierto desde Lu. a Vi.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Síguenos en"
     },
     "about": {
@@ -119,8 +119,8 @@
         "text": "Establecida por más de 20 años, nuestro equipo ayuda a que los emprendimientos, las pequeñas empresas y las grandes empresas internacionales hagan la impresión correcta. Ya sea que usted necesite diseño web, diseño de folletos, diseño gráfico, diseño de logotipos, marca, diseño digital, eCommerce, eCampaign, podemos ayudarle a hacerle notar.",
         "email": "about-us-es{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Abierto desde Lu. a Vi.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Abierto desde Lu. a Vi.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Síguenos en",
         "info": "RCS Arras (Pas-de-Calais Francia): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, Francia"
     },
@@ -130,24 +130,24 @@
         "text": "Haga click para ver detalles",
         "email": "design-es{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Abierto desde Lu. a Vi.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Abierto desde Lu. a Vi.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Síguenos en",
         "validity": "validez",
         "get_token": "Obtener un token",
         "permissions": "permisos"
     },
-    "add-short-link": {
+    "add_short_link": {
         "title": "Acorta una URL",
         "subtitle": "Cuidar el vencimiento automático",
         "errormsg": "Corrige los errores",
-        "longurl-title": "URL larga",
-        "longurl-help": "Introduzca su URL larga",
-        "longurl-error": "Falta URL larga",
-        "description-title": "Descripción",
-        "description-help": "Introduzca algo que describa esta URL",
-        "description-error": "Falta descripción",
-        "longurl-noturl-error": "Parece que no es una URL",
+        "longurl_title": "URL larga",
+        "longurl_help": "Introduzca su URL larga",
+        "longurl_error": "Falta URL larga",
+        "description_title": "Descripción",
+        "description_help": "Introduzca algo que describa esta URL",
+        "description_error": "Falta descripción",
+        "longurl_noturl_error": "Parece que no es una URL",
         "add": "obtener URL corta",
         "hour": "hora",
         "day": "día",
@@ -155,7 +155,7 @@
         "month": "mes",
         "year": "año"
     },
-    "list-short-links": {
+    "list_short_links": {
         "title": "Listar todas las URLs cortas",
         "subtitle": "…"
     },

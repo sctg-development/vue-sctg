@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="text-white" v-if="formerrors.length">
-      <b>{{ $t("add-short-link.errormsg") }}</b>
+      <b>{{ $t("add_short_link.errormsg") }}</b>
       <ul>
         <li v-for="error in formerrors" :key="error.id">
           <!-- eslint-disable-line -->
@@ -15,26 +15,26 @@
       @submit.prevent="submitForm"
     >
       <label for="longurl" class="mb-3 block text-white">
-        {{ $t("add-short-link.longurl-title") }}
+        {{ $t("add_short_link.longurl_title") }}
       </label>
       <input
         type="text"
         name="longurl"
         v-model="longurl"
         id="longurl"
-        :placeholder="$t('add-short-link.longurl-help')"
+        :placeholder="$t('add_short_link.longurl_help')"
         class="w-full bg-slate-600 rounded border text-white focus:bg-slate-400"
       />
       <div v-if="expiration == 0">
         <label for="description" class="mb-3 block text-white">
-          {{ $t("add-short-link.description-title") }}
+          {{ $t("add_short_link.description_title") }}
         </label>
         <input
           type="text"
           name="description"
           v-model="description"
           id="description"
-          :placeholder="$t('add-short-link.description-help')"
+          :placeholder="$t('add_short_link.description_help')"
           class="
             w-full
             bg-slate-600
@@ -57,17 +57,17 @@
             focus:bg-slate-400
           "
         >
-          <option value="3600">1 {{ $t("add-short-link.hour") }}</option>
-          <option value="21600">6 {{ $t("add-short-link.hour") }}</option>
-          <option value="43200">12 {{ $t("add-short-link.hour") }}</option>
+          <option value="3600">1 {{ $t("add_short_link.hour") }}</option>
+          <option value="21600">6 {{ $t("add_short_link.hour") }}</option>
+          <option value="43200">12 {{ $t("add_short_link.hour") }}</option>
           <option value="86400" selected>
-            1 {{ $t("add-short-link.day") }}
+            1 {{ $t("add_short_link.day") }}
           </option>
-          <option value="604800">1 {{ $t("add-short-link.week") }}</option>
-          <option value="2592000">1 {{ $t("add-short-link.month") }}</option>
-          <option value="15778476">6 {{ $t("add-short-link.month") }}</option>
-          <option value="31556952">1 {{ $t("add-short-link.year") }}</option>
-          <option value="2145872736">68 {{ $t("add-short-link.year") }}</option>
+          <option value="604800">1 {{ $t("add_short_link.week") }}</option>
+          <option value="2592000">1 {{ $t("add_short_link.month") }}</option>
+          <option value="15778476">6 {{ $t("add_short_link.month") }}</option>
+          <option value="31556952">1 {{ $t("add_short_link.year") }}</option>
+          <option value="2145872736">68 {{ $t("add_short_link.year") }}</option>
         </select>
         <button
           v-if="!formVerified"
@@ -94,7 +94,7 @@
             duration-150
           "
         >
-          {{ $t("add-short-link.add") }}
+          {{ $t("add_short_link.add") }}
         </button>
       </div>
       <div v-else>
@@ -108,7 +108,7 @@
 <script lang="ts">
 
 import { defineComponent, ref } from "vue";
-import { isAllowed, ADD_SHORT_URL } from "./TokenHelper";
+import { isAllowed, AUTH0_PERMISSION } from "./TokenHelper";
 import jwks from "../../jwks.json";
 
 export default defineComponent<{ token: string; canAddShortUrl: boolean }>({
@@ -130,7 +130,7 @@ export default defineComponent<{ token: string; canAddShortUrl: boolean }>({
         token.access_token,
         jwks.domain,
         Date.now() / 1000,
-        ADD_SHORT_URL
+        AUTH0_PERMISSION.add_short_url
       ).then((hasRight) => {
         this.canAddShortUrl = hasRight;
       });
@@ -170,13 +170,13 @@ export default defineComponent<{ token: string; canAddShortUrl: boolean }>({
         return true;
       }
       if (!this.longurl.length) {
-        this.formerrors.push(this.$t("add-short-link.longurl-error"));
+        this.formerrors.push(this.$t("add_short_link.longurl_error"));
       }
       if (!this.description.length) {
-        this.formerrors.push(this.$t("add-short-link.description-error"));
+        this.formerrors.push(this.$t("add_short_link.description_error"));
       }
       if (!this.isValidHttpUrl(this.longurl)) {
-        this.formerrors.push(this.$t("add-short-link.longurl-noturl-error"));
+        this.formerrors.push(this.$t("add_short_link.longurl_noturl_error"));
       }
       e.preventDefault();
     },

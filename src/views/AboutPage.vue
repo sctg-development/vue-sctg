@@ -60,10 +60,10 @@
                               {{ $t("about.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open-days") }}
+                              {{ $t("about.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open-hours") }}
+                              {{ $t("about.open_hours") }}
                             </span>
                           </p>
                         </div>

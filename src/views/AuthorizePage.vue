@@ -60,10 +60,10 @@
                               {{ $t("authorize.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open-days") }}
+                              {{ $t("authorize.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open-hours") }}
+                              {{ $t("authorize.open_hours") }}
                             </span>
                           </p>
                         </div>
@@ -136,30 +136,20 @@
     <footer-main class="absolute"/>
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-import Auth0Rize from "@/auth0/Auth0Rize.vue";
-import { getCloudinaryImg } from "@/utilities/utilities";
 import { $require } from '@/utilities/viteHelper.js';
+import Auth0Rize from "@/auth0/Auth0Rize.vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+const $route = useRoute()
+const {locale} = useI18n()
+$route.query.lang !== undefined ?
+      $route.query.lang == "fr" || $route.query.lang == "fr"
+        ? (locale.value = $route.query.lang)
+         : ""
+       : "";
 
-export default {
-  name: "SinglePage",
-
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg,$require };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    Auth0Rize,
-    FooterMain,
-  },
-};
 </script>

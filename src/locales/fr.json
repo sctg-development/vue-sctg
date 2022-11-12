@@ -35,8 +35,8 @@
         "community": "Communauté",
         "pages": "Pages",
         "support": "Assistance",
-        "add-shortlinks": "Ajouter un lien court",
-        "list-shortlinks": "Liste des liens courts",
+        "add_shortlinks": "Ajouter un lien court",
+        "list_shortlinks": "Liste des liens courts",
         "services": "Services",
         "web": "Web",
         "lang": "Langue"
@@ -73,19 +73,19 @@
         "seo_title": "Optimisation SEO",
         "together_title": "Construire ensemble",
         "together": "Vous faites intégralement partie du process.<br/><br/> Nous commençons le développement par une phase d'échange. Mieux nous comprendrons votre projet, meilleur sera le produit que nous vous délivrerons. Votre site web grandira en même temps que vous.",
-        "webdesign-email": "web-design-fr{'@'}sctg.cf",
-        "webdesign-phone": " ",
-        "webdesign-open-days": "Ouvert du Lu. au Ve.",
-        "webdesign-open-hours": "09.00 - 18.00",
+        "webdesign_email": "web-design-fr{'@'}sctg.cf",
+        "webdesign_phone": " ",
+        "webdesign_open_days": "Ouvert du Lu. au Ve.",
+        "webdesign_open_hours": "09.00 - 18.00",
         "follow": "Suivez-nous",
         "title": "Nous pouvons vous aider pour tous les aspects de la conception web et graphique",
-        "subtitle-1": "Créée depuis plus de 20 ans, notre équipe aide les start-ups, les PME et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
-        "subtitle-2": "Notre production reflètera votre société. Un site n'est pas seulement une image, il doit être aussi une co-conception entre vous et nous."
+        "subtitle_1": "Créée depuis plus de 20 ans, notre équipe aide les start-ups, les PME et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
+        "subtitle_2": "Notre production reflètera votre société. Un site n'est pas seulement une image, il doit être aussi une co-conception entre vous et nous."
     },
     "contact": {
         "title": "Contact",
         "subtitle": "Restons en contact",
-        "contact-email": "get-in-touch-fr{'@'}sctg.cf",
+        "contact_email": "get-in-touch-fr{'@'}sctg.cf",
         "name": "Votre Nom",
         "email": "votre Email",
         "message": "Votre Message",
@@ -109,8 +109,8 @@
         "slogan": "Slogan",
         "email": "design-fr{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Ouvert du Lu. au Ve.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Ouvert du Lu. au Ve.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Suivez-nous sur"
     },
     "about": {
@@ -119,8 +119,8 @@
         "text": "Créée depuis plus de 20 ans, notre équipe aide les start-ups, les Pme et les grands groups internationaux à laisser la bonne empreinte. Pour le Web, une brochure, une conception graphique, un logo, du branding, du eCommerce, une eCampagne… Nous pouvons vous aider.",
         "email": "about-us-fr{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Ouvert du Lu. au Ve.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Ouvert du Lu. au Ve.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Suivez-nous sur",
         "info": "RCS Arras (Pas-de-Calais France): 399224542, SIRET: 39922454200031, 173 rue des Fusillés 62440 Harnes, France"
     },
@@ -130,24 +130,24 @@
         "text": "Cliquez pour voir les détails",
         "email": "design-fr{'@'}sctg.cf",
         "phone": " ",
-        "open-days": "Ouvert du Lu. au Ve.",
-        "open-hours": "09.00 - 18.00",
+        "open_days": "Ouvert du Lu. au Ve.",
+        "open_hours": "09.00 - 18.00",
         "follow": "Suivez-nous",
         "validity": "validité",
         "get_token": "Obtenir un jeton",
         "permissions": "permissions"
     },
-    "add-short-link": {
+    "add_short_link": {
         "title": "Raccourcir l'URL",
         "subtitle": "Vérifiez l'expiration automatique",
         "errormsg": "Veuillez corriger ces erreurs",
-        "longurl-title": "URL longue",
-        "longurl-help": "Entrez votre URL longue",
-        "longurl-error": "URL longue manquante",
-        "description-title": "Description",
-        "description-help": "Entrez quelque chose décrivant cette URL",
-        "description-error": "Description manquante",
-        "longurl-noturl-error": "Ne semble pas être une URL",
+        "longurl_title": "URL longue",
+        "longurl_help": "Entrez votre URL longue",
+        "longurl_error": "URL longue manquante",
+        "description_title": "Description",
+        "description_help": "Entrez quelque chose décrivant cette URL",
+        "description_error": "Description manquante",
+        "longurl_noturl_error": "Ne semble pas être une URL",
         "add": "obtenir une URL courte",
         "hour": "heure",
         "day": "jour",
@@ -155,7 +155,7 @@
         "month": "mois",
         "year": "année"
     },
-    "list-short-links": {
+    "list_short_links": {
         "title": "Lister toutes les URLs courtes",
         "subtitle": "…"
     },

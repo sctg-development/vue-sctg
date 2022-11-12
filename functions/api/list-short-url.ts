@@ -1,7 +1,7 @@
 import {
   isAllowed,
   parseTokenFromAuthorizationHeader,
-  LIST_ALL_SHORT_URL
+  AUTH0_PERMISSION
 } from "../../src/auth0/TokenHelper";
 import { cyrb53 } from "../../src/utilities/utilities";
 
@@ -43,7 +43,7 @@ export const onRequestPost: PagesFunction<{
       jwtToken,
       auth0Domain,
       Date.now() / 1000,
-      LIST_ALL_SHORT_URL
+      AUTH0_PERMISSION.list_all_short_url
     );
     if (hasPermission !== false) {
       const longsUrl:

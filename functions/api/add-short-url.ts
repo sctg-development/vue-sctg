@@ -1,7 +1,7 @@
 import {
   isAllowed,
   parseTokenFromAuthorizationHeader,
-  ADD_SHORT_URL
+  AUTH0_PERMISSION
 } from "../../src/auth0/TokenHelper";
 import { customAlphabet } from "nanoid";
 
@@ -47,7 +47,7 @@ export const onRequestPost: PagesFunction<{
       jwtToken,
       auth0Domain,
       Date.now() / 1000,
-      ADD_SHORT_URL
+      AUTH0_PERMISSION.add_short_url
     );
     if (hasPermission !== false) {
       console.log("permission OK");

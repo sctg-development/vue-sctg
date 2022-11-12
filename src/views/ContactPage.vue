@@ -54,16 +54,16 @@
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("contact.contact-email") }}
+                              {{ $t("contact.contact_email") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign-phone") }}
+                              {{ $t("websites.webdesign_phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign-open-days") }}
+                              {{ $t("websites.webdesign_open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign-open-hours") }}
+                              {{ $t("websites.webdesign_open_hours") }}
                             </span>
                           </p>
                         </div>

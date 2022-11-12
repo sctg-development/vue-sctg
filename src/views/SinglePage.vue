@@ -60,10 +60,10 @@
                               {{ $t("single.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-days") }}
+                              {{ $t("single.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-hours") }}
+                              {{ $t("single.open_hours") }}
                             </span>
                           </p>
                         </div>
@@ -141,28 +141,19 @@
     <footer-main class="absolute" />
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import { $require } from '@/utilities/viteHelper.js';
-import { getCloudinaryImg } from "@/utilities/utilities";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+const $route = useRoute()
+const {locale} = useI18n()
+$route.query.lang !== undefined ?
+      $route.query.lang == "fr" || $route.query.lang == "fr"
+        ? (locale.value = $route.query.lang)
+         : ""
+       : "";
 
-export default {
-  name: "SinglePage",
-
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg,$require };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    FooterMain,
-  },
-};
 </script>
