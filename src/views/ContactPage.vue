@@ -328,7 +328,7 @@
     <footer-main class="absolute"/>
   </div>
 </template>
-<script>
+<script lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
