@@ -372,7 +372,6 @@ function loginout() {
   }
 }
 function login() {
-  debugger
   $auth0.loginWithRedirect();
 }
 // Log the user out
