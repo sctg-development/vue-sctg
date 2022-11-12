@@ -80,7 +80,7 @@ This website use:
         ease-linear
         transition-all
         duration-150
-      " @click="verifyToken()" :text="$t('check_token')" />
+      " @click="verifyToken()">{{$t('check_token')}}</button>
     </span>
     <span v-else>
       <button class="
@@ -103,12 +103,13 @@ This website use:
         ease-linear
         transition-all
         duration-150
-      " @click="access_token_valid = id_token_valid = !access_token_valid" :text="$t('mask_token')" />
+      " @click="access_token_valid = id_token_valid = !access_token_valid">
+        {{ $t('mask_token') }}</button>
     </span>
   </div>
   <div v-if="$auth0.isAuthenticated.value">
 
-    <p v-if="access_token_valid" class="text-slate-700 pt-8 text-normal font-mono break-all text-justify"
+    <p v-if="access_token_valid" class="text-slate-100 pt-8 text-normal font-mono break-all text-justify"
       @click="toggleAcessToken()">
       access_token ({{ $t('validity') }}: {{ (access_token_payload !== undefined) && (access_token_payload.exp !==
           undefined) ? (new
@@ -122,7 +123,7 @@ This website use:
         access_token
     }}</span>
     </p>
-    <p v-if="id_token_valid" class="text-slate-700 pt-8 pb-8 text-normal font-mono break-all text-justify"
+    <p v-if="id_token_valid" class="text-slate-100 pt-8 pb-8 text-normal font-mono break-all text-justify"
       @click="toggleIdToken()">
       id_token (validité: {{ (id_token_payload !== undefined) && (id_token_payload.exp !== undefined) ? (new
           Date(id_token_payload.exp * 1000).toLocaleString(locale as string)) : ""
@@ -131,7 +132,7 @@ This website use:
           id_token
       }}</span>
     </p>
-    <p v-if="sanity_token.length" class="text-slate-700 pt-8 pb-8 text-normal font-mono break-all text-justify">
+    <p v-if="sanity_token.length" class="text-slate-100 pt-8 pb-8 text-normal font-mono break-all text-justify">
       sanity_token : <span class="text-xs">{{ sanity_token }}</span>
     </p>
   </div>
