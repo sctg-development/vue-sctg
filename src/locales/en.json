@@ -164,5 +164,10 @@
     "banner":{
         "long":"You must verify your email and request access to an administrator !",
         "short":"Please verify your email !"
-    }
+    },
+    "login": "Login",
+    "check_token": "Check token",
+    "mask_token": "Hide token",
+    "validity": "validity",
+    "permissions": "permissions"
 }

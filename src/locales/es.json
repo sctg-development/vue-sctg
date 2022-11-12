@@ -162,5 +162,10 @@
     "banner": {
         "long": "Debe verificar su correo electrónico y solicitar acceso a un administrador!",
         "short": "Por favor, verifica tu email!"
-    }
+    },
+    "login": "Iniciar sesión",
+    "check_token": "Comprobar el token",
+    "mask_token": "Ocultar token",
+    "validity": "validez",
+    "permissions": "permisos"
 }
