@@ -60,10 +60,10 @@
                               {{ $t("single.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-days") }}
+                              {{ $t("single.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("single.open-hours") }}
+                              {{ $t("single.open_hours") }}
                             </span>
                           </p>
                         </div>
@@ -104,16 +104,16 @@
                     </div>
                     <div>
                       <span class="absolute left-3 bottom-6 -z-10">
-                        <img :src="$require('assets/img/dots.svg')" />
+                        <img :src="$require('@/assets/img/dots.svg')" />
                       </span>
                       <span class="absolute right-0 bottom-1/2 -z-10">
-                        <img :src="$require('assets/img/circle.svg')" />
+                        <img :src="$require('@/assets/img/circle.svg')" />
                       </span>
                       <span class="absolute left-1/4 bottom-1/2 -z-10">
-                        <img :src="$require('assets/img/triangle.svg')" />
+                        <img :src="$require('@/assets/img/triangle.svg')" />
                       </span>
                       <span class="absolute left-0 bottom-1/4 -z-10">
-                        <img :src="$require('assets/img/broken.svg')" />
+                        <img :src="$require('@/assets/img/broken.svg')" />
                       </span>
                     </div>
                   </div>
@@ -141,28 +141,19 @@
     <footer-main class="absolute" />
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
+import { $require } from '@/utilities/viteHelper.js';
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+const $route = useRoute()
+const {locale} = useI18n()
+$route.query.lang !== undefined ?
+      $route.query.lang == "fr" || $route.query.lang == "fr"
+        ? (locale.value = $route.query.lang)
+         : ""
+       : "";
 
-import { getCloudinaryImg } from "@/utilities/utilities";
-
-export default {
-  name: "SinglePage",
-
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    FooterMain,
-  },
-};
 </script>

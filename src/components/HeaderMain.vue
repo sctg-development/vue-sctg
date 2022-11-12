@@ -18,7 +18,7 @@
         <div class="max-w-full px-4">
           <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'">
-            <img :src="$require('assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
+            <img :src="$require('@/assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
               class="h-12 max-w-full contrast-100 brightness-100" />
           </router-link>
         </div>
@@ -170,7 +170,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.add-shortlinks") }}
+                        {{ $t("nav.add_shortlinks") }}
                       </router-link>
                       <router-link to="/list-shorlinks" class="
                           block
@@ -181,7 +181,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.list-shortlinks") }}
+                        {{ $t("nav.list_shortlinks") }}
                       </router-link>
                     </div>
                   </div>
@@ -226,7 +226,7 @@
                       <div class="py-1" role="none">
                         <span v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
                           <img @click="changeLang(locale)" class="cursor-pointer w-12 h-12"
-                            :src="$require(`assets/img/lang/${locale}.svg`)" />
+                            :src="$require(`@/assets/img/lang/${locale}.svg`)" />
                         </span>
                       </div>
                     </div>
@@ -326,6 +326,7 @@ import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
 import { useI18n } from 'vue-i18n';
 import { useLocaleStore } from '@/utilities/LocaleHelper'
 import { useRoute, useRouter } from 'vue-router';
+import { $require } from '@/utilities/viteHelper.js';
 const $auth0 = getCurrentInstance().appContext.app.config.globalProperties.$auth0 as Auth0Instance
 const { locale, availableLocales, messages, fallbackLocale } = useI18n({})
 const localeCounter = useLocaleStore()

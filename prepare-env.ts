@@ -1,5 +1,5 @@
 import { gitlogPromise, GitlogOptions } from "gitlog";
-
+import packageJsonLock from './package-lock.json' assert {type:'json'}
 import fs from 'fs';
 import https from 'https';
 
@@ -24,14 +24,19 @@ fs.writeFile('./commit.json',
 
 
 /*generate auth0-conf.json*/
+/*generate auth0-conf.json*/
 const auth0Conf = {
+  "auth0SdkVersion": packageJsonLock.dependencies["@auth0/auth0-spa-js"].version,
   "domain": process.env.AUTH0_DOMAIN,
-  "client_id": process.env.AUTH0_CLIENT_ID,
-  "scope": 'openid email profile',
+  "clientId": process.env.AUTH0_CLIENT_ID,
   "useRefreshTokens": true,
   "cacheLocation": "localstorage",
-  "audience": "https://sctg.api"
+  "authorizationParams": {
+    "scope": "openid email profile",
+    "audience": "https://sctg.api"
+  }
 };
+
 fs.writeFile('./auth0-conf.json',
   JSON.stringify(auth0Conf),
   'utf8', err => {
@@ -75,7 +80,7 @@ async function getJwks() {
         res.on("end", () => {
           const structuredData = JSON.parse(data) as Auth0JWKS;
           structuredData.domain = process.env.AUTH0_DOMAIN as string;
-          structuredData.namespace = process.env.AUTH0_CUSTOM_NAMESPACE as string;
+          structuredData.namespace = process.env.AUTH0_NAMESPACE as string;
           resolve(structuredData);
         });
       })

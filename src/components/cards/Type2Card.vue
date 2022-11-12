@@ -16,7 +16,7 @@
             px-2
             py-1
           ">
-          <img class="w-[14px] h-[14px]" :src="$require('assets/img/techno.svg')" />
+          <img class="w-[14px] h-[14px]" :src="$require('@/assets/img/techno.svg')" />
           <span class="pl-1 text-xs font-semibold text-zinc-900">
             {{ value }}
           </span>
@@ -81,6 +81,7 @@
 <script setup lang="ts">
 import * as basiclightbox from "basiclightbox";
 import { getCurrentInstance } from "vue";
+import { $require } from '@/utilities/viteHelper.js';
 import CssLightbox from "@/utilities/CssLightbox.vue";
 const props = defineProps<{
   title: string,

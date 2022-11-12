@@ -31,7 +31,7 @@
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="$require('assets/img/html5-react-vue.svg')"
+            :src="$require('@/assets/img/html5-react-vue.svg')"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -79,13 +79,9 @@
     </div>
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";
-export default {
-    setup() {
-        return {getCloudinaryImg};
-    },
-}
+import { $require } from '@/utilities/viteHelper.js';
 </script>

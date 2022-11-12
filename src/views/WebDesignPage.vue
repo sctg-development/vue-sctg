@@ -42,16 +42,16 @@
                       <div class="mt-16 mb-16">
                         <p class="text-lg font-bold text-white sm:text-xl">
                           <span class="block">
-                            {{ $t("websites.webdesign-email") }}
+                            {{ $t("websites.webdesign_email") }}
                           </span>
                           <span class="block">
-                            {{ $t("websites.webdesign-phone") }}
+                            {{ $t("websites.webdesign_phone") }}
                           </span>
                           <span class="block">
-                            {{ $t("websites.webdesign-open-days") }}
+                            {{ $t("websites.webdesign_open_days") }}
                           </span>
                           <span class="block">
-                            {{ $t("websites.webdesign-open-hours") }}
+                            {{ $t("websites.webdesign_open_hours") }}
                           </span>
                         </p>
                       </div>
@@ -90,16 +90,16 @@
                   </div>
                   <div>
                     <span class="absolute left-3 bottom-6 -z-10">
-                      <img :src="$require('assets/img/dots.svg')" />
+                      <img :src="$require('@/assets/img/dots.svg')" />
                     </span>
                     <span class="absolute right-0 bottom-1/2 -z-10">
-                      <img :src="$require('assets/img/circle.svg')" />
+                      <img :src="$require('@/assets/img/circle.svg')" />
                     </span>
                     <span class="absolute left-1/4 bottom-1/2 -z-10">
-                      <img :src="$require('assets/img/triangle.svg')" />
+                      <img :src="$require('@/assets/img/triangle.svg')" />
                     </span>
                     <span class="absolute left-0 bottom-1/4 -z-10">
-                      <img :src="$require('assets/img/broken.svg')" />
+                      <img :src="$require('@/assets/img/broken.svg')" />
                     </span>
                   </div>
                 </div>
@@ -110,10 +110,10 @@
                     {{$t('websites.title')}}
                   </h1>
                   <p class="pt-8">
-                    {{$t('websites.subtitle-1')}}
+                    {{$t('websites.subtitle_1')}}
                   </p>
                   <p class="py-8">
-                    {{$t('websites.subtitle-2')}}
+                    {{$t('websites.subtitle_2')}}
                   </p>
                 </div>
               </div>
@@ -162,34 +162,22 @@
     <footer-main />
   </div>
 </template>
-<script>
+<script setup lang="ts">
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-
-import { getCloudinaryImg } from "@/utilities/utilities";
+import { $require } from '@/utilities/viteHelper.js';
 import StandardSection from "@/components/elements/StandardSection.vue";
 import WebSites from "@/components/cards/WebSites.vue";
 import Type4Card from "@/components/cards/Type4Card.vue";
+import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+const $route = useRoute()
+const {locale} = useI18n()
+$route.query.lang !== undefined ?
+      $route.query.lang == "fr" || $route.query.lang == "fr"
+        ? (locale.value = $route.query.lang)
+         : ""
+       : "";
 
-export default {
-  name: "SinglePage",
-
-  data() {
-    this.$route.query.lang !== undefined
-      ? this.$route.query.lang == "fr" || this.$route.query.lang == "fr"
-        ? (this.$i18n.locale = this.$route.query.lang)
-        : ""
-      : "";
-    return { getCloudinaryImg };
-  },
-  components: {
-    HeaderMain,
-    MainSection,
-    FooterMain,
-    StandardSection,
-    WebSites,
-    Type4Card,
-  },
-};
 </script>

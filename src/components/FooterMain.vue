@@ -14,7 +14,7 @@
           <div class="mb-16">
             <div class="max-w-300px">
               <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="mb-7 inline-block">
-                <img :src="$require('assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
+                <img :src="$require('@/assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
                   class="h-12 max-w-full contrast-100 brightness-100" />
               </router-link>
               <p class="mb-6 text-base font-medium text-zinc-400">
@@ -257,6 +257,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 import commits from '../../commit.json'
+import { $require } from '@/utilities/viteHelper.js';
 const copyright_text = ref("2018-" + new Date().getFullYear())
 const commit_date = new Intl.DateTimeFormat("fr-FR", {
   year: "2-digit",
