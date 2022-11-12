@@ -124,7 +124,7 @@
                       <p class="text-white text-xl">
                         {{ $t("list_short_links.subtitle") }}
                       </p>
-                          <list_short_links />
+                          <ListShortLinks />
                   </div>
                 </div>
               </div>
