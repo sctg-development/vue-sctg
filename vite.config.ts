@@ -8,7 +8,7 @@ This website use:
 */
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vitePluginFontawesomeminify from "./fontawesome";
+import vitePluginFontawesomeminify from "@highcanfly-club/fontawesome";
 import path from "path";
 
 export default defineConfig({
