@@ -2,6 +2,17 @@ import { gitlogPromise, GitlogOptions } from "gitlog";
 import packageJsonLock from './package-lock.json' assert {type:'json'}
 import fs from 'fs';
 import https from 'https';
+import {LineCount} from "@sctg/code-stats"
+
+const results = await LineCount.countLines(['src','api/add-short-url','api/autoroute','api/common','api/list-short-url','api/redirect'])
+fs.writeFile(
+  "./codeStats.json",
+  JSON.stringify(results),
+  "utf8",
+  function (err) {
+    if (err) return console.log(err);
+  }
+);
 
 // Option 1: Just use the function, returned commit type has specified fields
 const commits = await gitlogPromise({
