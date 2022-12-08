@@ -51,6 +51,16 @@
     value="vue3"
   />
   <type2-card
+    title="Les Ailes du Mont-Blanc"
+    :imgurl="getCloudinaryImg('LesAiles', 250, 250).toURL()"
+    :miniImgurl="getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()"
+    :lightboxUrl="getCloudinaryImg('LesAiles').toURL()"
+    author="@ronan"
+    authorTitle="dev"
+    :baseMessage="$t('services.design')"
+    value="vue3"
+  />
+  <type2-card
     title="vdo com"
     :imgurl="getCloudinaryImg('vdocom-web', 250, 250).toURL()"
     :miniImgurl="getCloudinaryImg('Logo_SCTG_carre_3D', 50, 50).toURL()"
