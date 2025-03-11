@@ -47,7 +47,7 @@
                     sm:text-4xl
                   "
                 >
-                  {{ $t("message.company") }}
+                  {{ t("message.company") }}
                 </h1>
                 <p
                   class="
@@ -58,7 +58,7 @@
                     text-slate-400
                     md:pr-14
                   "
-                  v-html="$t('message.greetings')"
+                  v-html="t('message.greetings')"
                 ></p>
                 <div class="flex flex-wrap items-center">
                   <router-link
@@ -82,7 +82,7 @@
                       hover:bg-indigo-700
                     "
                   >
-                    {{ $t("message.explore_now") }}
+                    {{ t("message.explore_now") }}
                   </router-link>
                   <router-link
                     :to="{path:'/contact', hash:'#top',query:{lang: $i18n.locale}}"
@@ -102,7 +102,7 @@
                       hover:border-indigo-600 hover:leading-7
                     "
                   >
-                    {{ $t("message.contact_us") }}
+                    {{ t("message.contact_us") }}
                   </router-link>
                 </div>
               </div>
@@ -137,7 +137,7 @@
         <div class="mb-7 py-1 border-b border-white px-1.5 border-opacity-10">
           <div class="justify-between sm:flex">
             <h2 class="mb-4 text-3xl font-medium leading-none text-white">
-              {{ $t("message.services") }}
+              {{ t("message.services") }}
             </h2>
             <router-link
               :to="{path:'/web', hash:'#websites',query:{lang: $i18n.locale}}"
@@ -157,7 +157,7 @@
                 hover:opacity-90
               "
             >
-              {{$t('message.view_all')}}
+              {{t('message.view_all')}}
             </router-link>
           </div>
         </div>
@@ -192,7 +192,7 @@
           <div class="-mx-4 flex">
             <div class="w-full px-4">
               <h2 class="mb-5 text-3xl font-bold text-white">
-                {{ $t("slide.web_creations") }}
+                {{ t("slide.web_creations") }}
               </h2>
             </div>
           </div>
@@ -221,36 +221,36 @@
           <h2
             class="mb-4 text-4xl font-semibold leading-5 text-white sm:text-5xl"
           >
-            {{$t('message.core_activities')}}
+            {{t('message.core_activities')}}
           </h2>
           <p class="text-lg font-medium text-zinc-400">
-            {{ $t("message.core_content") }}
+            {{ t("message.core_content") }}
           </p>
         </div>
         <div class="mt-6 -mx-4 flex flex-wrap h-[500px] px-7">
           <type4-card
             class="pb-4"
             icon="text-orange-500 fa-solid fa-handshake"
-            :text="$t('message.design_content')"
-            :title="$t('message.web_design')"
+            :text="t('message.design_content')"
+            :title="t('message.web_design')"
           />
           <type4-card
             class="pb-4"
             icon="text-amber-600 fa-solid fa-wifi"
-            :text="$t('message.seo_content')"
-            :title="$t('websites.seo_title')"
+            :text="t('message.seo_content')"
+            :title="t('websites.seo_title')"
           />
           <type4-card
             class="pb-4"
             icon="text-green-500 fa-solid fa-code-compare"
-            :text="$t('message.admin_content')"
-            :title="$t('message.admin')"
+            :text="t('message.admin_content')"
+            :title="t('message.admin')"
           />
           <type4-card
             class="pb-4"
             icon="text-indigo-600 fa-solid fa-tag"
-            :text="$t('message.dev_content')"
-            :title="$t('message.dev')"
+            :text="t('message.dev_content')"
+            :title="t('message.dev')"
           />
         </div>
       </div>
@@ -272,7 +272,7 @@
           <div class="-mx-4 flex">
             <div class="w-full px-4">
               <h2 class="mb-5 text-3xl font-bold text-white">
-                {{ $t("message.team") }}
+                {{ t("message.team") }}
               </h2>
             </div>
           </div>
@@ -301,5 +301,6 @@ import ServerAdministrationCard from "@/components/cards/ServerAdministrationCar
 import ErpIntegrationCard from "@/components/cards/ErpIntegrationCard.vue";
 import WebSites from "@/components/cards/WebSites.vue";
 import { getCloudinaryImg } from "@/utilities/utilities";
-
+import { useI18n } from "vue-i18n";
+const {locale,t} = useI18n()
 </script>

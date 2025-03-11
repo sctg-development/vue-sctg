@@ -34,5 +34,5 @@ export default defineConfig({
       },
     },
   },
-  optimizeDeps: { include: ["lodash.throttle", "lodash.orderby"] },
+ // optimizeDeps: { include: ["lodash.throttle", "lodash.orderby"] },
 });

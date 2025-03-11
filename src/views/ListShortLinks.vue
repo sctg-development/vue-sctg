@@ -48,28 +48,28 @@
                           sm:text-5xl
                         "
                       >
-                        {{ $t("authorize.title") }}
+                        {{ t("authorize.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("authorize.email") }}
+                              {{ t("authorize.email") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.phone") }}
+                              {{ t("authorize.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open_days") }}
+                              {{ t("authorize.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("authorize.open_hours") }}
+                              {{ t("authorize.open_hours") }}
                             </span>
                           </p>
                         </div>
                         <div>
                           <p class="mb-3 text-xl font-bold text-white">
-                            {{ $t("authorize.follow") }}
+                            {{ t("authorize.follow") }}
                           </p>
                           <div
                             class="flex items-center space-x-1 lg:justify-end"
@@ -104,25 +104,25 @@
                     </div>
                     <div>
                       <span class="absolute left-3 bottom-6 -z-10">
-                        <img :src="$require('@/assets/img/dots.svg')" />
+                        <img src="../assets/img/dots.svg" />
                       </span>
                       <span class="absolute right-0 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/circle.svg')" />
+                        <img src="../assets/img/circle.svg" />
                       </span>
                       <span class="absolute left-1/4 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/triangle.svg')" />
+                        <img src="../assets/img/triangle.svg" />
                       </span>
                       <span class="absolute left-0 bottom-1/4 -z-10">
-                        <img :src="$require('@/assets/img/broken.svg')" />
+                        <img src="../assets/img/broken.svg" />
                       </span>
                     </div>
                   </div>
                 </div>
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
                   <div class="text-white pt-10">
-                    <h1 class="text-3xl font-semibold">{{ $t("list_short_links.title") }}</h1>
+                    <h1 class="text-3xl font-semibold">{{ t("list_short_links.title") }}</h1>
                       <p class="text-white text-xl">
-                        {{ $t("list_short_links.subtitle") }}
+                        {{ t("list_short_links.subtitle") }}
                       </p>
                           <ListShortLinks />
                   </div>
@@ -145,7 +145,7 @@ import { $require } from '@/utilities/viteHelper.js';
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 const $route = useRoute()
-const {locale} = useI18n()
+const {locale,t} = useI18n()
 $route.query.lang !== undefined ?
       $route.query.lang == "fr" || $route.query.lang == "fr"
         ? (locale.value = $route.query.lang)

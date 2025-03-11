@@ -9,9 +9,9 @@
             <i class="fa-solid fa-bullhorn text-white"></i>
           </span>
           <p class="ml-3 font-medium text-white truncate">
-            <span class="md:hidden">{{$t("banner.short")}}</span>
+            <span class="md:hidden">{{t("banner.short")}}</span>
             <span class="hidden md:inline">
-              {{$t("banner.long")}}
+              {{t("banner.long")}}
             </span>
           </p>
         </div>
@@ -52,13 +52,9 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent,ref } from 'vue'
-
-export default defineComponent({
-  data() {
-    const openBanner = ref(true);
-    return {openBanner};
-  },
-})
+import { useI18n } from "vue-i18n";
+const {locale,availableLocales,messages,t} = useI18n({})
+const openBanner = ref(true);
 </script>

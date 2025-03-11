@@ -30,20 +30,11 @@
     subtitle="net"
   />
 </template>
-<script>
+<script setup lang="ts">
 import MiniCard from "@/components/cards/Type1Card.vue";
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";
-
-export default {
-  setup() {
-    return {
-      getCloudinaryImg,
-      }
-  },
-  components: {
-    MiniCard
-  },
-};
+import { useI18n } from 'vue-i18n';
+const {locale,availableLocales,messages,t} = useI18n({})
 </script>

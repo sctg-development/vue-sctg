@@ -1,8 +1,8 @@
-import { gitlogPromise, GitlogOptions } from "gitlog";
-import packageJsonLock from './package-lock.json' assert {type:'json'}
-import fs from 'fs';
-import https from 'https';
-import {LineCount} from "@sctg/code-stats"
+import gitlog, { GitlogOptions } from "gitlog";
+import fs from "fs";
+import https from "https";
+import packageJsonLock from "./package-lock.json" with { type: "json" };
+import { LineCount } from "@sctg/code-stats";
 
 const results = await LineCount.countLines(['src','api/add-short-url','api/autoroute','api/common','api/list-short-url','api/redirect'])
 fs.writeFile(
@@ -15,11 +15,11 @@ fs.writeFile(
 );
 
 // Option 1: Just use the function, returned commit type has specified fields
-const commits = await gitlogPromise({
+const commits = await gitlog({
   repo: ".",
   number: 1,
   fields: ["authorDate"],
-}as GitlogOptions);
+} as GitlogOptions);
 
 const commit = {
   vue_sctg: (new Date(commits[0].authorDate)),
@@ -37,7 +37,7 @@ fs.writeFile('./commit.json',
 /*generate auth0-conf.json*/
 /*generate auth0-conf.json*/
 const auth0Conf = {
-  "auth0SdkVersion": packageJsonLock.dependencies["@auth0/auth0-spa-js"].version,
+  "auth0SdkVersion": "2.1.3", //packageJsonLock.dependencies["@auth0/auth0-spa-js"].version,
   "domain": process.env.AUTH0_DOMAIN,
   "clientId": process.env.AUTH0_CLIENT_ID,
   "useRefreshTokens": true,

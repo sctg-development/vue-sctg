@@ -7,7 +7,7 @@
     :lightboxUrl="getCloudinaryImg('ias-web').toURL()"
     author="@innov"
     authorTitle="dev"
-    :baseMessage="$t('services.design_hosting')"
+    :baseMessage="t('services.design_hosting')"
     value="wordpress"
   />
   <type2-card
@@ -17,7 +17,7 @@
     :lightboxUrl="getCloudinaryImg('smeg-web').toURL()"
     author="@smeg"
     authorTitle="dev"
-    :baseMessage="$t('services.design_hosting')"
+    :baseMessage="t('services.design_hosting')"
     value="react"
   />
   <type2-card
@@ -27,7 +27,7 @@
     :lightboxUrl="getCloudinaryImg('highcanfly-web').toURL()"
     author="@highcanfly"
     authorTitle="dev"
-    :baseMessage="$t('services.design')"
+    :baseMessage="t('services.design')"
     value="vue3"
   />
   <type2-card
@@ -37,7 +37,7 @@
     :lightboxUrl="getCloudinaryImg('cdvl59-web').toURL()"
     author="@cdvl59"
     authorTitle="dev"
-    :baseMessage="$t('services.design')"
+    :baseMessage="t('services.design')"
     value="vue3"
   />
   <type2-card
@@ -47,7 +47,7 @@
     :lightboxUrl="getCloudinaryImg('skisensations-web').toURL()"
     author="@ronan"
     authorTitle="dev"
-    :baseMessage="$t('services.design')"
+    :baseMessage="t('services.design')"
     value="vue3"
   />
   <type2-card
@@ -57,7 +57,7 @@
     :lightboxUrl="getCloudinaryImg('LesAiles').toURL()"
     author="@ronan"
     authorTitle="dev"
-    :baseMessage="$t('services.design')"
+    :baseMessage="t('services.design')"
     value="vue3"
   />
   <type2-card
@@ -67,7 +67,7 @@
     :lightboxUrl="getCloudinaryImg('vdocom-web').toURL()"
     author="@vdocom"
     authorTitle="dev"
-    :baseMessage="$t('services.design_hosting')"
+    :baseMessage="t('services.design_hosting')"
     value="php"
   />
   <type2-card
@@ -77,7 +77,7 @@
     :lightboxUrl="getCloudinaryImg('cfdmv-web').toURL()"
     author="@ffvl"
     authorTitle="dev"
-    :baseMessage="$t('services.web_app')"
+    :baseMessage="t('services.web_app')"
     value="js"
   />
   <type2-card
@@ -102,6 +102,8 @@
   />
 </template>
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const {locale,availableLocales,messages,t} = useI18n({})
 import Type2Card from "@/components/cards/Type2Card.vue";
 import { getCloudinaryImg } from "@/utilities/utilities";
 

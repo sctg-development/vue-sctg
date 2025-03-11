@@ -48,28 +48,28 @@
                           sm:text-5xl
                         "
                       >
-                        {{ $t("about.title") }}
+                        {{ t("about.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("about.email") }}
+                              {{ t("about.email") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.phone") }}
+                              {{ t("about.phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open_days") }}
+                              {{ t("about.open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("about.open_hours") }}
+                              {{ t("about.open_hours") }}
                             </span>
                           </p>
                         </div>
                         <div>
                           <p class="mb-3 text-xl font-bold text-white">
-                            {{ $t("about.follow") }}
+                            {{ t("about.follow") }}
                           </p>
                           <div
                             class="flex items-center space-x-1 lg:justify-end"
@@ -124,13 +124,13 @@
                       <h2
                         class="mb-4 text-4xl font-bold text-white sm:text-5xl"
                       >
-                        {{ $t("about.subtitle") }}
+                        {{ t("about.subtitle") }}
                       </h2>
                       <p class="text-white text-xl">
-                        {{ $t("about.text") }}
+                        {{ t("about.text") }}
                       </p>
                       <p class="mt-4 text-white text-normal">
-                        {{ $t("about.info") }}
+                        {{ t("about.info") }}
                       </p>
                     </div>
                   </div>
@@ -149,5 +149,6 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import { $require } from '@/utilities/viteHelper.js';
-import { getCloudinaryImg } from "@/utilities/utilities";
+import { useI18n } from "vue-i18n";
+const {locale,availableLocales,messages,t} = useI18n({})
 </script>

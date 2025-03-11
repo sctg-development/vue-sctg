@@ -31,7 +31,7 @@
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="$require('@/assets/img/mysql-php-nginx.svg')"
+            src="../../assets/img/mysql-php-nginx.svg"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -52,7 +52,7 @@
             xl:text-2xl
           "
         >
-          {{ $t("services.erp_integration") }}
+          {{ t("services.erp_integration") }}
         </a>
       </h3>
       <button
@@ -80,6 +80,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const {locale,availableLocales,messages,t} = useI18n({})
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";

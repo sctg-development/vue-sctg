@@ -8,8 +8,8 @@ import { createPinia } from "pinia";
 import enLang from '@/locales/en.json'
 
 type MessageSchema = typeof enLang;
-
-const i18n =createI18n<[MessageSchema | string], 'en' | 'fr' | 'es'>({
+export type AvailableLanguage = 'en' | 'fr' | 'es';
+const i18n =createI18n<[MessageSchema | string], AvailableLanguage>({
   locale: "en",
   legacy: false,
   messages: {
@@ -18,6 +18,14 @@ const i18n =createI18n<[MessageSchema | string], 'en' | 'fr' | 'es'>({
     es: "",
   },
 });
+import frImg from "./assets/img/lang/fr.svg";
+import enImg from "./assets/img/lang/gb.svg";
+import esImg from "./assets/img/lang/es.svg";
+export const langFlags = {
+  "fr": { char: "🇫🇷", img: frImg },
+  "en": { char: "🇬🇧", img: enImg },
+  "es": { char: "🇪🇸", img: esImg },
+}
 
 import temp from "@/views/IndexPage.vue"
 const routes = [

@@ -31,7 +31,7 @@
         </div>
         <div class="mb-6 w-full bs-slate-100">
           <img
-            :src="$require('@/assets/img/html5-react-vue.svg')"
+            src="../../assets/img/html5-react-vue.svg"
             alt="collection"
             class="rounded-lg w-full"
           />
@@ -52,13 +52,13 @@
             xl:text-2xl
           "
         >
-          {{ $t("message.web_design") }}
+          {{ t("message.web_design") }}
         </a>
       </h3>
       <button
         class="inline-flex font-bold items-center rounded-md bg-white px-2 py-1"
       >
-        <img :src="$require('@/assets/img/heart.svg')"/>
+        <img src="../../assets/img/heart.svg"/>
         <span class="pl-1 text-xs font-semibold text-zinc-900"> 1.6K </span>
       </button>
     </div>
@@ -80,6 +80,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const {locale,availableLocales,messages,t} = useI18n({})
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";

@@ -40,28 +40,28 @@
                           text-white
                           sm:text-5xl
                         ">
-                        {{ $t("contact.title") }}
+                        {{ t("contact.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
                         <div class="mt-16 mb-16">
                           <p class="text-lg font-bold text-white sm:text-xl">
                             <span class="block">
-                              {{ $t("contact.contact_email") }}
+                              {{ t("contact.contact_email") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign_phone") }}
+                              {{ t("websites.webdesign_phone") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign_open_days") }}
+                              {{ t("websites.webdesign_open_days") }}
                             </span>
                             <span class="block">
-                              {{ $t("websites.webdesign_open_hours") }}
+                              {{ t("websites.webdesign_open_hours") }}
                             </span>
                           </p>
                         </div>
                         <div>
                           <p class="mb-3 text-xl font-bold text-white">
-                            {{ $t("websites.follow") }}
+                            {{ t("websites.follow") }}
                           </p>
                           <div class="flex items-center trext-xl space-x-1 lg:justify-end">
                             <a href="javascript:void(0)" class="text-white hover:text-white/80">
@@ -82,16 +82,16 @@
                     </div>
                     <div>
                       <span class="absolute left-3 bottom-6 -z-10">
-                        <img :src="$require('@/assets/img/dots.svg')" />
+                        <img src="../assets/img/dots.svg" />
                       </span>
                       <span class="absolute right-0 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/circle.svg')" />
+                        <img src="../assets/img/circle.svg" />
                       </span>
                       <span class="absolute left-1/4 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/triangle.svg')" />
+                        <img src="../assets/img/triangle.svg" />
                       </span>
                       <span class="absolute left-0 bottom-1/4 -z-10">
-                        <img :src="$require('@/assets/img/broken.svg')" />
+                        <img src="../assets/img/broken.svg" />
                       </span>
                     </div>
                   </div>
@@ -100,10 +100,10 @@
                   <div class="pt-20 pb-8">
                     <div class="mb-12 max-w-[410px]">
                       <h2 class="mb-4 text-4xl font-bold text-white sm:text-5xl">
-                        {{ $t("contact.subtitle") }}
+                        {{ t("contact.subtitle") }}
                       </h2>
                       <h3 class="text-white" v-if="formerrors.length">
-                        <b>{{ $t("contact.errormsg") }}</b>
+                        <b>{{ t("contact.errormsg") }}</b>
                         <ul>
                           <li v-for="error in formerrors" :key="error.id">
                             <!-- eslint-disable-line -->
@@ -112,7 +112,7 @@
                         </ul>
                       </h3>
                       <p class="text-white text-xl">
-                        {{ $t("contact.slogan") }}
+                        {{ t("contact.slogan") }}
                       </p>
                     </div>
                     <form @submit="checkForm" @submit.prevent="submitForm">
@@ -120,10 +120,10 @@
                         <div class="w-full px-3 md:w-1/2">
                           <div class="mb-5">
                             <label for="name" class="mb-3 block text-white">
-                              {{ $t("contact.name") }}
+                              {{ t("contact.name") }}
                             </label>
                             <input v-if="!fromSendEmail" type="text" name="name" id="name" v-model="name"
-                              :placeholder="$t('contact.namemsg')" class="
+                              :placeholder="t('contact.namemsg')" class="
                                 w-full
                                 bg-slate-600
                                 rounded
@@ -136,10 +136,10 @@
                         <div class="w-full px-3 md:w-1/2">
                           <div class="mb-5">
                             <label for="email" class="mb-3 block text-white">
-                              {{ $t("contact.email") }}
+                              {{ t("contact.email") }}
                             </label>
                             <input v-if="!fromSendEmail" type="email" name="email" v-model="email" id="email"
-                              :placeholder="$t('contact.mailmsg')" class="
+                              :placeholder="t('contact.mailmsg')" class="
                                 w-full
                                 bg-slate-600
                                 rounded
@@ -152,10 +152,10 @@
                         <div class="w-full px-3">
                           <div class="mb-8">
                             <label for="" class="mb-3 block text-white">
-                              {{ $t("contact.message") }}
+                              {{ t("contact.message") }}
                             </label>
                             <textarea v-if="!fromSendEmail" rows="5" name="message" id="message" v-model="message"
-                              :placeholder="$t('contact.msgmsg')" class="
+                              :placeholder="t('contact.msgmsg')" class="
                                 w-full
                                 bg-slate-600
                                 rounded
@@ -187,7 +187,7 @@
                                 text-white
                                 text-xs
                               ">
-                              {{ $t("contact.agreement") }}
+                              {{ t("contact.agreement") }}
                             </label>
                           </div>
                         </div>
@@ -209,7 +209,7 @@
                               text-white
                               hover:bg-indigo-400
                             ">
-                            {{ $t("contact.send") }}
+                            {{ t("contact.send") }}
                           </button>
                           <div v-if="fromSendEmail" class="
                               text-white
@@ -224,10 +224,10 @@
                               sendemailRet.hCaptchaResponse &&
                               sendemailRet.mailjetResponse == 'OK'
                             ">
-                              {{ $t("contact.sent") }}
+                              {{ t("contact.sent") }}
                             </h4>
                             <h4 v-else>
-                              {{ $t("contact.notsent") }}
+                              {{ t("contact.notsent") }}
                             </h4>
                           </div>
                         </div>
@@ -255,7 +255,7 @@ import { $require } from '@/utilities/viteHelper.js';
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 const $route = useRoute()
-const {locale} = useI18n()
+const {locale,t} = useI18n()
 $route.query.lang !== undefined ?
       $route.query.lang == "fr" || $route.query.lang == "fr"
         ? (locale.value = $route.query.lang)
@@ -281,7 +281,6 @@ const sendemailRet = reactive({
   hCaptchaResponse: false,
   mailjetResponse: "Unauthorized",
 });
-const { t } = useI18n({})
 const checkForm = (e: { preventDefault: () => void; }) => {
   if (name.value.length && email.value.length && message.value.length && agreement.value ) {
     formerrors.value = [];

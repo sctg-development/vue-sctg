@@ -16,9 +16,9 @@
       ">
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="max-w-full px-4">
-          <router-link :to="{ path: '/', hash: '#top', query: { lang: $i18n.locale } }" class="header-logo w-32 block"
+          <router-link :to="{ path: '/', hash: '#top', query: { lang: locale } }" class="header-logo w-32 block"
             :class="scrolledFromTop ? 'py-4 lg:py-2' : 'py-5 lg:py-7'">
-            <img :src="$require('@/assets/img/Logo_SCTG_long.svg')" alt="SCTG logo"
+            <img src="../assets/img/Logo_SCTG_long.svg" alt="SCTG logo"
               class="h-12 max-w-full contrast-100 brightness-100" />
           </router-link>
         </div>
@@ -61,7 +61,7 @@
                   <router-link :to="{
                     path: '/',
                     hash: '#top',
-                    query: { lang: $i18n.locale },
+                    query: { lang: locale },
                   }" class="
                       px-4
                       flex
@@ -72,14 +72,14 @@
                       hover:text-slate-400
                       lg:mr-0 lg:font-bold lg:py-6 lg:px-0
                     ">
-                    {{ $t("nav.home") }}
+                    {{ t("nav.home") }}
                   </router-link>
                 </li>
                 <li class="relative">
                   <router-link :to="{
                     path: '/',
                     hash: '#services',
-                    query: { lang: $i18n.locale },
+                    query: { lang: locale },
                   }" class="
                       px-4
                       flex
@@ -91,14 +91,14 @@
                       lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                       xl:ml-12
                     ">
-                    {{ $t("nav.services") }}
+                    {{ t("nav.services") }}
                   </router-link>
                 </li>
                 <li class="relative">
                   <router-link :to="{
                     path: '/web',
                     hash: '#top',
-                    query: { lang: $i18n.locale },
+                    query: { lang: locale },
                   }" class="
                       px-8
                       flex
@@ -110,7 +110,7 @@
                       lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                       xl:ml-12
                     ">
-                    {{ $t("nav.web") }}
+                    {{ t("nav.web") }}
                   </router-link>
                 </li>
                 <li class="flex items-center">
@@ -132,7 +132,7 @@
                           lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                           xl:ml-12
                         " id="menu-button" aria-expanded="true" aria-haspopup="true">
-                        {{ $t("nav.support") }}
+                        {{ t("nav.support") }}
                         <svg class="-mr-1 ml-2 h-5 w-5 self-center" xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd"
@@ -170,7 +170,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.add_shortlinks") }}
+                        {{ t("nav.add_shortlinks") }}
                       </router-link>
                       <router-link to="/list-shorlinks" class="
                           block
@@ -181,7 +181,7 @@
                           text-slate-400
                           hover:text-white
                         ">
-                        {{ $t("nav.list_shortlinks") }}
+                        {{ t("nav.list_shortlinks") }}
                       </router-link>
                     </div>
                   </div>
@@ -205,7 +205,7 @@
                           lg:mr-0 lg:ml-8 lg:font-bold lg:py-6 lg:px-0
                           xl:ml-12
                         " id="menu-button" aria-expanded="true" aria-haspopup="true">
-                        {{ $t("nav.lang") }}
+                        {{ t("nav.lang") }}
                         <svg class="-mr-1 ml-2 h-5 w-5 self-center" xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd"
@@ -224,9 +224,9 @@
                         block
                       " role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                       <div class="py-1" role="none">
-                        <span v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
+                        <span v-for="locale in availableLocales" :key="`locale-${locale}`" :value="locale">
                           <img @click="changeLang(locale)" class="cursor-pointer w-12 h-12"
-                            :src="$require(`@/assets/img/lang/${locale}.svg`)" />
+                            :src="$requireLangImg(locale as AvailableLanguage)" />
                         </span>
                       </div>
                     </div>
@@ -310,8 +310,8 @@
               <span class="pr-2"><i class="fa-solid fa-lock"></i> </span>
               {{
               $auth0.user.value !== undefined
-              ? `${$t("message.logout")} ${$auth0.user.value.name}`
-              : $t("message.connect")
+              ? `${t("message.logout")} ${$auth0.user.value.name}`
+              : t("message.connect")
               }}
             </button>
           </div>
@@ -326,9 +326,10 @@ import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
 import { useI18n } from 'vue-i18n';
 import { useLocaleStore } from '@/utilities/LocaleHelper'
 import { useRoute, useRouter } from 'vue-router';
-import { $require } from '@/utilities/viteHelper.js';
+import { $requireLangImg } from '@/utilities/viteHelper.js';
+import { AvailableLanguage } from "@/main";
 const $auth0 = getCurrentInstance().appContext.app.config.globalProperties.$auth0 as Auth0Instance
-const { locale, availableLocales, messages, fallbackLocale } = useI18n({})
+const {locale,availableLocales,messages,t} = useI18n({})
 const localeCounter = useLocaleStore()
 const scrolledFromTop = ref("")
 const route = useRoute()

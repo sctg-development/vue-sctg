@@ -33,7 +33,7 @@ This website use:
         transition-all
         duration-150
       " type="button">
-      {{ $t('login') }}
+      {{ t('login') }}
     </button>
   </div>
   <div v-if="$auth0.isAuthenticated.value">
@@ -58,7 +58,7 @@ This website use:
         transition-all
         duration-150
       " @click="logout">
-      {{ $t("message.logout") }}( {{ $auth0.user.value.name }} )
+      {{ t("message.logout") }}( {{ $auth0.user.value.name }} )
     </button><span v-if="!access_token_valid">
       <button class="
         bg-camelot-500
@@ -80,7 +80,7 @@ This website use:
         ease-linear
         transition-all
         duration-150
-      " @click="verifyToken()">{{$t('check_token')}}</button>
+      " @click="verifyToken()">{{t('check_token')}}</button>
     </span>
     <span v-else>
       <button class="
@@ -104,18 +104,18 @@ This website use:
         transition-all
         duration-150
       " @click="access_token_valid = id_token_valid = !access_token_valid">
-        {{ $t('mask_token') }}</button>
+        {{ t('mask_token') }}</button>
     </span>
   </div>
   <div v-if="$auth0.isAuthenticated.value">
 
     <p v-if="access_token_valid" class="text-slate-100 pt-8 text-normal font-mono break-all text-justify"
       @click="toggleAcessToken()">
-      access_token ({{ $t('validity') }}: {{ (access_token_payload !== undefined) && (access_token_payload.exp !==
+      access_token ({{ t('validity') }}: {{ (access_token_payload !== undefined) && (access_token_payload.exp !==
           undefined) ? (new
             Date(access_token_payload.exp * 1000)).toLocaleString(locale as string) : ""
       }}):<br />
-      {{ $t('permissions') }}
+      {{ t('permissions') }}
     <pre>
         {{ access_token_payload !== undefined ? access_token_payload.permissions : "" }}
       </pre>
@@ -150,7 +150,6 @@ import * as jose from "jose";
 import type { Auth0Instance } from "./instance";
 import { useI18n } from 'vue-i18n'
 
-
 const $auth0 = getCurrentInstance().appContext.app.config.globalProperties.$auth0 as Auth0Instance
 const route = useRoute(); route.query
 const error = ref('' as string)
@@ -164,7 +163,7 @@ const id_token_payload = ref(null as jose.JWTPayload)
 const show_access_token = ref(false)
 const show_id_token = ref(false)
 const sanity_token = ref('' as string)
-const { locale } = useI18n({ useScope: 'global' })
+const { locale,t } = useI18n({ useScope: 'global' })
 
 if (
   route !== undefined &&
