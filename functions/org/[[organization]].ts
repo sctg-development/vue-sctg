@@ -27,7 +27,7 @@ export const onRequestGet = async ({ params }: EventContext<any, "organization",
     if (params.organization && params.organization.length === 2) {
         const organization = params.organization[0];
         const method = params.organization[1];
-        if (organization === "highcanfly" || organization === "sctg-development") {
+        if (organization === "highcanfly-club" || organization === "sctg-development") {
             if (method === "stars") {
                 const sum = await getTotalStargazersForOrg(organization);
                 return new Response(`The sum of stargazers_count is ${sum}`, { status: 200 });
