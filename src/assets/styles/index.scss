@@ -1,11 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url('@/assets/fonts/KeepCalm.css');
-@import '@highcanfly-club/fontawesome/styles/fontawesome.css';
-
-
-
+@use '../fonts/KeepCalm.css';
 .basicLightbox {
     position: fixed;
     display: flex;

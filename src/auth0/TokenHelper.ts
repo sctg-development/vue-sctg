@@ -58,9 +58,9 @@ export const verifyToken = (
 }
 
 export enum oAuthTokenType {
-  // eslint-disable-next-line no-unused-vars
+   
   access_token = 'access_token',
-  // eslint-disable-next-line no-unused-vars
+   
   id_token = 'id_token',
 }
 /**

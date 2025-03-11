@@ -16,7 +16,7 @@ import { reactive, ToRefs, toRefs } from 'vue'
  * you can augment this interface to remove fields optionality
  * and add custom properties.
  */
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+ 
 export interface Auth0User extends User {}
 
 // Extract public interface from class definition
@@ -241,7 +241,7 @@ export function initAuth0<AppStateType> ({
   const onLogin: LoginHookCallback = (callback) => {
     void invoke(async () => {
       await until(() => state.isAuthenticated && !!state.user).toBe(true)
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+       
       await callback(state.user!)
     })
   }

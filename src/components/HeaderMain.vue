@@ -325,18 +325,16 @@ import type { Auth0Instance } from "@/auth0/instance";
 import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
 import { useI18n } from 'vue-i18n';
 import { useLocaleStore } from '@/utilities/LocaleHelper'
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { $requireLangImg } from '@/utilities/viteHelper.js';
 import { AvailableLanguage } from "@/main";
 const $auth0 = getCurrentInstance().appContext.app.config.globalProperties.$auth0 as Auth0Instance
 const {locale,availableLocales,messages,t} = useI18n({})
 const localeCounter = useLocaleStore()
 const scrolledFromTop = ref("")
-const route = useRoute()
 const router = useRouter()
 const langOpen = ref(false);
 const supportOpen = ref(false);
-const submenuOpen = ref(false);
 const navbarOpen = ref(false);
 const searchOpen = ref(false);
 

@@ -8,7 +8,7 @@
             flex
             justify-center
             items-center
-            sm:min-h-screen-1/3
+            sm:min-h-screen-1_3
             w-full
             mx-auto
             sm:max-w-screen-sm
@@ -141,7 +141,6 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import AddShortlink from '@/auth0/AddShortlink.vue';
-import { $require } from '@/utilities/viteHelper.js';
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 const $route = useRoute()

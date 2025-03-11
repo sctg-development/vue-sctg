@@ -7,7 +7,7 @@
             flex
             justify-center
             items-center
-            sm:min-h-screen-1/3
+            sm:min-h-screen-1_3
             w-full
             mx-auto
             sm:max-w-screen-sm
@@ -249,9 +249,7 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
-import { getCloudinaryImg } from "@/utilities/utilities";
 import { ref, reactive } from "vue";
-import { $require } from '@/utilities/viteHelper.js';
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 const $route = useRoute()
@@ -274,7 +272,6 @@ const name = ref("");
 const email = ref("");
 const message = ref("");
 const agreement = ref(false);
-const email_sent = ref(false);
 const fromSendEmail = ref(false);
 const sendemailRet = reactive({
   executed: false,

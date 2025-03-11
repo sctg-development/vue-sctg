@@ -36,15 +36,16 @@
                 <h1
                   class="
                     mb-1
-                    text-4xl
                     font-medium
-                    leading-5
+                    
                     text-white
                     font-keepcalm
                     tracking-wide
+                    text-4xl
                     md:text-5xl
                     lg:text-6xl
                     sm:text-4xl
+                    
                   "
                 >
                   {{ t("message.company") }}

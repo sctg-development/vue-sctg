@@ -4,7 +4,7 @@ import {
   AUTH0_PERMISSION
 } from "../../src/auth0/TokenHelper";
 import { cyrb53 } from "../../src/utilities/utilities";
-
+import { PagesFunction, KVNamespace } from "@cloudflare/workers-types";
 type Metadata = {
   description: string;
   expiration: number;
@@ -27,7 +27,7 @@ export const onRequestPost: PagesFunction<{
    * ex: Authorization: Bearer eyJhbGci…AsTy
    */
   console.log(request.headers);
-  const authorizationHeader: string = request.headers.get("Authorization");
+  const authorizationHeader: string | null = request.headers.get("Authorization");
   const jwtToken: string =
     parseTokenFromAuthorizationHeader(authorizationHeader);
 
@@ -54,7 +54,7 @@ export const onRequestPost: PagesFunction<{
          */
         return Promise.all(
           list.keys.map(async (key) => {
-            const getResult = await env.SHORTURL.getWithMetadata(key.name) as KVShort;
+            const getResult = await env.SHORTURL.getWithMetadata(key.name) as unknown as KVShort;
             return await new Promise((resolve) => resolve({
               name: key.name,
               value: getResult.value,
@@ -70,7 +70,7 @@ export const onRequestPost: PagesFunction<{
     } else {
       return new Response(
         JSON.stringify({ error: "JWT invalid" }, null, 3),
-        null
+        undefined
       );
     }
   } else {
@@ -80,7 +80,7 @@ export const onRequestPost: PagesFunction<{
         null,
         3
       ),
-      null
+      undefined
     );
   }
 };

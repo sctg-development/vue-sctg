@@ -8,7 +8,7 @@
             flex
             justify-center
             items-center
-            sm:min-h-screen-1/3
+            sm:min-h-screen-1_3
             w-full
             mx-auto
             sm:max-w-screen-sm
@@ -104,16 +104,16 @@
                     </div>
                     <div>
                       <span class="absolute left-3 bottom-6 -z-10">
-                        <img :src="$require('@/assets/img/dots.svg')" />
+                        <img src="../assets/img/dots.svg" />
                       </span>
                       <span class="absolute right-0 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/circle.svg')" />
+                        <img src="../assets/img/circle.svg" />
                       </span>
                       <span class="absolute left-1/4 bottom-1/2 -z-10">
-                        <img :src="$require('@/assets/img/triangle.svg')" />
+                        <img src="../assets/img/triangle.svg" />
                       </span>
                       <span class="absolute left-0 bottom-1/4 -z-10">
-                        <img :src="$require('@/assets/img/broken.svg')" />
+                        <img src="../assets/img/broken.svg" />
                       </span>
                     </div>
                   </div>
@@ -148,7 +148,6 @@
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
-import { $require } from '@/utilities/viteHelper.js';
 import { useI18n } from "vue-i18n";
 const {locale,availableLocales,messages,t} = useI18n({})
 </script>

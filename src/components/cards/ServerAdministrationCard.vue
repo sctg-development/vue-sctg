@@ -60,7 +60,7 @@
 </template>
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-const {locale,availableLocales,messages,t} = useI18n({})
+const { t } = useI18n({})
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";

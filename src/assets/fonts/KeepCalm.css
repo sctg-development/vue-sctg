@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'KeepCalm-Medium';
+    font-family: KeepCalm-Medium;
     src:
-        url('KeepCalm-Medium.woff2') format('woff2'),
-        url('KeepCalm-Medium.woff') format('woff'),
-        url('KeepCalm-Medium.ttf') format('truetype');
+        url('@/assets/fonts/KeepCalm-Medium.woff2') format('woff2'),
+        url('@/assets/fonts/KeepCalm-Medium.woff') format('woff'),
+        url('@/assets/fonts/KeepCalm-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;

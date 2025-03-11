@@ -9,12 +9,14 @@ This website use:
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vitePluginFontawesomeminify from "@highcanfly-club/fontawesome";
+import tailwindcss from '@tailwindcss/vite'
 import path from "path";
 
 export default defineConfig({
 
   plugins: [
     vue(),
+    tailwindcss(),
     vitePluginFontawesomeminify({ glyphWhitelist: ["\f111"] }),
     // vitePluginAddLicense()
   ],

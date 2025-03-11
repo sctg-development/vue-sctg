@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-keepcalm: KeepCalm-Medium; 
+
+  --spacing-2px: 2px;
+  --spacing-4px: 4px;
+  --spacing-8px: 8px;
+  --spacing-10px: 10px;
+  --spacing-16px: 16px;
+  --spacing-70px: 70px;
+  --spacing-80px: 80px;
+  --spacing-90px: 90px;
+  --spacing-95px: 95px;
+  --spacing-150px: 150px;
+  --spacing-200px: 200px;
+  --spacing-250px: 250px;
+  --spacing-300px: 300px;
+  --spacing-350px: 350px;
+  --spacing-500px: 500px;
+  --spacing-600px: 600px;
+  --spacing-800px: 800px;
+  --spacing-900px: 900px;
+  
+  --spacing-screen-1_2: 50vh;
+  --spacing-screen-1_3: calc(100vh / 3);
+  --spacing-screen-2_3: calc(2 * 100vh / 3);
+  --spacing-screen-1_4: calc(100vh / 4);
+  --spacing-screen-3_4: calc(3 * 100vh / 4);
+  --spacing-screen-1_5: calc(100vh / 5);
+  --spacing-screen-2_5: calc(2 * 100vh / 5);
+  --spacing-screen-3_5: calc(3 * 100vh / 5);
+  --spacing-screen-4_5: calc(4 * 100vh / 5);
+  --spacing-screen-1_6: calc(100vh / 6);
+  --spacing-screen-5_6: calc(5 * 100vh / 6);
+  --color-gdt-50: #646470;
+  --color-gdt-100: #5a5a66;
+  --color-gdt-200: #50505c;
+  --color-gdt-300: #464652;
+  --color-gdt-400: #3c3c48;
+  --color-gdt-500: #32323e;
+  --color-gdt-600: #282834;
+  --color-gdt-700: #1e1e2a;
+  --color-gdt-800: #141420;
+  --color-gdt-900: #0a0a16;
+
+  --color-camelot-50: #f9f4f6;
+  --color-camelot-100: #f3e9ed;
+  --color-camelot-200: #e1c9d1;
+  --color-camelot-300: #cfa8b5;
+  --color-camelot-400: #ac677e;
+  --color-camelot-500: #882647;
+  --color-camelot-600: #7a2240;
+  --color-camelot-700: #661d35;
+  --color-camelot-800: #52172b;
+  --color-camelot-900: #431323;
+
+  --color-watermelon-50: #f3f7f5;
+  --color-watermelon-100: #e7f0eb;
+  --color-watermelon-200: #c3d9cd;
+  --color-watermelon-300: #9fc3ae;
+  --color-watermelon-400: #569572;
+  --color-watermelon-500: #0e6835;
+  --color-watermelon-600: #0d5e30;
+  --color-watermelon-700: #0b4e28;
+  --color-watermelon-800: #083e20;
+  --color-watermelon-900: #07331a;
+
+  --color-pistachio-50: #fafcf4;
+  --color-pistachio-100: #f4f9e9;
+  --color-pistachio-200: #e5efc7;
+  --color-pistachio-300: #d5e5a5;
+  --color-pistachio-400: #b5d262;
+  --color-pistachio-500: #95be1f;
+  --color-pistachio-600: #86ab1c;
+  --color-pistachio-700: #708f17;
+  --color-pistachio-800: #597213;
+  --color-pistachio-900: #495d0f;
+
+  --color-apple-50: #f5fbf6;
+  --color-apple-100: #ebf8ed;
+  --color-apple-200: #ceedd2;
+  --color-apple-300: #b0e1b7;
+  --color-apple-400: #74cb80;
+  --color-apple-500: #39B54A; /* HighCanFly Green = hcfgreen */
+  --color-apple-600: #33a343;
+  --color-apple-700: #2b8838;
+  --color-apple-800: #226d2c;
+  --color-apple-900: #1c5924;
+
+  --color-hcfdark: #0e6835;
+  --color-hcflight: #95be1f;
+  --color-hcfcardinal: #882647;
+  --color-hcfgreen: #39B54A;
+  
+  --z-2: 2;
+  --z-3: 3;
+  --z-100: 100;
+  --z-998: 998;
+  --z-999: 999;
+}
+@config "../../../tailwind.config.ts";
+
