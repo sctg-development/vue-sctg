@@ -53,8 +53,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { defineComponent,ref } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from "vue-i18n";
-const {locale,availableLocales,messages,t} = useI18n({})
+const {t} = useI18n({})
 const openBanner = ref(true);
 </script>

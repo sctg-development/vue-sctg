@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 function listDir(dir) {
     fs.readdir(dir, (err, files) => {

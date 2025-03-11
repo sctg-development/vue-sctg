@@ -35,6 +35,4 @@ import MiniCard from "@/components/cards/Type1Card.vue";
 import {
   getCloudinaryImg,
 } from "@/utilities/utilities";
-import { useI18n } from 'vue-i18n';
-const {locale,availableLocales,messages,t} = useI18n({})
 </script>

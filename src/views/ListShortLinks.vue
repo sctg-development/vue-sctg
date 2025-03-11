@@ -141,7 +141,6 @@ import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import ListShortLinks from '@/auth0/ListShortLinks.vue';
-import { $require } from '@/utilities/viteHelper.js';
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 const $route = useRoute()
