@@ -23,6 +23,7 @@
   --color-gdt-700: #1e1e2a;
   --color-gdt-800: #141420;
   --color-gdt-900: #0a0a16;
+
   --color-camelot-50: #f9f4f6;
   --color-camelot-100: #f3e9ed;
   --color-camelot-200: #e1c9d1;
@@ -33,6 +34,28 @@
   --color-camelot-700: #661d35;
   --color-camelot-800: #52172b;
   --color-camelot-900: #431323;
+
+  --color-watermelon-50: #f3f7f5;
+  --color-watermelon-100: #e7f0eb;
+  --color-watermelon-200: #c3d9cd;
+  --color-watermelon-300: #9fc3ae;
+  --color-watermelon-400: #569572;
+  --color-watermelon-500: #0e6835;
+  --color-watermelon-600: #0d5e30;
+  --color-watermelon-700: #0b4e28;
+  --color-watermelon-800: #083e20;
+  --color-watermelon-900: #07331a;
+
+  --color-pistachio-50: #fafcf4;
+  --color-pistachio-100: #f4f9e9;
+  --color-pistachio-200: #e5efc7;
+  --color-pistachio-300: #d5e5a5;
+  --color-pistachio-400: #b5d262;
+  --color-pistachio-500: #95be1f;
+  --color-pistachio-600: #86ab1c;
+  --color-pistachio-700: #708f17;
+  --color-pistachio-800: #597213;
+  --color-pistachio-900: #495d0f;
 }
 @config "../../../tailwind.config.ts";
 
