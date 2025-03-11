@@ -2,17 +2,37 @@
 
 @theme {
   --font-keepcalm: KeepCalm-Medium; 
+
   --spacing-2px: 2px;
   --spacing-4px: 4px;
   --spacing-8px: 8px;
   --spacing-10px: 10px;
   --spacing-16px: 16px;
+  --spacing-70px: 70px;
   --spacing-80px: 80px;
   --spacing-90px: 90px;
+  --spacing-95px: 95px;
   --spacing-150px: 150px;
+  --spacing-200px: 200px;
+  --spacing-250px: 250px;
   --spacing-300px: 300px;
+  --spacing-350px: 350px;
+  --spacing-500px: 500px;
+  --spacing-600px: 600px;
   --spacing-800px: 800px;
   --spacing-900px: 900px;
+  
+  --spacing-screen-1_2: 50vh;
+  --spacing-screen-1_3: calc(100vh / 3);
+  --spacing-screen-2_3: calc(2 * 100vh / 3);
+  --spacing-screen-1_4: calc(100vh / 4);
+  --spacing-screen-3_4: calc(3 * 100vh / 4);
+  --spacing-screen-1_5: calc(100vh / 5);
+  --spacing-screen-2_5: calc(2 * 100vh / 5);
+  --spacing-screen-3_5: calc(3 * 100vh / 5);
+  --spacing-screen-4_5: calc(4 * 100vh / 5);
+  --spacing-screen-1_6: calc(100vh / 6);
+  --spacing-screen-5_6: calc(5 * 100vh / 6);
   --color-gdt-50: #646470;
   --color-gdt-100: #5a5a66;
   --color-gdt-200: #50505c;
@@ -56,6 +76,28 @@
   --color-pistachio-700: #708f17;
   --color-pistachio-800: #597213;
   --color-pistachio-900: #495d0f;
+
+  --color-apple-50: #f5fbf6;
+  --color-apple-100: #ebf8ed;
+  --color-apple-200: #ceedd2;
+  --color-apple-300: #b0e1b7;
+  --color-apple-400: #74cb80;
+  --color-apple-500: #39B54A; /* HighCanFly Green = hcfgreen */
+  --color-apple-600: #33a343;
+  --color-apple-700: #2b8838;
+  --color-apple-800: #226d2c;
+  --color-apple-900: #1c5924;
+
+  --color-hcfdark: #0e6835;
+  --color-hcflight: #95be1f;
+  --color-hcfcardinal: #882647;
+  --color-hcfgreen: #39B54A;
+  
+  --z-2: 2;
+  --z-3: 3;
+  --z-100: 100;
+  --z-998: 998;
+  --z-999: 999;
 }
 @config "../../../tailwind.config.ts";
 

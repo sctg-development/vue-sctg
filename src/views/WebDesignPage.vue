@@ -8,7 +8,7 @@
         class="
           flex
           items-center
-          sm:min-h-screen-1/3
+          sm:min-h-screen-1_3
           w-full
           mx-auto
           sm:max-w-screen-sm

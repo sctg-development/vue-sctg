@@ -42,10 +42,10 @@ export default {
         //   "800": "#141420",
         //   "900": "#0a0a16"
         // },
-        "hcfdark": "#0e6835",
-        "hcflight": "#95be1f",
-        "hcfcardinal": "#882647",
-        "hcfgreen": "#39B54A",
+        // "hcfdark": "#0e6835",
+        // "hcflight": "#95be1f",
+        // "hcfcardinal": "#882647",
+        // "hcfgreen": "#39B54A",
         // 'camelot': {
         //   '50': '#f9f4f6',
         //   '100': '#f3e9ed',
@@ -82,18 +82,18 @@ export default {
         //   '800': '#597213',
         //   '900': '#495d0f'
         // },
-        'apple': {
-          '50': '#f5fbf6',
-          '100': '#ebf8ed',
-          '200': '#ceedd2',
-          '300': '#b0e1b7',
-          '400': '#74cb80',
-          '500': '#39B54A',   //HighCanFly Green = hcfgreen
-          '600': '#33a343',
-          '700': '#2b8838',
-          '800': '#226d2c',
-          '900': '#1c5924'
-        }
+        // 'apple': {
+        //   '50': '#f5fbf6',
+        //   '100': '#ebf8ed',
+        //   '200': '#ceedd2',
+        //   '300': '#b0e1b7',
+        //   '400': '#74cb80',
+        //   '500': '#39B54A',   //HighCanFly Green = hcfgreen
+        //   '600': '#33a343',
+        //   '700': '#2b8838',
+        //   '800': '#226d2c',
+        //   '900': '#1c5924'
+        // }
       },
       fontSize: {
         "55": "55rem",
@@ -101,13 +101,13 @@ export default {
       opacity: {
         "80": ".8",
       },
-      zIndex: {
-        "2": 2,
-        "3": 3,
-        "100": 100,
-        "998":998,
-        "999":999
-      },
+      // zIndex: {
+      //   "2": 2,
+      //   "3": 3,
+      //   "100": 100,
+      //   "998":998,
+      //   "999":999
+      // },
       inset: {
         "110%":"110%",
         "-100": "-100%",
@@ -127,27 +127,27 @@ export default {
         "210-px": "210px",
         "260-px": "260px",
       },
-      height: {
-        "95-px": "95px",
-        "70-px": "70px",
-        "350-px": "350px",
-        "500-px": "500px",
-        "600-px": "600px",
-        "screen-1/2": "50vh",
-        "screen-1/3": "calc(100vh / 3)",
-        "screen-2/3": "calc(2 * 100vh / 3)",
-        "screen-1/4": "calc(100vh / 4)",
-        "screen-3/4": "calc(3 * 100vh / 4)",
-        "screen-1/5": "calc(100vh / 5)",
-        "screen-2/5": "calc(2 * 100vh / 5)",
-        "screen-3/5": "calc(3 * 100vh / 5)",
-        "screen-4/5": "calc(4 * 100vh / 5)",
-        "screen-1/6": "calc(100vh / 6)",
-        "screen-5/6": "calc(5 * 100vh / 6)",
-      },
-      width:{
-        "250px":"250px"
-      },
+      // height: {
+      //   "95-px": "95px",
+      //   "70-px": "70px",
+      //   "350-px": "350px",
+      //   "500-px": "500px",
+      //   "600-px": "600px",
+      //   "screen-1_2": "50vh",
+      //   "screen-1_3": "calc(100vh / 3)",
+      //   "screen-2_3": "calc(2 * 100vh / 3)",
+      //   "screen-1_4": "calc(100vh / 4)",
+      //   "screen-3_4": "calc(3 * 100vh / 4)",
+      //   "screen-1_5": "calc(100vh / 5)",
+      //   "screen-2_5": "calc(2 * 100vh / 5)",
+      //   "screen-3_5": "calc(3 * 100vh / 5)",
+      //   "screen-4_5": "calc(4 * 100vh / 5)",
+      //   "screen-1_6": "calc(100vh / 6)",
+      //   "screen-5_6": "calc(5 * 100vh / 6)",
+      // },
+      // width:{
+      //   "250px":"250px"
+      // },
       minHeight: {
         "95-px": "95px",
         "70-px": "70px",
@@ -155,17 +155,17 @@ export default {
         "500-px": "500px",
         "600-px": "600px",
         "screen-75": "75vh",
-        "screen-1/2": "50vh",
-        "screen-1/3": "calc(100vh / 3)",
-        "screen-2/3": "calc(2 * 100vh / 3)",
-        "screen-1/4": "calc(100vh / 4)",
-        "screen-3/4": "calc(3 * 100vh / 4)",
-        "screen-1/5": "calc(100vh / 5)",
-        "screen-2/5": "calc(2 * 100vh / 5)",
-        "screen-3/5": "calc(3 * 100vh / 5)",
-        "screen-4/5": "calc(4 * 100vh / 5)",
-        "screen-1/6": "calc(100vh / 6)",
-        "screen-5/6": "calc(5 * 100vh / 6)",
+        "screen-1_2": "50vh",
+        "screen-1_3": "calc(100vh / 3)",
+        "screen-2_3": "calc(2 * 100vh / 3)",
+        "screen-1_4": "calc(100vh / 4)",
+        "screen-3_4": "calc(3 * 100vh / 4)",
+        "screen-1_5": "calc(100vh / 5)",
+        "screen-2_5": "calc(2 * 100vh / 5)",
+        "screen-3_5": "calc(3 * 100vh / 5)",
+        "screen-4_5": "calc(4 * 100vh / 5)",
+        "screen-1_6": "calc(100vh / 6)",
+        "screen-5_6": "calc(5 * 100vh / 6)",
       },
       maxHeight: {
         "860-px": "860px",

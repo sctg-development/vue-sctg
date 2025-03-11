@@ -105,7 +105,7 @@
     </form>
   </div>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import { ref, inject } from "vue";
 import { useI18n } from "vue-i18n";
 import { isAllowed, AUTH0_PERMISSION } from "./TokenHelper";
