@@ -20,7 +20,7 @@
         "./functions/*"
       ]
     },
-"types": ["vue"]
+"types": ["vue","@cloudflare/workers-types"]
   },
   "include": ["src/**/*.ts","src/**/*.vue"],
   "exclude": ["sanity/node_modules"]
