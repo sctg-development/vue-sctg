@@ -11,6 +11,7 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "lib": ["es2015", "dom"],
     "paths": {
       "@/*": [
         "src/*"

@@ -6,7 +6,7 @@ This website use:
 - Vite, Vue3, FontAwesome 6, TailwindCss 3
 - And many others
 */
-const tailwindcss = require('tailwindcss')
+const tailwindcss = require('@tailwindcss/postcss')
 const autoprefixer = require('autoprefixer')
 const purgecss = require('@fullhuman/postcss-purgecss')
 

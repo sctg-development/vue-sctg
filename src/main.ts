@@ -6,6 +6,10 @@ import type { Auth0Instance, RedirectCallback } from "@/auth0";
 import { createI18n } from 'vue-i18n'
 import { createPinia } from "pinia";
 import enLang from '@/locales/en.json'
+import "./assets/styles/index.css";
+import '@highcanfly-club/fontawesome/styles/fontawesome.css';
+
+import "./assets/styles/index.scss";
 
 type MessageSchema = typeof enLang;
 export type AvailableLanguage = 'en' | 'fr' | 'es';
@@ -87,7 +91,6 @@ const router = createRouter({
   routes,
 });
 
-import "@/assets/styles/index.scss";
 import * as basiclightbox from "basiclightbox";
 import auth0conf from "../auth0-conf.json";
 

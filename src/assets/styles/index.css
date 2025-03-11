@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@config "../../../tailwind.config.ts";
+
+@theme {
+    --font-display: "keepcalm", "KeepCalm-Medium"; 
+  }
