@@ -1,7 +1,38 @@
 @import "tailwindcss";
 
+@theme {
+  --font-keepcalm: KeepCalm-Medium; 
+  --spacing-2px: 2px;
+  --spacing-4px: 4px;
+  --spacing-8px: 8px;
+  --spacing-10px: 10px;
+  --spacing-16px: 16px;
+  --spacing-80px: 80px;
+  --spacing-90px: 90px;
+  --spacing-150px: 150px;
+  --spacing-300px: 300px;
+  --spacing-800px: 800px;
+  --spacing-900px: 900px;
+  --color-gdt-50: #646470;
+  --color-gdt-100: #5a5a66;
+  --color-gdt-200: #50505c;
+  --color-gdt-300: #464652;
+  --color-gdt-400: #3c3c48;
+  --color-gdt-500: #32323e;
+  --color-gdt-600: #282834;
+  --color-gdt-700: #1e1e2a;
+  --color-gdt-800: #141420;
+  --color-gdt-900: #0a0a16;
+  --color-camelot-50: #f9f4f6;
+  --color-camelot-100: #f3e9ed;
+  --color-camelot-200: #e1c9d1;
+  --color-camelot-300: #cfa8b5;
+  --color-camelot-400: #ac677e;
+  --color-camelot-500: #882647;
+  --color-camelot-600: #7a2240;
+  --color-camelot-700: #661d35;
+  --color-camelot-800: #52172b;
+  --color-camelot-900: #431323;
+}
 @config "../../../tailwind.config.ts";
 
-@theme {
-    --font-display: "keepcalm", "KeepCalm-Medium"; 
-  }
