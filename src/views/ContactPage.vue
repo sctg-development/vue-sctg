@@ -245,20 +245,33 @@
   </div>
 </template>
 <script setup lang="ts">
+/**
+=========================================================
+* © 2019-2025 Ronan LE MEILLAT for SCTG Development
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.
+=========================================================
+*/
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import VueHcaptcha from "@/hCaptcha/hcaptcha.vue";
 import { ref, reactive } from "vue";
-import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
-const $route = useRoute()
-const {locale,t} = useI18n()
-$route.query.lang !== undefined ?
-      $route.query.lang == "fr" || $route.query.lang == "fr"
-        ? (locale.value = $route.query.lang)
-         : ""
-       : "";
+
+const { t } = useI18n()
+
 
 const formerrors = ref([]);
 const formVerified = ref(false);
@@ -279,7 +292,7 @@ const sendemailRet = reactive({
   mailjetResponse: "Unauthorized",
 });
 const checkForm = (e: { preventDefault: () => void; }) => {
-  if (name.value.length && email.value.length && message.value.length && agreement.value ) {
+  if (name.value.length && email.value.length && message.value.length && agreement.value) {
     formerrors.value = [];
     return true;
   }
@@ -320,7 +333,8 @@ function hCaptchaVerify(tokenStr: string, ekey: string) {
       .then((res) => {
         return res.json();
       })
-      .then((data) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .then((data: any) => {
         console.log(data);
         sendemailRet.executed = true;
         sendemailRet.hCaptchaResponse = data.hCaptchaResponse;
@@ -352,12 +366,9 @@ function hCaptchaError(err: string) {
   hCaptcha_error.value = err;
   console.log(`Error: ${err}`);
 }
-function hCaptchaSubmit() {
-  console.log("Submitting the invisible hCaptcha");
-  // todo.execute();
-}
+
 function submitForm() {
-  if (!formerrors.value.length && name.value.length && email.value.length && message.value.length ) {
+  if (!formerrors.value.length && name.value.length && email.value.length && message.value.length) {
     formVerified.value = true;
   }
 }

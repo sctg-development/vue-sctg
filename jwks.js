@@ -10,8 +10,10 @@ function listDir(dir) {
 
 
 async function getJwks() {
+    // eslint-disable-next-line no-undef
     console.log(`retrieve https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`)
-    const https = require('https')
+    const https = await import('https')
+    // eslint-disable-next-line no-undef
     const url = `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`;
     return new Promise((resolve, reject) => {
         https.get(url, res => {
@@ -21,6 +23,7 @@ async function getJwks() {
             });
             res.on('end', () => {
                 data = JSON.parse(data);
+                // eslint-disable-next-line no-undef
                 data.domain = process.env.AUTH0_DOMAIN;
                 resolve(data);
             })
