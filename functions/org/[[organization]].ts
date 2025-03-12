@@ -51,7 +51,7 @@ function isOrganizationAllowed(organization: string, allowedOrganizations: strin
  * Function to cache the stats of an organization for a certain amount of time
  * The cache is stored in the Cloudflare KV store with an automatic expiration
  */
-function cacheStatsForOrg(organization: string, stats: Stats, kv: KVNamespace, ttl?: number): void {
+async function cacheStatsForOrg(organization: string, stats: Stats, kv: KVNamespace, ttl?: number): Promise<void> {
     if (!ttl) {
         ttl = 60 * 60 * 24; // 1 day
     }
@@ -59,7 +59,7 @@ function cacheStatsForOrg(organization: string, stats: Stats, kv: KVNamespace, t
     const cacheValue = JSON.stringify(stats);
     const cacheTTL = ttl;
     console.log(`Caching ${cacheKey} with value ${cacheValue} for ${cacheTTL} seconds`);
-    kv.put(cacheKey, cacheValue, { expirationTtl: cacheTTL });
+    await kv.put(cacheKey, cacheValue, { expirationTtl: cacheTTL });
 }
 
 /**
@@ -77,7 +77,7 @@ async function getStatsForOrg(organization: string, kv: KVNamespace, token?: str
     }
     console.log(`Cache miss for ${cacheKey}`);
     const stats = await getGlobalStatsForOrg(organization, token);
-    cacheStatsForOrg(organization, stats, kv, ttl);
+    await cacheStatsForOrg(organization, stats, kv, ttl);
     return stats;
 }
 /**
