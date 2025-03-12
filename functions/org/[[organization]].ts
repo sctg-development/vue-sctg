@@ -16,7 +16,7 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/>.
 =========================================================
 */
-import { PagesFunction } from "@cloudflare/workers-types";
+import { KVNamespace, PagesFunction } from "@cloudflare/workers-types";
 import { type Response as CFResponse } from "@cloudflare/workers-types";
 import axios from 'axios';
 import { OrgRepository } from "./types";
@@ -24,6 +24,8 @@ import { OrgRepository } from "./types";
 type Env = {
     TOKEN_FOR_GITHUB: string;
     ALLOWED_ORGANIZATIONS: string;
+    KV_CACHE_ORG_STATS: KVNamespace;
+    CACHE_TTL: string;
 }
 type Stats = {
     nbStars: number;
@@ -43,6 +45,40 @@ type Data = Record<string, unknown>;
  */
 function isOrganizationAllowed(organization: string, allowedOrganizations: string): boolean {
     return allowedOrganizations.split(',').includes(organization);
+}
+
+/**
+ * Function to cache the stats of an organization for a certain amount of time
+ * The cache is stored in the Cloudflare KV store with an automatic expiration
+ */
+async function cacheStatsForOrg(organization: string, stats: Stats, kv: KVNamespace, ttl?: number): Promise<void> {
+    if (!ttl) {
+        ttl = 60 * 60 * 24; // 1 day
+    }
+    const cacheKey = `stats_${organization}`;
+    const cacheValue = JSON.stringify(stats);
+    const cacheTTL = ttl;
+    console.log(`Caching ${cacheKey} with value ${cacheValue} for ${cacheTTL} seconds`);
+    await kv.put(cacheKey, cacheValue, { expirationTtl: cacheTTL });
+}
+
+/**
+ * Function to get the stats of an organization from the cache or from the GitHub API
+ * @param organization
+ * @param kv
+ * @returns the stats of the organization
+ */
+async function getStatsForOrg(organization: string, kv: KVNamespace, token?: string, ttl?: number): Promise<Stats> {
+    const cacheKey = `stats_${organization}`;
+    const cacheValue = await kv.get(cacheKey);
+    if (cacheValue) {
+        console.log(`Cache hit for ${cacheKey}`);
+        return JSON.parse(cacheValue);
+    }
+    console.log(`Cache miss for ${cacheKey}`);
+    const stats = await getGlobalStatsForOrg(organization, token);
+    await cacheStatsForOrg(organization, stats, kv, ttl);
+    return stats;
 }
 /**
  * Function to fetch GitHub api at https://api.github.com/orgs/{organization}/repos
@@ -101,7 +137,10 @@ export const onRequestGet: PagesFunction<Env, "organization", Data> = async ({ e
         const method = params.organization[1];
         if (isOrganizationAllowed(organization, env.ALLOWED_ORGANIZATIONS)) {
             if (method === "stats") {
-                const stats = await getGlobalStatsForOrg(organization, env.TOKEN_FOR_GITHUB);
+                const stats = await getStatsForOrg(organization, 
+                    env.KV_CACHE_ORG_STATS, 
+                    env.TOKEN_FOR_GITHUB, 
+                    parseInt(env.CACHE_TTL));
                 return getCFResponse(JSON.stringify(stats), { status: 200, headers: { 'Content-Type': 'application/json' } });
             }
             return getCFResponse(JSON.stringify({ status: "Unsupported" }), { status: 200, headers: { 'Content-Type': 'application/json' } });
