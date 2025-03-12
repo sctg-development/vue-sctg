@@ -25,7 +25,7 @@ type Env = {
     TOKEN_FOR_GITHUB: string;
     ALLOWED_ORGANIZATIONS: string;
     KV_CACHE_ORG_STATS: KVNamespace;
-    CACHE_TTL: number;
+    CACHE_TTL: string;
 }
 type Stats = {
     nbStars: number;
@@ -137,7 +137,10 @@ export const onRequestGet: PagesFunction<Env, "organization", Data> = async ({ e
         const method = params.organization[1];
         if (isOrganizationAllowed(organization, env.ALLOWED_ORGANIZATIONS)) {
             if (method === "stats") {
-                const stats = await getStatsForOrg(organization, env.KV_CACHE_ORG_STATS, env.TOKEN_FOR_GITHUB, env.CACHE_TTL);
+                const stats = await getStatsForOrg(organization, 
+                    env.KV_CACHE_ORG_STATS, 
+                    env.TOKEN_FOR_GITHUB, 
+                    parseInt(env.CACHE_TTL));
                 return getCFResponse(JSON.stringify(stats), { status: 200, headers: { 'Content-Type': 'application/json' } });
             }
             return getCFResponse(JSON.stringify({ status: "Unsupported" }), { status: 200, headers: { 'Content-Type': 'application/json' } });
