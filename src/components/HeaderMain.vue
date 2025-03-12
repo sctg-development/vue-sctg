@@ -321,6 +321,24 @@
   </header>
 </template>
 <script setup lang="ts">
+/**
+=========================================================
+* © 2019-2025 Ronan LE MEILLAT for SCTG Development
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.
+=========================================================
+*/
 import type { Auth0Instance } from "@/auth0/instance";
 import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
 import { useI18n } from 'vue-i18n';
@@ -339,6 +357,7 @@ const navbarOpen = ref(false);
 const searchOpen = ref(false);
 
 function handleScroll() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   window.pageYOffset >= 50
     ? (this.scrolledFromTop = true)
     : (this.scrolledFromTop = false);

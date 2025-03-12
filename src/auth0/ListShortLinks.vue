@@ -4,7 +4,7 @@
       <tr v-for="data in kvData" :key="data.name">
         <td>{{ data.name }}</td>
         <td>{{ data.description }}</td>
-        <td>{{ (new Date(data.expiration)).toLocaleDateString($i18n.locale) }}</td>
+        <td>{{ (new Date(data.expiration)).toLocaleDateString(locale) }}</td>
         <td><a :href="data.value">link</a></td>
       </tr>
     </table>
@@ -13,10 +13,29 @@
   </div>
 </template>
 <script setup lang="ts">
+/**
+=========================================================
+* © 2019-2025 Ronan LE MEILLAT for SCTG Development
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.
+=========================================================
+*/
 import { onMounted, ref } from "vue";
 import { isAllowed, AUTH0_PERMISSION } from "./TokenHelper";
 import jwks from "../../jwks.json";
 import { getAuth0 } from '@/auth0';
+import { useI18n } from "vue-i18n";
 
 interface kvStoreElement {
   name: string;
@@ -27,10 +46,10 @@ interface kvStoreElement {
 }
 type kvStore = kvStoreElement[]
 
-const canonical = new URL(window.location.origin);
 const canListShortUrl = ref(false);
 const kvData = ref(null as kvStore);
 const $auth0 = getAuth0()
+const { locale } = useI18n()
 
 onMounted(() => {
   $auth0

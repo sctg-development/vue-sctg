@@ -3,8 +3,7 @@
     <header-main />
     <main-section>
       <section id="content">
-        <div
-          class="
+        <div class="
             flex
             justify-center
             items-center
@@ -16,16 +15,12 @@
             lg:max-w-screen-lg
             xl:max-w-screen-xl
             2xl:max-w-screen-xl
-          "
-        >
+          ">
           <div class="px-4 min-w-2/3">
             <div class="relative z-10 overflow-hidden rounded-lg bg-slate-800">
               <div class="-mx-4 flex flex-wrap">
-                <div
-                  class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center"
-                >
-                  <div
-                    class="
+                <div class="w-full px-4 lg:pr-8 lg:w-5/12 xl:w-1/3 items-center">
+                  <div class="
                       relative
                       h-full
                       z-10
@@ -35,19 +30,16 @@
                       pr-5
                       lg:text-right
                       bg-indigo-600
-                    "
-                  >
+                    ">
                     <div class="mb-16 lg:mb-56">
-                      <div
-                        class="
+                      <div class="
                           mb-4
                           text-4xl
                           pl-4
                           font-bold
                           text-white
                           sm:text-5xl
-                        "
-                      >
+                        ">
                         {{ t("authorize.title") }}
                       </div>
                       <div class="absolute bottom-4 right-4">
@@ -71,31 +63,17 @@
                           <p class="mb-3 text-xl font-bold text-white">
                             {{ t("authorize.follow") }}
                           </p>
-                          <div
-                            class="flex items-center space-x-1 lg:justify-end"
-                          >
-                            <a
-                              href="javascript:void(0)"
-                              class="text-white hover:text-white/80"
-                            >
+                          <div class="flex items-center space-x-1 lg:justify-end">
+                            <a href="javascript:void(0)" class="text-white hover:text-white/80">
                               <i class="fa-brands fa-facebook"></i>
                             </a>
-                            <a
-                              href="javascript:void(0)"
-                              class="text-white hover:text-white/80"
-                            >
+                            <a href="javascript:void(0)" class="text-white hover:text-white/80">
                               <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a
-                              href="javascript:void(0)"
-                              class="text-white hover:text-white/80"
-                            >
+                            <a href="javascript:void(0)" class="text-white hover:text-white/80">
                               <i class="fa-brands fa-instagram"></i>
                             </a>
-                            <a
-                              href="javascript:void(0)"
-                              class="text-white hover:text-white/80"
-                            >
+                            <a href="javascript:void(0)" class="text-white hover:text-white/80">
                               <i class="fa-brands fa-linkedin"></i>
                             </a>
                           </div>
@@ -121,10 +99,10 @@
                 <div class="w-full px-8 lg:w-5/12 xl:w-2/3">
                   <div class="text-white pt-10">
                     <h1 class="text-3xl font-semibold">{{ t("list_short_links.title") }}</h1>
-                      <p class="text-white text-xl">
-                        {{ t("list_short_links.subtitle") }}
-                      </p>
-                          <ListShortLinks />
+                    <p class="text-white text-xl">
+                      {{ t("list_short_links.subtitle") }}
+                    </p>
+                    <ListShortLinks />
                   </div>
                 </div>
               </div>
@@ -133,22 +111,33 @@
         </div>
       </section>
     </main-section>
-    <footer-main class="absolute"/>
+    <footer-main class="absolute" />
   </div>
 </template>
 <script setup lang="ts">
+/**
+=========================================================
+* © 2019-2025 Ronan LE MEILLAT for SCTG Development
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.
+=========================================================
+*/
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import ListShortLinks from '@/auth0/ListShortLinks.vue';
-import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
-const $route = useRoute()
-const {locale,t} = useI18n()
-$route.query.lang !== undefined ?
-      $route.query.lang == "fr" || $route.query.lang == "fr"
-        ? (locale.value = $route.query.lang)
-         : ""
-       : "";
+const { t } = useI18n()
 
 </script>

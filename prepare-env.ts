@@ -1,6 +1,7 @@
 import gitlog, { GitlogOptions } from "gitlog";
 import fs from "fs";
 import https from "https";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import packageJsonLock from "./package-lock.json" with { type: "json" };
 import { LineCount } from "@sctg/code-stats";
 

@@ -63,7 +63,7 @@
                 ></p>
                 <div class="flex flex-wrap items-center">
                   <router-link
-                    :to="{path:'/', hash:'#features' ,query:{lang: $i18n.locale}}"
+                    :to="{path:'/', hash:'#features' ,query:{lang: locale}}"
                     class="
                       mr-5
                       mb-5
@@ -86,7 +86,7 @@
                     {{ t("message.explore_now") }}
                   </router-link>
                   <router-link
-                    :to="{path:'/contact', hash:'#top',query:{lang: $i18n.locale}}"
+                    :to="{path:'/contact', hash:'#top',query:{lang: locale}}"
                     class="
                       mb-5
                       items-center
@@ -141,7 +141,7 @@
               {{ t("message.services") }}
             </h2>
             <router-link
-              :to="{path:'/web', hash:'#websites',query:{lang: $i18n.locale}}"
+              :to="{path:'/web', hash:'#websites',query:{lang: locale}}"
               class="
                 mb-5
                 items-center
@@ -291,6 +291,24 @@
 </template>
 
 <script setup lang="ts">
+/**
+=========================================================
+* © 2019-2025 Ronan LE MEILLAT for SCTG Development
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <https://www.gnu.org/licenses/>.
+=========================================================
+*/
 import HeaderMain from "@/components/HeaderMain.vue";
 import MainSection from "@/components/elements/MainSection.vue";
 import FooterMain from "@/components/FooterMain.vue";
